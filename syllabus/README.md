@@ -52,9 +52,9 @@ The course will feature required reading from the following selection of books. 
 
 ## Slides
 
-You can find the full lecture presentation slides at [ml.tips/24q3-slides][slides-link].
+You can find the full lecture presentation slides at [ml.tips/25q1-slides][slides-link].
 
-[slides-link]: https://ml.tips/24q3-slides
+[slides-link]: https://ml.tips/25q1-slides
 
 ## Tools
 

@@ -71,13 +71,13 @@ function Lesson12() {
                 <p>It's easy to <em>add</em>, <em>remove</em>, or <em>peek</em> at things at the front or back of the list.</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide391.png" alt="Slide 391" />
+                <img class="r-stretch" src="images/slides/Slide391.png" alt="Slide 391" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide392.png" alt="Slide 392" />
+                <img class="r-stretch" src="images/slides/Slide392.png" alt="Slide 392" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide393.png" alt="Slide 393" />
+                <img class="r-stretch" src="images/slides/Slide393.png" alt="Slide 393" />
             </section>
             <section class="ml-columns-slide">
                 <div class="columns">
@@ -151,7 +151,7 @@ public class App {
                 <p>And by the way, and linked lists can have <em>cycles</em> 🤯</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide397.png" alt="Slide 397" />
+                <img class="r-stretch" src="images/slides/Slide397.png" alt="Slide 397" />
             </section>
             <section>
                 <img class="r-stretch" src="images/dog-pig.gif" alt="Slide 398" />

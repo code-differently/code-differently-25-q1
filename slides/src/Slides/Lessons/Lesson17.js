@@ -83,7 +83,7 @@ function Lesson17() {
                 <p>Here's where we're going…</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide598.png" alt="Slide 598" />
+                <img class="r-stretch" src="images/slides/Slide598.png" alt="Slide 598" />
             </section>
             <section>
                 <p>Let's go back to our simplified car example…</p>
@@ -499,7 +499,7 @@ public class App {
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide648.png" alt="Slide 648" />
+                <img class="r-stretch" src="images/slides/Slide648.png" alt="Slide 648" />
             </section>
             <section>
                 <p>Here are the principles we've covered…</p>

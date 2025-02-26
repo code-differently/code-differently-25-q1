@@ -59,7 +59,7 @@ function Lesson13() {
                 <p>We use HashMaps so often, that this is why every Java object has a <em>hashCode()</em> function</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide426.png" alt="Slide 426" />
+                <img class="r-stretch" src="images/slides/Slide426.png" alt="Slide 426" />
             </section>
             <${CodeSlide} lang="java" lineNumbers="true">
 ${`

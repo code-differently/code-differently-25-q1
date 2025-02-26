@@ -35,10 +35,10 @@ function Lesson22() {
                 <p>The <em>user interface</em> is what the user sees in order to interact with your application</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide715.png" alt="Slide 715" />
+                <img class="r-stretch" src="images/slides/Slide715.png" alt="Slide 715" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide716.png" alt="Slide 716" />
+                <img class="r-stretch" src="images/slides/Slide716.png" alt="Slide 716" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Anatomy of an Application</h3>

@@ -79,16 +79,16 @@ class AppTest {
                 <p>An <em>annotation</em> is just a data type that can be used to decorate methods and classes (use "@" followed by the name of the annotation type).</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide507.png" alt="Slide 507" />
+                <img class="r-stretch" src="images/slides/Slide507.png" alt="Slide 507" />
             </section>
             <section>
                 <p>Step 2: Run the test, watch it fail</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide509.png" alt="Slide 509" />
+                <img class="r-stretch" src="images/slides/Slide509.png" alt="Slide 509" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide510.png" alt="Slide 510" />
+                <img class="r-stretch" src="images/slides/Slide510.png" alt="Slide 510" />
             </section>
             <section>
                 <p>You can create code automatically using refactoring tools in VS Code (and any modern IDE)</p>
@@ -97,28 +97,28 @@ class AppTest {
                 <p><em>Refactoring</em> is just a fancy word for moving code around without breaking functionality</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide513.png" alt="Slide 513" />
+                <img class="r-stretch" src="images/slides/Slide513.png" alt="Slide 513" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide514.png" alt="Slide 514" />
+                <img class="r-stretch" src="images/slides/Slide514.png" alt="Slide 514" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide515.png" alt="Slide 515" />
+                <img class="r-stretch" src="images/slides/Slide515.png" alt="Slide 515" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide516.png" alt="Slide 516" />
+                <img class="r-stretch" src="images/slides/Slide516.png" alt="Slide 516" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide517.png" alt="Slide 517" />
+                <img class="r-stretch" src="images/slides/Slide517.png" alt="Slide 517" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide518.png" alt="Slide 518" />
+                <img class="r-stretch" src="images/slides/Slide518.png" alt="Slide 518" />
             </section>
             <section>
                 <p>Step 3: Now write code to make the test pass</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide520.png" alt="Slide 520" />
+                <img class="r-stretch" src="images/slides/Slide520.png" alt="Slide 520" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Additional things to test</h3>

@@ -32,25 +32,25 @@ function Lesson02() {
                 <p>⌘ + Spacebar, "terminal"</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide49.png" alt="Slide 49" />
+                <img class="r-stretch" src="images/slides/Slide49.png" alt="Slide 49" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide50.png" alt="Slide 50" />
+                <img class="r-stretch" src="images/slides/Slide50.png" alt="Slide 50" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide51.png" alt="Slide 51" />
+                <img class="r-stretch" src="images/slides/Slide51.png" alt="Slide 51" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide52.png" alt="Slide 52" />
+                <img class="r-stretch" src="images/slides/Slide52.png" alt="Slide 52" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide53.png" alt="Slide 53" />
+                <img class="r-stretch" src="images/slides/Slide53.png" alt="Slide 53" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide54.png" alt="Slide 54" />
+                <img class="r-stretch" src="images/slides/Slide54.png" alt="Slide 54" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide55.png" alt="Slide 55" />
+                <img class="r-stretch" src="images/slides/Slide55.png" alt="Slide 55" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Navigating files & directories</h3>

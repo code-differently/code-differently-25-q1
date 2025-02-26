@@ -8,7 +8,7 @@ function Lesson09() {
     return html`
         <${Lesson} title="Data Types" lessonId="lesson_09" subtitle="Lesson 9">
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide241.png" alt="Slide 241" />
+                <img class="r-stretch" src="images/slides/Slide241.png" alt="Slide 241" />
             </section>
             <section>
                 <p><span style=${{"color": "red"}}>Note</span>: We're defaulting to <em>Java</em> for this lesson, but we'll also see examples in <em>JavaScript</em> and <em>TypeScript</em></p>
@@ -297,7 +297,7 @@ String name = instructor.name; // Error: won't let you compile
                 <p>All classes themselves inherit the <em>Object</em> class from Java…</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide281.png" alt="Slide 281" />
+                <img class="r-stretch" src="images/slides/Slide281.png" alt="Slide 281" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Every object inherits these methods</h3>

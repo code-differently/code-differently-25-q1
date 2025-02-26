@@ -35,13 +35,13 @@ false // This is a FALSE expression
                 </pre>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide169.png" alt="Slide 169" />
+                <img class="r-stretch" src="images/slides/Slide169.png" alt="Slide 169" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide170.png" alt="Slide 170" />
+                <img class="r-stretch" src="images/slides/Slide170.png" alt="Slide 170" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide171.png" alt="Slide 171" />
+                <img class="r-stretch" src="images/slides/Slide171.png" alt="Slide 171" />
             </section>
             <section>
                 <p>How do you say this?</p>
@@ -71,7 +71,7 @@ false // This is a FALSE expression
                 <p>Used when we want to run code only when a condition is true.</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide179.png" alt="Slide 179" />
+                <img class="r-stretch" src="images/slides/Slide179.png" alt="Slide 179" />
             </section>
             <${CodeSlide} title=${html`The <em>if..else</em> statement`} lang="typescript">
 if (student.getSchoolName() === "Code Differently") {
@@ -111,28 +111,28 @@ if (pivotValue === target) {
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide184.png" alt="Slide 184" />
+                <img class="r-stretch" src="images/slides/Slide184.png" alt="Slide 184" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide185.png" alt="Slide 185" />
+                <img class="r-stretch" src="images/slides/Slide185.png" alt="Slide 185" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide186.png" alt="Slide 186" />
+                <img class="r-stretch" src="images/slides/Slide186.png" alt="Slide 186" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide187.png" alt="Slide 187" />
+                <img class="r-stretch" src="images/slides/Slide187.png" alt="Slide 187" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide188.png" alt="Slide 188" />
+                <img class="r-stretch" src="images/slides/Slide188.png" alt="Slide 188" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide189.png" alt="Slide 189" />
+                <img class="r-stretch" src="images/slides/Slide189.png" alt="Slide 189" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide190.png" alt="Slide 190" />
+                <img class="r-stretch" src="images/slides/Slide190.png" alt="Slide 190" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide191.png" alt="Slide 191" />
+                <img class="r-stretch" src="images/slides/Slide191.png" alt="Slide 191" />
             </section>
             <${CodeSlide} title=${html`The <em>for</em> statement`} lang="typescript">
 for (let i = 0; i ${'<'} 10; i++) {
@@ -162,7 +162,7 @@ for (;;) {
 }
             <//>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide196.png" alt="Slide 196" />
+                <img class="r-stretch" src="images/slides/Slide196.png" alt="Slide 196" />
             </section>
             <${CodeSlide} title=${html`The <em>while</em> statement`} lang="typescript" fontSize=".6em">
 while (account.hasFunds()) {

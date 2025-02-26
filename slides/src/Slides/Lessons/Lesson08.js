@@ -14,10 +14,10 @@ function Lesson08() {
                 <p>The <em><i>function signature</i></em> identifies the inputs and outputs of a method</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide155.png" alt="Slide 155" />
+                <img class="r-stretch" src="images/slides/Slide155.png" alt="Slide 155" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide156.png" alt="Slide 156" />
+                <img class="r-stretch" src="images/slides/Slide156.png" alt="Slide 156" />
             </section>
             <section>
                 <p>Functions always occur in a <em><i>class</i></em> <span class="fragment">(we'll talk about <em>classes</em> in a later class, and do it with class)</span></p>
@@ -62,7 +62,7 @@ public static double add(double x, double y) {
                 <p>Functions can return either a <em>single result</em> or <em><i>void</i></em> (nothing)</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide222.png" alt="Slide 222" />
+                <img class="r-stretch" src="images/slides/Slide222.png" alt="Slide 222" />
             </section>
             <section>
                 <p>Functions can call other functions</p>

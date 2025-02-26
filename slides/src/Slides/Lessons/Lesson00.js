@@ -69,34 +69,34 @@ function Lesson00() {
                 </ol>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide16.png" alt="Slide 16" />
+                <img class="r-stretch" src="images/slides/Slide16.png" alt="Slide 16" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide17.png" alt="Slide 17" />
+                <img class="r-stretch" src="images/slides/Slide17.png" alt="Slide 17" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide18.png" alt="Slide 18" />
+                <img class="r-stretch" src="images/slides/Slide18.png" alt="Slide 18" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide19.png" alt="Slide 19" />
+                <img class="r-stretch" src="images/slides/Slide19.png" alt="Slide 19" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide20.png" alt="Slide 20" />
+                <img class="r-stretch" src="images/slides/Slide20.png" alt="Slide 20" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide21.png" alt="Slide 21" />
+                <img class="r-stretch" src="images/slides/Slide21.png" alt="Slide 21" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide22.png" alt="Slide 22" />
+                <img class="r-stretch" src="images/slides/Slide22.png" alt="Slide 22" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide23.png" alt="Slide 23" />
+                <img class="r-stretch" src="images/slides/Slide23.png" alt="Slide 23" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide24.png" alt="Slide 24" />
+                <img class="r-stretch" src="images/slides/Slide24.png" alt="Slide 24" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide25.png" alt="Slide 25" />
+                <img class="r-stretch" src="images/slides/Slide25.png" alt="Slide 25" />
             </section>
         <//>`;
 }

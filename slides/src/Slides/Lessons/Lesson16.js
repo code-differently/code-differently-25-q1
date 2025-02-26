@@ -11,7 +11,7 @@ function Lesson16() {
                 <p>Remember how we said we'd come back to <em>classes</em>?</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide528.png" alt="Slide 528" />
+                <img class="r-stretch" src="images/slides/Slide528.png" alt="Slide 528" />
             </section>
             <section>
                 <p>Today is <em>the day</em></p>
@@ -102,7 +102,7 @@ function Lesson16() {
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide545.png" alt="Slide 545" />
+                <img class="r-stretch" src="images/slides/Slide545.png" alt="Slide 545" />
             </section>
             <section>
                 <p>Here are some tests we might write…</p>

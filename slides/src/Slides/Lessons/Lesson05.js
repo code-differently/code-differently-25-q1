@@ -57,61 +57,61 @@ function Lesson05() {
                 <p>But what if just deliver <em>parts of the system</em> at a time and adjust as we go?</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide120.png" alt="Slide 120" />
+                <img class="r-stretch" src="images/slides/Slide120.png" alt="Slide 120" />
             </section>
             <section>
                 <p>A <em>day in the life</em> of a software engineer (in screenshots)</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide122.png" alt="Slide 122" />
+                <img class="r-stretch" src="images/slides/Slide122.png" alt="Slide 122" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide123.png" alt="Slide 123" />
+                <img class="r-stretch" src="images/slides/Slide123.png" alt="Slide 123" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide124.png" alt="Slide 124" />
+                <img class="r-stretch" src="images/slides/Slide124.png" alt="Slide 124" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide125.png" alt="Slide 125" />
+                <img class="r-stretch" src="images/slides/Slide125.png" alt="Slide 125" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide126.png" alt="Slide 126" />
+                <img class="r-stretch" src="images/slides/Slide126.png" alt="Slide 126" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide127.png" alt="Slide 127" />
+                <img class="r-stretch" src="images/slides/Slide127.png" alt="Slide 127" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide128.png" alt="Slide 128" />
+                <img class="r-stretch" src="images/slides/Slide128.png" alt="Slide 128" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide129.png" alt="Slide 129" />
+                <img class="r-stretch" src="images/slides/Slide129.png" alt="Slide 129" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide130.png" alt="Slide 130" />
+                <img class="r-stretch" src="images/slides/Slide130.png" alt="Slide 130" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide131.png" alt="Slide 131" />
+                <img class="r-stretch" src="images/slides/Slide131.png" alt="Slide 131" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide132.png" alt="Slide 132" />
+                <img class="r-stretch" src="images/slides/Slide132.png" alt="Slide 132" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide133.png" alt="Slide 133" />
+                <img class="r-stretch" src="images/slides/Slide133.png" alt="Slide 133" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide134.png" alt="Slide 134" />
+                <img class="r-stretch" src="images/slides/Slide134.png" alt="Slide 134" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide135.png" alt="Slide 135" />
+                <img class="r-stretch" src="images/slides/Slide135.png" alt="Slide 135" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide136.png" alt="Slide 136" />
+                <img class="r-stretch" src="images/slides/Slide136.png" alt="Slide 136" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide137.png" alt="Slide 137" />
+                <img class="r-stretch" src="images/slides/Slide137.png" alt="Slide 137" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide138.png" alt="Slide 138" />
+                <img class="r-stretch" src="images/slides/Slide138.png" alt="Slide 138" />
             </section>
             <section>
                 <p><i>Phew!</i></p>

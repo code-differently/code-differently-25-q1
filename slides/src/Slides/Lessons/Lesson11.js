@@ -69,7 +69,7 @@ System.out.println(
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide329.png" alt="Slide 329" />
+                <img class="r-stretch" src="images/slides/Slide329.png" alt="Slide 329" />
             </section>
             <section>
                 <p style=${{"font-size": ".9em"}}>For arrays, we use <em>square brackets</em> ("[]") to access a specific item by it's zero-based index (1st element at index 0, second element at index 1, etc)</p>
@@ -141,7 +141,7 @@ agesOfKids.add(40);
 agesOfKids.remove(5);
             <//>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide338.png" alt="Slide 338" />
+                <img class="r-stretch" src="images/slides/Slide338.png" alt="Slide 338" />
             </section>
             <section>
                 <p>The <em>ArrayList</em> is just one of several <em><i>collections</i></em> in Java that are useful for managing data.</p>
@@ -200,10 +200,10 @@ var library = new ArrayList[2];
                 <p>Let's visualize a 2D array representing a bingo card</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide348.png" alt="Slide 348" />
+                <img class="r-stretch" src="images/slides/Slide348.png" alt="Slide 348" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide349.png" alt="Slide 349" />
+                <img class="r-stretch" src="images/slides/Slide349.png" alt="Slide 349" />
             </section>
             <${CodeSlide} lang="java" fontSize=".4em" lineNumbers=true>
 // A 5x5 bingo card of numbers.
@@ -218,7 +218,7 @@ bingoCard[2][3] = 56;
 bingoCard[4][2] = 8;
             <//>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide351.png" alt="Slide 351" />
+                <img class="r-stretch" src="images/slides/Slide351.png" alt="Slide 351" />
             </section>
             <section>
                 <p>Frequently, we need to iterate through arrays and collections to read data. That's what loops are <em>for</em>.</p>

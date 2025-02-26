@@ -71,7 +71,7 @@ function Lesson23() {
                 <p>We also use HTML to <em>import things</em> we need in order to present data and interact with the user</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide754.png" alt="Slide 754" />
+                <img class="r-stretch" src="images/slides/Slide754.png" alt="Slide 754" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Things we use HTML for</h3>
@@ -269,7 +269,7 @@ sayHello();
                 <p>Instead, we use <em>frameworks</em> and <em>libraries</em> that help us to more easily build web user interfaces</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide774.png" alt="Slide 774" />
+                <img class="r-stretch" src="images/slides/Slide774.png" alt="Slide 774" />
             </section>
             <section>
                 <p>In the next lesson, we'll learn about how we tie everything together using JavaScript</p>

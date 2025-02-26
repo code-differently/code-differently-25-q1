@@ -14,10 +14,10 @@ function Lesson03() {
                 <p>A <em>computer</em> is a machine that <span class="fragment"><i>transforms</i> <em>input</em> data to <em>output</em> data</span> <span class="fragment">using <i>automatically executed</i>, pre-programmed <em>instructions</em>.</span></p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide68.png" alt="Slide 68" />
+                <img class="r-stretch" src="images/slides/Slide68.png" alt="Slide 68" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide69.png" alt="Slide 69" />
+                <img class="r-stretch" src="images/slides/Slide69.png" alt="Slide 69" />
             </section>
             <section>
                 <p>How does it work?</p>
@@ -41,10 +41,10 @@ function Lesson03() {
                 <p>Modern computers leverage the <em><i>graphical processing unit (GPU)</i></em> for handling intensive number-crunching for graphics.</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide77.png" alt="Slide 77" />
+                <img class="r-stretch" src="images/slides/Slide77.png" alt="Slide 77" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide78.png" alt="Slide 78" />
+                <img class="r-stretch" src="images/slides/Slide78.png" alt="Slide 78" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>The desk analogy</h3>
@@ -58,7 +58,7 @@ function Lesson03() {
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide80.png" alt="Slide 80" />
+                <img class="r-stretch" src="images/slides/Slide80.png" alt="Slide 80" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>The body analogy</h3>

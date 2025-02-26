@@ -8,10 +8,10 @@ function Slides() {
   return html`
     <div class="slides">
         <section>
-            <img class="r-stretch" src="images/24q4-slides/Slide1.png" alt="Slide 1" />
+            <img class="r-stretch" src="images/slides/Slide1.png" alt="Slide 1" />
         </section>
         <section>
-            <img class="r-stretch" src="images/24q4-slides/Slide2.png" alt="Slide 2" />
+            <img class="r-stretch" src="images/slides/Slide2.png" alt="Slide 2" />
         </section>
         <${lessons.Lesson00} />
         <${lessons.Lesson01} />

@@ -140,7 +140,7 @@ public static List<String> readFile() throws Exception {
 `}
             <//>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide480.png" alt="Slide 480" />
+                <img class="r-stretch" src="images/slides/Slide480.png" alt="Slide 480" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Options for checked exceptions</h3>

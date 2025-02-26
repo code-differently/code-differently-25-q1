@@ -14,10 +14,10 @@ function Lesson06() {
                 <p>We write code from top to bottom, one <em>statement</em> at a time</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide144.png" alt="Slide 144" />
+                <img class="r-stretch" src="images/slides/Slide144.png" alt="Slide 144" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide145.png" alt="Slide 145" />
+                <img class="r-stretch" src="images/slides/Slide145.png" alt="Slide 145" />
             </section>
             <section class="ml-bullet-slide">
                 <h3>Types of statements</h3>
@@ -42,46 +42,46 @@ function Lesson06() {
                 </ul>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide148.png" alt="Slide 148" />
+                <img class="r-stretch" src="images/slides/Slide148.png" alt="Slide 148" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide149.png" alt="Slide 149" />
+                <img class="r-stretch" src="images/slides/Slide149.png" alt="Slide 149" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide150.png" alt="Slide 150" />
+                <img class="r-stretch" src="images/slides/Slide150.png" alt="Slide 150" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide151.png" alt="Slide 151" />
+                <img class="r-stretch" src="images/slides/Slide151.png" alt="Slide 151" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide152.png" alt="Slide 152" />
+                <img class="r-stretch" src="images/slides/Slide152.png" alt="Slide 152" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide153.png" alt="Slide 153" />
+                <img class="r-stretch" src="images/slides/Slide153.png" alt="Slide 153" />
             </section>
             <section>
                 <p>The <em><i>function signature</i></em> identifies the inputs and outputs of a method</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide155.png" alt="Slide 155" />
+                <img class="r-stretch" src="images/slides/Slide155.png" alt="Slide 155" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide156.png" alt="Slide 156" />
+                <img class="r-stretch" src="images/slides/Slide156.png" alt="Slide 156" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide157.png" alt="Slide 157" />
+                <img class="r-stretch" src="images/slides/Slide157.png" alt="Slide 157" />
             </section>
             <section>
                 <p>Express yourself</p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide159.png" alt="Slide 159" />
+                <img class="r-stretch" src="images/slides/Slide159.png" alt="Slide 159" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide160.png" alt="Slide 160" />
+                <img class="r-stretch" src="images/slides/Slide160.png" alt="Slide 160" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide161.png" alt="Slide 161" />
+                <img class="r-stretch" src="images/slides/Slide161.png" alt="Slide 161" />
             </section>
             <${QuestionsSlide}/>
         <//>`;

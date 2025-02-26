@@ -153,10 +153,10 @@ CREATE TABLE star_wars_characters (
                 <p>It's useful to define relationships between tables. Databases that support this are called <em>relational databases</em></p>
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide909.png" alt="Slide 909" />
+                <img class="r-stretch" src="images/slides/Slide909.png" alt="Slide 909" />
             </section>
             <section>
-                <img class="r-stretch" src="images/24q4-slides/Slide910.png" alt="Slide 910" />
+                <img class="r-stretch" src="images/slides/Slide910.png" alt="Slide 910" />
             </section>
             <${DemoSlide} />
             <${QuestionsSlide} />
