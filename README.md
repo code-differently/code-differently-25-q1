@@ -13,3 +13,5 @@ Main project repo for the Code Differently 2025 Q1 cohort. Read the [syllabus](s
 [dev-container-instructions]: https://aka.ms/vscode-remote/containers/getting-started
 
 This readme has been edited.
+
+This readme has been edited a second time.
