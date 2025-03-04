@@ -16,7 +16,7 @@ using whatever knowledge I can gain to finally pursue the projects that I want t
 
 ## What I hate
 
-I hate potatoes being put on top of my pizza. I hate when my phone decides to act slow for no reason. I hate twitter. I hate, HATE losing
+I hate potatoes on top of my pizza. I hate when my phone decides to act slow for no reason. I hate Twitter. I hate, HATE losing
 when competing seriously. Even when I'm not competing seriously, losing just irks me the wrong way.
 
 ## What am I like?
