@@ -19,7 +19,7 @@ When it comes to working with me, here are a few things to keep in mind:
 
 - I value **personal space** and believe it’s essential for a balanced and productive relationship.
 - As an **extroverted introvert**, I’m a bit reserved but love having engaging conversations when the opportunity arises.
-- The best way to reach me is via **email** at RMillerCohort251@Gmail.Com.
+- The best way to reach me is via **email** at RMillerCohort251@gmail.com.
 - I’m usually juggling multiple tasks, so it’s often best to schedule a time with me for meetings or calls.
 
 ## Contact
@@ -37,12 +37,11 @@ Here are a few fun things about me:
 
 ## Photo Gallery
 
-![My Profile Screenshot](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG)
+![My Profile Screenshot](lesson_00/RM-README/IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG)
 
-![Drone Photo](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/EMC01446.jpg)
+![Drone Photo](lesson_00/RM-README/IMAGES/EMC01446.jpg)
 
-<!---
-RMillerCohort251/RMillerCohort251 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+## Favorite Quote
 
+If you assume success and persist in that assumption, you cannot fail. 
+- Neville Goddard
