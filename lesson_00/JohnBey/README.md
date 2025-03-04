@@ -34,4 +34,5 @@ I'm a chill person. I don't like to cause trouble for anyone that's around me. I
 You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey251@gmail.com (which is simply my other work email).
 
 ---
-![20250304_113948](https://github.com/user-attachments/assets/26c30c04-fe3f-4546-8fb9-bd5ea94f4384)
+
+![John Bey picture](lesson_00/JohnBey/20250304_113948.jpg)
