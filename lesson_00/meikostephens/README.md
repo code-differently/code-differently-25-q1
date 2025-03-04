@@ -1,12 +1,15 @@
 ## How to work with Meiko Stephens
 
 ## My work hours:
- My work hours are from 7am - 11pm. I'm able to be adpatable by being either an early riser or night owl.
+* My work hours are from 7am - 11pm. 
+ * I'm able to be adpatable by being either an early riser or night owl.
 
  ## What's the best way to communicate with me?
- I prefer Google Chat over email. If I don’t respond then you can send a follow up email.
-If you want to talk about projects ideas or assignments then in person is my default. For most things, I prefer a quick in-person chat — less opportunity for misunderstanding, builds relationships, and it's often faster
-If I don’t respond, try: Follow up email, or ping me again on Google Chat. Don't feel bad about bugging me (you're not). For breaking news/emergencies, reach me by text or phone call.
+ * I prefer Google Chat over email.
+ * If I don’t respond then you can send a follow up email.
+* If you want to talk about projects ideas or assignments then in person is my default.
+* For most things, I prefer a quick in-person chat — less opportunity for misunderstanding, builds relationships, and it's often faster.
+* If I don’t respond, try: Follow up email, or ping me again on Google Chat. Don't feel bad about bugging me (you're not). For breaking news/emergencies, reach me by text or phone call.
 
 ## I'd love to help you with_
 The small things that I feel confident about or feel I have the most expertise on. I also enjoy helping others with anything and it can be a big problem or small problem.
@@ -30,6 +33,6 @@ I enjoy watching movies and tv shows. I can talk to you about any kind of shows 
 * **My favorite candy:** Kit Kat
 * **My favorite drink:** Lemonade
 * **My favorite soda:** Sprite
-* **Sport loyalities** LA Lakers and Minnesota Vikings
+* **Sport loyalities:** LA Lakers and Minnesota Vikings
 
   ![image](https://github.com/user-attachments/assets/eaeadd19-f296-4a46-84e4-34e278f1891a)
