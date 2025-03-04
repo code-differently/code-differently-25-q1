@@ -43,5 +43,5 @@ Here are a few fun things about me:
 
 ## Favorite Quote
 
-If you assume success and persist in that assumption, you cannot fail. 
-- Neville Goddard
+"If you assume success and persist in that assumption, you cannot fail." 
+-Neville Goddard
