@@ -29,8 +29,6 @@ I'm a chill person. I don't like to cause trouble for anyone that's around me. I
 - Comic books look ugly.
 - Zendaya isn't all that.
 
-## 
-
 ## Contacts
 
 You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey251@gmail.com (which is simply my other work email).
