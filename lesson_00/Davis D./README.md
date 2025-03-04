@@ -28,4 +28,5 @@ What gets me going to be a productive U.S Soldier and Man
   
 ## Reach Me
 
-  You can reach me via [linkedin](www.linkedin.com/in/davisdw2004) or Email at davisdwendell@gmail.com
+  You can reach me via [linked in][linkedin-link] or Email at davisdwendell@gmail.com
+[linkedin-link]: www.linkedin.com/in/davisdw2004
