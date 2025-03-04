@@ -17,4 +17,15 @@ What gets me going to be a productive U.S Soldier and Man
 * A great breakfast. I love Oat meal & Waffles!
 * 1hr of meditation or reading the word
 
-##
+## Cool Stuff
+
+* I've played over 8 sports.
+* I was a Golf instructor for Education First Golf.
+* Im in the Military, Army Gaurd.
+
+## The Moments
+
+  
+## Reach Me
+
+  You can reach me via Instagram... or Email...
