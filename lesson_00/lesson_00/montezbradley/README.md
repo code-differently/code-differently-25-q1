@@ -15,7 +15,7 @@ Things I need to be a productive professionally and personally.
 
 ## Support 
 
-You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295/">www.linkedin.com/in/montez-bradley-62017295/</a> If you're hiring for Software Engineer I am your guy.
+You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295>montez-bradley</a> If you're hiring for Software Engineer I am your guy.
 
 ## Installation Instructions
 
