@@ -1,10 +1,10 @@
-#Rasheed Miller README
+# Rasheed Miller README
 
-##About Me
+## About Me
 
 Hi there! I'm **Rasheed**, a passionate **Photographer & Videographer** with a love for capturing the beauty of life through my lens. I enjoy finding special moments and preserving them as memories for others to cherish. My love for photography extends to **Sunrise & Sunset Photography**, where I often use my drone to capture breathtaking aerial shots of the world. Currently, I'm working on an exciting project- **A Calendar for 2026** featuring some of my best work!
 
-##My Goals
+## My Goals
 
 In life, I aim to achieve big things and help others along the way. My goals include:
 
@@ -13,7 +13,7 @@ In life, I aim to achieve big things and help others along the way. My goals inc
 - Becoming a highly sought-after Business Coach, Photographer, and Full-Stack Developer.
 - Offering Guidance & Training to underserved entrepreneurs, helping them grow their businesses and achieve success.
 
-##Working With Me
+## Working With Me
 
 When it comes to working with me, here are a few things to keep in mind:
 
@@ -22,11 +22,11 @@ When it comes to working with me, here are a few things to keep in mind:
 - The best way to reach me is via **email** at RMillerCohort251@Gmail.Com.
 - I’m usually juggling multiple tasks, so it’s often best to schedule a time with me for meetings or calls.
 
-##Contact
+## Contact
 
 Feel free to email me if you'd like to schedule a one-on-one **Zoom Call**.
 
-##Fun Facts
+## Fun Facts
 
 Here are a few fun things about me:
 
