@@ -37,7 +37,7 @@ Here are a few fun things about me:
 
 ## Photo Gallery
 
-![My Profile Screenshot](lesson_00/RM-README/IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG)
+![My Profile Screenshot] <img src="IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG"</a>
 
 ![Drone Photo](lesson_00/RM-README/IMAGES/EMC01446.jpg)
 
