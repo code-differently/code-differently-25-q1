@@ -22,11 +22,12 @@ What gets me going to be a productive U.S Soldier and Man
 * I've played over 8 sports.
 * I was a Golf instructor for Education First Golf.
 * Im in the Military, Army Gaurd.
+* I was ranked top 20 in the state of Delaware for wrestling!
 
 ## The Moments
 
-<a href="https://images.app.goo.gl/djN5XmQj53sXvymq8</a>
-  
+
+
 ## Reach Me
 
-<a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a>
+You can reach me via <a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a> or email at davisdwendell@gmail.com.
