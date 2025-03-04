@@ -34,7 +34,7 @@ I love using my drone for **Sunrise & Sunset Photography**. I'm currently workin
 
 ![My Profile Screenshot](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG)
 
-
+![Drone Photo](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/EMC01446.jpg)
 
 <!---
 RMillerCohort251/RMillerCohort251 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
