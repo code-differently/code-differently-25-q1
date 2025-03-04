@@ -10,8 +10,8 @@ In life, I aim to achieve big things and help others along the way. My goals inc
 
 - Traveling the world while generating massive income from my passions.
 - Building generational wealth through real estate and other business ventures.
-- Becoming a highly sought-after Business Coach, Photographer, and Full-Stack Developer.
-- Offering Guidance & Training to underserved entrepreneurs, helping them grow their businesses and achieve success.
+- Becoming a highly sought-after **Business Coach, Photographer, and Full-Stack Developer**.
+- Offering **Guidance & Training** to underserved entrepreneurs, helping them grow their businesses and achieve success.
 
 ## Working With Me
 
