@@ -30,10 +30,10 @@ Feel free to email me if you'd like to schedule a one-on-one **Zoom Call**.
 
 Here are a few fun things about me:
 
-I’m an avid **Workout Enthusiast** who enjoys staying active and healthy.
-I’m always diving into **Self-improvement Books** to keep growing.
-One of my all-time favorite movies is **The Matrix** —Hence coding.
-I’m a **Certified Health Coach**, passionate about helping others live healthier lives.
+- I’m an avid **Workout Enthusiast** who enjoys staying active and healthy.
+- I’m always diving into **Self-improvement Books** to keep growing.
+- One of my all-time favorite movies is **The Matrix** —Hence coding.
+- I’m a **Certified Health Coach**, passionate about helping others live healthier lives.
 
 ## Photo Gallery
 
