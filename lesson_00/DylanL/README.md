@@ -47,4 +47,10 @@ I want to be able to **never** have to work at a restuarant again.
   - My birthday is August 18th, 2003.
   - I am a huge gaming nerd and am proud of it.
 
+---
 
+![picture of Dylan Lafferty](images/dylan.jpeg)
+
+![Picture of my dog finn](images/finn.jpeg)
+
+![Picture of one of my favorite Games](images/videogame.jpeg)
