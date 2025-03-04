@@ -8,3 +8,13 @@ Davis is a 20 year old man who serves in the army but, is also insearch for his 
 
 Davis has had the pressure on him since his early days as being refered to as the golden boy, Mr. Perfect, or Blessed by God. As well as all family memebers from grandparents to distant cousins all being compared to me or being told to be like me. This presssure only means failure isn't an option!
 
+## The Drive
+
+What gets me going to be a productive U.S Soldier and Man
+
+* 1-2hr workout whenever I can
+* R&B/Soul throught the day to calm my mind
+* A great breakfast. I love Oat meal & Waffles!
+* 1hr of meditation or reading the word
+
+##
