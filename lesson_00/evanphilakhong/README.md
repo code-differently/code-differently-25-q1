@@ -10,7 +10,7 @@ Currently my Monday and Friday evenings are quite busy because that's when I'm u
 
 I'm a very hands on and visual learner. If you give me instruction and I'm unsure how to execute it. I would need some sort of demonstration or some kind of draft of what you want me to do. Although, usually I'm able to visualize it in my head that gets my mind flowing.
 
-
+I do enjoy listening to white noise or music while working. If you find me not responding to you I'm just hyperfocused so feel free to come up to me and tap me on the shoulder if you need anything.
 
 ### Feedback
 
@@ -22,13 +22,14 @@ Now as far as me giving or suggesting advice. I'll always first ask why you did 
 
 ### Getting to know me
 
-I'm a car guy I love talking about cars or motorsport whether that be Formula 1, Rally, or Formula Drift. My favorite drivers include Yuki Tsunoda, Alex Albon, and Keiichi Tsuchiya.
+I'm a car guy I love talking about cars or motorsport whether that be Formula 1, Rally, or Formula Drift. Some of my favorite drivers include Yuki Tsunoda, Alex Albon, and Keiichi Tsuchiya. I'm a big Papaya (McLaren) fan! I'm very passionate about cars so feel free to come up to me and talk anything relating to cars.
 
-I was on the swimming and volleyball team in highschool. Although, I'm not very good I find both sports very fun!
-
+I was on the swimming and volleyball team in highschool. These days I try to go regularly every week with a group of my friends.
 
 ### Fun Facts
 * **Favorite Food:** Bánh mì
+* **Favorite Color:** Royal Blue
+* **Coffee Order:** Dirty Matcha (Matcha Latte + 1 shot of Espresso + 2 Shots of Vanilla)
 * **Favorite Anime:** Fullmetal Alchemist: Brotherhood
 * **My favorite GIF:**
 <img src="https://media1.tenor.com/m/rsA445bvUs8AAAAd/hinata-haikyuu.gif"/>
