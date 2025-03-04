@@ -12,10 +12,13 @@ Visual learner. I learn things or can comprehend things better seeing a visual e
 Not an early bird at all. preferably not mornings but if it has to be a morning after 9am. Email is the most formal way to reach me but a text would always be the quickest. (im a 2000's baby so text is what i grew up with) also another way is by a social media dm. I check all my streams of communication daily but you will most likely get an answer quicker on an off day through a text.
 
 ## Other fun facts to know
-I have been making music since 2018 i make all diffrent kinds of music
-I have been on the Temple feild during a game for a visist for football. (Temple vs Buffalo a while back)
-Theres a post on instagram with over 40000 views featuring one of my songs
-One of my songs has almost 10k views on instagram.
+* I have been making music since 2018 i make all diffrent kinds of music
+* I have been on the Temple feild during a game for a visist for football. (Temple vs Buffalo a while back)
+* Theres a post on instagram with over 40000 views featuring one of my songs
+* One of my songs has almost 10k views on instagram.
+* I played football up untill i graduated high school
+* I played DE RB and LB.
+* I played for Salesianum my freshman year but finished at appo.
 
 ## Photo of me
 ![image](https://github.com/user-attachments/assets/a1801a81-b569-4f1f-83f3-10cec45f4b15)
