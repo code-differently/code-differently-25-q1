@@ -35,4 +35,4 @@ You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey2
 
 ---
 
-![John Bey picture](lesson_00/JohnBey/20250304_113948.jpg)
+![John Bey picture](images/JBEY.jpg)
