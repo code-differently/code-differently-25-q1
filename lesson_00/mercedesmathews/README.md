@@ -1,40 +1,44 @@
-## How to work with Mercedes Mathews
+# Mercedes Mathews README
+![Picture of me](images/headshot.JPG)
 
-### My work hours:
-*Are you a morning person? Or a night owl? When should someone expect to work with you? When will I be unavailable?*
+## About Me
+I am 23 years old and just graduated from the University of Delaware with a Computer Science degree. I was a gymnast for about 17 years and started when I was 18 months. I taught gymnastics for over 7 years and was a Tech Lead with Code Differently for almost 2 years. 
 
-### What’s the best way to communicate with me?
-*Prefer Slack over email on certain topics? Prefer in-person meetings over chats? Is it OK to interrupt when I have headphones on?*
+## Working With Me
+I am a night owl even though my schedule doesn't reflect that currently. I prefer working and talking in person but I am best reached via the google chat or text. I'm a bit more of a visual learner so videos and diagrams are my go to.
 
-If I don’t respond, try:
+## My Current Schedule
+1. Wake up and get prepped for the day (6:00am - 6:30am)
+2. Go to the gym (About 7:00am - 8:30am)
+    * Weightlifting / Strength
+3. Go to class (9:00am - 5:00pm)
+    * Stay after if needed (up until 7:00pm)
+4. Go to the gym again (30 - 60 mins)
+    * Cardio / Endurance
+5. Go home (yay :smile:) 
 
-### I'd love to help you with ____
-*What are tools, libraries, skills, etc., that you can help others with? e.g., I am always happy to help teach people how to make GIFs in photoshop, or how to use Sketch for super-fast prototyping.*
+---
+>*I am training for a hybrid race called [HYROX](https://hyrox.com/the-fitness-race/) which is why I workout mulitples times a day.*
+>
+>*Some days are rest days or only has one workout depending on that days training.*
 
-### What makes me grumpy?
+
+
+## Things I like
+* Working out or weight lifting
+* Coffee and matcha, I prefer them both iced 
+* Cava, El Diablo, Chic-fil-a
+* Hanging out with my friends
+* Traveling
+* Going to the beach
+* Music, concerts, and festivals
+* Oreo Mcflurries
+* Naps
 	
-### How do I like to give feedback?
-*In-person? Via Slack/email? Frequency of feedback?*
 
-### How do I like to receive feedback?
-*In-person? Via Slack/email? Frequency of feedback?*
+## Fun Facts
+* I studied abroad in Thailand for a month
+* My dad was a gymnast, taught gymnastics/cheer, and was the main reason I started gymnastics
+* My parents were bodybuilders and the reason I'm big into weightlifting
+* I'm not a natural redhead
 
-### One of my goals for the coming year:
-*What's something you hope to learn, make or do in the coming year? Can be work related or not!*
-
-### Topics I’m always happy to talk about:
-*WebGL? The sandwich spectrum? Medieval poetry? Your dog? Give people ideas on what you love to discuss.*
-
-### Other things you might want to know:
-*Some optional ideas below. Delete and/or add whatever you like.*
-
-* My favorite baked good:
-* Spouses/partners/kiddos/pets:
-* My birthday: 
-* Fruit on pizza? Y/N/M
-* My coffee order:
-* My hometown:
-* Sports loyalties:
-* My favorite GIF: 
-
-![Nope](https://media.giphy.com/media/AXyCwYnfd3jJS/giphy.gif "Nope Rocket")
