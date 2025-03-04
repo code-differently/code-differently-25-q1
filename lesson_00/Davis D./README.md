@@ -24,12 +24,9 @@ What gets me going to be a productive U.S Soldier and Man
 * Im in the Military, Army Gaurd.
 
 ## The Moments
-<a href="
-<a href="
+
+<a href="https://images.app.goo.gl/djN5XmQj53sXvymq8</a>
   
 ## Reach Me
 
-  You can reach me via [linked in][linkedin-link] or Email at davisdwendell@gmail.com
-
-
-[linkedin-link]: www.linkedin.com/in/davisdw2004
+<a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a>
