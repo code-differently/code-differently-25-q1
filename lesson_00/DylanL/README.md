@@ -20,8 +20,6 @@ I am always available and checking my email, feel free to send me emails or even
 
 I am more of the quiet behind the scenes kind of person at the beginning but soon will become a talker. None the less I am always willing to share and collaborate, I just might need a little push to spark up a conversation with me but I am always ready.
 
-#### Email: dlafferty251@gmail.com
-
 ## Ways I like to help others
 
 - I like to attempt to help others grasp a better understanding of what is required of an assignment when I understand something or am ahead of schedule.
