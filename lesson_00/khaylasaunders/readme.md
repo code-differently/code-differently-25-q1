@@ -1,5 +1,5 @@
 # **Howdy, I'm Khayla Saunders** 🤠👩🏾‍💻  
-## Welcome to my Git Crib! 
+## Welcome to my Git Crib!
 Feel free to call me Khai! I love having sidebar chit-chats to make connections, laugh, and work hard. Integrity is essential to me. One of my favorite quotes is from the GOAT Lebron "I know we're out [of]  the playoff race, but if I'm on the court, I'm going to play how I play, and I play to win. So, I **never will cheat the game**...".
 ## A few not so essential, basics
 - I use she/her/hers pronouns
