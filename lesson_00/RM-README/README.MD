@@ -1,34 +1,39 @@
-- # Rasheed Miller README
+#Rasheed Miller README
 
-## About Me
+##About Me
 
-Hi! I'm **Rasheed**, a passionate **Photographer & Videographer** dedicated to capturing moments & creating memories.
-I love using my drone for **Sunrise & Sunset Photography**. I'm currently working on **A Calendar for 2026**.
+Hi there! I'm **Rasheed**, a passionate **Photographer & Videographer** with a love for capturing the beauty of life through my lens. I enjoy finding special moments and preserving them as memories for others to cherish. My love for photography extends to **Sunrise & Sunset Photography**, where I often use my drone to capture breathtaking aerial shots of the world. Currently, I'm working on an exciting project- **A Calendar for 2026** featuring some of my best work!
 
-## My Goals
+##My Goals
 
-* Travel the world while generating massive income.
-* Build generational wealth with business estates.
-* Become a sought after **Business Coach, Photographer, and Full-Stack Developer**.
-* Provide **Guidance & Training** to underserved entrepreneurs.
+In life, I aim to achieve big things and help others along the way. My goals include:
 
-## Working With Me
+- Traveling the world while generating massive income from my passions.
+- Building generational wealth through real estate and other business ventures.
+- Becoming a highly sought-after Business Coach, Photographer, and Full-Stack Developer.
+- Offering Guidance & Training to underserved entrepreneurs, helping them grow their businesses and achieve success.
 
-1. I highly **value & respect personal space**.
-1. I'm an extroverted introvert. I'm more on the reserved side but I'm always open for a stimulating conversation.
-1. It's best to contact me through email. (RMillerCohort251@Gmail.Com)
-2. There is always something to get done, so scheduling time with me is usually best.
+##Working With Me
 
-## Contact
+When it comes to working with me, here are a few things to keep in mind:
 
-* Email me to schedule a one-on-one **Zoom Call**
+- I value **personal space** and believe it’s essential for a balanced and productive relationship.
+- As an **extroverted introvert**, I’m a bit reserved but love having engaging conversations when the opportunity arises.
+- The best way to reach me is via **email** at RMillerCohort251@Gmail.Com.
+- I’m usually juggling multiple tasks, so it’s often best to schedule a time with me for meetings or calls.
 
-## Fun Facts
+##Contact
 
-* I'm a **Workout Enthusiast**. 
-* I love **Self-Improvement Books**
-* One of my favorite movies is **The Matrix**
-* I'm a **Certified Health Coach**
+Feel free to email me if you'd like to schedule a one-on-one **Zoom Call**.
+
+##Fun Facts
+
+Here are a few fun things about me:
+
+I’m an avid **Workout Enthusiast** who enjoys staying active and healthy.
+I’m always diving into **Self-improvement Books** to keep growing.
+One of my all-time favorite movies is **The Matrix** —Hence coding.
+I’m a **Certified Health Coach**, passionate about helping others live healthier lives.
 
 ## Photo Gallery
 
