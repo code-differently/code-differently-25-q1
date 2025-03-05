@@ -1,6 +1,6 @@
 # JASON A. WATSON
 
-## About Me
+## 📖 About Me 
 
 I first fell in love with computers before they became an household item in my country.My love started from a curiosity to understand how things worked , what made them go, and what made them stop working. My first lessons in tech were from simple self taugh research and over the years my love grew and my path was established. I started to focus on signals and how it works.
 
@@ -10,7 +10,7 @@ Currently I'm in the process of learning to code at Code Differently. With the g
 
 # What Gets Me Going
 1. Time with Family
-2. Home COoked meals
+2. Home Cooked meals
 3. Doing research on new Techs
 4. Doing repairs on Techs
 5. ANIME! I love Anime (no contact when I'm locked in)
