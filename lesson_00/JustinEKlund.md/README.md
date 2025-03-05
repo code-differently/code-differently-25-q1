@@ -1,6 +1,6 @@
 # Justin Eklund README
 # Introduction
-Hello my name is Justin Eklund. Im an aspiring coder from Middletown Delaware. I was previously working at apex concrete which is a flooring installer. I helped install floors to the customers expectations as well as help manage the work area. I hope to make an impact somewhere in the coding or software engineering indusrty using my creativity and eventual expertise of the industry. I also make music.
+Hello my name is Justin Eklund. Im an aspiring coder from Middletown Delaware. I was previously working at apex concrete which is a flooring installer. I helped install floors to the customers expectations as well as help manage the work area. I hope to make an impact somewhere in the coding or software engineering indusrty using my creativity and eventual expertise of the industry. Ive also have been making music for almost 5 years. Music is something that im very passionate about. It helps me take my mind off things and allows me to express myself in ways that I would no do otherwise.
 
 
 ## Prerequisite
