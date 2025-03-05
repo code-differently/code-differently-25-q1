@@ -28,7 +28,7 @@ I was on the swimming and volleyball team in highschool. These days I try to go 
 
 ### Fun Facts
 * **Favorite Food:** Bánh mì
-* **Favorite Color:** Royal Blue
+* **Favorite Color:** Royal Blue and Forest Green
 * **Coffee Order:** Dirty Matcha (Matcha Latte + 1 shot of Espresso + 2 Shots of Vanilla)
 * **Favorite Anime:** Fullmetal Alchemist: Brotherhood
 * **My favorite GIF:**
