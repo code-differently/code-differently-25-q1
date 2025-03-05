@@ -26,8 +26,8 @@ What gets me going to be a productive U.S Soldier and Man
 
 ## The Moments
 
-![IMG_7323 (1)](https://github.com/user-attachments/assets/5b024ff1-74a9-409b-82ba-908d916b6646)
-![waffles123](https://github.com/user-attachments/assets/e66a2986-7f96-469a-bda0-c3c2e4d1da6c)
+![Davis in Uniform](https://github.com/user-attachments/assets/5b024ff1-74a9-409b-82ba-908d916b6646)
+![waffles](https://github.com/user-attachments/assets/e66a2986-7f96-469a-bda0-c3c2e4d1da6c)
 
 ## Reach Me
 
