@@ -37,9 +37,9 @@ Here are a few fun things about me:
 
 ## Photo Gallery
 
-![My Profile Screenshot](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG)
+<img src="./IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG"> 
 
-![Drone Photo](https://github.com/RMillerCohort251/code-differently-25-q1-RM-Fork/blob/main/lesson_00/RM-README/IMAGES/EMC01446.jpg)
+<img src="./IMAGES/EMC01446.jpg">
 
 ## Favorite Quote
 
