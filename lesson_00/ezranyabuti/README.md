@@ -37,7 +37,7 @@ GitHub: EzraNyabuti
 
 LinkedIn: Ezra Nyabuti
 
-<a src="images/B0922182-C99D-4D2B-A083-769FD187152A.jpeg" />
+<img src="images/B0922182-C99D-4D2B-A083-769FD187152A.jpeg"/>
 
 *Note: I used chatGPT for better visual layout and better documentation/grammer.*
 <!---
