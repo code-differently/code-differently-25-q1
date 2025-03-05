@@ -32,4 +32,4 @@ You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradle
 
 ## Photo Gallery
 
-<img src="images/Lesson_00.jpeg"> 
+<img src="images/Lesson_00.jpeg"/> 
