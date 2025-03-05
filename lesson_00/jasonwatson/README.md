@@ -19,4 +19,4 @@ you can find me on linked, twitter or my instagram.
 ---
 
 ## Photo
-![MyPhoto](MyPhoto.jpg)
+![MyPhoto](image/MyPhoto.jpg)
