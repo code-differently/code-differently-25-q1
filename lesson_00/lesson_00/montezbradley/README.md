@@ -2,20 +2,20 @@
 
 ## Introduction
 
-I am a aspiring software Engineer with six  months of experience. Born in Philadelphia, PA going to high school in CHAD which is a art school. We did several murals and philadelphia. The one most prominate one is the one on the side of childrens hospital. In that school I met and was classmate with the now famous Quinta Brunson from Abbott Elementary. Throughout the years I have fell in love with drawing, painting, Working Out and now coding. I try to be the best person I can be everyday 
+I am an aspiring Software Engineer with six  months of experience. Born in Philadelphia, PA going to high school in CHAD which is a art school. We did several murals in Philadelphia. The one most prominate one is the one on the side of childrens hospital. In that school I met with the now famous Quinta Brunson from Abbott Elementary. Throughout the years I fell in love with drawing, painting, Working Out and now coding. I try to to challenge myself daily in workouts and every summer try to climg one mountain. Everyday I am trying to become a better person. 
 
 ## Prerequisites
 
 Things I need to be a productive professionally and personally.
 
-* I need a slow morning from 6:30am to 7am otherwise I will be fratic throughout the day.
+* I need a slow morning from 6:30am to 7am otherwise I will be frantic throughout the day.
 * I need to workout daily to deal with the stresses of life.
 * I need to eat a healthy amount of greens.
 * I have to peace and schedule my in life to be at my absolute best. 
 
 ## Support 
 
-You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295">montez bradley</a> If you're hiring for Software Engineer I am your guy.
+You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295">montez bradley</a> If you're hiring for an Software Engineer I am your guy.
 
 ## Installation Instructions
 
