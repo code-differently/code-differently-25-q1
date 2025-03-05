@@ -9,7 +9,7 @@ relativly quiet workspace. Im easily distracted so having a focused workspace wo
 Visual learner. I learn things or can comprehend things better seeing a visual example. visual examples give me the most amount of details so I can take the best steps moving forward.
 
 ## Best ways to reach me
-Not an early bird at all. preferably not mornings but if it has to be a morning after 9am. Email is the most formal way to reach me but a text would always be the quickest. (im a 2000's baby so text is what i grew up with) also another way is by a social media dm. I check all my streams of communication daily but you will most likely get an answer quicker on an off day through a text.
+Not an early bird at all. preferably not mornings but if it has to be a morning after 9am. Email is the most formal way to reach me but a text would always be the quickest. (im a 2000's baby so text is what i grew up with) Also another way is by a social media dm. I check all my streams of communication daily but you will most likely get an answer quicker on an off day through a text.
 
 ## Other fun facts to know
 * I have been making music since 2018 i make all diffrent kinds of music
@@ -19,6 +19,7 @@ Not an early bird at all. preferably not mornings but if it has to be a morning 
 * I played football up untill i graduated high school
 * I played DE RB and LB.
 * I played for Salesianum my freshman year but finished at appo.
-
+* Made all state team for delaware my senior year.
+* I have flown a plane before through CAP (Civil Air Patrol) It was a small private plane that I helped steer while it was in the air.
 ## Photo of me
-![image](https://github.com/user-attachments/assets/a1801a81-b569-4f1f-83f3-10cec45f4b15)
+![image](Images/IMG_2810.jpg)
