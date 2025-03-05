@@ -6,7 +6,7 @@ A'nanatawa means The Cosmic Mother Has Returned. I landed here in 1995 and have 
 
 ## My Work Ethic:
 
-1. In general, I am someone that can and will be ready to go at any time of the day if it's for the betterment of the whole. I do prefer to meet in the mornings after 9am and no later than 4pm. The evenings are reserved for family time. 
+1. In general, I am someone that can and will be ready to go at any time of the day if it's for the better of the whole. I do prefer to meet in the mornings after 9am and no later than 4pm. The evenings are reserved for family time. 
 2. I enjoy working on solo projects, where I am given a clear task and tools to complete that task. I also find enjoyment in group projects, as long as we're all equally doing our part and each person is compatible with the other.
 3. I absolutely love communicating through email and text. As someone that has used computers since a young age, I find fun in any opportunity to type on a keyboard and love the professionalism that you can carry when it comes to email.
 4. Meeting new people and helping them brings me joy. I thrive in receptionist roles, where I am delegated tasks and am the face of the company that I serve. Often, people naturally come to me for advice, which I am more than happy to help with.
