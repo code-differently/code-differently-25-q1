@@ -1,0 +1,73 @@
+
+/* The * is a universal selector */
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    /*box-sizing: border-box; is a property that allows you to include the padding and border in an element's total width and height*/
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+div {
+    max-width: 800px;
+    /*margin: 0 auto; centers the div*/
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    line-height: 1.4;
+    font-size: 16px;
+
+}
+
+.bar {
+    color: rgb(110, 110, 110);
+    background-color: rgba(110, 110, 110, 30%);
+    height: .25em;
+    margin-bottom: 1.5em;
+}
+
+.brderBtm {
+    border-bottom: 1px solid rgba(128, 128, 128, 30%);
+    padding-top: 30px;
+    margin-bottom: 16px;
+}
+
+h1, h2  {
+    text-align: left;
+    font-size: 2.0rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+ul {
+    /* List-style-type changes the shape of the bullet point*/
+    list-style-type: disc;
+    /* padding-inline-start is the space between the bullet point and the text*/
+    padding-inline-start: 40px;
+    display: block;
+    font-size: 16px;
+    /*line height is the space between the lines of text*/
+    line-height: 1.5;
+
+}
+
+/* li+li selects all li elements that are immediately preceded by an li element*/
+li+li {
+    margin-top: .25em;
+}
+
+p, ul{
+    margin-top: 0px;
+    margin: 15px;
+    font-size: 16px;
+}
+hr {
+    
+    margin: 15px 0px;
+    /*rgba is a color selector that allows you to set the opacity of the color*/
+    border: .5px solid rgba(128, 128, 128, 30%);
+}
