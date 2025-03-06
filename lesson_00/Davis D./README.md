@@ -32,4 +32,4 @@ Davis has had the pressure on him since his early days as being refered to as th
 
 ## Reach Me
 
-You can reach me via <a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a>
+You can reach me via <a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a> As well as contact via Email at davisdwendell@gmail.com
