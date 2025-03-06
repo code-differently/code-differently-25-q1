@@ -1,7 +1,7 @@
 ## How to work with Meiko Stephens
 
 ## My work hours:
-* My work hours are from 7am - 11pm. 
+* My work hours are from 9am - 5pm. 
  * I'm able to be adpatable by being either an early riser or night owl.
 
  ## What's the best way to communicate with me?
