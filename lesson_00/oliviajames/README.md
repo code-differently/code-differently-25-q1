@@ -9,7 +9,7 @@ Olivia is a multifaceted professional with over 10 years of work experience in v
 
 ## TELL ME SOMETHING GOOD
 The best way to contact me is through e-mail at anytime. 
-Email: oxjames251@gmail.com
+Email/Linkedin: Per request 
 
 
 ## Hobbies!
@@ -18,7 +18,7 @@ Email: oxjames251@gmail.com
 ##  🔥What fuels my fire🔥
  I have always been passionate about helping others and exploring different cultures. My journey began with studying International Affairs and Middle Eastern Studies, which deepened my appreciation for global perspectives and sparked my love for languages like Arabic. Learning about different societies and their histories has shaped my understanding of the world and fueled my curiosity.
 
-Over the years, I've embraced learning new skills, from dental assisting to data analytics and UX design. I am deeply grateful for these diverse experiences, as they have broadened my perspective and allowed me to pull knowledge from multiple fields. I love to learn, adapt, and grow, always seeking opportunities to expand my understanding.
+Over the years, I've embraced learning new skills, from dental assisting to Data Analytics and UX design. I am deeply grateful for these diverse experiences, as they have broadened my perspective and allowed me to pull knowledge from multiple fields. I love to learn, adapt, and grow, always seeking opportunities to expand my understanding.
 
 Now, I'm diving into Software Engineering with Code Differently, where I am honing my skills in front-end and back-end development. My goal is to build impactful technology that improves lives while continuing to evolve, explore, and embrace new challenges. My ability to connect ideas across disciplines gives me a unique approach to problem-solving, and I am excited to see where this journey takes me next!
 
@@ -30,10 +30,8 @@ Now, I'm diving into Software Engineering with Code Differently, where I am honi
 - Favorite Animal: Otter
 - Favorite Show: Greys Anatomy 
 - Favorite quirk: Practicing different accents
-- Favorite Play: Hamilton
+- Favorite Broadway Play: Hamilton
 
 - ## Photo Gallery
 ![Gym](images/Solid.png) 
-![Tree](images/Tree.png)
-![Bridge](images/bridge.png)
 ![Ham](images/ham.png)
