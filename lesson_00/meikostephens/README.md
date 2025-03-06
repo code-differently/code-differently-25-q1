@@ -35,4 +35,4 @@ I enjoy watching movies and tv shows. I can talk to you about any kind of shows 
 * **My favorite soda:** Sprite
 * **Sport loyalities:** LA Lakers and Minnesota Vikings
 
-  i[image](images/meiko-stephens.jpg)
+ ![image](images/meiko-stephens.jpg)
