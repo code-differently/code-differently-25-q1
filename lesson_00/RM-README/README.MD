@@ -19,7 +19,7 @@ When it comes to working with me, here are a few things to keep in mind:
 
 - I value **personal space** and believe it’s essential for a balanced and productive relationship.
 - As an **extroverted introvert**, I’m a bit reserved but love having engaging conversations when the opportunity arises.
-- The best way to reach me is via **email** at RMillerCohort251@gmail.com.
+- The best way to reach me is via **email**.
 - I’m usually juggling multiple tasks, so it’s often best to schedule a time with me for meetings or calls.
 
 ## Contact
