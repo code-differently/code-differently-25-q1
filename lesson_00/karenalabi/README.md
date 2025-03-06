@@ -54,12 +54,11 @@ I’m constantly learning and currently diving into learning new things. When I 
 ### 📸  A Sneak Peak Into My Life 📸
 
 <img src="Images/Professional Photo1.jpg" height=300/>
-<img src="Images/allblackoutfitpic.jpg" height=250/> <img src="Images/outfitpic2.jpg" height=250/> <img src="Images/whiteoutfit.jpg" height=250/> <img src="Images/outfitpic1.jpg" height=250/> <img src="Images/styledoutfit1.jpg" height=250/>
+<img src="Images/allblackoutfitpic.jpg" height=250/> <img src="Images/outfitpic2.jpg" height=250/> <img src="Images/whiteoutfit.jpg" height=250/> <img src="Images/outfitpic1.jpg" height=250/> 
 
 
 Travel Diaries 
 
 <img src="Images/plane pic.jpg" height=250/> <img src="Images/airport pic.jpg" height=250/> <img src="Images/eiffel tower.jpg" height=250/> <img src="Images/parisolympics.jpg" height=250/> <img src="Images/prague1.jpg" height=250/>
 
-<img src="" height=250/>
 
