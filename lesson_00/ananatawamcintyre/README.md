@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A'nanatawa means The Cosmic Mother Has Returned. I landed here in 1995 and have dedicated almost 2 decades of my existence to serving the community of Wilmington, Delaware alongside my family. I grew up in Mollys Old Fashioned Icecream: My grandmother's 50s-60s themed ice cream parlor established in 1999. In 2010, at the age of 15, I helped my mom, Abundance Child, experient with making our own "meats" and vegan cheeses, and within two years we turned the family ice cream shop into Drop Squad Kitchen, Delaware's first vegan restaurant. In 2024, I became Vendor Coordinator for the 30th Annual Peoples Festival Tribute to Bob Marley and, currently in 2025, I've started to take the steps towards learning code so that I can build my own app. 
+A'nanatawa means The Cosmic Mother Has Returned. I landed here in 1995 and have dedicated almost 2 decades of my existence to serving the community of Wilmington, Delaware alongside my family. I grew up in Mollys Old Fashioned Icecream: My grandmother's 50s-60s themed ice cream parlor established in 1999. In 2010, at the age of 15, I helped my mom, Abundance Child, experiment with making "meats" and vegan cheeses, and within two years we turned the family ice cream shop into Drop Squad Kitchen, Delaware's first vegan restaurant. In 2024, I became Vendor Coordinator for the 30th Annual Peoples Festival Tribute to Bob Marley and, currently in 2025, I've started to take the steps towards learning code so that I can build my own app. 
 
 ## My Work Ethic:
 
@@ -19,7 +19,7 @@ Feedback is absolutely necessary and I am thankful to receive it face to face, r
 
 In person: Catch me sitting on a rock by the river, feet in the water, watching the ducks in their habitat. I'm almost always at Drop Squad Kitchen, making food from scratch or with my family netflix and chilling it at home. 
 
-In the digital world: If you know me personally, you'll almost always find me on Instagram @ananatawa . If you're lucky and come across one of my many accounts, you may be able to find me on Reddit, tumblr, and Youtube. To reach me professionally and urgently, shoot me an email at ananatawa@gmail.com and I'll get back to you within 24 hours.
+In the digital world: If you know me personally, you'll almost always find me on Instagram . If you're lucky and come across one of my many accounts, you may be able to find me on Reddit, tumblr, and Youtube. To reach me professionally and urgently, shoot me an email and I'll get back to you within 24 hours.
 
 ## How To Build A Good Relationship With Me:
 
