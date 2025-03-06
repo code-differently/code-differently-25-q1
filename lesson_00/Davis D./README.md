@@ -28,7 +28,7 @@ Davis is a 20 year old man who serves in the army but, is also in search for his
 
 ## The Moments
 
-
+![Davis Lifestyle](Images/TheMixer1.jpeg)
 
 ## Reach Me
 
