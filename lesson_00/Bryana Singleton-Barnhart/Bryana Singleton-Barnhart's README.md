@@ -1,5 +1,5 @@
 
-# How to be work with Bryana:
+# How to work with Bryana:
 
 
 ### When do I like to take meetings:
