@@ -4,10 +4,10 @@ How to work with Nia P.
 
 
 ### My work hours:
-I am a morning person. Specifically early morning, between 3 & 8am is my usual leisure time. Colleagues should expect to work with me during most business hours, 9am to 6pm. I am available Mon through Friday during those times. I don't prefer to work weekends but I will make an exception on Saturdays. Sundays are strictly forbidden for work.  
+I am a morning person. Specifically early morning, between 3 & 8am is my usual leisure time. Colleagues should expect to work with me during most business hours, 9am to 6pm. I am available Monday through Friday during those times. I don't prefer to work weekends but I will make an exception on Saturdays. Sundays are strictly forbidden for work.  
 
 ### What’s the best way to communicate with me?
-I prefer to  email on certain topics in order to have a paper trail, but I am open to communication through text message if needed. I Prefer in-person meetings over chats and Zoom. It is OK to interrupt when I have headphones on.
+I prefer to  email on certain topics in order to have a paper trail, but I am open to communication through text message if needed. I prefer in-person meetings over chats and Zoom. It is OK to interrupt when I have headphones on.
 
 If I don’t respond try calling me on my cell phone.
 
@@ -19,7 +19,7 @@ I was intrested in code and decided to enroll in a CS50 class with Harvard. I le
 I'm usually grumpy when I'm hungry and/or tired. 
 	
 ### How do I like to give feedback?
-I prefer to give feedback in person, this way there is no way to misinterpet my tone and my deliveray. Which is easy to do when reading.
+I prefer to give feedback in person, this way there is no way to misinterpet my tone and my delivery. Which is easy to do when reading.
 
 ### How do I like to receive feedback?
 I prefer feedback in-person because it's more personable but I'm open to email. I would like feedback as frequently as once a week. More if needed.
@@ -28,7 +28,7 @@ I prefer feedback in-person because it's more personable but I'm open to email. 
 This year one of my goals is to become fluent in code and it's terminology. Another goal is to travel out of my country.
 
 ### Topics I’m always happy to talk about:
-I'm always happy to talk about my experiences in life. The places I've been, previous jobs and places I've traveled.  I also love talking about my children. 
+I'm always happy to talk about my experiences in life. The places I've lived, previous jobs and places I've traveled.  I also love talking about my children. 
 
 ### Other things you might want to know:
 
