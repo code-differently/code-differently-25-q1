@@ -32,4 +32,4 @@ I was on the swimming and volleyball team in highschool. These days I try to go 
 * **Coffee Order:** Dirty Matcha (Matcha Latte + 1 shot of Espresso + 2 Shots of Vanilla)
 * **Favorite Anime:** Fullmetal Alchemist: Brotherhood
 * **My favorite GIF:**
-<img src="https://media1.tenor.com/m/rsA445bvUs8AAAAd/hinata-haikyuu.gif"/>
+![Hinata Eating](/lesson_00/evanphilakhong/images/hinata-haikyuu.gif)
