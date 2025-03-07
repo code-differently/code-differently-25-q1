@@ -3,6 +3,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #1f2328;
+    margin: 35px;
 }
 
 h1, h2 {
@@ -47,4 +48,9 @@ a {
     text-underline-offset: .2rem;
     color: #0969da;
     cursor: pointer;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
 }
