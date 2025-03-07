@@ -42,5 +42,3 @@ npm run test
 [lesson-2-src-dir]: quiz/src/
 [test-report]: quiz/lesson_02_quiz/build/reports/tests/test/index.html
 [spotless-link]: https://github.com/diffplug/spotless
-
-I don't mean to make this change!!!!
