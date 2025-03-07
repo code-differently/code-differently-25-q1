@@ -1,4 +1,3 @@
-
 # Knowing Nia 
 How to work with Nia P. 
 
@@ -25,7 +24,7 @@ I prefer to give feedback in person, this way there is no way to misinterpret my
 I prefer feedback in-person because it's more personable but I'm open to email. I would like feedback as frequently as once a week. More if needed.
 
 ### One of my goals for the coming year:
-This year one of my goals is to become fluent in code and it's terminology. Another goal is to travel out of my country.
+This year one of my goals is to become fluent in code and its terminology. Another goal is to travel out of my country.
 
 ### Topics I’m always happy to talk about:
 I'm always happy to talk about my experiences in life. The places I've lived, previous jobs and places I've traveled.  I also love talking about my children. 
