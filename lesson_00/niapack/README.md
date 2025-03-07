@@ -1,5 +1,5 @@
 
-# KnowingNia## 
+# KnowingNia 
 How to work with Nia P. 
 
 
