@@ -1,5 +1,5 @@
 
-# KnowingNia 
+# Knowing Nia 
 How to work with Nia P. 
 
 
@@ -11,15 +11,15 @@ I prefer to  email on certain topics in order to have a paper trail, but I am op
 
 If I don’t respond try calling me on my cell phone.
 
-### How did my intrest in tech start?
-I was intrested in code and decided to enroll in a CS50 class with Harvard. I learned a few fundamentals but overall it was too fast-paced. I then did a course at SNHU wanting to major in Cyber Security, but came to the conclusion that I would prefer to learn in person.
+### How did my interest in tech start?
+I was interested in code and decided to enroll in a CS50 class with Harvard. I learned a few fundamentals but overall it was too fast-paced. I then did a course at SNHU wanting to major in Cyber Security, but came to the conclusion that I would prefer to learn in person.
 
 
 ### What makes me grumpy?
 I'm usually grumpy when I'm hungry and/or tired. 
 	
 ### How do I like to give feedback?
-I prefer to give feedback in person, this way there is no way to misinterpet my tone and my delivery. Which is easy to do when reading.
+I prefer to give feedback in person, this way there is no way to misinterpret my tone and my delivery. Which is easy to do when reading.
 
 ### How do I like to receive feedback?
 I prefer feedback in-person because it's more personable but I'm open to email. I would like feedback as frequently as once a week. More if needed.
@@ -33,7 +33,7 @@ I'm always happy to talk about my experiences in life. The places I've lived, pr
 ### Other things you might want to know:
 
 
-* My favorite baked good: Chocalate cake
+* My favorite baked good: Chocolate cake
 * Spouses/partners/kiddos/pets: I have 3 children. (18, 9 & 6)
 * My birthday: October 21 #TEAM LIBRA
 * Fruit on pizza? I love pineapples on pizza
