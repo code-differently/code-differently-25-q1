@@ -1,0 +1,35 @@
+        body {
+          font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: left;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+        }
+        .images img {
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .profile img {
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: #ddd;
+            margin: 20px 0;
+        }
