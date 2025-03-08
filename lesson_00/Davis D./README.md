@@ -32,4 +32,4 @@ Davis is a 20 year old man who serves in the army but, is also in search for his
 
 ## Reach Me
 
-You can reach me via. <a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a> As well as contact me via. Email at davisdwendell@gmail.com
+You can reach me via. <a href="https://www.linkedin.com/in/davisdw2004">LinkedIn</a>
