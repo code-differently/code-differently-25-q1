@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I am an aspiring Software Engineer with six  months of experience. Born in Philadelphia, PA going to high school in CHAD which is a art school. We did several murals in Philadelphia. The one most prominate one is the one on the side of childrens hospital. In that school I met with the now famous Quinta Brunson from Abbott Elementary. Throughout the years I fell in love with drawing, painting, Working Out and now coding. I try to to challenge myself daily in workouts and every summer try to climg one mountain. Everyday I am trying to become a better person. 
+I am an aspiring Software Engineer with six  months of experience. Born in Philadelphia, PA going to high school in CHAD which is a art school. We did several murals in Philadelphia. The one most prominent one is the one on the side of childrens hospital. In that school I met with the now famous Quinta Brunson from Abbott Elementary. Throughout the years I fell in love with drawing, painting, Working Out and now coding. I try to to challenge myself daily in workouts and every summer try to climb one mountain. Everyday I am trying to become a better person. 
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Things I need to be a productive professionally and personally.
 
 ## Support 
 
-You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295">montez bradley</a> If you're hiring for an Software Engineer I am your guy.
+You can find me on LinkedIn @ <a href="https://www.linkedin.com/in/montez-bradley-62017295">montez bradley</a> If you're hiring for a Software Engineer I am your guy.
 
 ## Installation Instructions
 
