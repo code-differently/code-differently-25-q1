@@ -71,5 +71,6 @@ blockquote span{
 }
 img{
     height: 605px;
+    object-fit: contain;
 }
 
