@@ -5,10 +5,10 @@ ___
  
 
 ## How can we work well together
-*My work preferences are communicate respectively and be positive. I am a soluton based individual. I want to emphasize ways to solve an issue rather then giving life to the problem. Conflicts or disputes should be handled, in my opinion, like a pro/con list. If you understand that everyone has a perspective and different analytical skills life will flow easily. Just be mindful.*
+*My work preferences are communicate respectfully and be positive. I am a solution based individual. I want to emphasize ways to solve an issue rather than giving life to the problem. Conflicts or disputes should be handled, in my opinion, like a pro/con list. If you understand that everyone has a perspective and different analytical skills life will flow easily. Just be mindful.*
 
 ### My dream schedule:
-I am a morning person but I can do nights. *Having it my way, I would work Tuesday thru Thursday 7am - 7pm.* What you will expect from me during in-office workdays are warm greetings, readiness and humor. I am available during my scheduled business hours . 
+I am a morning person but I can do nights. *Having it my way, I would work Tuesday thru Thursday 7am - 7pm.* What you will expect from me during in-office workdays are warm greetings, readiness and humor. I am available during my scheduled business hours. 
 
 # Getting to know all about ME...
 
@@ -33,7 +33,7 @@ Hunger and inconsideration
 Is to be proficient in area of tech that I am passionate about or intrigued by. Certification in multiple disciplines and making a great salary. 
 
 ### Topics I’m always happy to talk about:
-*Movies, tv series, and traveling. I love talking herbs, quantam theories, and inventions(new ideas).*
+*Movies, tv series, and traveling. I love talking herbs, quantum theories, and inventions(new ideas).*
 
 ### Other things you might want to know:
 * I really like Marvel Studios movies/tv series, learning new things, and interacting with people.
