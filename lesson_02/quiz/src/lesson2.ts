@@ -15,17 +15,17 @@ export class Lesson2 {
 
   static makeQuizQuestions(): QuizQuestion[] {
     return [
-      Lesson2.makeQuestion0(B),
-      Lesson2.makeQuestion1(B),
-      Lesson2.makeQuestion2(D),
-      Lesson2.makeQuestion3(B),
-      Lesson2.makeQuestion4(D),
-      Lesson2.makeQuestion5(C),
-      Lesson2.makeQuestion6(C),
-      Lesson2.makeQuestion7(B),
-      Lesson2.makeQuestion8(C),
-      Lesson2.makeQuestion9(A),
-      Lesson2.makeQuestion10(B),
+      Lesson2.makeQuestion0(),
+      Lesson2.makeQuestion1(),
+      Lesson2.makeQuestion2(),
+      Lesson2.makeQuestion3(),
+      Lesson2.makeQuestion4(),
+      Lesson2.makeQuestion5(),
+      Lesson2.makeQuestion6(),
+      Lesson2.makeQuestion7(),
+      Lesson2.makeQuestion8(),
+      Lesson2.makeQuestion9(),
+      Lesson2.makeQuestion10(),
     ];
   }
 
