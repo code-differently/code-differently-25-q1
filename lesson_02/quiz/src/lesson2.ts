@@ -39,7 +39,7 @@ export class Lesson2 {
         [AnswerChoice.C, "To delete unnecessary files"],
         [AnswerChoice.D, "To run code more efficiently"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.B, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -56,7 +56,7 @@ export class Lesson2 {
         [AnswerChoice.C, "A tool for merging branches"],
         [AnswerChoice.D, "A way to delete a repository"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.A, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -70,7 +70,7 @@ export class Lesson2 {
         [AnswerChoice.C, "Push changes to the server"],
         [AnswerChoice.D, "Write code directly in GitHub"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.D, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -84,7 +84,7 @@ export class Lesson2 {
         [AnswerChoice.C, "git branch"],
         [AnswerChoice.D, "git pull"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.B, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -98,7 +98,7 @@ export class Lesson2 {
         [AnswerChoice.C, "NetBeans"],
         [AnswerChoice.D, "VS Code"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.D, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -112,7 +112,7 @@ export class Lesson2 {
         [AnswerChoice.C, "Dev Containers"],
         [AnswerChoice.D, "Source Control"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.C, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -126,7 +126,7 @@ export class Lesson2 {
         [AnswerChoice.C, "Playing music"],
         [AnswerChoice.D, "Managing source control"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.C, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -140,7 +140,7 @@ export class Lesson2 {
         [AnswerChoice.C, "cd"],
         [AnswerChoice.D, "mkdir"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.B, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -154,7 +154,7 @@ export class Lesson2 {
         [AnswerChoice.C, "cd"],
         [AnswerChoice.D, "mkdir"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.C, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -168,7 +168,7 @@ export class Lesson2 {
         [AnswerChoice.C, "Remove a file or directory"],
         [AnswerChoice.D, "Copy a file or directory"],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.A, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -182,7 +182,7 @@ export class Lesson2 {
         [AnswerChoice.C, "⌘ + Q"],
         [AnswerChoice.D, '⌘ + S, then type "terminal"'],
       ]),
-      AnswerChoice.UNANSWERED, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.B, // Replace `UNANSWERED` with the correct answer.
     );
   }
 }
