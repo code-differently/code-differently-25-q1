@@ -8,11 +8,11 @@ using whatever knowledge I can gain to finally pursue the projects that I want t
 ## What I like
 
 - Money. Need that in order to do anything, ESPECIALLY the things that I WANT to do.
-- Pets. I want an attack dog. 
+- Pets. I want an attack dog. The dogs that I've taken care of in the past weren't exactly attack-dog capable (I miss them 😢).
 - Females. Self-explanatory.
 - Computers. But only when they work. I don't want to even look at a computer when it's having personal issues.
 - Lemons. This is just my weird guilty pleasure.
-- Anime & video games. I probably don't watch or play the same things that most people play, but that's fine. This is definitely one of my main hobbies.
+- Anime & video games. I probably don't watch or play the same things that most people play, but that's fine. This is definitely one of my main hobbies. The 2 main games I do play are called Super Smash Bros. Ultimate and Splatoon 3.
 
 ## What I hate
 
@@ -27,14 +27,16 @@ I'm a chill person. I don't like to cause trouble for anyone that's around me. I
 
 - Samsung is better than iPhone.
 - Comic books look ugly.
-- Zendaya isn't all that.
-
+- Video games don't make people violent.
 ## Contacts
 
-You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey251@gmail.com (which is simply my other work email). They are both my work email to be honest.
+You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey251@gmail.com (this one is my Code Differently email). They're both really my work email to be honest.
 
 ---
 
 ![John Bey picture](images/JBEY.jpg)
 ![John Bey hobbie](images/JBeyS3.jpg)
 ![John Bey hobbie](images/JBeySU.jpg)
+![John Bey attackdog?](images/Lucky.jpg)
+![John Bey attackdog?](images/Rowdy.jpg)
+![John Bey attackdog?](images/Sasha.jpg)
