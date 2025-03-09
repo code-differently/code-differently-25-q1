@@ -19,7 +19,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1030px;
     background-color: black;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,6 +42,7 @@ header h1 {
 
 .content {
     margin-bottom: 30px;
+    
 }
 
 h1 {
@@ -103,10 +104,17 @@ footer {
     margin-bottom: -15px;
 }
 
-.profile-image {
+.images {
     width: 1012px;
     height: 1349px;
     margin-top: -10px;
+    margin-bottom: 10px
+}
+
+.SUimage {
+    padding-right: 150px;
+    margin-bottom: 10px;
+    margin-top: -10px
 }
 
 .last-paragraph {
