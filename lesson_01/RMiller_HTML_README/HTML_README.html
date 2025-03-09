@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rasheed Miller README</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,7 +25,7 @@
             list-style-type: disc;
             margin-left: 20px;
         }
-        .gallery img {
+        .slideshow img {
             width: 100%;
             height: auto;
             margin: 10px 0;
@@ -40,11 +42,48 @@
             font-style: italic;
             color: #555;
         }
+
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #111;
+}
+
+.slideshow {
+    width: 55vw; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.slide-track {
+    display: flex;
+    width: calc(800%); /* Twice the original width for looping */
+    animation: slide 50s linear infinite;
+}
+
+.slide-track img {
+    width: 20vw; /* Adjust image size */
+    height: auto;
+    margin-right: 1px; /* Spacing between images */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
     </style>
+
 </head>
 <body>
 
     <div class="container">
+
         <h1>Rasheed Miller README</h1>
 
         <h2>About Me</h2>
@@ -77,12 +116,41 @@
             <li>I’m always diving into <strong>Self-improvement Books</strong> to keep growing.</li>
             <li>One of my all-time favorite movies is <strong>The Matrix</strong> —Hence coding.</li>
             <li>I’m a <strong>Certified Health Coach</strong>, passionate about helping others live healthier lives.</li>
+            <li>I had the opportunity to meet <strong>Les Brown, Ash Cash, and David Shands</strong> at a Podacst Summit.</li>
         </ul>
 
         <h2>Photo Gallery</h2>
-        <div class="gallery">
+
+        <div class="slideshow">
             <img src="./IMAGES/CD7FDAF2-6835-4DA5-8A50-75EFA07E04CB.JPEG" alt="Photography 1">
             <img src="./IMAGES/DronePic.jpg" alt="Photography 2">
+        </div>
+
+        <div class="slideshow">
+            <div class="slide-track">
+
+            <img src="./IMAGES/IMG_0292.jpg" alt="Photography 5">
+            <img src="./IMAGES/IMG_0392.jpg" alt="Photography 6">
+            <img src="./IMAGES/IMG_0419.jpg" alt="Photography 7">
+            <img src="./IMAGES/IMG_0292.jpg" alt="Photography 5">
+            <img src="./IMAGES/IMG_0392.jpg" alt="Photography 6">
+            <img src="./IMAGES/IMG_0419.jpg" alt="Photography 7">
+            <img src="./IMAGES/IMG_0292.jpg" alt="Photography 5">
+            <img src="./IMAGES/IMG_0392.jpg" alt="Photography 6">
+            <img src="./IMAGES/IMG_0419.jpg" alt="Photography 7">
+            <img src="./IMAGES/IMG_0292.jpg" alt="Photography 5">
+            <img src="./IMAGES/IMG_0392.jpg" alt="Photography 6">
+            <img src="./IMAGES/IMG_0419.jpg" alt="Photography 7">
+            <img src="./IMAGES/IMG_0292.jpg" alt="Photography 5">
+            <img src="./IMAGES/IMG_0392.jpg" alt="Photography 6">
+            <img src="./IMAGES/IMG_0419.jpg" alt="Photography 7">
+            
+            </div>
+        </div>
+
+        <div class="slideshow">
+            <img src="./IMAGES/DJI_0059.JPG" alt="Photography 3">
+            <img src="./IMAGES/DJI_0016 (2) copy.jpg" alt="Photography 4">
         </div>
 
         <h2>Favorite Quote</h2>
