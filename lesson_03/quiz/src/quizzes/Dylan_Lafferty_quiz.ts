@@ -1,3 +1,4 @@
+
 import {
 
   AnswerChoice,
@@ -21,7 +22,6 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
     ];
 
     return [DylanLaffertyQuiz.makeQuestion0(), DylanLaffertyQuiz.makeQuestion0()];
-
   }
 
   private static makeQuestion0(): QuizQuestion {
@@ -63,6 +63,5 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
       AnswerChoice.UNANSWERED,
     );
   }
-
 }
 
