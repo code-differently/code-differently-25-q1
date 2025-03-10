@@ -39,7 +39,7 @@ export class Lesson2 {
         [AnswerChoice.C, "To delete unnecessary files"],
         [AnswerChoice.D, "To run code more efficiently"],
       ]),
-      AnswerChoice.D, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.B, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
@@ -154,7 +154,7 @@ export class Lesson2 {
         [AnswerChoice.C, "cd"],
         [AnswerChoice.D, "mkdir"],
       ]),
-      AnswerChoice.D, // Replace `UNANSWERED` with the correct answer.
+      AnswerChoice.C, // Replace `UNANSWERED` with the correct answer.
     );
   }
 
