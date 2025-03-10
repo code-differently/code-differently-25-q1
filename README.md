@@ -11,5 +11,3 @@ Main project repo for the Code Differently 2025 Q1 cohort. Read the [syllabus](s
 1. Click the `Dev Containers` button above to automatically clone and open the project in a new dev container.
    
 [dev-container-instructions]: https://aka.ms/vscode-remote/containers/getting-started
-
-###Note Hello This is Nana. I pray I am doing this correctly
