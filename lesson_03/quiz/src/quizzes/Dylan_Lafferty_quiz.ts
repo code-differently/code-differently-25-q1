@@ -21,41 +21,41 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
   private static makeQuestion0(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       0,
-      'What is the next upcoming holiday?',
+      'What is the Power supply unit most compared to when comparing it to a human body?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'St. Patricks Day'],
-        [AnswerChoice.B, 'Valentines Day'],
-        [AnswerChoice.C, 'Halloween'],
-        [AnswerChoice.D, '4th of July'],
+        [AnswerChoice.A, 'Heart'],
+        [AnswerChoice.B, 'Arm'],
+        [AnswerChoice.C, 'Leg'],
+        [AnswerChoice.D, 'Brain'],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.A,
     );
   }
   private static makeQuestion1(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       1,
-      'What food is traditionally eaten on St Patricks Day?',
+      'What is the full name of CPU?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'Tacos'],
-        [AnswerChoice.B, 'Pizza'],
-        [AnswerChoice.C, 'Corned Beef and Cabbage'],
-        [AnswerChoice.D, 'Lasagna'],
+        [AnswerChoice.A, 'Central Place Unit'],
+        [AnswerChoice.B, 'Certified Processing Unit'],
+        [AnswerChoice.C, 'Central Processing Unit'],
+        [AnswerChoice.D, 'Configured Procerdale Unicode'],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.C,
     );
   }
 
   private static makeQuestion2(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       2,
-      'What is the mascot of St Patricks Day?',
+      'What is used to keep Short term memory in a computer?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'Bunny'],
-        [AnswerChoice.B, 'St. Nicholas'],
-        [AnswerChoice.C, 'Turkey'],
-        [AnswerChoice.D, 'Leprechaun'],
+        [AnswerChoice.A, 'Hard Drive'],
+        [AnswerChoice.B, 'SSD'],
+        [AnswerChoice.C, 'GPU'],
+        [AnswerChoice.D, 'RAM'],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.D,
     );
   }
 }
