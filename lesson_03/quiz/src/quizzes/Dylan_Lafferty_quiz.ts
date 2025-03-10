@@ -1,9 +1,11 @@
 import {
+
   AnswerChoice,
   MultipleChoiceQuizQuestion,
   QuizQuestion,
   QuizQuestionProvider,
 } from 'codedifferently-instructional';
+
 
 export class DylanLaffertyQuiz implements QuizQuestionProvider {
   getProviderName(): string {
@@ -11,11 +13,15 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
   }
 
   makeQuizQuestions(): QuizQuestion[] {
+
     return [
       DylanLaffertyQuiz.makeQuestion0(),
       DylanLaffertyQuiz.makeQuestion1(),
       DylanLaffertyQuiz.makeQuestion2(),
     ];
+
+    return [DylanLaffertyQuiz.makeQuestion0(), DylanLaffertyQuiz.makeQuestion0()];
+
   }
 
   private static makeQuestion0(): QuizQuestion {
@@ -54,8 +60,9 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
         [AnswerChoice.B, 'SSD'],
         [AnswerChoice.C, 'GPU'],
         [AnswerChoice.D, 'RAM'],
-      ]),
       AnswerChoice.UNANSWERED,
     );
   }
+
 }
+
