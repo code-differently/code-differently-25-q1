@@ -1,17 +1,21 @@
-  import {
+import {
   AnswerChoice,
   MultipleChoiceQuizQuestion,
   QuizQuestion,
   QuizQuestionProvider,
 } from 'codedifferently-instructional';
-  
-  
+
+export class DylanLaffertyQuiz implements QuizQuestionProvider {
   getProviderName(): string {
     return 'dylanlafferty';
   }
 
   makeQuizQuestions(): QuizQuestion[] {
-    return [DylanLaffertyQuiz.makeQuestion0(), DylanLaffertyQuiz.makeQuestion0()];
+    return [
+      DylanLaffertyQuiz.makeQuestion0(),
+      DylanLaffertyQuiz.makeQuestion1(),
+      DylanLaffertyQuiz.makeQuestion2(),
+    ];
   }
 
   private static makeQuestion0(): QuizQuestion {
@@ -26,7 +30,7 @@
       ]),
       AnswerChoice.UNANSWERED,
     );
-
+  }
   private static makeQuestion1(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       1,
@@ -54,3 +58,4 @@
       AnswerChoice.UNANSWERED,
     );
   }
+}
