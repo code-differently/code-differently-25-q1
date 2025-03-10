@@ -1,0 +1,30 @@
+name: Check Lesson 02 Pull Request
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "lesson_02/quiz/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+
+    - name: Build Shared Lib with Node.js
+      working-directory: ./lib/javascript/codedifferently-instructional
+      run: npm ci
+
+    - name: Build Lesson 02 with Node.js
+      working-directory: ./lesson_02/quiz
+      run: |
+        npm ci
+        npm run test
