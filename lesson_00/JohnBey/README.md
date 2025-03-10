@@ -34,9 +34,9 @@ You can contact me by sending an email to thebusinessonly579@gmail.com, or jbey2
 
 ---
 
-![John Bey picture](images/JBEY.jpg)
-![John Bey hobbie](images/JBeyS3.jpg)
-![John Bey hobbie](images/JBeySU.jpg)
-![John Bey attackdog?](images/Lucky.jpg)
-![John Bey attackdog?](images/Rowdy.jpg)
-![John Bey attackdog?](images/Sasha.jpg)
+![John Bey picture](Images/JBEY.jpg)
+![John Bey hobbie](Images/JBeyS3.jpg)
+![John Bey hobbie](Images/JBeySU.jpg)
+![John Bey attackdog?](Images/Lucky.jpg)
+![John Bey attackdog?](Images/Rowdy.jpg)
+![John Bey attackdog?](Images/Sasha.jpg)
