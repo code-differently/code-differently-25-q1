@@ -5,19 +5,22 @@ import {
   QuizQuestionProvider,
 } from 'codedifferently-instructional';
 
-export class khayla_quiz implements QuizQuestionProvider {
+export class KhaylaSaundersQuiz implements QuizQuestionProvider {
   getProviderName(): string {
-    return 'khayla_quiz';
+    return 'khaylasaunders';
   }
 
   makeQuizQuestions(): QuizQuestion[] {
-    return [khayla_saundersquiz.makeQuestion0(), khayla_quiz.makeQuestion1()];
+    return [
+      KhaylaSaundersQuiz.makeQuestion0(),
+      KhaylaSaundersQuiz.makeQuestion1(),
+    ];
   }
 
   private static makeQuestion0(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       0,
-      'Your team is working on a shared Git repository. Which of the following is not the best practices to follow for smooth collaboration?',
+      'Your team is working on a shared Git repository. Which of the following is not the best practice to follow for smooth collaboration?',
       new Map<AnswerChoice, string>([
         [AnswerChoice.A, 'Always pull before pushing to avoid conflicts.'],
         [
@@ -30,7 +33,7 @@ export class khayla_quiz implements QuizQuestionProvider {
           'Use Git stash to temporarily save uncommitted changes. ',
         ],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.B,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
@@ -50,7 +53,7 @@ export class khayla_quiz implements QuizQuestionProvider {
         ],
         [AnswerChoice.D, 'When you need to undo the last commit '],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.A,
     ); // Replace `UNANSWERED` with the correct answer.
   }
   private static makeQuestion2(): QuizQuestion {
@@ -63,7 +66,7 @@ export class khayla_quiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Supersets'],
         [AnswerChoice.D, 'Git'],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.A,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 }
