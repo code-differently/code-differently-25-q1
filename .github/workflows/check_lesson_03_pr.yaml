@@ -1,10 +1,10 @@
-name: Check Lesson 02 Pull Request
+name: Check Lesson 03 Pull Request
 
 on:
   pull_request:
     branches: [ "main" ]
     paths:
-      - "lesson_02/quiz/**"
+      - "lesson_03/quiz/**"
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
@@ -25,8 +25,8 @@ jobs:
       working-directory: ./lib/javascript/codedifferently-instructional
       run: npm ci
 
-    - name: Build Lesson 02 with Node.js
-      working-directory: ./lesson_02/quiz
+    - name: Build Lesson 03 with Node.js
+      working-directory: ./lesson_03/quiz
       run: |
         npm ci
-        npm run test
+        npm run check
