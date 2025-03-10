@@ -14,6 +14,7 @@ export class KhaylaSaundersQuiz implements QuizQuestionProvider {
     return [
       KhaylaSaundersQuiz.makeQuestion0(),
       KhaylaSaundersQuiz.makeQuestion1(),
+      KhaylaSaundersQuiz.makeQuestion2(),
     ];
   }
 
@@ -40,7 +41,7 @@ export class KhaylaSaundersQuiz implements QuizQuestionProvider {
   private static makeQuestion1(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       1,
-      'What is the capital of the United States?',
+      'When should you use git rebase --skip while resolving conflicts in Git?',
       new Map<AnswerChoice, string>([
         [
           AnswerChoice.A,
