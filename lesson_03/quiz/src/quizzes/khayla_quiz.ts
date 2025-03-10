@@ -34,7 +34,7 @@ export class KhaylaSaundersQuiz implements QuizQuestionProvider {
           'Use Git stash to temporarily save uncommitted changes. ',
         ],
       ]),
-      AnswerChoice.B,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
@@ -54,7 +54,7 @@ export class KhaylaSaundersQuiz implements QuizQuestionProvider {
         ],
         [AnswerChoice.D, 'When you need to undo the last commit '],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
   private static makeQuestion2(): QuizQuestion {
@@ -67,7 +67,7 @@ export class KhaylaSaundersQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Supersets'],
         [AnswerChoice.D, 'Git'],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 }
