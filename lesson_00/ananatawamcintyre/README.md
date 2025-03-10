@@ -37,11 +37,8 @@ Be authentic, open, and inquisitive. Invite me to work on a project together wit
 
 ## Camera Roll
 
-![nana peoples festival-2](https://github.com/user-attachments/assets/26afbe88-c420-4f60-921e-a29d6f25c68c)
-![nana smiling with burger-2](https://github.com/user-attachments/assets/cf6c4a13-e012-4e1e-bef1-667d2fb6d017)
-![nana baby pic-3](https://github.com/user-attachments/assets/abab196f-8daf-48e7-a1e4-fdbe12b9a49f)
 
-
-
-
+![Nana Baby Pic](<images/nana baby pic-3.jpg>)
+![Peoples Festival](<images/nana peoples festival-2.jpg>)
+![Smiling ](<images/nana smiling with burger-2.jpg>)
 
