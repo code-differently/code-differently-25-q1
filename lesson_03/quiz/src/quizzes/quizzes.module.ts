@@ -10,7 +10,7 @@ export const Quizzes = Symbol.for('Quizzes');
 
 // Add your quiz provider here.
  
-const QUIZ_PROVIDERS = [AnthonyMaysQuiz, AnotherQuiz, meiko_stephens_quiz ];
+const QUIZ_PROVIDERS = [AnthonyMaysQuiz, AnotherQuiz, meiko_stephens_quiz,MercedesMathewsQuiz,Jbeyquiz ];
 
 const QUIZ_PROVIDERS = [
   AnthonyMaysQuiz,
