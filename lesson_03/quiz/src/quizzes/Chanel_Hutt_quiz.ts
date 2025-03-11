@@ -11,7 +11,7 @@ export class ChanelHuttQuiz implements QuizQuestionProvider {
   }
 
   makeQuizQuestions(): QuizQuestion[] {
-    return [ChanelHuttQuiz.makeQuestion0(),ChanelHuttQuiz.makeQuestion1(),ChanelHuttQuiz.makeQuestion2(),];
+    return [ChanelHuttQuiz.makeQuestion0(),ChanelHuttQuiz.makeQuestion1(),ChanelHuttQuiz.makeQuestion2()];
   }
 
   private static makeQuestion0(): QuizQuestion {
