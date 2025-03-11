@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AnotherQuiz } from './another_quiz.js';
 import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { DylanLaffertyQuiz } from './Dylan_Lafferty_quiz.js';
-=======
 
 import { Jbeyquiz } from './jbeyquiz.js';
 
