@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1030px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    overflow: hidden;
+    margin: -5px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.content {
+    margin-bottom: 30px;
+    
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid grey;
+    padding-top: 0px;
+    padding-bottom: -30px;
+    margin-bottom: 35px;
+    width: 110%;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: var(--base-text-weight-semibold, 600);
+    color: white;
+    border-bottom: 1px solid grey;
+    padding-bottom: -30px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    width: 110%;
+}
+
+
+p {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: var(--base-size-16);
+    margin-top: 0;
+}
+
+ul {
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #555;
+    list-style-type: disc;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 1px;
+    color: white;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+
+.images {
+    width: 1012px;
+    height: 1349px;
+    margin-top: -10px;
+    margin-bottom: 10px
+}
+
+.SUimage {
+    padding-right: 150px;
+    margin-bottom: 10px;
+    margin-top: -10px
+}
+
+.last-paragraph {
+    border-bottom: 3px solid grey;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    width: 110%;
+}
