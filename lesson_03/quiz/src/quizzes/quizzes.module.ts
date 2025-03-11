@@ -4,6 +4,7 @@ import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { DylanLaffertyQuiz } from './Dylan_Lafferty_quiz.js';
 
 import { Jbeyquiz } from './jbeyquiz.js';
+import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
 
 export const Quizzes = Symbol.for('Quizzes');
 
@@ -16,6 +17,13 @@ const QUIZ_PROVIDERS = [
   Jbeyquiz,
 ];
 const QUIZ_PROVIDERS = [AnthonyMaysQuiz, AnotherQuiz, Jbeyquiz];
+
+const QUIZ_PROVIDERS = [
+  AnthonyMaysQuiz,
+  AnotherQuiz,
+  MercedesMathewsQuiz,
+  Jbeyquiz,
+];
 
 @Module({
   providers: [
