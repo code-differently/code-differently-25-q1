@@ -14,9 +14,9 @@ const QUIZ_PROVIDERS = [
   AnotherQuiz,
   MercedesMathewsQuiz,
   Jbeyquiz,
-  DavidAdenaikeQuiz,
-  RasheedMillerQuiz,
   DylanLaffertyQuiz,
+  RasheedMillerQuiz,
+  DavidAdenaikeQuiz,
 ];
 
 @Module({
