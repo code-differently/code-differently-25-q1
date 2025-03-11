@@ -17,49 +17,52 @@ export class ChanelHuttQuiz implements MultipleQuestionnaireProvider {
   private static makeQuestion0(): MultipleQuestionnaire {
     return new MultipleChoiceQuizQuestion(
       0,
-      'When do you commit your code?',
+      'Which one is not a purpose for git commit?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'A question about agency'],
-        [AnswerChoice.B, 'The hardest kind of quiz question there is'],
+        [AnswerChoice.A, 'To save changes to your local repository'],
+        [AnswerChoice.B, 'To provide a clear, descriptive message for the changes made'],
         [
           AnswerChoice.C,
-          'A question that can be answered using one or more provided choices',
+          'To clear the terminal and re-type the command',
         ],
-        [AnswerChoice.D, 'Whatever you want it to be!'],
+        [AnswerChoice.D, 'Keeps track of changes made to your code'],
       ]),
       AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
-  private static makeQuestion0(): MultipleQuestionnaire {
+  private static makeQuestion1(): MultipleQuestionnaire {
     return new MultipleChoiceQuizQuestion(
       1,
-      'What is a multiple choice question?',
+      'Which answer best fits the command git push?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'A question about agency'],
-        [AnswerChoice.B, 'The hardest kind of quiz question there is'],
+        [AnswerChoice.A, 'To move the code to the trash'],
+        [
+          AnswerChoice.B,
+          'To transfer files from the local repository to remote repository hosting services',
+        ],
         [
           AnswerChoice.C,
-          'A question that can be answered using one or more provided choices',
+          'To add comments to the code',
         ],
-        [AnswerChoice.D, 'Whatever you want it to be!'],
+        [AnswerChoice.D, 'To merge several branches into one branch'],
       ]),
       AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
-  private static makeQuestion0(): MultipleQuestionnaire {
+  private static makeQuestion2(): MultipleQuestionnaire {
     return new MultipleChoiceQuizQuestion(
       2,
-      'What is a multiple choice question?',
+      'Which command is used to update the your local repository with changes from your remote repository?',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'A question about agency'],
-        [AnswerChoice.B, 'The hardest kind of quiz question there is'],
+        [AnswerChoice.A, 'git fetch upstream'],
+        [AnswerChoice.B, 'git pull'],
         [
           AnswerChoice.C,
-          'A question that can be answered using one or more provided choices',
+          'git commit',
         ],
-        [AnswerChoice.D, 'Whatever you want it to be!'],
+        [AnswerChoice.D, 'git checkout main'],
       ]),
       AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
