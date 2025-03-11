@@ -15,6 +15,7 @@ const QUIZ_PROVIDERS = [AnthonyMaysQuiz, AnotherQuiz, meiko_stephens_quiz ];
 const QUIZ_PROVIDERS = [
   AnthonyMaysQuiz,
   AnotherQuiz,
+  meiko_stephens_quiz,
   MercedesMathewsQuiz,
   Jbeyquiz,
 ];
