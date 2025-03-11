@@ -6,6 +6,8 @@ on:
     paths:
       - ".github/workflows/check_push.yml"
       - "lib/**"
+      - "lesson_02/quiz/**"
+      - "lesson_03/quiz/**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,3 +58,16 @@ jobs:
       run: |
         npm ci
         npm run test
+
+    - name: Build Lesson 02 with Node.js
+      working-directory: ./lesson_02/quiz
+      run: |
+        npm ci
+        npm run compile
+
+    - name: Build Lesson 03 with Node.js
+      working-directory: ./lesson_03/quiz
+      run: |
+        npm ci
+        npm run compile
+        npm run lint
