@@ -9,9 +9,9 @@ body {
 
 
 img{
-    height: 1200px;
-    width: 90%;
-    display: flex;
+    height: auto;
+    width: 100%;
+    display: block;
     flex-direction: column;
     padding-top: 7px;
 }
