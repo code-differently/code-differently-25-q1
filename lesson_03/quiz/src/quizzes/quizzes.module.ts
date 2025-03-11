@@ -4,7 +4,7 @@ import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
 import { RasheedMillerQuiz } from './rasheed_miller_quiz.js';
-
+import { JustinsQuiz } from './justin_eklund_quiz.js';
 export const Quizzes = Symbol.for('Quizzes');
 
 // Add your quiz provider here.
@@ -14,6 +14,7 @@ const QUIZ_PROVIDERS = [
   MercedesMathewsQuiz,
   Jbeyquiz,
   RasheedMillerQuiz,
+  JustinsQuiz,
 ];
 
 @Module({
