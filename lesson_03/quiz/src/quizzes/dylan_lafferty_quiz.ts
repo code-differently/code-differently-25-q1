@@ -28,7 +28,7 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Leg'],
         [AnswerChoice.D, 'Brain'],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.UNANSWERED,
     );
   }
   private static makeQuestion1(): QuizQuestion {
@@ -41,7 +41,7 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Central Processing Unit'],
         [AnswerChoice.D, 'Configured Procerdale Unicode'],
       ]),
-      AnswerChoice.C,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -55,7 +55,7 @@ export class DylanLaffertyQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'GPU'],
         [AnswerChoice.D, 'RAM'],
       ]),
-      AnswerChoice.D,
+      AnswerChoice.UNANSWERED,
     );
   }
 }
