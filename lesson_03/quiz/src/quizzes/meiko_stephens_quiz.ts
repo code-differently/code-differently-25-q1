@@ -5,16 +5,16 @@ import {
   QuizQuestionProvider,
 } from 'codedifferently-instructional';
 
-export class meiko_stephens_quiz implements QuizQuestionProvider {
+export class MeikoStephensQuiz implements QuizQuestionProvider {
   getProviderName(): string {
     return 'meikostephens';
   }
 
   makeQuizQuestions(): QuizQuestion[] {
     return [
-      meiko_stephens_quiz.makeQuestion0(),
-      meiko_stephens_quiz.makeQuestion1(),
-      meiko_stephens_quiz.makeQuestion2(),
+      MeikoStephensQuiz.makeQuestion0(),
+      MeikoStephensQuiz.makeQuestion1(),
+      MeikoStephensQuiz.makeQuestion2(),
     ];
   }
 
