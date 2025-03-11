@@ -29,7 +29,6 @@ const QUIZ_PROVIDERS = [
   RasheedMillerQuiz,
   JeremiahWingQuiz,
   JasonWatsonQuiz,
-  DylanLaffertyQuiz,
 ];
 
 @Module({
