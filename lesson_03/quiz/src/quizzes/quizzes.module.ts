@@ -11,7 +11,7 @@ import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
 export const Quizzes = Symbol.for('Quizzes');
 
 // Add your quiz provider here.
- feat/lesson03
+ 
 const QUIZ_PROVIDERS = [AnthonyMaysQuiz, AnotherQuiz, meiko_stephens_quiz ];
 
 const QUIZ_PROVIDERS = [
