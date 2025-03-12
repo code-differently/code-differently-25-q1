@@ -35,14 +35,14 @@ export class JustinsQuiz implements QuizQuestionProvider {
   private static makeQuestion1(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       1,
-      'How man states are there in the United States?',
+      'How many states are there in the United States?',
       new Map<AnswerChoice, string>([
         [AnswerChoice.A, '53'],
         [AnswerChoice.B, '52'],
         [AnswerChoice.C, '48'],
         [AnswerChoice.D, '50'],
       ]),
-      AnswerChoice.UNANSWERED,
+      AnswerChoice.UNANSWERED,          
     ); // Replace `UNANSWERED` with the correct answer.
   }
   private static makeQuestion2(): QuizQuestion {
