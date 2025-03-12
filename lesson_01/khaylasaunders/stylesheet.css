@@ -1,0 +1,81 @@
+
+
+body{
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(214,214,214);
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", 
+               Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Apple Color Emoji";
+}
+h1  { 
+    border-bottom: 1px solid rgb(214,214,214);
+    width: 100%;
+    padding-bottom: 10px;
+
+}
+h2{
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(214,214,214);
+}
+h3{
+    border-bottom: 1px solid rgb(214,214,214);
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+li{
+    line-height: 1.4;
+}
+h4{
+    font-size: 20px;
+    font-weight: 550;
+
+   
+}
+span {
+    color: #000;
+    font-weight: 550;
+   
+}
+blockquote{
+    color: rgb(91, 90, 90);
+    border-left: 3px solid rgb(202, 204, 220);
+    padding-left: 13px; 
+}
+blockquote span{
+    color: rgb(105, 103, 103);
+}
+.favorites {
+    font-size: 13px;
+    line-height: 2.5;
+}
+.camera {
+    margin: 12px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.image-container {
+    width: 90%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+}
+.image-container p {
+    font-size: 13px;
+    font-weight: 550;
+    margin: 24px 0 16px;
+}
+/* Styling assistance provided by ChatGPT to ensure responsive images */
+
+img{
+    max-width: 100%;  
+    height: auto;     
+    display: block;
+    
+}
+
+
