@@ -5,9 +5,6 @@ import { Jbeyquiz } from './jbeyquiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
 import { RasheedMillerQuiz } from './rasheed_miller_quiz.js';
 import { JeremiahWingQuiz } from './jeremiah_wing_quiz.js';
-
-
-
 export const Quizzes = Symbol.for('Quizzes');
 
 // Add your quiz provider here.
