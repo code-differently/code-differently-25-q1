@@ -3,6 +3,7 @@ import { AnotherQuiz } from './another_quiz.js';
 import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
+import { KarensQuiz } from './karen_alabi_quiz.js';
 import { KhaylaSaundersQuiz } from './khayla_quiz.js';
 import { MeikoStephensQuiz } from './meiko_stephens_quiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
@@ -13,10 +14,11 @@ export const Quizzes = Symbol.for('Quizzes');
 // Add your quiz provider here.
 const QUIZ_PROVIDERS = [
   AnthonyMaysQuiz,
-  AnotherQuiz, 
-  MeikoStephensQuiz ,
+  AnotherQuiz,
+  MeikoStephensQuiz,
   MercedesMathewsQuiz,
   Jbeyquiz,
+  KarensQuiz,
   DavidAdenaikeQuiz,
   KhaylaSaundersQuiz,
   RasheedMillerQuiz,
