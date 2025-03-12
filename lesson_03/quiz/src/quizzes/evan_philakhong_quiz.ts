@@ -15,7 +15,6 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
       EvanPhilakhongQuiz.makeQuestion0(),
       EvanPhilakhongQuiz.makeQuestion1(),
       EvanPhilakhongQuiz.makeQuestion2(),
-      EvanPhilakhongQuiz.makeQuestion3(),
     ];
   }
 
@@ -58,20 +57,6 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
         [AnswerChoice.D, 'Power Storing Unit'],
       ]),
       AnswerChoice.UNANSWERED, // repleace UNANSWERED with correct answer
-    );
-  }
-
-  private static makeQuestion3(): QuizQuestion {
-    return new MultipleChoiceQuizQuestion(
-      3,
-      'RAM is short for ___?',
-      new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'Randomly Advanced Memory'],
-        [AnswerChoice.B, 'Random Access Memory'],
-        [AnswerChoice.C, 'Temporary Memory'],
-        [AnswerChoice.D, 'Readlily Access Memory'],
-      ]),
-      AnswerChoice.UNANSWERED, // replace UNANSWERED with correct answer
     );
   }
 }
