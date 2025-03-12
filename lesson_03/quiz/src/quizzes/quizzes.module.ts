@@ -22,7 +22,6 @@ const QUIZ_PROVIDERS = [
   EvanPhilakhongQuiz,
   KhaylaSaundersQuiz,
   RasheedMillerQuiz,
-  EvanPhilakhongQuiz,
 ];
 
 @Module({
