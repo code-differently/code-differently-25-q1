@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AnotherQuiz } from './another_quiz.js';
 import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
-import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
 import { DylanLaffertyQuiz } from './dylan_lafferty_quiz.js';
+import { ChanelHuttQuiz } from './Chanel_Huttquiz.js';
+import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
+import { EvanPhilakhongQuiz } from './evan_philakhong_quiz.js';
 import { EzraQuiz } from './ezra_quiz.js';
 import { JasonWatsonQuiz } from './jason_watson_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
@@ -24,9 +26,11 @@ const QUIZ_PROVIDERS = [
   Jbeyquiz,
   EzraQuiz,
   DavidAdenaikeQuiz,
+  EvanPhilakhongQuiz,
   KhaylaSaundersQuiz,
   DylanLaffertyQuiz,
   RasheedMillerQuiz,
+  ChanelHuttQuiz,
   JeremiahWingQuiz,
   JasonWatsonQuiz,
 ];
