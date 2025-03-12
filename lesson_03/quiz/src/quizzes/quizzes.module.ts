@@ -4,7 +4,6 @@ import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
 import { EvanPhilakhongQuiz } from './evan_philakhong_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
-import { Jbeyquiz } from './jbeyquiz.js';
 import { KhaylaSaundersQuiz } from './khayla_quiz.js';
 import { MeikoStephensQuiz } from './meiko_stephens_quiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
@@ -23,6 +22,7 @@ const QUIZ_PROVIDERS = [
   EvanPhilakhongQuiz,
   KhaylaSaundersQuiz,
   RasheedMillerQuiz,
+  EvanPhilakhongQuiz,
 ];
 
 @Module({
