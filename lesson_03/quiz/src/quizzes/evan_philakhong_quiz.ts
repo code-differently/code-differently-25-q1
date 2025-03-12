@@ -28,7 +28,7 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Central Processing Unit'],
         [AnswerChoice.D, 'Coding Processor Unit'],
       ]),
-      AnswerChoice.C, // replace UNANSWERED with correct answer
+      AnswerChoice.UNANSWERED, // replace UNANSWERED with correct answer
     );
   }
 
@@ -42,7 +42,7 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Graphical Programming Unit'],
         [AnswerChoice.D, 'Gaming Processor Unit'],
       ]),
-      AnswerChoice.A, // replace UNANSWERED with correct answer
+      AnswerChoice.UNANSWERED, // replace UNANSWERED with correct answer
     );
   }
 
@@ -56,7 +56,7 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Power Supplier Unit'],
         [AnswerChoice.D, 'Power Storing Unit'],
       ]),
-      AnswerChoice.B, // repleace UNANSWERED with correct answer
+      AnswerChoice.UNANSWERED, // repleace UNANSWERED with correct answer
     );
   }
 }
