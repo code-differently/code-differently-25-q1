@@ -1,0 +1,26 @@
+{
+  "name": "amcintyrecodedifferently",
+  "version": "1.0.0",
+  "description": "[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/code-differently/code-differently-25-q1) [![Check Push](https://github.com/code-differently/code-differently-25-q1/actions/workflows/check_push.yml/badge.svg)](https://github.com/code-differently/code-differently-25-q1/actions/workflows/check_push.yml)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ananatawa/amcintyrecodedifferently.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ananatawa/amcintyrecodedifferently/issues"
+  },
+  "homepage": "https://github.com/Ananatawa/amcintyrecodedifferently#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
