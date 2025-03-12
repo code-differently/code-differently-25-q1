@@ -25,7 +25,7 @@ const QUIZ_PROVIDERS = [
   DavidAdenaikeQuiz,
   KhaylaSaundersQuiz,
   RasheedMillerQuiz,
-  JeremiahWingQuiz
+  JeremiahWingQuiz,
   JasonWatsonQuiz,
 ];
 
