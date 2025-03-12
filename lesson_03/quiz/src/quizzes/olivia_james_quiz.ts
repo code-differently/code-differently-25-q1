@@ -49,7 +49,7 @@ export class OliviaJamesQuiz implements QuizQuestionProvider {
   private static makeQuestion2(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       2,
-      'Which of the following is the correct syntax for a CSS comment??',
+      'Which tag is used to create an unordered list in HTML?',
       new Map<AnswerChoice, string>([
         [AnswerChoice.A, '<ol>'],
         [AnswerChoice.B, '<ul>'],
