@@ -9,4 +9,9 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Provide details
+- [ ] Do [coding exercise](#writing-some-code).
+- [ ] Do pre-work for [lesson 05](/lesson_05/).
+  
+### Writing some code
+
+For this assignment, you will need to write code that determines whether a number is a prime number. You will produce code in two different languages, then provide a 100+ word write up about the similarities and differences between the two implementations you made. An example is provided in the [anthonydmays/](./anthonydmays/) folder.
