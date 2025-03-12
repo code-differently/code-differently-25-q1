@@ -7,7 +7,7 @@ import {
 
 export class AnanatawaQuiz implements QuizQuestionProvider {
   getProviderName(): string {
-    return ‘awatanana’;
+    return 'awatanana';
   }
 
   makeQuizQuestions(): QuizQuestion[] {
