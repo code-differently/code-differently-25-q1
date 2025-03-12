@@ -98,7 +98,6 @@ describe('Lesson3Test', () => {
             }),
           );
 
-          console.log('Checking answers for:', providerName);
           expect(areAnswersValid.some((isCorrect) => isCorrect)).toBe(true);
         }
       }
