@@ -7,7 +7,7 @@ import {
 
 export class JustinsQuiz implements QuizQuestionProvider {
   getProviderName(): string {
-    return 'Justin';
+    return 'justin';
   }
 
   makeQuizQuestions(): QuizQuestion[] {
@@ -28,7 +28,7 @@ export class JustinsQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, '12'],
         [AnswerChoice.D, '10'],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
@@ -42,7 +42,7 @@ export class JustinsQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, '48'],
         [AnswerChoice.D, '50'],
       ]),
-      AnswerChoice.D,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
   private static makeQuestion2(): QuizQuestion {
@@ -55,7 +55,7 @@ export class JustinsQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'December 26th'],
         [AnswerChoice.D, 'December 23rd'],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 }
