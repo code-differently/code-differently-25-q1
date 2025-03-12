@@ -14,7 +14,6 @@ const QUIZ_PROVIDERS = [
   AnotherQuiz,
   MercedesMathewsQuiz,
   Jbeyquiz,
-
   KhaylaSaundersQuiz,
   RasheedMillerQuiz,
 ];
