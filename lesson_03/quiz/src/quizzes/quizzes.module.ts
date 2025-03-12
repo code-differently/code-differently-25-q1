@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AnotherQuiz } from './another_quiz.js';
 import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
+import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
 import { EzraQuiz } from './ezra_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
@@ -16,6 +17,7 @@ const QUIZ_PROVIDERS = [
   MercedesMathewsQuiz,
   Jbeyquiz,
   EzraQuiz,
+  DavidAdenaikeQuiz,
   RasheedMillerQuiz,
 ];
 
