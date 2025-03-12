@@ -3,6 +3,7 @@ import { beforeAll, describe, expect, it } from '@jest/globals';
 import { Test, TestingModule } from '@nestjs/testing';
 import {
   AnswerChoice,
+  MultipleChoiceQuizQuestion,
   QuizConfig,
   QuizQuestion,
 } from 'codedifferently-instructional';
@@ -76,16 +77,42 @@ describe('Lesson3Test', () => {
 
   const maybeIt = process.env.PROVIDER_NAME ? it : it.skip;
 
+  maybeIt(
+    'checks multiple choice answers are configured correctly',
+    async () => {
+      for (const [providerName, questions] of quizQuestionsByProvider) {
+        for (const question of questions) {
+          if (!(question instanceof MultipleChoiceQuizQuestion)) {
+            continue;
+          }
+
+          // Assert that multiple choice questions have at least one correct answer.
+          const choices = question.getAnswerChoices();
+          const areAnswersValid = await Promise.all(
+            [...choices].map(async (choice) => {
+              return quizConfig.checkAnswer(
+                providerName,
+                question.getQuestionNumber(),
+                choice,
+              );
+            }),
+          );
+
+          expect(areAnswersValid.some((isCorrect) => isCorrect)).toBe(true);
+        }
+      }
+    },
+  );
+
   maybeIt('checks for correct answers', async () => {
-    const targetProviderName =
-      process.env.PROVIDER_NAME?.toLowerCase().trim() || '';
+    const targetProviderName = process.env.PROVIDER_NAME?.trim() || '';
 
     if (!quizQuestionsByProvider.has(targetProviderName)) {
       throw new Error(`Unknown provider name: ${targetProviderName}`);
     }
 
     for (const [providerName, questions] of quizQuestionsByProvider) {
-      if (providerName !== process.env.PROVIDER_NAME?.toLowerCase().trim()) {
+      if (providerName !== process.env.PROVIDER_NAME?.trim()) {
         continue;
       }
       for (const question of questions) {
