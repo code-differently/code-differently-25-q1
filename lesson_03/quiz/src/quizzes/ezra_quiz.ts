@@ -5,7 +5,7 @@ import {
 
 export class EzraQuiz {
   getProviderName() {
-    return 'TravelQuiz';
+    return 'ezraquiz';
   }
 
   makeQuizQuestions() {
