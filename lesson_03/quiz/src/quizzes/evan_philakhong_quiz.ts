@@ -56,7 +56,7 @@ export class EvanPhilakhongQuiz implements QuizQuestionProvider {
         [AnswerChoice.C, 'Power Supplier Unit'],
         [AnswerChoice.D, 'Power Storing Unit'],
       ]),
-      AnswerChoice.B, // repleace UNANSWERED with correct answer
+      AnswerChoice.UNANSWERED, // repleace UNANSWERED with correct answer
     );
   }
 }
