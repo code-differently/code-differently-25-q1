@@ -10,7 +10,7 @@ import { Bar, BarChart, XAxis } from "recharts";
 
 const chartConfig = {
   TypeScript: {
-    label: "Desktop",
+    label: "TypeScript",
     color: "#2563eb",
   },
   JavaScript: {
