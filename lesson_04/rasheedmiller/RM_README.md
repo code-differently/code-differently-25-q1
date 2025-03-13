@@ -75,6 +75,6 @@ The C++ "C Plus Plus" implementation uses a function named `is_Prime`. This func
 | **Syntax**            | The names of the functions are similar.          | C# uses "IsPrime". C++ uses "isPrime".  |
 | **Input**             | Both take user input.                            | One coded in C# language. One coded C++ language.|
 | **Main Function**     | Both have main functions.                        | C# uses "static void Main()" C++ uses "int main()"|
-| **First Line of Code** | Both have a line of code to start.  | C# starts with "using System;". C++ starts with "#include <iostream>"|
+| **First Line of Code** | Both have a line of code to start. | C# starts with "using System;". C++ starts with "#include <iostream>"|
 | **Printing Output**    | Both use printing outputs.          | C# uses "Console.WriteLine()". C++ uses "std::cout <<". |
 
