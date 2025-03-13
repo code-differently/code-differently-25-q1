@@ -45,7 +45,7 @@ export default function ResultsChart({ votes }: ResultsChartProps) {
           data={sortedVotes}
         >
           {sortedVotes.map((vote) => (
-            <Bar key={vote.option} dataKey="count" fill={chartConfig[vote.option].color}>
+            <Bar key={vote.option} dataKey="count" fill="#60a5fa">
             </Bar>
           ))}
         </BarChart>
