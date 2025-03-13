@@ -60,3 +60,5 @@ const QUIZ_PROVIDERS = [
   ],
 })
 export class QuizzesModule {}
+
+/* End of code */
