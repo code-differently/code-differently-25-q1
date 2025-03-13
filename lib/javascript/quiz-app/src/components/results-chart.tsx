@@ -31,9 +31,7 @@ export default function ResultsChart({ votes }: ResultsChartProps) {
   const total = votes.reduce((sum, vote) => sum + vote.count, 0)
 
   // Sort votes by count in descending order
-  const sortedVotes = [...votes].sort((a, b) => b.count - a.count)
-
-  // TODO(anthonydmays): Maybe add back bar code.
+  const sortedVotes = [...votes].sort((a, b) => b.count - a.count);
 
   return (
     <Card className="p-6 max-w-3xl mx-auto">
