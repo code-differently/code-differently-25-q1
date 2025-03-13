@@ -5,6 +5,7 @@ import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
 import { DylanLaffertyQuiz } from './dylan_lafferty_quiz.js';
 import { ChanelHuttQuiz } from './Chanel_Huttquiz.js';
 import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
+import { DavisDQuiz } from './davisd_quiz.js';
 import { EvanPhilakhongQuiz } from './evan_philakhong_quiz.js';
 import { EzraQuiz } from './ezra_quiz.js';
 import { JasonWatsonQuiz } from './jason_watson_quiz.js';
@@ -38,6 +39,7 @@ const QUIZ_PROVIDERS = [
   KhaylaSaundersQuiz,
   DylanLaffertyQuiz,
   RasheedMillerQuiz,
+  DavisDQuiz,
   AnanatawaQuiz,
   OliviaJamesQuiz,
   ChanelHuttQuiz,
