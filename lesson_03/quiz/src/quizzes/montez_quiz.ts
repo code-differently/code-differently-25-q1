@@ -35,11 +35,11 @@ export class MontezBradleyQuiz implements QuizQuestionProvider {
   private static makeQuestion1(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       1,
-      'What command is used to save all changes and create a commit in Git?',
+      'How would you commit your code',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'git status'],
+        [AnswerChoice.A, 'git commit -m "" '],
         [AnswerChoice.B, 'git info'],
-        [AnswerChoice.C, 'git check-status'],
+        [AnswerChoice.C, 'git commit'],
         [AnswerChoice.D, 'git add git commit -m "Your commit message'],
       ]),
       AnswerChoice.UNANSWERED,
@@ -49,15 +49,17 @@ export class MontezBradleyQuiz implements QuizQuestionProvider {
   private static makeQuestion2(): QuizQuestion {
     return new MultipleChoiceQuizQuestion(
       2,
-      'What Git command is used to check the current status of a repository',
+      'How would you push your vs code main to replace your main branch in github ',
       new Map<AnswerChoice, string>([
-        [AnswerChoice.A, 'git status'],
-        [AnswerChoice.B, 'git  verify'],
-        [AnswerChoice.C, 'git info'],
-        [AnswerChoice.D, 'git check-status'],
+        [
+          AnswerChoice.A,
+          'pull your commits to vs code, git reset --hard upstream/main, then git push --force',
+        ],
+        [AnswerChoice.B, 'git  reset, then git push --force'],
+        [AnswerChoice.C, 'git info, then git pull, final step is git push'],
+        [AnswerChoice.D, 'git push after that git reset then git pull'],
       ]),
       AnswerChoice.UNANSWERED,
-    ); 
+    );
   }
-
 }
