@@ -28,7 +28,7 @@ export class Bryanasingletonbarnhart implements QuizQuestionProvider {
         [AnswerChoice.C, 'CPU'],
         [AnswerChoice.D, 'Motherboard'],
       ]),
-      AnswerChoice.C,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 
@@ -42,7 +42,7 @@ export class Bryanasingletonbarnhart implements QuizQuestionProvider {
         [AnswerChoice.C, 'System Design Document'],
         [AnswerChoice.D, 'Software Development Document'],
       ]),
-      AnswerChoice.B,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
   private static makeQuestion2(): QuizQuestion {
@@ -55,7 +55,7 @@ export class Bryanasingletonbarnhart implements QuizQuestionProvider {
         [AnswerChoice.C, '1000'],
         [AnswerChoice.D, '8'],
       ]),
-      AnswerChoice.D,
+      AnswerChoice.UNANSWERED,
     ); // Replace `UNANSWERED` with the correct answer.
   }
 }
