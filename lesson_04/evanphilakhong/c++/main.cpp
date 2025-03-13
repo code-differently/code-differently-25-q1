@@ -1,4 +1,4 @@
-#include "header.hpp"
+#include "main.hpp"
 
 bool isPrime(int num) {
     int count = 0;
