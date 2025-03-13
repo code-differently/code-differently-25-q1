@@ -1,16 +1,19 @@
 import { Module } from '@nestjs/common';
 import { AnotherQuiz } from './another_quiz.js';
 import { AnthonyMaysQuiz } from './anthony_mays_quiz.js';
-import { JasonWatsonQuiz } from './jason_watson_quiz.js';
-import { MeikoStephensQuiz } from './meiko_stephens_quiz.js';
+import { DylanLaffertyQuiz } from './dylan_lafferty_quiz.js';
+import { ChanelHuttQuiz } from './Chanel_Huttquiz.js';
 import { DavidAdenaikeQuiz } from './david_adenaike_quiz.js';
 import { DavisDQuiz } from './davisd_quiz.js';
+import { EvanPhilakhongQuiz } from './evan_philakhong_quiz.js';
 import { EzraQuiz } from './ezra_quiz.js';
+import { JasonWatsonQuiz } from './jason_watson_quiz.js';
 import { Jbeyquiz } from './jbeyquiz.js';
+import { JeremiahWingQuiz } from './jeremiah_wing_quiz.js';
 import { KhaylaSaundersQuiz } from './khayla_quiz.js';
+import { MeikoStephensQuiz } from './meiko_stephens_quiz.js';
 import { MercedesMathewsQuiz } from './mercedes_mathews_quiz.js';
 import { RasheedMillerQuiz } from './rasheed_miller_quiz.js';
-import { JeremiahWingQuiz } from './jeremiah_wing_quiz.js';
 
 export const Quizzes = Symbol.for('Quizzes');
 
@@ -24,9 +27,12 @@ const QUIZ_PROVIDERS = [
   Jbeyquiz,
   EzraQuiz,
   DavidAdenaikeQuiz,
+  EvanPhilakhongQuiz,
   KhaylaSaundersQuiz,
+  DylanLaffertyQuiz,
   RasheedMillerQuiz,
   DavisDQuiz,
+  ChanelHuttQuiz,
   JeremiahWingQuiz,
   JasonWatsonQuiz,
 ];
