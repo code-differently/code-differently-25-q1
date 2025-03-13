@@ -3,10 +3,14 @@ import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
-  const user = await currentUser()
+  const user = await currentUser();
 
-  //const userId = user.emailAddresses[0]?.emailAddress || user.id
-  const userId = 'anthony@morganlatimer.com';
+  // Redirect to sign-in if not authenticated
+  if (!user) {
+    return redirect("/sign-in")
+  }
+
+  const userId = user.emailAddresses[0]?.emailAddress || user.id;
 
   // Check if user has already voted
   const hasVoted = await getUserVote(userId)
