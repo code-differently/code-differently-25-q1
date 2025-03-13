@@ -63,3 +63,5 @@ export class MontezBradleyQuiz implements QuizQuestionProvider {
     );
   }
 }
+
+/* End of code */
