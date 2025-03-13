@@ -1,9 +1,5 @@
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-
+    
      public static boolean isPrime(int num) {
         int count = 0;
         for (int i = num; i > 0; i--) {
