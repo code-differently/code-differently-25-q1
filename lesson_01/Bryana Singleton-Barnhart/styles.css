@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 80%;
+    margin: 20px auto; 
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1, h2, h3 {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+hr {
+    font-weight: 2px;
+    border-width: 0;
+    color: gray;
+    background-color: rgb(214, 214, 214);
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 10px auto; 
+}
