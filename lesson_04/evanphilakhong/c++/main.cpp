@@ -7,7 +7,7 @@ bool isPrime(int num) {
                 count++;
             }
         }
-        if (count==2) {
+        if (count == 2) {
             cout << "This is a Prime Number" << endl;
             return true;
         }
