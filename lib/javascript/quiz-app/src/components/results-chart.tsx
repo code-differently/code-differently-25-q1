@@ -1,10 +1,11 @@
 "use client"
 
 import { Card } from "@/components/ui/card";
-import { ChartContainer } from "@/components/ui/chart";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+
 
 import { type ChartConfig } from "@/components/ui/chart";
-import { Bar, BarChart } from "recharts";
+import { Bar, BarChart, XAxis } from "recharts";
 
 
 const chartConfig = {
@@ -42,6 +43,8 @@ export default function ResultsChart({ votes }: ResultsChartProps) {
           className="h-[300px]"
           data={sortedVotes}
         >
+         <XAxis dataKey="option" />
+         <ChartTooltip content={<ChartTooltipContent />} />
           {sortedVotes.map((vote) => (
             <Bar key={vote.option} dataKey="count" fill={`var(--color-${vote.option})`} radius={4}></Bar>
           ))}
