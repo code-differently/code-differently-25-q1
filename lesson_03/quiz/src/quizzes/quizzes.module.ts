@@ -31,7 +31,7 @@ const QUIZ_PROVIDERS = [
   KhaylaSaundersQuiz,
   DylanLaffertyQuiz,
   RasheedMillerQuiz,
-  AnanatawaQuiz
+  AnanatawaQuiz,
   ChanelHuttQuiz,
   JeremiahWingQuiz,
   JasonWatsonQuiz,
