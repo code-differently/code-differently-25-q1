@@ -30,7 +30,7 @@ public static void main(String[] args) {
 
 
 ### Python Explanations.
- When we look at the python implementation, we define a function and give it and attribute `(num)`. We introduce the if statement and for loop to iterate over the funtion and check if it matches the requirements. We later propmt user to input a number and the code will verify if all the requirements are met to qualify it as a prime number. 
+ When we look at the python implementation, we define a function and give it and attribute `(num)`. We introduce the `if` statement and `for` loop to iterate over the funtion and check if it matches the requirements. We later propmt user to input a number and the code will verify if all the requirements are met to qualify it as a prime number. 
 
 
 
@@ -42,8 +42,7 @@ In java we have a different approach. Unlike python we define our class using `(
 
 ### Difference
 
-1. **Syntax**
-- Python uses `def` keyword to define a funtion while Java uses, `public static boolean` to define a function.
+1. Python uses `def` keyword to define a funtion while Java uses, `public static boolean` to define a function.
 
 2. Java uses `System.out.print()` to print out the statement and python uses `print()` to print statement.
 
