@@ -17,6 +17,19 @@ bool isPrime(int num) {
 // main 
 int main() {
     // test
-    isPrime(10);
+    // prime nums
+    cout << "Testing Prime Nums" << endl;
+    isPrime(2);
+    isPrime(3);
+    isPrime(5);
+    isPrime(7);
+    isPrime(11);
+    // non-prime nums
+    cout << "Testing Non-Prime Nums" << endl;
+    isPrime(1);
+    isPrime(4);
+    isPrime(6);
+    isPrime(8);
+    isPrime(9);
     return 0;
 }
