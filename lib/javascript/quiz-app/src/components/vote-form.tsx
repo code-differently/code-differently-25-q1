@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { submitVote } from "@/lib/actions"
-import { UserButton } from "@clerk/nextjs"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
@@ -44,9 +43,6 @@ export default function VoteForm({ topic, options, userId }: VoteFormProps) {
 
   return (
     <div>
-      <div className="flex justify-end mb-4">
-        <UserButton afterSignOutUrl="/" />
-      </div>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <RadioGroup value={selectedOption} onValueChange={setSelectedOption} className="space-y-4 mb-6">
           {options.map((option) => (
