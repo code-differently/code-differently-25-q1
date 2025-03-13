@@ -29,7 +29,7 @@ public static void main(String[] args) {
 ```
 
 
-### Python Explanations.
+### Python Explanations
  When we look at the python implementation, we define a function and give it and attribute `(num)`. We introduce the `if` statement and `for` loop to iterate over the funtion and check if it matches the requirements. We later propmt user to input a number and the code will verify if all the requirements are met to qualify it as a prime number. 
 
 
