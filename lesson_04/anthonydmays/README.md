@@ -37,4 +37,4 @@ The JavaScript implementation uses a function named `isEven` that also takes a s
    - JavaScript has type coercion, which can sometimes lead to unexpected results if the input is not properly handled. In contrast, Python is more strict with types.
    
 3. **Function Calls**:
-   - The syntax for calling functions and printing to the console/output is slightly different. Python uses `print()`, while JavaScript uses `console.log()`.
+   - The syntax for calling functions and printing to the console/output is slightly different. Python uses `print()`, while JavaScript uses `console.log()`.#
