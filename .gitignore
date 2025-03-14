@@ -150,7 +150,3 @@ venv/
 pip-log.txt
 .vercel
 .env*.local
-
-# Custom
-!slides/dist/
-lesson_05/DavisD._HW/Bug-Issues
