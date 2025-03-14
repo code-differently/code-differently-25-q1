@@ -10,12 +10,13 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 interface VoteFormProps {
+  promptId: number
   topic: string
   options: string[]
   userId: string
 }
 
-export default function VoteForm({ topic, options, userId }: VoteFormProps) {
+export default function VoteForm({ promptId, topic, options, userId }: VoteFormProps) {
   const [selectedOption, setSelectedOption] = useState<string>("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
@@ -30,10 +31,11 @@ export default function VoteForm({ topic, options, userId }: VoteFormProps) {
       await submitVote({
         topic,
         option: selectedOption,
+        promptId,
         userId,
       })
 
-      router.push("/results")
+      router.push(`/results/${promptId}`)
     } catch (error) {
       console.error("Error submitting vote:", error)
     } finally {
