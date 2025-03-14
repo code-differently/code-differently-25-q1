@@ -31,8 +31,16 @@ interface ResultsChartProps {
 export default function ResultsChart({ votes }: ResultsChartProps) {
   const total = votes.reduce((sum, vote) => sum + vote.count, 0)
 
-  // Sort votes by count in descending order
-  const sortedVotes = [...votes].sort((a, b) => b.count - a.count);
+  // Group votes by option
+  const groupedVotes = votes.reduce((acc, vote) => {
+    if (!acc[vote.option]) {
+      acc[vote.option] = { ...vote, count: 0 }
+    }
+    acc[vote.option].count += vote.count
+    return acc
+  }, {} as Record<string, Vote>)
+
+  const chartData = Object.values(groupedVotes)
 
   return (
     <Card className="p-6 max-w-3xl mx-auto">
@@ -41,13 +49,11 @@ export default function ResultsChart({ votes }: ResultsChartProps) {
       <ChartContainer className="gap-6" config={chartConfig}>
         <BarChart
           className="h-[300px]"
-          data={sortedVotes}
+          data={chartData}
         >
          <XAxis dataKey="option" />
          <ChartTooltip content={<ChartTooltipContent />} />
-          {sortedVotes.map((vote) => (
-            <Bar key={vote.option} dataKey="count" fill={`var(--color-${vote.option})`} radius={4}></Bar>
-          ))}
+          <Bar dataKey="count" fill="#2563eb" />
         </BarChart>
       </ChartContainer>
 

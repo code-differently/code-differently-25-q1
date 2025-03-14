@@ -1,35 +1,37 @@
 // In a real application, you would use a proper database
 // This is a simple in-memory implementation for demonstration purposes
 
+import prisma from "./prisma"
+
 interface VoteRecord {
   topic: string
   option: string
   userId: string // Changed from userEmail to userId
-  timestamp: Date
+  createdAt: Date
 }
 
-// In-memory storage
-const votes: VoteRecord[] = []
-
-export async function saveVote(vote: Omit<VoteRecord, "timestamp">) {
-  const newVote = {
-    ...vote,
-    timestamp: new Date(),
-  }
-
-  votes.push(newVote)
-  return newVote
+export async function saveVote(vote: Omit<VoteRecord, "createdAt">) {
+  const newVote = await prisma.votes.create({
+    data: vote,
+  })
+  return {...newVote, createdAt: newVote.created_at}
 }
 
 export async function getUserVote(userId: string | null | undefined) {
   if (!userId) return null
 
-  return votes.find((vote) => vote.userId === userId) || null
+  return await prisma.votes.findFirst({
+    where: {
+      userId: userId,
+    },
+  })
 }
 
 export async function getAllVotes() {
   // Count votes by option
   const voteCounts: Record<string, number> = {}
+
+  const votes = await prisma.votes.findMany();
 
   votes.forEach((vote) => {
     if (voteCounts[vote.option]) {
@@ -44,5 +46,9 @@ export async function getAllVotes() {
     option,
     count,
   }))
+}
+
+export async function clearVotes() {
+  await prisma.votes.deleteMany({})
 }
 

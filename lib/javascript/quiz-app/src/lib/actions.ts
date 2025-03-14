@@ -1,6 +1,6 @@
 "use server"
 
-import { saveVote } from "./db"
+import { clearVotes, saveVote } from "./db"
 
 interface VoteData {
   topic: string
@@ -29,3 +29,12 @@ export async function submitVote(data: VoteData) {
   }
 }
 
+export async function clearAllVotes() {
+  try {
+    await clearVotes()
+    return { success: true }
+  } catch (error) {
+    console.error("Error clearing votes:", error)
+    throw error
+  }
+}
