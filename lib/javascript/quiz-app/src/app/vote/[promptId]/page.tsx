@@ -19,13 +19,13 @@ export default async function VotePage({
 
   // Check if user has already voted
   const hasVoted = await getUserVote(userId)
+  const promptId = +(await params).promptId;
 
   // Redirect to results if already voted
   if (hasVoted) {
-    return redirect("/results")
+    return redirect(`/results/${promptId}`)
   }
 
-  const promptId = +(await params).promptId;
   const prompt = await getPrompt(promptId);
   const topic = '' + prompt?.Prompt;
   const options = (prompt?.Options as {options: string[]}).options;
