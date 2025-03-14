@@ -1,15 +1,15 @@
 "use client"
 
 import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import { clearAllVotes } from "@/lib/actions"
@@ -25,7 +25,7 @@ export default function ClearVotesButton() {
     setIsClearing(true)
     try {
       await clearAllVotes()
-      router.refresh() // Refresh the page to show updated results
+      router.push("/vote")
     } catch (error) {
       console.error("Failed to clear votes:", error)
     } finally {
