@@ -11,8 +11,7 @@ export default async function VotePage() {
     return redirect("/sign-in")
   }
 
-  // const userId = user.emailAddresses[0]?.emailAddress || user.id
-  const userId = 'anthony@morganlatimer.com';
+  const userId = user.emailAddresses[0]?.emailAddress || user.id;
 
   // Check if user has already voted
   const hasVoted = await getUserVote(userId)
