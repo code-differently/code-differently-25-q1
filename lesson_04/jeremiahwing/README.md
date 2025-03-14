@@ -57,4 +57,4 @@ The "C++" Implementation also uses the function IsPrime. This function also work
 | **Input**             | Both take number input to check if output is prime.                           | Java has a personal writting style while C++ follows an ordered structure.|
 | **Main Function**     | Both have main start section to run code.                        | Java uses "public static void Main()" C++ uses "int main()" to start.|
 | **First Line of Code** | Both need a special line including designated tools for code to start and run. | Java starts with "public class;". C++ starts with "#include <iostream>"|
-| **Printing Output**    | Both Java and C++ use printing outputs to show if number is prime.          | Java uses "System.out.print()". C++ uses "cout" but, for larger programs uses std::cout to avoid potential name conflicts. |
+| **Printing Output**    | Both Java and C++ use printing outputs to show if number is prime.          | Java uses "System.out.print()". C++ uses "cout" but, for larger programs uses std::cout to avoid potential name conflicts.|
