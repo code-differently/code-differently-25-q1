@@ -2,6 +2,7 @@
 As a customer, I want to be able to order food from my favorite restaurant, so that I can have my food deleivered to my home.
 
 Jacob is a pizza lover and his favorite pizza restaurant is Papa John's. He wants to order Papa John's for dinner every day after work.
+
 ## 2. Social media app to post picutres 
 As user, I want to be able to easily post my pictures somewhere, so that I can have a place to show my picture portfolio.
 
