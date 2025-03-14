@@ -150,6 +150,3 @@ venv/
 pip-log.txt
 .vercel
 .env*.local
-
-# Custom
-!slides/dist/
