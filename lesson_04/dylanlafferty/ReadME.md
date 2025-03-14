@@ -24,7 +24,7 @@
 }
 ```
 
-##JavaScript implementation
+## JavaScript implementation
 
 ```
 // let number = prompt("Enter a number to check if it is a Prime number");
