@@ -5,7 +5,8 @@ import { clearVotes, saveVote } from "./db"
 interface VoteData {
   topic: string
   option: string
-  userId: string // Changed from userEmail to userId
+  promptId: number
+  userId: string
 }
 
 export async function submitVote(data: VoteData) {
@@ -19,6 +20,7 @@ export async function submitVote(data: VoteData) {
     await saveVote({
       topic: data.topic,
       option: data.option,
+      promptId: data.promptId,
       userId: data.userId,
     })
 
@@ -29,9 +31,9 @@ export async function submitVote(data: VoteData) {
   }
 }
 
-export async function clearAllVotes() {
+export async function clearAllVotes(promptId: number) {
   try {
-    await clearVotes()
+    await clearVotes(promptId)
     return { success: true }
   } catch (error) {
     console.error("Error clearing votes:", error)

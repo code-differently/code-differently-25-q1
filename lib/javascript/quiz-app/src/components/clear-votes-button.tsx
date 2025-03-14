@@ -17,15 +17,15 @@ import { Trash2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-export default function ClearVotesButton() {
+export default function ClearVotesButton({ promptId }: { promptId: number }) {
   const [isClearing, setIsClearing] = useState(false)
   const router = useRouter()
 
   const handleClearVotes = async () => {
     setIsClearing(true)
     try {
-      await clearAllVotes()
-      router.push("/vote")
+      await clearAllVotes(promptId)
+      router.push(`/vote/${promptId}`)
     } catch (error) {
       console.error("Failed to clear votes:", error)
     } finally {

@@ -6,13 +6,19 @@ import prisma from "./prisma"
 interface VoteRecord {
   topic: string
   option: string
-  userId: string // Changed from userEmail to userId
+  userId: string
+  promptId: number
   createdAt: Date
 }
 
 export async function saveVote(vote: Omit<VoteRecord, "createdAt">) {
   const newVote = await prisma.votes.create({
-    data: vote,
+    data: {
+      prompt_id: vote.promptId,
+      topic: vote.topic,
+      userId: vote.userId,
+      option: vote.option,
+    },
   })
   return {...newVote, createdAt: newVote.created_at}
 }
@@ -27,11 +33,15 @@ export async function getUserVote(userId: string | null | undefined) {
   })
 }
 
-export async function getAllVotes() {
+export async function getAllVotes(promptId: number) {
   // Count votes by option
   const voteCounts: Record<string, number> = {}
 
-  const votes = await prisma.votes.findMany();
+  const votes = await prisma.votes.findMany({
+    where: {
+      prompt_id: promptId,
+    },
+  });
 
   votes.forEach((vote) => {
     if (voteCounts[vote.option]) {
@@ -48,7 +58,19 @@ export async function getAllVotes() {
   }))
 }
 
-export async function clearVotes() {
-  await prisma.votes.deleteMany({})
+export async function clearVotes(promptId: number) {
+  await prisma.votes.deleteMany({
+    where: {
+      prompt_id: promptId,
+    },
+  })
+}
+
+export async function getPrompt(id: number) {
+  return await prisma.prompts.findFirst({
+    where: {
+      id: id,
+    },
+  });
 }
 
