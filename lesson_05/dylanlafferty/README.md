@@ -6,5 +6,7 @@
 
     2. As a `Software engineer`, `I want` a program that will allow me to drag and drop different css elements, `So that` I can efficently create a custom webpage without having to spend hours making the perfect CSS.
 
-    3. As a `Inventory Stock`, `I want` a program that will keep track of items in my storage and when that item hits a certain number it will automatically send order. 
+    3. As a `Inventory Stock`, `I want` a program that will keep track of items in my storage and when that item hits a certain number it will automatically send order. `So that` I can automate my storage process and spend time reordering on other tasks in the store.
     ```
+
+    
