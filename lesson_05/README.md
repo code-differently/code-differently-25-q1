@@ -23,7 +23,7 @@ Write three user stories for any software of your choosing, existing or totally 
 
 ### Submitting bugs
 
-Find three bugs in the [UTasks online todo app][buggy-app] (need to create an account). Write up two GitHub issues in our code differently repository containing the following elements:
+Find three bugs in the [UTasks online todo app][buggy-app] (need to create an account). Write up two GitHub issues in our Code Differently repository containing the following elements:
 
 * A brief description of the problem.
 * Detailed steps to reproduce the issue in a numbered list.
