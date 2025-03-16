@@ -1,9 +1,13 @@
 import VoteForm from "@/components/vote-form";
-import { getUserVote } from "@/lib/db";
+import { getPrompt, getUserVote } from "@/lib/db";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
-export default async function VotePage() {
+export default async function VotePage({
+  params,
+}: {
+  params: Promise<{ promptId: string }>
+}) {
   const user = await currentUser()
 
   // Redirect to sign-in if not authenticated
@@ -15,19 +19,21 @@ export default async function VotePage() {
 
   // Check if user has already voted
   const hasVoted = await getUserVote(userId)
+  const promptId = +(await params).promptId;
 
   // Redirect to results if already voted
   if (hasVoted) {
-    return redirect("/results")
+    return redirect(`/results/${promptId}`)
   }
 
-  const topic = "What's your favorite programming language?"
-  const options = ["JavaScript", "TypeScript", "Python", "Rust", "Go", "Other"]
+  const prompt = await getPrompt(promptId);
+  const topic = '' + prompt?.Prompt;
+  const options = (prompt?.Options as {options: string[]}).options;
 
   return (
     <div className="container mx-auto py-10">
       <h1 className="text-3xl font-bold mb-8 text-center">{topic}</h1>
-      <VoteForm topic={topic} options={options} userId={userId} />
+      <VoteForm promptId={promptId} topic={topic} options={options} userId={userId} />
     </div>
   )
 }

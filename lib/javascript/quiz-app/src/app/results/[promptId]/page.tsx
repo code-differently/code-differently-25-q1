@@ -1,10 +1,14 @@
 import ClearVotesButton from "@/components/clear-votes-button"
 import ResultsChart from "@/components/results-chart"
-import { getAllVotes } from "@/lib/db"
+import { getAllVotes, getPrompt } from "@/lib/db"
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 
-export default async function ResultsPage() {
+export default async function ResultsPage({
+  params,
+}: {
+  params: Promise<{ promptId: string }>
+}) {
   const user = await currentUser()
 
   // Redirect to sign-in if not authenticated
@@ -18,8 +22,10 @@ export default async function ResultsPage() {
     isAdmin = true;
   }
 
-  const topic = "What's your favorite programming language?"
-  const votes = await getAllVotes()
+  const promptId = +(await params).promptId;
+  const prompt = await getPrompt(promptId);
+  const topic = prompt?.Prompt;
+  const votes = await getAllVotes(promptId);
 
   return (
     <div className="container mx-auto py-10">
@@ -27,7 +33,7 @@ export default async function ResultsPage() {
         <h1 className="text-3xl font-bold mb-8 text-center">{topic}</h1>
         {isAdmin &&(
           <div className="flex items-center gap-4">
-            <ClearVotesButton />
+            <ClearVotesButton promptId={promptId} />
           </div>
         )}
       </div>
