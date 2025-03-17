@@ -23,6 +23,7 @@ HW_VERSION=D
 ```
 2. Run the program to determine the expression you must implement.
 ```bash
+npm install
 npm run compile
 npm start
 ```
