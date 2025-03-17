@@ -8,4 +8,16 @@ export class ExpressionCalculator {
   pow(base: number, exponent: number): number {
     return Math.pow(base, exponent);
   }
+
+  add(a: number, b: number): number {
+    return a + b;
+  }
+
+  mutiply(a: number, b: number): number {
+    return a * b;
+  }
+
+  divide(a: number, b: number): number {
+    return a / b;
+  }
 }
