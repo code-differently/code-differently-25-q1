@@ -38,7 +38,7 @@ export class Lesson5 {
         [AnswerChoice.C, "To insert an image"],
         [AnswerChoice.D, "To create a paragraph"],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.B,
     );
   }
 
@@ -52,7 +52,7 @@ export class Lesson5 {
         [AnswerChoice.C, "alt"],
         [AnswerChoice.D, "href"],
       ]),
-      AnswerChoice.D,
+      AnswerChoice.B,
     );
   }
 
