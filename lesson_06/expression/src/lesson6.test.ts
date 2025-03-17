@@ -17,7 +17,7 @@ describe("Lesson6Test", () => {
     const c = 3;
     const d = 4;
     const e = 5;
-    const expected = FUNCTIONS[process.env.HW_VERSION!].call(
+    const expected = FUNCTIONS[process.env.HW_VERSION || ""].call(
       null,
       ...[a, b, c, d, e],
     );
