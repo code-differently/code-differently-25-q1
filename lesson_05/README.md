@@ -30,5 +30,3 @@ Find three bugs in the [UTasks online todo app][buggy-app] (need to create an ac
 * The outcome you expected as a result of doing the steps.
 * The actual result you got that was unexpected.
 * At least one of your bugs must include a screenshot.
-
-[buggy-app]: https://utasks-main.web.app/
