@@ -13,4 +13,22 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Write details here.
+- [ ] Write [user stories](#writing-user-stories).
+- [ ] [Submit a new bug](#submitting-bugs) to the repository.
+- [ ] Do pre-work for [lesson 06](/lesson_06/).
+
+### Writing user stories
+
+Write three user stories for any software of your choosing, existing or totally made up. Provide your responses in a README file that you create within your own uniquely named directory.
+
+### Submitting bugs
+
+Find three bugs in the [UTasks online todo app][buggy-app] (need to create an account). Write up two GitHub issues in our Code Differently repository containing the following elements:
+
+* A brief description of the problem.
+* Detailed steps to reproduce the issue in a numbered list.
+* The outcome you expected as a result of doing the steps.
+* The actual result you got that was unexpected.
+* At least one of your bugs must include a screenshot.
+
+[buggy-app]: https://utasks-main.web.app/
