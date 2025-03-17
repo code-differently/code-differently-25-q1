@@ -122,7 +122,7 @@ export class Lesson5 {
         [AnswerChoice.C, "/* this is a comment */"],
         [AnswerChoice.D, "<!-- this is a comment -->"],
       ]),
-      AnswerChoice.A,
+      AnswerChoice.C,
     );
   }
 
