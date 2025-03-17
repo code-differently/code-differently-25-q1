@@ -78,10 +78,12 @@ jobs:
       working-directory: ./lesson_06/quiz
       run: |
         npm ci
-        npm run check
+        npm run compile
+        npm run lint
 
     - name: Build Lesson 06 Expression with Node.js
       working-directory: ./lesson_06/expression
       run: |
         npm ci
-        npm run check
+        npm run compile
+        npm run lint
