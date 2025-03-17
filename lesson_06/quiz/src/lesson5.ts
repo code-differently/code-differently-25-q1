@@ -136,7 +136,7 @@ export class Lesson5 {
         [AnswerChoice.C, "text-size"],
         [AnswerChoice.D, "text-style"],
       ]),
-      AnswerChoice.C,
+      AnswerChoice.B,
     );
   }
 
