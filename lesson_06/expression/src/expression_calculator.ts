@@ -5,7 +5,7 @@ export class ExpressionCalculator {
     const base: number = this.add(a, b);
     const expo: number = c;
 
-    return this.divide(this.pow(base, expo), this.mutiply(d, e));
+    return this.divide(this.pow(base, expo), this.multiply(d, e));
   }
 
   pow(base: number, exponent: number): number {
@@ -16,7 +16,7 @@ export class ExpressionCalculator {
     return a + b;
   }
 
-  mutiply(a: number, b: number): number {
+  multiply(a: number, b: number): number {
     return a * b;
   }
 
