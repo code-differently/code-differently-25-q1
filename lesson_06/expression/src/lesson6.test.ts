@@ -37,7 +37,7 @@ describe("Lesson6Test", () => {
     expect(calculator.pow).toHaveBeenCalledTimes(1);
   });
 
-  test("testAdd_works", () => {
+  test("testAdd_works", (B) => {
     // Act
     const result = calculator.add(1, 2);
 
@@ -45,7 +45,7 @@ describe("Lesson6Test", () => {
     expect(result).toBe(3);
   });
 
-  test("testMultiply_works", () => {
+  test("testMultiply_works", (D) => {
     // Act
     const result = calculator.multiply(1, 2);
 
@@ -53,7 +53,7 @@ describe("Lesson6Test", () => {
     expect(result).toBe(2);
   });
 
-  test("testDivide_works", () => {
+  test("testDivide_works", (C) => {
     // Act
     const result = calculator.divide(1, 2);
 
@@ -61,7 +61,7 @@ describe("Lesson6Test", () => {
     expect(result).toBeCloseTo(0.5);
   });
 
-  test("testPow_works", () => {
+  test("testPow_works", (G) => {
     // Act
     const result = calculator.pow(2, 3);
 
