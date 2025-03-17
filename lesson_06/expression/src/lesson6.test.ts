@@ -39,7 +39,7 @@ describe("Lesson6Test", () => {
 
   test("testAdd_works", () => {
     // Act
-    const result = calculator.add(2, 3);
+    const result = calculator.add(1, 2);
 
     // Assert
     expect(result).toBe(3);
