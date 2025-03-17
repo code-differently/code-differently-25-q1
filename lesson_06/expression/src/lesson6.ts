@@ -13,7 +13,7 @@ const rl = createInterface({
 });
 
 const main = async () => {
-  const testFunction = FUNCTIONS[process.env.HW_VERSION!];
+  const testFunction = FUNCTIONS[process.env.HW_VERSION || ""];
   if (testFunction === undefined) {
     console.log("HW_VERSION version not set in config. Exiting...");
     process.exit(1);
