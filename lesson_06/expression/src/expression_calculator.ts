@@ -2,10 +2,7 @@ export class ExpressionCalculator {
   /** Returns a calculation involving a, b, c, d, and e */
   calculate(a: number, b: number, c: number, d: number, e: number): number {
     // Implement your code here to return the correct value.
-    const base: number = this.add(a, b);
-    const expo: number = c;
-
-    return this.divide(this.pow(base, expo), this.multiply(d, e));
+    return this.divide(this.pow(this.add(a, b), c), this.multiply(d, e));
   }
 
   pow(base: number, exponent: number): number {
