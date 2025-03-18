@@ -38,7 +38,7 @@ export class Lesson5 {
         [AnswerChoice.C, "To insert an image"],
         [AnswerChoice.D, "To create a paragraph"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -52,7 +52,7 @@ export class Lesson5 {
         [AnswerChoice.C, "alt"],
         [AnswerChoice.D, "href"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -66,7 +66,7 @@ export class Lesson5 {
         [AnswerChoice.C, "<div>"],
         [AnswerChoice.D, "<link>"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -80,7 +80,7 @@ export class Lesson5 {
         [AnswerChoice.C, "<span>"],
         [AnswerChoice.D, "<br>"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -94,7 +94,7 @@ export class Lesson5 {
         [AnswerChoice.C, "Computer Style Sheets"],
         [AnswerChoice.D, "Cascading System Sheets"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -108,7 +108,7 @@ export class Lesson5 {
         [AnswerChoice.C, "text-color"],
         [AnswerChoice.D, "background-color"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -122,7 +122,7 @@ export class Lesson5 {
         [AnswerChoice.C, "/* this is a comment */"],
         [AnswerChoice.D, "<!-- this is a comment -->"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -136,7 +136,7 @@ export class Lesson5 {
         [AnswerChoice.C, "text-size"],
         [AnswerChoice.D, "text-style"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -150,7 +150,7 @@ export class Lesson5 {
         [AnswerChoice.C, "inline-block"],
         [AnswerChoice.D, "none"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 
@@ -164,7 +164,7 @@ export class Lesson5 {
         [AnswerChoice.C, "<stylesheet link='styles.css'>"],
         [AnswerChoice.D, "<css href='styles.css'>"],
       ]),
-      AnswerChoice.Unanswered,
+      AnswerChoice.UNANSWERED,
     );
   }
 }
