@@ -12,9 +12,9 @@ export const askQuestion = (
   });
 };
 
-export const getFunctionBody = (f: Function) => {
-  const fString = f.toString().split("=>").pop()!;
-  return beautify(fString);
+export const getFunctionBody = (f: () => unknown) => {
+  const fString = f.toString().split("=>").pop();
+  return beautify(fString || "");
 };
 
 export const printFormualaWithValues = (
@@ -34,7 +34,7 @@ export const printFormualaWithValues = (
     ["e", String(e)],
     ["pow", "Math.pow"],
   ).reduce(
-    (acc: string, param: string[]) => acc.replace(param[0]!, param[1]!),
+    (acc: string, param: string[]) => acc.replace(param[0], param[1]),
     functionBody,
   );
   console.log(`\nNow computing the value of ${formula}`);
