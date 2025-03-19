@@ -11,10 +11,15 @@ export function compareStrings(a: string, b: string): number {
   // The distance will be a number less than 0 if string `a` is lexicographically less than `b`, 1
   // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
-
   // TODO(you): Finish this method.
 
-  return 0;
+  if (distance < 0) {
+    return -1;
+  } else if (distance > 0) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 /**
@@ -24,7 +29,11 @@ export function compareStrings(a: string, b: string): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  let result: number = n;
+  for (let i = result; i > 0; i--) {
+    result = i * (i - 1);
+  }
+  return result;
 }
 
 /**
