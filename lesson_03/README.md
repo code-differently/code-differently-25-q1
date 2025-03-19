@@ -1,4 +1,4 @@
-# Lesson 03: How Computers Work ([Slides](https://code-differently.github.io/code-differently-24-q4/slides/#/lesson_03))
+# Lesson 03: How Computers Work ([Slides](https://code-differently.github.io/code-differently-25-q1/slides/#/lesson_03))
 
 ## Pre-work
 

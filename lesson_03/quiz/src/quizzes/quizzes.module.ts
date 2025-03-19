@@ -20,7 +20,7 @@ import { MontezBradleyQuiz } from './montez_quiz.js';
 import { NiaPackquiz } from './nia_quiz.js';
 import { OliviaJamesQuiz } from './olivia_james_quiz.js';
 import { RasheedMillerQuiz } from './rasheed_miller_quiz.js';
-
+import { JustinsQuiz } from './justin_eklund_quiz.js';
 export const Quizzes = Symbol.for('Quizzes');
 
 // Add your quiz provider here.
@@ -40,6 +40,7 @@ const QUIZ_PROVIDERS = [
   KhaylaSaundersQuiz,
   DylanLaffertyQuiz,
   RasheedMillerQuiz,
+  JustinsQuiz,
   NiaPackquiz,
   DavisDQuiz,
   AnanatawaQuiz,
@@ -47,6 +48,7 @@ const QUIZ_PROVIDERS = [
   ChanelHuttQuiz,
   JeremiahWingQuiz,
   JasonWatsonQuiz,
+
 ];
 
 @Module({
