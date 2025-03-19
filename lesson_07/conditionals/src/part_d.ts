@@ -23,10 +23,11 @@ export function isWithinRange(num: number, min: number, max: number): boolean {
  * @returns
  */
 export function isValidTriangle(a: number, b: number, c: number): boolean {
-  if (a + b > c || a + c > b || b + c > a) {
+  if (a + b > c && a + c > b && b + c > a) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 /**
