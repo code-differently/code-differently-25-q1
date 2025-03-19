@@ -6,10 +6,7 @@ export class ExpressionCalculator {
     return Math.pow(base, exponent);
   }
   divide(a: number, b: number): number {
-    /*if (denominator === 0) {
-      throw new Error("Cannot divide by zero");
-    }
-    */return a / b;
+    return a / b;
   }
 
   multiply(a: number, b: number): number {
@@ -20,7 +17,7 @@ export class ExpressionCalculator {
     const divisionResult = this.divide(sumResult, c);
     const powerResult = this.pow(c, d);
     const multiplication = this.multiply(divisionResult, e);
-    console.log({ sumResult, powerResult, divisionResult, });
-    return multiplication
+    void powerResult;
+    return multiplication 
   }
   }
