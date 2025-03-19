@@ -1,8 +1,6 @@
 export class ExpressionCalculator {
   /** Returns a calculation involving a, b, c, d, and e */
   calculate(a: number, b: number, c: number, d: number, e: number): number {
-    // Implement your code here to return the correct value.
-    //(Math.pow(a, b) + c) * d / e
     const exponential = this.pow(a, b);
     const addition = this.add(exponential, c);
     const multiply = this.multiply(addition, d);
