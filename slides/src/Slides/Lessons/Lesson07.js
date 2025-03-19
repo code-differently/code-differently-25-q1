@@ -61,7 +61,7 @@ false // This is a FALSE expression
             <section>
                 <pre><code style=${{...codeStyle}}>!(val ${'>'} 0 && val ${'<'} 10)</code></pre>
                 <p>is equivalent to</p>
-                <pre><code style=${{...codeStyle}}>!(val ${'<='} 0 || val ${'>='} 10)</code></pre>
+                <pre><code style=${{...codeStyle}}>val ${'<='} 0 || val ${'>='} 10</code></pre>
             </section>
             <section>
                 <p>Now let's talk about <em>control flow</em></p>
