@@ -7,7 +7,6 @@ export class ExpressionCalculator {
     const power = this.pow(d, e);
     const division = this.divide(multiplication, power);
     return division;
-    //return (this.add(a, b) * c) / this.pow(d, e);
   }
 
   // Function to be implemented: (a + b) * c / Math.pow(d, e)
@@ -27,6 +26,5 @@ export class ExpressionCalculator {
     return a / b;
   }
 }
-
 
 //end of file//
