@@ -10,6 +10,7 @@ on:
       - "lesson_03/quiz/**"
       - "lesson_06/quiz/**"
       - "lesson_06/expression/**"
+      - "lesson_07/conditionals/**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -83,6 +84,12 @@ jobs:
 
     - name: Build Lesson 06 Expression with Node.js
       working-directory: ./lesson_06/expression
+      run: |
+        npm ci
+        npm run compile
+
+    - name: Build Lesson 07 with Node.js
+      working-directory: ./lesson_07/conditionals
       run: |
         npm ci
         npm run compile
