@@ -1,4 +1,4 @@
-# Lesson 04: How to Be A Great Software Engineer ([Slides](https://code-differently.github.io/code-differently-24-q4/slides/#/lesson_04))
+# Lesson 04: How to Be A Great Software Engineer ([Slides](https://code-differently.github.io/code-differently-25-q1/slides/#/lesson_04))
 
 ## Pre-work
 
