@@ -50,23 +50,22 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  const arr: number[] = [1, 1];
-  let prev = 1;
+  const arr: number[] = [];
   let curr = 1;
+  let prev = 1;
   let next;
 
-  if (n < 1) {
-    return [];
-  } else if (n === 1) {
-    return [1];
+  for (let i = 0; i < n; i++) {
+    if (i < 2) {
+      arr[i] = 1;
+    } else {
+      next = curr + prev;
+      arr[i] = next;
+      prev = curr;
+      curr = next;
+    }
   }
 
-  for (let i = 2; i < n; i++) {
-    next = prev + curr;
-    arr[i] = next;
-    prev = curr;
-    curr = next;
-  }
   return arr;
 }
 
