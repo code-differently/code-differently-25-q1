@@ -53,5 +53,19 @@ export function getDayOfWeek(day: number): string {
  * @returns
  */
 export function getTicketPrice(age: number): number {
-  return 0;
+  let ticketPrice = 0;
+
+  if (age < 5) {
+    return (ticketPrice = 0);
+  } else if (age >= 5 && age <= 17) {
+    return (ticketPrice = 10);
+  } else if (age >= 18 && age <= 59) {
+    return (ticketPrice = 20);
+  } else if (age >= 60) {
+    return (ticketPrice = 15);
+  } else {
+    return 0;
+  }
+
+  return ticketPrice;
 }
