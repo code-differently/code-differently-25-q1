@@ -5,9 +5,17 @@
  * @returns
  */
 export function isLeapYear(year: number): boolean {
-  return false;
+  switch (true) {
+    case year % 400 === 0:
+      return true;
+    case year % 100 === 0:
+      return false;
+    case year % 4 === 0:
+      return true;
+    default:
+      return false;
+  }
 }
-
 /**
  * Returns whether the given number is even or odd.
  *
@@ -15,6 +23,12 @@ export function isLeapYear(year: number): boolean {
  * @returns
  */
 export function isEvenOrOdd(num: number): string {
+  if (num % 2 === 0) {
+    return "even";
+  }
+  if (num % 2 !== 0) {
+    return "odd";
+  }
   return "";
 }
 
@@ -25,5 +39,8 @@ export function isEvenOrOdd(num: number): string {
  * @returns
  */
 export function hasVowel(word: string): boolean {
+  if (word.match(/[aeiou]/i)) {
+    return true;
+  }
   return false;
 }
