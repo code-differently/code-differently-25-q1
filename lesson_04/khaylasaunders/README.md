@@ -24,7 +24,7 @@ public class PrimeCheck {
         scanner.close();
     }
 }
-
+```
 
 ## JavaScript implementation
 
@@ -43,7 +43,7 @@ function isPrime(n) {
 
 let num = parseInt(prompt("Enter a number: "));
 console.log(isPrime(num) ? "Prime" : "Not Prime");
-
+```
 
 ## Explanation
 
