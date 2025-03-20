@@ -11,9 +11,15 @@ export function compareStrings(a: string, b: string): number {
   // The distance will be a number less than 0 if string `a` is lexicographically less than `b`, 1
   // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
-
-  // TODO(you): Finish this method.
-
+  if (distance < 0){ 
+    return -1;
+  }
+  if (distance > 0)  {
+    return 1;
+  }
+  if (distance === 0) {
+    return 1;
+  }
   return 0;
 }
 
