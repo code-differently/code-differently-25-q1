@@ -6,6 +6,39 @@
  * @returns
  */
 export function isUppercase(char: string): boolean {
+  const lower: string[] = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  for (const letter of lower) {
+    if (char === letter) {
+      return true;
+    }
+  }
   return false;
 }
 
@@ -17,7 +50,11 @@ export function isUppercase(char: string): boolean {
  * @returns
  */
 export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
-  return false;
+  if (age >= 18 && passedTest === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -29,5 +66,9 @@ export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
  * @returns
  */
 export function isStoreOpen(day: string, hour: number): boolean {
-  return false;
+  if (day !== "Sunday" && hour < 21 && hour >= 9) {
+    return true;
+  } else {
+    return false;
+  }
 }
