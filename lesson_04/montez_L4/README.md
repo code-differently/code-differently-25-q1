@@ -2,6 +2,7 @@
 
 ## Python code 
 
+```python
 def is_prime(n):
     """Check if a number is prime."""
     if n < 2:
@@ -32,9 +33,11 @@ def main():
     Run the program
 if __name__ == "__main__":
     main()
+```
 
 ## Java Code  
 
+```java
 import java.util.Scanner;
 
 public class PrimeChecker {
@@ -69,6 +72,7 @@ public class PrimeChecker {
         return true;
     }
 }
+```
 
 ## Compare and Contrast Java and Python
 
