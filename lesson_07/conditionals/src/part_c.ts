@@ -6,7 +6,13 @@
  * @returns
  */
 export function isStrongPassword(password: string): boolean {
-  return false;
+  if (password.length < 8) {
+    return false;
+  }
+  const passwordUppercase = /[A-Z]/.test(password);
+  const passwordNumber = /[0-9]/.test(password);
+
+  return passwordUppercase && passwordNumber;
 }
 
 /**
@@ -16,7 +22,23 @@ export function isStrongPassword(password: string): boolean {
  * @returns
  */
 export function getDayOfWeek(day: number): string {
-  return "";
+  if (day === 0) {
+    return "Sunday";
+  } else if (day === 1) {
+    return "Monday";
+  } else if (day === 2) {
+    return "Tuesday";
+  } else if (day === 3) {
+    return "Wednesday";
+  } else if (day === 4) {
+    return "Thursday";
+  } else if (day === 5) {
+    return "Friday";
+  } else if (day === 6) {
+    return "Saturday";
+  } else {
+    return "";
+  }
 }
 
 /**
