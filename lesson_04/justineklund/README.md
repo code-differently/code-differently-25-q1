@@ -18,7 +18,7 @@ else:
 ```
   
   
-    Java Examples
+Java Examples
 
 ```java
     public class PrimeChecker {
