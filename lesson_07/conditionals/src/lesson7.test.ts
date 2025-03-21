@@ -43,6 +43,7 @@ describe("Lesson7 Tests", () => {
     // Test for value not present in the array
     expect(binarySearch(values, 0, values.length - 1, 4)).toBe(-1);
   });
+
   test("testComputeFactorial", () => {
     // Test for n = 0 (edge case)
     expect(computeFactorial(0)).toBe(1);
