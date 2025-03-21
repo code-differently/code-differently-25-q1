@@ -1,29 +1,47 @@
 ## Python Implementation
 
 ```python
-def prime_num(num):
+def is_prime(num):
     if num <= 1:
         return False
-    for i in range(2, num): 
+    for i in range(2, num):
         if num % i == 0:
             return False
     return True
+
+def main():
+    num = int(input("Enter a number: "))
+    print(f"{num} is prime." if is_prime(num) else f"{num} is not prime.")
+
+if __name__ == "__main__":
+    main()
 ```
 
 ## Java Implementation
 
 
 ```java
-public static void main(String[] args) { 
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter a number:");
-    int num = scanner.nextInt();
+import java.util.Scanner;
 
-    if (isPrime(num)) {
-        System.out.println(num + " is prime.");
+public class PrimeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        System.out.println(num + (isPrime(num) ? " is prime." : " is not prime."));
+        scanner.close();
     }
-    else {
-        System.out.println(num + " is not prime.");
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 ```
@@ -46,5 +64,6 @@ In java we have a different approach. Unlike python we define our class using `(
 
 2. Java uses `System.out.print()` to print out the statement and python uses `print()` to print statement.
 
-
 3. I notice i have to import `java.util.Scanner` to prompt user to input a number while python you only need to use, `input()`
+4. Java uses `{}` for blocks and `;` to end statement while python doesn't need semicolons.
+   
