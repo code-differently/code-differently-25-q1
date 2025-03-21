@@ -5,6 +5,19 @@
  * @returns
  */
 export function isLeapYear(year: number): boolean {
+  // To determine a leap year, it has to be divisible by 4.
+  if (year % 4 === 0) {
+    return true;
+  }
+
+  if (year % 100 === 0) {
+    return false;
+  }
+
+  if (year % 400 === 0) {
+    return true;
+  }
+
   return false;
 }
 
@@ -14,8 +27,16 @@ export function isLeapYear(year: number): boolean {
  * @param num
  * @returns
  */
+// To determine if anumber is even is has to be divisible by 2 with no remainder.
+// To determine if a number is odd, it will not be divisible by 2 evenly.
 export function isEvenOrOdd(num: number): string {
   return "";
+  if (num % 2 === 0) {
+    return "even";
+  }
+  if (num % 3 === 0) {
+    return "odd";
+  }
 }
 
 /**
@@ -24,6 +45,26 @@ export function isEvenOrOdd(num: number): string {
  * @param word
  * @returns
  */
+// If any word contains a vowel, it will render true.
+// If a word does not contain a vowel, it will render false.
+
 export function hasVowel(word: string): boolean {
-  return false;
+  const lowerCaseword = word.toLowerCase();
+  if (lowerCaseword.includes("a")) {
+    return true;
+  }
+  if (lowerCaseword.includes("e")) {
+    return true;
+  }
+  if (lowerCaseword.includes("i")) {
+    return true;
+  }
+  if (lowerCaseword.includes("o")) {
+    return true;
+  }
+  if (lowerCaseword.includes("u")) {
+    return true;
+  } else {
+    return false;
+  }
 }
