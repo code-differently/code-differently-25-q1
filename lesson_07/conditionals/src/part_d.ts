@@ -7,6 +7,9 @@
  * @returns
  */
 export function isWithinRange(num: number, min: number, max: number): boolean {
+  if (num >= min && num <= max) {
+    return true;
+  }
   return false;
 }
 
@@ -19,7 +22,12 @@ export function isWithinRange(num: number, min: number, max: number): boolean {
  * @returns
  */
 export function isValidTriangle(a: number, b: number, c: number): boolean {
-  return false;
+  switch (true) {
+    case a + b > c && a + c > b && b + c > a:
+      return true;
+    default:
+      return false;
+  }
 }
 
 /**
@@ -30,5 +38,17 @@ export function isValidTriangle(a: number, b: number, c: number): boolean {
  * @returns
  */
 export function getSeason(month: number): string {
+  if (isWithinRange(month, 1, 12)) {
+    switch (true) {
+      case isWithinRange(month, 3, 5):
+        return "Spring";
+      case isWithinRange(month, 6, 8):
+        return "Summer";
+      case isWithinRange(month, 9, 11):
+        return "Fall";
+      default:
+        return "Winter";
+    }
+  }
   return "Invalid month";
 }
