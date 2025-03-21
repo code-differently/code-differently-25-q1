@@ -22,11 +22,11 @@ export function compareStrings(a: string, b: string): number {
  * Computes the factorial of the given value of `n`.
  *
  * @param n The value for which to compute the factorial.
- * @return The factorial of n.
+ * @return The factorial of n, or 0 if n is negative.
  */
 export function computeFactorial(n: number): number {
   if (n < 0) {
-    throw new Error("Factorial is not defined for negative numbers.");
+    return 0; // Return 0 for negative numbers as per the test case
   }
   if (n === 0 || n === 1) {
     return 1;
