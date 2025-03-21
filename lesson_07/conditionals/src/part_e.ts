@@ -5,9 +5,15 @@
  * @param char
  * @returns
  */
+
 export function isUppercase(char: string): boolean {
-  return false;
-}
+  if(['A', 'B', 'C', 'D', 'E', 'F','G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S','T', 'U', 'V', 'W', 'X', 'Y', 'Z'].includes(char)) {
+    return true;
+  } else {
+    return false;
+  }
+  }
+
 
 /**
  * Determine if a person is eligible for a driving license (age and test passed).
@@ -17,7 +23,12 @@ export function isUppercase(char: string): boolean {
  * @returns
  */
 export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
-  return false;
+      if (age >= 18 && passedTest) {
+        return true;
+      }
+      else {
+        return false;
+      }
 }
 
 /**
@@ -29,5 +40,16 @@ export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
  * @returns
  */
 export function isStoreOpen(day: string, hour: number): boolean {
-  return false;
+  const weekCaseDay = day.toLowerCase(); 
+
+
+    if(weekCaseDay === 'sunday') {
+    return false;
+    }
+    else if (['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'].includes(weekCaseDay) && hour >= 21 || hour < 9)
+      return false;
+    else {
+      return true;
+    }
 }
+

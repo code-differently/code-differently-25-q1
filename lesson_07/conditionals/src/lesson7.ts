@@ -12,9 +12,15 @@ export function compareStrings(a: string, b: string): number {
   // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
 
-  // TODO(you): Finish this method.
-
+  if (distance < 0) {
+    return -1;
+  }
+  else if (distance > 0) {
+    return 1;
+  }
+  else {
   return 0;
+  }
 }
 
 /**
@@ -22,10 +28,19 @@ export function compareStrings(a: string, b: string): number {
  *
  * @param n The value for which to compute the factorial.
  * @return The factorial of n.
+ * 
+ * 5! = 5*4! factorial equation
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  else {
+    return n * computeFactorial(n-1);
+  }
 }
+
+
 
 /**
  * Returns an array of the first `n` Fibonacci numbers starting from 1.
@@ -34,7 +49,31 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  return [];
+   
+    for (let i = 0; i < n; i++) {
+      if (n === 0) 
+        return [];
+
+      else if (n === 1) {
+        return [1];
+      }
+
+      else if (n === 2) {
+        return[1,1];
+      }
+      else {
+        const fib = getFirstNFibonacciNumbers(n -1);
+        fib.push(fib[fib.length - 1] + fib [fib.length - 2]);
+        return fib;
+      }
+    }
+
+  return[];
+
+
+
+
+
 }
 
 /**
@@ -58,6 +97,14 @@ export function binarySearch(
   }
 
   const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array.
+  if (values[pivotIndex] === value) {
+    return pivotIndex;
+  } else if (values[pivotIndex] > value) {
+    return binarySearch(values,start, pivotIndex - 1, value);
+  } else {
+    return binarySearch(values, pivotIndex + 1, end, value);
+    return -1;
+  }
 
   // TODO(you): Finish implementing this algorithm
 
