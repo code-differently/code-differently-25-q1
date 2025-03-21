@@ -12,8 +12,12 @@ export function compareStrings(a: string, b: string): number {
   // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
 
+  if (distance < 0) {
+    return -1;
+  } else if (distance > 0) {
+    return 1;
+  }
   // TODO(you): Finish this method.
-
   return 0;
 }
 
