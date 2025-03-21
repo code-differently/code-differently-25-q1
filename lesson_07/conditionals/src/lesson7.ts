@@ -8,13 +8,15 @@ import { computeLexicographicDistance } from "./util.js";
  * @return -1 if a is less than b, 1 if a is greater than b, and 0 otherwise.
  */
 export function compareStrings(a: string, b: string): number {
-  // The distance will be a number less than 0 if string `a` is lexicographically less than `b`, 1
-  // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
 
-  // TODO(you): Finish this method.
-
-  return 0;
+  if (distance < 0) {
+    return -1;
+  } else if (distance > 0) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 /**
@@ -24,7 +26,16 @@ export function compareStrings(a: string, b: string): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  if (n === 0) {
+    return 1;
+  }
+
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
 }
 
 /**
@@ -34,7 +45,20 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  return [];
+  if (n <= 0) return [];
+
+  const fib: number[] = [1];
+
+  if (n === 1) return fib;
+
+  fib.push(1); // Add the second 1
+
+  for (let i = 2; i < n; i++) {
+    const next = fib[i - 1] + fib[i - 2];
+    fib.push(next);
+  }
+
+  return fib;
 }
 
 /**
@@ -53,17 +77,16 @@ export function binarySearch(
   value: number,
 ): number {
   if (end < start) {
-    // The range is not valid so just return -1.
-    return -1;
+    return -1; // Base case: value not found
   }
 
-  const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array.
+  const pivotIndex = Math.floor((start + end) / 2);
 
-  // TODO(you): Finish implementing this algorithm
-
-  // If values[pivotIndex] is equal to value then return `pivotIndex`.
-  // Else if values[pivotIndex] is greater than the value, then
-  // call `binarySearch(values, start, pivotIndex - 1, value)` and return its value;
-  // Else call `binarySearch(values, pivotIndex + 1, end, value)` and return its value.
-  return -1;
+  if (values[pivotIndex] === value) {
+    return pivotIndex;
+  } else if (values[pivotIndex] > value) {
+    return binarySearch(values, start, pivotIndex - 1, value);
+  } else {
+    return binarySearch(values, pivotIndex + 1, end, value);
+  }
 }
