@@ -37,7 +37,7 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  /* fibionacci formula - f(n) = f(n-1) + f(n-2)... */
+  // edge cases
   if (n === 0) {
     return [];
   }
