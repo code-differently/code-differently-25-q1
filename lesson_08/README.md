@@ -13,4 +13,7 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Add moar details
+- [ ] Memorize the `printPermutations` and `reverseString` methods in [algos_app][algos-app].
+- [ ] Do pre-work for [lesson 09](/lesson_09/).
+
+[algos-app]: ./algos/src/lesson8.ts
