@@ -28,16 +28,28 @@ export function compareStrings(a: string, b: string): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  if (n < 0) {
+  if (n === 0) {
+    return 1;
+  }
+  else if (n === 1) {
+    return 1;
+  }
+  else if (n < 0) {
     return 0;
   }
-  let numbers = 1;
-
-  for (let i = 1; i < n; n--) {
-    numbers = numbers * n;
+  else {
+    return n * computeFactorial(n-1);
   }
+  // if (n < 0) {
+  //   return 0;
+  // }
+  // let numbers = 1;
 
-  return numbers;
+  // for (let i = 1; i < n; n--) {
+  //   numbers = numbers * n;
+  // }
+
+  // return numbers;
 }
 
 /**
@@ -47,17 +59,39 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  if (n === 0) {
-    return [];
+
+  for (let i = 0; i < n; i++) {
+    if (n === 0)
+      return[];
+    else if (n === 1) {
+      return [1];
+    }
+    else if (n === 2) {
+      return[1,1];
+    }
+    else {
+      const fib = getFirstNFibonacciNumbers(n-1);
+      fib.push(fib[fib.length - 1] + fib [fib.length -2]);
+      return fib;
+    }
   }
-  if (n === 1) {
-    return [1];
-  }
-  const number: number[] = [1, 1];
-  for (let i = 2; i < n; i++) {
-    number.push(number[i - 1] + number[i - 2]);
-  }
-  return [];
+  return[];
+  
+//   if (n === 0) {
+//     return [];
+//   }
+//   else if(n === 1) {
+//     return [1];
+//   } else if (n === 2) { 
+//       return [2]
+//   } else {
+//             const number: number[] = [1, 1];
+//       for (let i = 3; i < n; i++) {
+//       number.push(number[i - 1] + number[i - 2]);;
+    
+// }
+//   return number;
+//   }
 }
 
 /**
@@ -69,6 +103,7 @@ export function getFirstNFibonacciNumbers(n: number): number[] {
  * @param value The value to look for.
  * @return The index of the value if found in the array and -1 otherwise.
  */
+
 export function binarySearch(
   values: number[],
   start: number,
@@ -80,7 +115,17 @@ export function binarySearch(
     return -1;
   }
 
-  const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array.
+  const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array. //this is a variable "pivotIndex" that finds the middle values of our array
+  if (values[pivotIndex] === value) {
+    //this function checks if middle value index of our array is equal to the value in our array
+    return pivotIndex; // returns said value if it is
+  } else if (values[pivotIndex] > value) {
+    // checks if middle value is greater than our targett value, if it is than our target is in left half
+    return binarySearch(values, start, pivotIndex - 1, value); //calls the binarySearch function but range is narrowed down to left side from start to pivotIndex -1
+  } else {
+    //if middle value is less than the target value then the target must be in the right half
+    return binarySearch(values, pivotIndex + 1, end, value); // calls function binarySearch again and limit range to right side from pivotIndex +1 to end
+  }
 
   // TODO(you): Finish implementing this algorithm
 
@@ -88,12 +133,6 @@ export function binarySearch(
   // Else if values[pivotIndex] is greater than the value, then
   // call `binarySearch(values, start, pivotIndex - 1, value)` and return its value;
   // Else call `binarySearch(values, pivotIndex + 1, end, value)` and return its value.
-  if (values[pivotIndex] === value) {
-    return pivotIndex;
-  } else if (values[pivotIndex] > value) {
-    return binarySearch(values, start, pivotIndex - 1, value);
-  } else {
-    return binarySearch(values, start, pivotIndex + 1, end);
-  }
-  return -1;
+
+
 }

@@ -18,12 +18,17 @@ export function canVote(age: number): boolean {
  * @return The sum of all the values.
  */
 export function addNumbers(values: number[]): number {
+  // const array1 = ["a", "b", "c"];
+
+  // for (const element of array1) {
+  //   console.log(element);
+  // }
   if (values.length === 0) {
     return 0;
   } else {
     let sum = 0;
-    for (let i = 0; i < values.length; i++) {
-      sum += values[i];
+    for (const value of values) {
+      sum += value;
     }
     return sum;
   }
@@ -35,5 +40,13 @@ export function addNumbers(values: number[]): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  if (n < 0) {
+    return 0;
+  }
+  let numbers = 1;
+
+  for (let i = 1; i < n; n--) {
+    numbers = numbers * n;
+  }
+  return numbers;
 }
