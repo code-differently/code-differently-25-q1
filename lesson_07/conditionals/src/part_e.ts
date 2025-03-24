@@ -2,10 +2,14 @@
  * Write a function that takes a single character as an argument and
  * returns boolean value true if the character is an uppercase letter.
  *
- * @param char
- * @returns
+ *
+ *
  */
 export function isUppercase(char: string): boolean {
+  if (char >= "A" && char <= "Z") {
+    return true;
+  }
+
   return false;
 }
 
@@ -17,6 +21,9 @@ export function isUppercase(char: string): boolean {
  * @returns
  */
 export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
+  if (age >= 18 && passedTest) {
+    return true;
+  }
   return false;
 }
 
@@ -29,5 +36,9 @@ export function canGetDriverLicense(age: number, passedTest: boolean): boolean {
  * @returns
  */
 export function isStoreOpen(day: string, hour: number): boolean {
-  return false;
+  if (day === "Sunday" || hour < 9 || hour >= 21) {
+    return false;
+  } else {
+    return true;
+  }
 }
