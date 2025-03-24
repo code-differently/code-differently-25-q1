@@ -19,3 +19,4 @@ This exercise will provide you ample opportunities to practice your understandin
 
 [lesson7-file]: ./conditionals/src/lesson7.ts
 [conventional-commits]: https://www.conventionalcommits.org/en/v1.0.0/
+
