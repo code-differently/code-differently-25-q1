@@ -32,8 +32,14 @@ export function compareStrings(a: string, b: string): number {
  * 5! = 5*4! factorial equation
  */
 export function computeFactorial(n: number): number {
-  if (n === 0 || n === 1) {
+  if (n === 0) {
     return 1;
+  }
+  else if (n === 1) {
+    return 1;
+  }
+  else if (n < 0) {
+    return 0;
   }
   else {
     return n * computeFactorial(n-1);
