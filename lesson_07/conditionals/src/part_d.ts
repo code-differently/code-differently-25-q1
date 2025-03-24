@@ -8,7 +8,7 @@
  */
 function isWithinRange(num: number, min: number, max: number): boolean {
   return num >= min && num <= max;
-}
+} 
 
 console.log(isWithinRange(7, 5, 10));
 console.log(isWithinRange(2, 5, 10));

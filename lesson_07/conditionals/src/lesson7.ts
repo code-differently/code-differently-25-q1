@@ -15,7 +15,7 @@ function compareStrings(a: string, b: string): number {
   } else {
     return 0;
   }
-  
+   
 }
 
 /**
