@@ -64,6 +64,8 @@ Throughout the course, we will use the following tools for most assignments unle
 * Docker (https://www.docker.com/)
 * Github CLI (https://cli.github.com/)
 
+To experiment with different kinds of programming languages, you can also git clone the [Language Workbench](https://github.com/code-differently/language-workbench) to your computer and open it in VS Code. It is a useful tool for practicing concepts learned throughout the course.
+
 ## Activities
 
 Regular course work and homework assignments will be provided throughout lessons. Though varied, the assignments will generally consist of:
