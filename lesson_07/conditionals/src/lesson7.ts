@@ -7,16 +7,15 @@ import { computeLexicographicDistance } from "./util.js";
  * @param b The second `string` to compare.
  * @return -1 if a is less than b, 1 if a is greater than b, and 0 otherwise.
  */
-export function compareStrings(a: string, b: string): number {
-  const distance = computeLexicographicDistance(a, b);
-
-  if (distance < 0) {
+function compareStrings(a: string, b: string): number { 
+  if (a < b) {
     return -1;
-  } else if (distance > 0) {
+  } else if (a > b) {
     return 1;
   } else {
     return 0;
   }
+  
 }
 
 /**
@@ -25,7 +24,7 @@ export function compareStrings(a: string, b: string): number {
  * @param n The value for which to compute the factorial.
  * @return The factorial of n.
  */
-export function computeFactorial(n: number): number {
+function computeFactorial(n: number): number {
   if (n === 0) {
     return 1;
   }
@@ -44,21 +43,17 @@ export function computeFactorial(n: number): number {
  * @param n The first `n` of Fibonacci values to compute.
  * @return An array containing the first `n` Fibonacci values.
  */
-export function getFirstNFibonacciNumbers(n: number): number[] {
-  if (n <= 0) return [];
+function getFirstNFibonacciNumbers(n: number): number[] {
+  let fib: number[] = [];
 
-  const fib: number[] = [1];
-
-  if (n === 1) return fib;
-
-  fib.push(1); // Add the second 1
-
-  for (let i = 2; i < n; i++) {
-    const next = fib[i - 1] + fib[i - 2];
-    fib.push(next);
+  for (let i = 0; i < n; i++) {
+    if (i === 0 || i ===1) {
+      fib.push(1);
+    } else {
+      fib.push(fib[i - 1] + fib[i -2]);
+    }
   }
-
-  return fib;
+   return fib;
 }
 
 /**
@@ -70,23 +65,16 @@ export function getFirstNFibonacciNumbers(n: number): number[] {
  * @param value The value to look for.
  * @return The index of the value if found in the array and -1 otherwise.
  */
-export function binarySearch(
+function findValue(
   values: number[],
   start: number,
   end: number,
-  value: number,
+  value: number
 ): number {
-  if (end < start) {
-    return -1; // Base case: value not found
+  for (let i+ start; i <= end; i++) {
+    if (values[i] === value) {
+      return i;
+    }
   }
-
-  const pivotIndex = Math.floor((start + end) / 2);
-
-  if (values[pivotIndex] === value) {
-    return pivotIndex;
-  } else if (values[pivotIndex] > value) {
-    return binarySearch(values, start, pivotIndex - 1, value);
-  } else {
-    return binarySearch(values, pivotIndex + 1, end, value);
-  }
+  return -1;
 }
