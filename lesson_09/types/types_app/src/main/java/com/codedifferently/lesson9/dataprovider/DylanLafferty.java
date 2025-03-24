@@ -11,12 +11,12 @@ public class DylanLafferty extends DataProvider {
 
   public Map<String, Class> getColumnTypeByName() {
     return Map.of(
-        "column1", Integer.class,
-        "column2", Short.class,
-        "column3", String.class,
-        "column4", Float.class,
-        "column5", Long.class,
-        "column6", Double.class,
-        "column7", Boolean.class);
+        "column1", Boolean.class,
+        "column2", Integer.class,
+        "column3", Short.class,
+        "column4", Double.class,
+        "column5", Float.class,
+        "column6", Long.class,
+        "column7", String.class);
   }
 }
