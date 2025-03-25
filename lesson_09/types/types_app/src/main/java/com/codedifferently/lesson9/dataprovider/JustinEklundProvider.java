@@ -12,11 +12,11 @@ public class JustinEklundProvider extends DataProvider {
   public Map<String, Class> getColumnTypeByName() {
     return Map.of(
         "column1", Integer.class,
-        "column2", String.class,
-        "column3", Boolean.class,
-        "column4", Float.class,
-        "column5", Double.class,
-        "column6", Long.class,
-        "column7", Short.class);
+        "column2", Boolean.class,
+        "column3", Long.class,
+        "column4", Short.class,
+        "column5", Float.class,
+        "column6", String.class,
+        "column7", Double.class);
   }
 }
