@@ -5,19 +5,19 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AnthonyMaysProvider extends DataProvider {
+public class KarenAlabiProvider extends DataProvider {
   public String getProviderName() {
-    return "anthonymays";
+    return "karenalabi";
   }
 
   public Map<String, Class> getColumnTypeByName() {
     return Map.of(
-        "column1", Integer.class,
+        "column1", Short.class,
         "column2", String.class,
         "column3", Boolean.class,
         "column4", Float.class,
-        "column5", Double.class,
-        "column6", Long.class,
-        "column7", Short.class);
+        "column5", Long.class,
+        "column6", Integer.class,
+        "column7", Double.class);
   }
 }
