@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JbeyProvider extends DataProvider {
   public String getProviderName() {
-    return "Jbey";
+    return "JBey";
   }
 
   public Map<String, Class> getColumnTypeByName() {
