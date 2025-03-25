@@ -1,13 +1,12 @@
 package com.codedifferently.lesson9.dataprovider;
 
 import java.util.Map;
-
 import org.springframework.stereotype.Service;
 
 @Service
-public class montezBProviderProvider extends DataProvider {
+public class montezBProvider extends DataProvider {
   public String getProviderName() {
-    return "montezBProvider";
+    return "montezb";
   }
 
   public Map<String, Class> getColumnTypeByName() {
@@ -21,6 +20,3 @@ public class montezBProviderProvider extends DataProvider {
         "column7", Long.class);
   }
 }
-
-// End Of Code // 
-
