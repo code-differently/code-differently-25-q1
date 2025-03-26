@@ -27,7 +27,22 @@ export function compareStrings(a: string, b: string): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  // worked with Davis to complete this coding problem
+  // edge cases
+  if (n === 0) {
+    return 1;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  if (n < 0) {
+    return 0;
+  }
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
 
 /**
