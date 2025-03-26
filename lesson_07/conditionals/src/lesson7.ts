@@ -7,12 +7,19 @@ import { computeLexicographicDistance } from "./util.js";
  * @param b The second `string` to compare.
  * @return -1 if a is less than b, 1 if a is greater than b, and 0 otherwise.
  */
-function compareStrings(a: string, b: string): number { 
-  if (a < b) {
+export function compareStrings(a: string, b: string): number { 
+  // The distance will be a number less than 0 if string `a` is lexicographically less than `b`, 1
+  // if it is greater, and 0 if the strings are equal.
+  const distance = computeLexicographicDistance(a, b);
+
+  // TODO(you): Finish this method.
+
+  if (distance < 0) {
     return -1;
-  } else if (a > b) {
+  } else if (distance > 0) {
     return 1;
-  } else {
+  } 
+    else {
     return 0;
   }
  
@@ -24,17 +31,19 @@ function compareStrings(a: string, b: string): number {
  * @param n The value for which to compute the factorial.
  * @return The factorial of n.
  */
-function computeFactorial(n: number): number {
+export function computeFactorial(n: number): number {
   if (n === 0) {
     return 1;
   }
-
-  let result = 1;
-  for (let i = 1; i <= n; i++) {
-    result *= i;
+  else if (n === 1) {
+    return 1;
   }
-
-  return result;
+  else if (n < 0) {
+    return 0;
+  }
+  else {
+    return n * computeFactorial(n-1);
+  }
 }
 
 /**
@@ -43,17 +52,22 @@ function computeFactorial(n: number): number {
  * @param n The first `n` of Fibonacci values to compute.
  * @return An array containing the first `n` Fibonacci values.
  */
-function getFirstNFibonacciNumbers(n: number): number[] {
-  let fib: number[] = [];
+export function getFirstNFibonacciNumbers(n: number): number[] {
 
   for (let i = 0; i < n; i++) {
-    if (i === 0 || i ===1) {
-      fib.push(1);
-    } else {
-      fib.push(fib[i - 1] + fib[i -2]);
+    if (n === 0)
+      return [];
+
+      else if (n === 2) {
+        return[1,1];
+      }
+      else {
+        const fib = getFirstNFibonacciNumbers(n -1);
+        fib.push(fib[fib.length- 1] + fib[fib.length - 2]);
+        return fib;
     }
   }
-   return fib;
+   return[];
 }
 
 /**
@@ -65,16 +79,37 @@ function getFirstNFibonacciNumbers(n: number): number[] {
  * @param value The value to look for.
  * @return The index of the value if found in the array and -1 otherwise.
  */
-function findValue(
+export function binarySearch(
   values: number[],
   start: number,
   end: number,
-  value: number
+  value: number,
 ): number {
-  for (let i+ start; i <= end; i++) {
-    if (values[i] === value) {
-      return i;
+  while (start <= end) {
+    const mid = Math.floor((start + end) / 2);
+    if (values[mid] === value) {
+      return mid;
+    } else if (values[mid] < value) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
     }
   }
-  return -1;
+  
+  const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array.
+  if (values[pivotIndex] === value) {
+    return pivotIndex;
+  } else if (values[pivotIndex] > value) {
+    return binarySearch(values, start, pivotIndex - 1, value);
+  } else {
+    return binarySearch(values, pivotIndex + 1, end, value);
+    return -1;
+  }
+
+  // TODO(you): Finish implementing this algorithm
+
+  // If values[pivotIndex] is equal to value then return `pivotIndex`.
+  // Else if values[pivotIndex] is greater than the value, then
+  // call `binarySearch(values, start, pivotIndex - 1, value)` and return its value;
+  // Else call `binarySearch(values, pivotIndex + 1, end, value)` and return its value.
 }

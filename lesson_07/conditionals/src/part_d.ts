@@ -6,7 +6,7 @@
  * @param max
  * @returns
  */
-function isWithinRange(num: number, min: number, max: number): boolean {
+export function isWithinRange(num: number, min: number, max: number): boolean {
   return num >= min && num <= max;
 }  
 
@@ -21,7 +21,7 @@ console.log(isWithinRange(2, 5, 10));
  * @param c
  * @returns
  */
-function isValidTriangle(a: number, b: number, c: number): boolean {
+export function isValidTriangle(a: number, b: number, c: number): boolean {
   return a + b > c && a + c > b && b + c > a;
 }
 
@@ -32,7 +32,7 @@ function isValidTriangle(a: number, b: number, c: number): boolean {
  * @param month
  * @returns
  */
-function getSeason(month: number): string {
+export function getSeason(month: number): string {
   if (month >= 3 && month <= 5) {
     return "Spring";
   } else if (month >= 6 && month <= 8) {
