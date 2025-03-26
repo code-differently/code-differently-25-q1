@@ -1,0 +1,201 @@
+id,media_item_id,role,name
+75,38,Actor,Edward Norton
+159,80,Actor,Max von Sydow
+121,61,Director,David Lynch
+15,8,Actor,Leonardo DiCaprio
+167,84,Writer,Italo Calvino
+45,23,Actor,Johnny Depp
+77,39,Writer,Jane Austen
+110,55,Producer,Andrew Kosove
+125,63,Writer,Franz Kafka
+113,57,Writer,Philip K. Dick
+118,59,Actor,Paul Dano
+73,37,Director,David Fincher
+129,65,Actor,Jeff Bridges
+52,26,Actor,Ingrid Bergman
+60,30,Composer,Alexandre Desplat
+137,69,Writer,James Joyce
+164,82,Producer,Angelo Rizzoli
+38,19,Producer,Fran Walsh
+166,83,Actor,Anita Ekberg
+7,4,Director,Steven Spielberg
+78,39,Composer,Thomas Newman
+2,1,Producer,Jane Smith
+172,86,Actor,Aldo Fabrizi
+134,67,Producer,Jon Kilik
+151,76,Director,Akira Kurosawa
+177,89,Actor,Monica Vitti
+87,44,Actor,Mark Hamill
+36,18,Composer,James Horner
+72,36,Composer,Elmer Bernstein
+31,16,Director,James Cameron
+42,21,Composer,Alan Silvestri
+1,1,Director,John Doe
+16,8,Actor,Brad Pitt
+90,45,Composer,Patrick Doyle
+35,18,Writer,Arthur Conan Doyle
+89,45,Writer,Victor Hugo
+98,49,Producer,Rob Cowan
+149,75,Writer,James Baldwin
+32,16,Producer,Gale Anne Hurd
+143,72,Writer,Marcel Proust
+81,41,Actor,Christian Bale
+74,37,Producer,Cean Chaffin
+68,34,Producer,David Giler
+19,10,Director,Quentin Tarantino
+86,43,Producer,Gary Kurtz
+165,83,Actor,Marcello Mastroianni
+196,98,Actor,Lee Van Cleef
+49,25,Director,Alfred Hitchcock
+120,60,Composer,Jonny Greenwood
+163,82,Director,Federico Fellini
+156,78,Composer,Fumio Hayasaka
+58,29,Actor,Al Pacino
+14,7,Producer,Emma Thomas
+101,51,Writer,H.G. Wells
+122,61,Producer,Mark Frost
+82,41,Actor,Heath Ledger
+145,73,Director,Jean-Luc Godard
+12,6,Composer,John Williams
+13,7,Director,Christopher Nolan
+168,84,Composer,Nino Rota
+54,27,Composer,Max Steiner
+47,24,Writer,Ray Bradbury
+17,9,Writer,J.K. Rowling
+128,64,Producer,Ethan Coen
+88,44,Actor,Harrison Ford
+198,99,Composer,Ennio Morricone
+50,25,Producer,David O. Selznick
+106,53,Actor,Michael Shannon
+91,46,Director,Michael Bay
+133,67,Director,Spike Lee
+56,28,Producer,Jan Harlan
+175,88,Director,Michelangelo Antonioni
+109,55,Director,Denis Villeneuve
+139,70,Director,Woody Allen
+116,58,Producer,JoAnne Sellar
+108,54,Composer,Clint Mansell
+190,95,Actor,Silvana Mangano
+184,92,Actor,Claudia Cardinale
+136,68,Actor,Spike Lee
+117,59,Actor,Daniel Day-Lewis
+107,54,Writer,George Orwell
+39,20,Actor,Daniel Radcliffe
+97,49,Director,James Wan
+186,93,Composer,Franco Mannino
+157,79,Director,Ingmar Bergman
+53,27,Writer,Ernest Hemingway
+130,65,Actor,John Goodman
+144,72,Composer,Philip Glass
+180,90,Composer,Giovanni Fusco
+160,80,Actor,Liv Ullmann
+5,3,Writer,Mark Twain
+29,15,Writer,Agatha Christie
+105,53,Actor,Sally Hawkins
+37,19,Director,Peter Jackson
+65,33,Writer,William Shakespeare
+26,13,Producer,Irwin Winkler
+150,75,Composer,Michel Legrand
+61,31,Director,Francis Ford Coppola
+62,31,Producer,Gray Frederickson
+141,71,Actor,Diane Keaton
+55,28,Director,Stanley Kubrick
+94,47,Actor,Megan Fox
+102,51,Composer,Marco Beltrami
+199,100,Director,Franco Zeffirelli
+155,78,Writer,Yukio Mishima
+161,81,Writer,Henrik Ibsen
+104,52,Producer,J. Miles Dale
+40,20,Actor,Emma Watson
+93,47,Actor,Shia LaBeouf
+27,14,Actor,Matt Damon
+80,40,Producer,Robert Lorenz
+171,86,Actor,Anna Magnani
+30,15,Composer,Ennio Morricone
+187,94,Director,Pier Paolo Pasolini
+99,50,Actor,Patrick Wilson
+146,73,Producer,Georges de Beauregard
+23,12,Writer,Stephen King
+154,77,Actor,Takashi Shimura
+21,11,Actor,Tom Hanks
+124,62,Actor,Laura Dern
+25,13,Director,Martin Scorsese
+64,32,Actor,Morgan Freeman
+192,96,Composer,Carlo Rustichelli
+123,62,Actor,Kyle MacLachlan
+127,64,Director,Joel Coen
+148,74,Actor,Anna Karina
+191,96,Writer,Alberto Moravia
+9,5,Actor,Robert Downey Jr.
+138,69,Composer,Terence Blanchard
+200,100,Producer,John Brabourne
+112,56,Actor,Harrison Ford
+18,9,Composer,Howard Shore
+169,85,Director,Roberto Rossellini
+162,81,Composer,Erik Nordgren
+92,46,Producer,Jerry Bruckheimer
+41,21,Writer,Isaac Asimov
+83,42,Writer,Leo Tolstoy
+28,14,Actor,Ben Affleck
+63,32,Actor,Clint Eastwood
+111,56,Actor,Ryan Gosling
+193,97,Director,Sergio Leone
+46,23,Actor,Helena Bonham Carter
+20,10,Producer,Lawrence Bender
+115,58,Director,Paul Thomas Anderson
+51,26,Actor,Humphrey Bogart
+11,6,Writer,George R.R. Martin
+10,5,Actor,Chris Hemsworth
+140,70,Producer,Letty Aronson
+132,66,Composer,Carter Burwell
+189,95,Actor,Franco Citti
+43,22,Director,Tim Burton
+195,98,Actor,Clint Eastwood
+170,85,Producer,Salvo D'Angelo
+131,66,Writer,William Faulkner
+142,71,Actor,Mia Farrow
+119,60,Writer,John Steinbeck
+183,92,Actor,Burt Lancaster
+173,87,Writer,Umberto Eco
+44,22,Producer,Denise Di Novi
+6,3,Composer,Hans Zimmer
+3,2,Actor,Chris Evans
+147,74,Actor,Jean-Paul Belmondo
+85,43,Director,George Lucas
+59,30,Writer,F. Scott Fitzgerald
+96,48,Composer,John Ottman
+34,17,Actor,Tommy Lee Jones
+84,42,Composer,James Newton Howard
+22,11,Actor,Robin Wright
+79,40,Director,Clint Eastwood
+185,93,Writer,Primo Levi
+70,35,Actor,Carrie Fisher
+182,91,Producer,Goffredo Lombardo
+103,52,Director,Guillermo del Toro
+176,88,Producer,Carlo Ponti
+69,35,Actor,Harrison Ford
+179,90,Writer,Giuseppe Tomasi di Lampedusa
+48,24,Composer,Michael Giacchino
+174,87,Composer,Ennio Morricone
+178,89,Actor,Alain Delon
+188,94,Producer,Alfredo Bini
+126,63,Composer,Angelo Badalamenti
+194,97,Producer,Claudio Mancini
+197,99,Writer,Giovanni Verga
+57,29,Actor,Marlon Brando
+4,2,Actor,Scarlett Johansson
+24,12,Composer,Danny Elfman
+33,17,Actor,Will Smith
+67,34,Director,Ridley Scott
+135,68,Actor,Denzel Washington
+181,91,Director,Luchino Visconti
+76,38,Actor,Brad Pitt
+71,36,Writer,Charles Dickens
+66,33,Composer,John Barry
+95,48,Writer,Edgar Allan Poe
+114,57,Composer,Hans Zimmer
+158,79,Producer,Allan Ekelund
+152,76,Producer,Sôjirô Motoki
+153,77,Actor,Toshirô Mifune
+8,4,Producer,Kathleen Kennedy
+100,50,Actor,Vera Farmiga
