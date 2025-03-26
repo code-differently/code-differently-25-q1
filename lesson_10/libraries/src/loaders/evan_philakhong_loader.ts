@@ -21,7 +21,6 @@ export class EvanPhilakhongLoader implements Loader {
 
   async loadMediaItems(): Promise<MediaItem[]> {
     const mediaItems = [];
-    const credits = this.loadCredits;
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
