@@ -5,7 +5,7 @@ import { Loader } from './loader.js';
 
 export class EvanPhilakhongLoader implements Loader {
   getLoaderName(): string {
-    return 'anthonymays';
+    return 'evanphilakhong';
   }
 
   async loadData(): Promise<MediaItem[]> {
