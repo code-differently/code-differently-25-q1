@@ -40,16 +40,6 @@ export function computeFactorial(n: number): number {
   else {
     return n * computeFactorial(n-1);
   }
-  // if (n < 0) {
-  //   return 0;
-  // }
-  // let numbers = 1;
-
-  // for (let i = 1; i < n; n--) {
-  //   numbers = numbers * n;
-  // }
-
-  // return numbers;
 }
 
 /**
