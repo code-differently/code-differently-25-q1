@@ -12,10 +12,23 @@ export class MercedesMathewsLoader implements Loader {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
 
+    const mediaMap = new Map<string, MediaItem>();
+    for (const media of mediaItems) {
+      mediaMap.set(media.getId(), media);
+    }
+
+    for (const credit of credits) {
+      const mediaItem = mediaMap.get(credit.getMediaItemId());
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+    }
+
     console.log(
       `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
     );
 
+    console.log(...mediaItems.values());
     return [...mediaItems.values()];
   }
 
