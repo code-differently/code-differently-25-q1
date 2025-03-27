@@ -12,12 +12,25 @@ export class JustinEklundLoader implements Loader {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
     const mediamap = new Map<string, MediaItem>();
-             mediaItems.forEach((mediaItem) => {
+    mediaItems.forEach((mediaItem) => {
       mediamap.set(mediaItem.getId(), mediaItem);
-    }); console.log( `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
+    });
+    for (const mediaitem of mediaItems) {
+      mediamap.set(mediaitem.getId(), mediaitem);
+    }
+    for (const credit of credits) {
+      const mediaItem = mediamap.get(credit.getMediaItemId());
+      
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+    }
+    console.log(
+      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
     );
+  
 
-    return [...mediaItems.values()];
+    return Array.from(mediamap.values());
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
@@ -44,4 +57,4 @@ export class JustinEklundLoader implements Loader {
     return credits;
   }
 }
-// got assistance from ai and copilot aswell as Meiko and Mercedes
+// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon
