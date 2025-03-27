@@ -11,29 +11,37 @@ export class MeikoStephensLoader implements Loader {
   async loadData(): Promise<MediaItem[]> {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
-  const mediaMap = new Map<string, MediaItem>();
-           mediaItems.forEach((mediaItem) => {
+    const mediaMap = new Map<string, MediaItem>();
+
+    for (const mediaItem of mediaItems) {
       mediaMap.set(mediaItem.getId(), mediaItem);
-    });
- 
+    }
+    for (const credit of credits) {
+      const mediaItem = mediaMap.get(credit.getMediaItemId());
 
-    console.log(`Loaded ${credits.length} credits and ${mediaItems.length} media items`, );
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+    }
 
-    return [...mediaItems.values( )];
+    console.log(
+      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
+    );
+
+    return Array.from(mediaMap.values());
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
     const mediaItems = [];
     const readable = fs
-        .createReadStream('data/media_items.csv', 'utf-8')
-        .pipe(csv());
+      .createReadStream('data/media_items.csv', 'utf-8')
+      .pipe(csv());
     for await (const row of readable) {
-      const { id, title, type, year} = row;
-      mediaItems.push(new MediaItem(id, title, type, year,[]));
+      const { id, title, type, year } = row;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
     }
     return mediaItems;
   }
-
 
   async loadCredits(): Promise<Credit[]> {
     const credits = [];
