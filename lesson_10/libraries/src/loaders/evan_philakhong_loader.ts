@@ -25,8 +25,8 @@ export class EvanPhilakhongLoader implements Loader {
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
-      const { media_item_id, title, genre, year } = row;
-      mediaItems.push(new MediaItem(media_item_id, title, genre, year, []));
+      const { id, type, title, year } = row;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
     }
 
     return mediaItems;
