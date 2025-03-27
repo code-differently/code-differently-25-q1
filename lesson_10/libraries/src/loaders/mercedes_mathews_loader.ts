@@ -25,8 +25,8 @@ export class MercedesMathewsLoader implements Loader {
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
-      const { id, title, type, releaseYear } = row;
-      medias.push(new MediaItem(id, title, type, parseInt(releaseYear), []));
+      const { id, title, type, year } = row;
+      medias.push(new MediaItem(id, title, type, year, []));
     }
     return medias;
   }
