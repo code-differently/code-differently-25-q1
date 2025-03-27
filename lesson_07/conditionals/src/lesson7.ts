@@ -7,15 +7,23 @@ import { computeLexicographicDistance } from "./util.js";
  * @param b The second `string` to compare.
  * @return -1 if a is less than b, 1 if a is greater than b, and 0 otherwise.
  */
-export function compareStrings(a: string, b: string): number {
+export function compareStrings(a: string, b: string): number { 
   // The distance will be a number less than 0 if string `a` is lexicographically less than `b`, 1
   // if it is greater, and 0 if the strings are equal.
   const distance = computeLexicographicDistance(a, b);
 
   // TODO(you): Finish this method.
 
-  return 0;
-}
+  if (distance < 0) {
+    return -1;
+  } else if (distance > 0) {
+    return 1;
+  } 
+    else {
+    return 0;
+  }
+ 
+} 
 
 /**
  * Computes the factorial of the given value of `n`.
@@ -24,7 +32,18 @@ export function compareStrings(a: string, b: string): number {
  * @return The factorial of n.
  */
 export function computeFactorial(n: number): number {
-  return 0;
+  if (n === 0) {
+    return 1;
+  }
+  else if (n === 1) {
+    return 1;
+  }
+  else if (n < 0) {
+    return 0;
+  }
+  else {
+    return n * computeFactorial(n-1);
+  }
 }
 
 /**
@@ -34,7 +53,21 @@ export function computeFactorial(n: number): number {
  * @return An array containing the first `n` Fibonacci values.
  */
 export function getFirstNFibonacciNumbers(n: number): number[] {
-  return [];
+
+  for (let i = 0; i < n; i++) {
+    if (n === 0)
+      return [];
+
+      else if (n === 2) {
+        return[1,1];
+      }
+      else {
+        const fib = getFirstNFibonacciNumbers(n -1);
+        fib.push(fib[fib.length- 1] + fib[fib.length - 2]);
+        return fib;
+    }
+  }
+   return[];
 }
 
 /**
@@ -52,12 +85,20 @@ export function binarySearch(
   end: number,
   value: number,
 ): number {
-  if (end < start) {
-    // The range is not valid so just return -1.
-    return -1;
+  if (start > end) {
+    return -1; // base case: not found
   }
 
-  const pivotIndex = Math.floor((start + end) / 2); // The index in the middle of the array.
+  const pivotIndex = Math.floor((start + end) / 2);
+
+  if (values[pivotIndex] === value) {
+    return pivotIndex;
+  } else if (values[pivotIndex] > value) {
+    return binarySearch(values, start, pivotIndex - 1, value);
+  } else {
+    return binarySearch(values, pivotIndex + 1, end, value);
+  }
+}
 
   // TODO(you): Finish implementing this algorithm
 
@@ -65,5 +106,3 @@ export function binarySearch(
   // Else if values[pivotIndex] is greater than the value, then
   // call `binarySearch(values, start, pivotIndex - 1, value)` and return its value;
   // Else call `binarySearch(values, pivotIndex + 1, end, value)` and return its value.
-  return -1;
-}
