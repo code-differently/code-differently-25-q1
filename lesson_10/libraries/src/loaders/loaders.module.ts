@@ -5,6 +5,11 @@ import { JustinEklundLoader } from './justin_eklund_loader.js';
 export const Loaders = Symbol.for('Loaders');
 
 const LOADER_PROVIDERS = [AnthonyMaysLoader, JustinEklundLoader];
+import { DylanLaffertysLoader } from './dylan_lafferty_loaders.js';
+
+export const Loaders = Symbol.for('Loaders');
+
+const LOADER_PROVIDERS = [AnthonyMaysLoader, DylanLaffertysLoader];
 
 @Module({
   providers: [
