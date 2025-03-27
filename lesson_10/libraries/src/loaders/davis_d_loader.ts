@@ -3,6 +3,8 @@ import fs from 'fs';
 import { Credit, MediaItem } from '../models/index.js';
 import { Loader } from './loader.js';
 
+// Do the extra credit tonight as well as prework for tommorow!!
+
 export class DavisDLoader implements Loader {
   getLoaderName(): string {
     return 'davis';
