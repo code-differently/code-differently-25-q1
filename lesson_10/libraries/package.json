@@ -21,6 +21,7 @@
     "@eslint/js": "^9.17.0",
     "@nestjs/testing": "^10.4.15",
     "@stylistic/eslint-plugin": "^2.12.1",
+    "@types/commander": "^2.12.0",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.14",
     "@types/node": "22.10.2",
@@ -36,9 +37,6 @@
     "typescript-eslint": "^8.18.0"
   },
   "dependencies": {
-    "@nestjs/common": "^10.4.15",
-    "@nestjs/core": "^10.4.15",
-    "commander": "^12.1.0",
     "csv-parser": "^3.0.0"
   }
 }
