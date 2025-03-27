@@ -11,12 +11,12 @@ public class MontezBrProvider extends DataProvider {
 
   public Map<String, Class> getColumnTypeByName() {
     return Map.of(
-        "column1", Boolean.class,
-        "column2", Float.class,
-        "column3", Double.class,
-        "column4", Short.class,
-        "column5", Integer.class,
-        "column6", String.class,
-        "column7", Long.class);
+        "column1", Float.class,
+        "column2", Short.class,
+        "column3", Boolean.class,
+        "column4", Integer.class,
+        "column5", Long.class,
+        "column6", Double.class,
+        "column7", String.class);
   }
 }
