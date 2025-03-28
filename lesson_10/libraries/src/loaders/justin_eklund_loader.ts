@@ -57,4 +57,4 @@ export class JustinEklundLoader implements Loader {
     return credits;
   }
 }
-// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon
+// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon.

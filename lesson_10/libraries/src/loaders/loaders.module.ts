@@ -21,3 +21,4 @@ const LOADER_PROVIDERS = [AnthonyMaysLoader, DylanLaffertysLoader,JustinEklundLo
   exports: [Loaders],
 })
 export class LoadersModule {}
+// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon
