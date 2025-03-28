@@ -1,23 +1,60 @@
-import { Module } from '@nestjs/common';
-import { DylanLaffertysLoader } from './dylan_lafferty_loaders.js';
+import csv from 'csv-parser';
+import fs from 'fs';
+import { Credit, MediaItem } from '../models/index.js';
+import { Loader } from './loader.js';
 
-import { AnthonyMaysLoader } from './anthony_mays_loader.js';
-import { JustinEklundLoader } from './justin_eklund_loader.js';
+export class JustinEklundLoader implements Loader {
+  getLoaderName(): string {
+    return 'justineklund';
+  }
 
+  async loadData(): Promise<MediaItem[]> {
+    const credits = await this.loadCredits();
+    const mediaItems = await this.loadMediaItems();
+    const mediamap = new Map<string, MediaItem>();
+    mediaItems.forEach((mediaItem) => {
+      mediamap.set(mediaItem.getId(), mediaItem);
+    });
+    for (const mediaitem of mediaItems) {
+      mediamap.set(mediaitem.getId(), mediaitem);
+    }
+    for (const credit of credits) {
+      const mediaItem = mediamap.get(credit.getMediaItemId());
+      
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+    }
+    console.log(
+      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
+    );
+  
 
-export const Loaders = Symbol.for('Loaders');
+    return Array.from(mediamap.values());
+  }
 
-const LOADER_PROVIDERS = [AnthonyMaysLoader, DylanLaffertysLoader,JustinEklundLoader];
+  async loadMediaItems(): Promise<MediaItem[]> {
+    const mediaItems = [];
+    const readable = fs
+      .createReadStream('data/media_items.csv', 'utf-8')
+      .pipe(csv());
+    for await (const row of readable) {
+      const { id, type, title, year } = row;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
+    }
+    return mediaItems;
+  }
 
-@Module({
-  providers: [
-    ...LOADER_PROVIDERS,
-    {
-      provide: Loaders,
-      useFactory: (...args) => [...args],
-      inject: LOADER_PROVIDERS,
-    },
-  ],
-  exports: [Loaders],
-})
-export class LoadersModule {}
+  async loadCredits(): Promise<Credit[]> {
+    const credits = [];
+    const readable = fs
+      .createReadStream('data/credits.csv', 'utf-8')
+      .pipe(csv());
+    for await (const row of readable) {
+      const { media_item_id, role, name } = row;
+      credits.push(new Credit(media_item_id, name, role));
+    }
+    return credits;
+  }
+}
+// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon
