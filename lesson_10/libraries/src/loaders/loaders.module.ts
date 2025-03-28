@@ -8,16 +8,6 @@ import { JustinEklundLoader } from './justin_eklund_loader.js';
 export const Loaders = Symbol.for('Loaders');
 
 const LOADER_PROVIDERS = [AnthonyMaysLoader, DylanLaffertysLoader,JustinEklundLoader];
-import { DylanLaffertysLoader } from './dylan_lafferty_loaders.js';
-import { MercedesMathewsLoader } from './mercedes_mathews_loader.js';
-
-export const Loaders = Symbol.for('Loaders');
-
-const LOADER_PROVIDERS = [
-  AnthonyMaysLoader,
-  DylanLaffertysLoader,
-  MercedesMathewsLoader,
-];
 
 @Module({
   providers: [
