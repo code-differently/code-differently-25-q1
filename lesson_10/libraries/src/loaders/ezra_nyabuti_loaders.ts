@@ -11,6 +11,19 @@ export class EzraNyabutiLoaders implements Loader {
   async loadData(): Promise<MediaItem[]> {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
+    const mediaMap = new Map<string, MediaItem>();
+    mediaItems.forEach((mediaItem) =>
+      mediaMap.set(mediaItem.getId(), mediaItem),
+    );
+    credits.forEach((credit) => {
+      const mediaItem = mediaMap.get(credit.getMediaItemId());
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+    });
+    for (const mediaItem of mediaItems) {
+      console.log(mediaItem);
+    }
 
     console.log(
       `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
