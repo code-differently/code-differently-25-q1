@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 
 import { AnthonyMaysLoader } from './anthony_mays_loader.js';
-import { KarenAlabiLoader } from './karen_alabi_loader.js';
 
 export const Loaders = Symbol.for('Loaders');
 
-const LOADER_PROVIDERS = [AnthonyMaysLoader, KarenAlabiLoader];
+const LOADER_PROVIDERS = [AnthonyMaysLoader];
 
 @Module({
   providers: [
