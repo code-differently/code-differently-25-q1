@@ -33,7 +33,6 @@ export class EzraNyabutiLoaders implements Loader {
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    // TODO: Implement this method.
     const mediaItems = [];
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
