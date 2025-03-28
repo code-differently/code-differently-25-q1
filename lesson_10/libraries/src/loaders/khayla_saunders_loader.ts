@@ -3,25 +3,20 @@ import fs from 'fs';
 import { Credit, MediaItem } from '../models/index.js';
 import { Loader } from './loader.js';
 
-export class DylanLaffertysLoader implements Loader {
+export class KhaylaSaundersLoader implements Loader {
   getLoaderName(): string {
-    return 'dylanlafferty';
+    return 'khaylasaunders';
   }
+  //TA Help/Chatgpt to complete Extra Credit
   async loadData(): Promise<MediaItem[]> {
-    const credits = await this.loadCredits(); //loads credits from the csv file
-    const mediaItems = await this.loadMediaItems(); //loads media items from csv file
-
-    //Creates a map where the key is a string and the value is MediaItem Object
-    const mapIndex = new Map<string, MediaItem>();
-
-    //Loops through the CSV file and gets the id of the mediaItem that is specified.
-    for (const mediaItem of mediaItems) {
-      mapIndex.set(mediaItem.getId(), mediaItem);
-
-    }
+    const mediaItems = await this.loadMediaItems();
+    const credits = await this.loadCredits();
 
     for (const credit of credits) {
-      const mediaItem = mapIndex.get(credit.getMediaItemId()); //Finds the media item by getting media ID
+      const mediaItem = mediaItems.find(
+        (item) => item.getId() === credit.getMediaItemId(),
+      );
+
       if (mediaItem) {
         mediaItem.addCredit(credit);
       }
@@ -30,21 +25,21 @@ export class DylanLaffertysLoader implements Loader {
     console.log(
       `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
     );
-    //Returns a newly created array by converting the map values
-    return Array.from(mapIndex.values());
+
+    return mediaItems;
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    const mediaItem = [];
+    // TODO: Implement this method.
+    const mediaItems = [];
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
-
     for await (const row of readable) {
       const { id, title, type, year } = row;
-      mediaItem.push(new MediaItem(id, title, type, year, []));
+      mediaItems.push(new MediaItem(id, title, type, year, []));
     }
-    return mediaItem;
+    return mediaItems;
   }
 
   async loadCredits(): Promise<Credit[]> {
@@ -59,4 +54,3 @@ export class DylanLaffertysLoader implements Loader {
     return credits;
   }
 }
-//# sourceMappingURL=dylan_lafferty_loaders.js.map
