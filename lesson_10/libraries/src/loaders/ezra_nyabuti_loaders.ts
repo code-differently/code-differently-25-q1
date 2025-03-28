@@ -21,13 +21,6 @@ export class EzraNyabutiLoaders implements Loader {
         mediaItem.addCredit(credit);
       }
     });
-    for (const mediaItem of mediaItems) {
-      console.log(mediaItem);
-    }
-
-    console.log(
-      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
-    );
 
     return [...mediaItems.values()];
   }
