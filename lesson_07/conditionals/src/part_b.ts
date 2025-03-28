@@ -5,7 +5,15 @@
  * @returns
  */
 export function isLeapYear(year: number): boolean {
-  return false;
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -15,7 +23,11 @@ export function isLeapYear(year: number): boolean {
  * @returns
  */
 export function isEvenOrOdd(num: number): string {
-  return "";
+  if (num % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
 }
 
 /**
@@ -25,5 +37,22 @@ export function isEvenOrOdd(num: number): string {
  * @returns
  */
 export function hasVowel(word: string): boolean {
-  return false;
+  const lowerCaseword = word.toLowerCase();
+  if (lowerCaseword.includes("a")) {
+    return true;
+  }
+  if (lowerCaseword.includes("e")) {
+    return true;
+  }
+  if (lowerCaseword.includes("i")) {
+    return true;
+  }
+  if (lowerCaseword.includes("o")) {
+    return true;
+  }
+  if (lowerCaseword.includes("u")) {
+    return true;
+  } else {
+    return false;
+  }
 }
