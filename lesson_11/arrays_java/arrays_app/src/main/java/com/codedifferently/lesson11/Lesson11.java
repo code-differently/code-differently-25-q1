@@ -43,7 +43,7 @@ public class Lesson11 {
 
     String[] words = {
       "leet", "code", "hello", "world"
-    }; // Creates an Array named words that contains a series of strings.
+    }; // Creates an Array named words that contains a series of strings.[]
 
     char x = 'e'; // Calls for a specific char
     System.out.println(findWordsContaining(words, x)); // Prints out findWordsContaining method
