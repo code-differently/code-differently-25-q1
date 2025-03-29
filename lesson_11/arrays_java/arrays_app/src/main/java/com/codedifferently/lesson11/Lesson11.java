@@ -29,7 +29,7 @@ public class Lesson11 {
     List<Integer> result = new ArrayList();
 
     for (int i = 0; i < words.length; i++) {
-      if (words[i].contains(x+"")) {
+      if (words[i].contains(x + "")) {
         result.add(i);
       }
     }
