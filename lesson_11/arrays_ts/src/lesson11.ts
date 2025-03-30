@@ -41,10 +41,10 @@ export function findWordsContaining(words: string[], x: string): number[] {
 
 const nums: number[] = [1, 2 , 3, 4]; //Array of numbers based on test case
 const result: number[] = getConcatenation(nums);
-console.log(result.join(" "))//Prints the test result out for the fet concatentaition method
+console.log(result.join(' '))//Prints the test result out for the fet concatentaition method
 
 
-const words: string[] = ["leet", "code", "hello", "world"]; //Array of strings based on test case
+const words: string[] = ['leet', 'code', 'hello', 'world']; //Array of strings based on test case
 const x: string = 'e'; //Calls for a specific char
 console.log(findWordsContaining(words, x));
 
