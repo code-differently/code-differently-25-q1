@@ -45,6 +45,6 @@ console.log(result.join(' '))//Prints the test result out for the fet concatenta
 
 
 const words: string[] = ['leet', 'code', 'hello', 'world']; //Array of strings based on test case
-const x: string = 'e'; //Calls for a specific char
+const x = 'e'; //Calls for a specific char
 console.log(findWordsContaining(words, x));
 
