@@ -20,14 +20,15 @@ export class ChanelHuttLoader implements Loader {
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    const items = [];
+    const mediaItems = [];
     const readable = fs
-      .createReadStream('data/items.csv', 'utf-8')
+      .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
       const { id, title, type, year } = row;
-      items.push(new MediaItem(id, title, type, year, []));
-    return items;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
+    }
+    return mediaItems;
   }
 
   async loadCredits(): Promise<Credit[]> {
