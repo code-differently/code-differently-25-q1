@@ -11,12 +11,24 @@ export class ChanelHuttLoader implements Loader {
   async loadData(): Promise<MediaItem[]> {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
-
-    console.log(
-      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
-    );
-
-    return [...mediaItems.values()];
+    // Create a Hashmap to where the key is a string(MediaItem ID) and the value is the MediaItem object.
+    const hashMapIndex = new Map<string, MediaItem>();
+    // Loops through the mediaItems and adds them to the map by their ID.
+    for (const mediaItem of mediaItems) {
+      hashMapIndex.set(mediaItem.getId(), mediaItem);
+    }
+    // Loops through the credits and adds them to the mediaItem by getting the mediaItem ID.
+    for (const credit of credits) {
+      const mediaItem = hashMapIndex.get(credit.getMediaItemId());
+      if (mediaItem) {
+        mediaItem.addCredit(credit);
+      }
+      console.log(
+        `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
+      );
+    }
+    // Returns an array of the values from the hashmap.
+    return Array.from(hashMapIndex.values());
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
