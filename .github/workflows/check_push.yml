@@ -11,6 +11,10 @@ on:
       - "lesson_06/quiz/**"
       - "lesson_06/expression/**"
       - "lesson_07/conditionals/**"
+      - "lesson_09/types/**"
+      - "lesson_10/libraries/**"
+      - "lesson_11/arrays_java/**"
+      - "lesson_11/arrays_ts/**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -100,6 +104,16 @@ jobs:
 
     - name: Build Lesson 10 with Node.js
       working-directory: ./lesson_10/libraries
+      run: |
+        npm ci
+        npm run compile
+
+    - name: Build Lesson 11 with Java
+      working-directory: ./lesson_11/arrays_java
+      run: ./gradlew assemble
+
+    - name: Build Lesson 11 with Node.js
+      working-directory: ./lesson_11/arrays_ts
       run: |
         npm ci
         npm run compile
