@@ -20,7 +20,8 @@ public class Lesson11 {
     }
 
     // Same thing as the last one, but with the starting position being on whatever index n is on.
-    // In this case, it's starting at index 3, aka, position 4. This is where the concatenation part happens.
+    // In this case, it's starting at index 3, aka, position 4. This is where the concatenation part
+    // happens.
     for (int i = 0; i < n; i++) {
       ans[i + n] = nums[i];
     }
@@ -38,8 +39,10 @@ public class Lesson11 {
     List<Integer> result = new ArrayList<>();
 
     // Iterating through the array.
-    for (int i = 0; i < words.length; i++) { 
-      if (words[i].indexOf(x) != -1) { // If a particular index contains x, and it does not strictly equal -1 (aka, an index that doesn't exist)...
+    for (int i = 0; i < words.length; i++) {
+      if (words[i].indexOf(x)
+          != -1) { // If a particular index contains x, and it does not strictly equal -1 (aka, an
+        // index that doesn't exist)...
         result.add(i); // Then append the index at the end of the list.
       }
     }
