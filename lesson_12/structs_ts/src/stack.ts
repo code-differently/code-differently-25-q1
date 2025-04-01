@@ -8,18 +8,27 @@ export class Stack {
   }
 
   push(value: number): void {
-    throw new Error('Not implemented');
+    const newNode = new ListNode(value);
+    newNode.next = this.top;
+    this.top = newNode;
   }
 
   pop(): number | undefined {
-    throw new Error('Not implemented');
+    const current = this.top;
+    
+    this.top = this.top?.next;
+    
+    return current?.val;
   }
 
   peek(): number | null {
-    throw new Error('Not implemented');
+    if (this.top === undefined) {
+      throw new Error('Invalid Sytanx');
+    }
+    return this.top.val;
   }
 
   isEmpty(): boolean {
-    throw new Error('Not implemented');
+    return this.top == null;
   }
 }
