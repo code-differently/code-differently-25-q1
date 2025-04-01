@@ -3,7 +3,6 @@ package com.codedifferently.lesson12;
 public class ListNode {
   int val;
   ListNode next;
-  int data;
 
   ListNode() {}
 
