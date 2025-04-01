@@ -23,13 +23,10 @@ export class Stack {
   }
 
   peek(): number | null {
-    if (this.top === null) {
+    if (this.top === undefined) {
       throw new Error('Empty List');
     }
-    if (this.top !== undefined) {
-      return this.top.val;
-    }
-    throw new Error('Empty List');
+    return this.top.val;
   }
 
   isEmpty(): boolean {
