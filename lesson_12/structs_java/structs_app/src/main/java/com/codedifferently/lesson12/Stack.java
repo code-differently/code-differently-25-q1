@@ -15,7 +15,8 @@ public class Stack {
   }
 
   public int pop() {
-    int value = top.val; // gets the value of top and creating it as a variable value that will temporarily
+    int value =
+        top.val; // gets the value of top and creating it as a variable value that will temporarily
     // store it
     top = top.next; // Move top to the next position in the stack this instance it would be whatever
     // is below the top node.
