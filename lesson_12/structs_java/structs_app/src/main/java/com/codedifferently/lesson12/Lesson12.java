@@ -15,7 +15,7 @@ public class Lesson12 {
       int val2 = head.next.val;
 
       if (val1 < val2) {
-        oddValue += val1;
+        oddValue += 1;
       } else if (val2 < val1) {
         evenValue += 1;
       }
