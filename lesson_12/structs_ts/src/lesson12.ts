@@ -7,4 +7,5 @@ export class Lesson12 {
    */
   public gameResult(head: ListNode | null): string {
     return '';
+  }
 }
