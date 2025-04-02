@@ -9,19 +9,22 @@ public class Stack {
   }
 
   public void push(int value) {
-    // your code
-    
+    ListNode newNode = new ListNode(value);
+    newNode.next = top;
+    top = newNode;
   }
 
   public int pop() {
-    return 0;
+    int value = top.val;
+    top = top.next;
+    return value;
   }
 
   public int peek() {
-    return 0;
+    return top.val;
   }
 
   public boolean isEmpty() {
-    return true;
+    return top == null;
   }
 }
