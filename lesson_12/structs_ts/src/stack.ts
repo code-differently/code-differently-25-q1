@@ -1,25 +1,36 @@
 import { ListNode } from './list_node.js';
 
 export class Stack {
-  private top: ListNode | undefined;
+  private top: ListNode | null;
 
   constructor() {
-    this.top = undefined;
+    this.top = null;
   }
 
   push(value: number): void {
-    throw new Error('Not implemented');
+    const newNode = new ListNode(value, this.top ?? undefined);
+    this.top = newNode;
   }
 
-  pop(): number | undefined {
-    throw new Error('Not implemented');
+  pop(): number {
+    if (this.isEmpty()) {
+      throw new Error('Stack Underflow: Cannot pop from an empty stack');
+    }
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const poppedValue = this.top!.val;
+    this.top = this.top?.next ?? null;
+    return poppedValue;
   }
 
-  peek(): number | null {
-    throw new Error('Not implemented');
+  peek(): number {
+    if (this.isEmpty()) {
+      throw new Error('Stack is empty: Cannot peek');
+    }
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return this.top!.val;
   }
 
   isEmpty(): boolean {
-    throw new Error('Not implemented');
+    return this.top === null;
   }
 }
