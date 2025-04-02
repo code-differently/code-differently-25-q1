@@ -9,18 +9,39 @@ public class Stack {
   }
 
   public void push(int value) {
-    // Your code here
+    ListNode newNode = new ListNode(value);
+    // putting ontop of stack
+    newNode.next = top;
+    // setting top as new node
+    top = newNode;
   }
 
   public int pop() {
-    return 0;
+    // checking to see if top is null
+    if (top == null) {
+      throw new IllegalStateException("stack is empty");
+    }
+    // created a varible to store current value
+    int value = top.val;
+    // remove the top
+    top = top.next;
+    return value;
   }
 
   public int peek() {
-    return 0;
+    if (top == null) {
+      throw new IllegalStateException("stack is empty");
+    }
+
+    return top.val;
   }
 
   public boolean isEmpty() {
-    return true;
+    if (top == null) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
+
