@@ -26,14 +26,14 @@ public class Lesson11 {
 
   public static List<Integer> findWordsContaining(String[] words, char x) {
     // Create an arraylist named arrList
-    ArrayList<Integer> arrList = new ArrayList<>(); 
+    ArrayList<Integer> arrList = new ArrayList<>();
 
     // Runs a loop that will iterate through each character in the word.
     for (int i = 0; i < words.length; i++) {
       // will check to see if 'x' exists inside of the word
-      if (words[i].indexOf(x) != -1) { 
+      if (words[i].indexOf(x) != -1) {
         // Stores the index if it is true that it has that character
-        arrList.add(i); 
+        arrList.add(i);
       }
     }
     return arrList;
