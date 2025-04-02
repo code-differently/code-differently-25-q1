@@ -1,26 +1,45 @@
 package com.codedifferently.lesson12;
 
-/** Implement the below Stack by providing code for the class methods. */
 public class Stack {
   private ListNode top;
+
+  private static class ListNode {
+    int value;
+    ListNode next;
+
+    ListNode(int value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
 
   public Stack() {
     this.top = null;
   }
 
   public void push(int value) {
-    // Your code here
+    ListNode newNode = new ListNode(value);
+    newNode.next = top;
+    top = newNode; // This will update top to the new node.
   }
 
   public int pop() {
-    return 0;
+    if (isEmpty()) {
+      throw new IllegalStateException("Stack is empty");
+    }
+    int poppedValue = top.value;
+    top = top.next;
+    return poppedValue;
   }
 
   public int peek() {
-    return 0;
+    if (isEmpty()) {
+      throw new IllegalStateException("Stack is empty");
+    }
+    return top.value;
   }
 
   public boolean isEmpty() {
-    return true;
+    return top == null;
   }
 }

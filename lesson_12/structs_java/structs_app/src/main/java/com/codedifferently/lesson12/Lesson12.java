@@ -2,11 +2,33 @@ package com.codedifferently.lesson12;
 
 public class Lesson12 {
 
-  /**
-   * Provide the solution to LeetCode 3062 here:
-   * https://github.com/yang-su2000/Leetcode-algorithm-practice/tree/master/3062-winner-of-the-linked-list-game
-   */
   public String gameResult(ListNode head) {
-    return null;
+    int evenNumbers = 0;
+    int oddNumbers = 0;
+
+    ListNode current = head;
+
+    // While "current" does not strictly equal null & current.next does not strictly equal null, the
+    // current value is evenVariable, & oddVariable is the next value.
+    while (current != null && current.next != null) {
+      int evenVariable = current.val;
+      int oddVariable = current.next.val;
+
+      if (oddVariable > evenVariable) {
+        oddNumbers++;
+      } else if (evenVariable > oddVariable) {
+        evenNumbers++;
+      }
+
+      current = current.next.next;
+    }
+
+    if (oddNumbers > evenNumbers) {
+      return "Odd";
+    } else if (evenNumbers > oddNumbers) {
+      return "Even";
+    } else {
+      return "Tie";
+    }
   }
 }
