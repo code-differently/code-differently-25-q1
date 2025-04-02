@@ -35,7 +35,6 @@ public class Stack {
       return top.val;
     } else {
       throw new RuntimeException("Stack is empty");
-        
     }
   }
 
