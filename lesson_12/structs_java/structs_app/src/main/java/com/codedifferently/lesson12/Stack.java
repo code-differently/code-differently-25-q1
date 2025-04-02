@@ -28,4 +28,5 @@ public class Stack {
   public boolean isEmpty() {
     return top == null;
   }
+  // references Chatgpt google W3 school //
 }

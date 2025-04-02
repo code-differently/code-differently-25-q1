@@ -27,4 +27,5 @@ public class Lesson12 {
     }
     return "Tie";
   }
+  // Relied on chatgpt lines 13-20//
 }
