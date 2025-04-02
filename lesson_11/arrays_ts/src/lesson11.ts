@@ -4,16 +4,17 @@
 * https://leetcode.com/problems/concatenation-of-array
 */
 export function getConcatenation(nums: number[]): number[] {
- const n = nums.length; //Creates a variable named n that is the length of nums
- const ans = new Array(2 * n); //Creates a new array that is double the size of n
+  //Creates a variable named n that is the length of nums
+  const n = nums.length;
+  //Creates a new array that is double the size of n
+  const ans = new Array(2 * n); 
 
- for(let i = 0; i < n; ++i) {
-   ans[i] = nums[i];
-   ans[i + n] = nums[i];
- }
- return ans;
+  for (let i = 0; i < n; ++i) {
+    ans[i] = nums[i];
+    ans[i + n] = nums[i];
+  }
+  return ans;
 }
-
 
 /**
 * Provide the solution to LeetCode 2942 here:
@@ -21,13 +22,16 @@ export function getConcatenation(nums: number[]): number[] {
 */
 export function findWordsContaining(words: string[], x: string): number[] {
  //creates a new array list names arrList
- const arrList: number[] = [] 
+ const arrList: number[] = []; 
 
  //Runs a loop that will iterate through each character in the String.
  for (let i = 0; i < words.length; ++i) {
-   if (words[i].includes(x)) { //Checks to see if the word inclues the char 'x'
-     arrList.push(i); //Pushes the index of i if it is true that the word contains that character
+  //Checks to see if the word inclues the char 'x'
+   if (words[i].includes(x)) { 
+  //Pushes the index of i if it is true that the word contains that character
+     arrList.push(i); 
    }
- } return arrList; //Will return the Array elListo
+    //Will return the Array list arrList
+ } return arrList;
 }
 
