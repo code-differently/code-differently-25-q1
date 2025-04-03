@@ -29,7 +29,6 @@ public class Lesson13 {
     }
     // Runs a for loop that will be the length of t but this time we will be using the map t
     // tell our loop to run until it finds the same character
-    System.out.println(charByIndex);
     return difference;
   }
 }
