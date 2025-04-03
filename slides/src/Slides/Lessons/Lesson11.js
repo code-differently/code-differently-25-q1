@@ -128,7 +128,8 @@ agesOfKidsWithNewlyAdopted[4] = 40;
                 <p>There's a better way. It's called <em>ArrayList</em></p>
             </section>
             <${CodeSlide} lang="java" fontSize=".38em" lineNumbers=true fontSize=".5em">
-var agesOfKids = new ArrayListInteger();
+${`
+var agesOfKids = new ArrayList<Integer>();
 agesOfKids.add(5);
 agesOfKids.add(9);
 agesOfKids.add(13);
@@ -139,6 +140,7 @@ agesOfKids.add(40);
 
 // We can remove too!
 agesOfKids.remove(5);
+`}
             <//>
             <section>
                 <img class="r-stretch" src="images/slides/Slide338.png" alt="Slide 338" />
