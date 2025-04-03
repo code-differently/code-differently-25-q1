@@ -9,7 +9,10 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- [ ] Complete methods in [Lesson11.java](./arrays_java/arrays_app/src/main/java/com/codedifferently/lesson11/Lesson11.java) and submit PR.
+- [ ] Complete methods in [Lesson11.java](./arrays_java/arrays_app/src/main/java/com/codedifferently/lesson11/Lesson11.java) and submit PR. Don't forget to run the formatter to clean up the code:
+```bash
+./gradlew spotlessApply
+```
 - [ ] Do pre-work for [lesson 12](/lesson_12/).
 
 ### Extra credit
