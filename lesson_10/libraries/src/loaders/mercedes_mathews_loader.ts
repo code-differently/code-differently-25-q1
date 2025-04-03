@@ -28,7 +28,6 @@ export class MercedesMathewsLoader implements Loader {
       `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
     );
 
-    console.log(...mediaItems.values());
     return [...mediaItems.values()];
   }
 
