@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/permutation-difference-between-two-strings
  */
 export function findPermutationDifference(s: string, t: string): number {
-  const charByIndex = new Map<String, number>();
+  const charByIndex = new Map<string, number>();
 
   for(let i = 0; i < s.length; ++i) {
     charByIndex.set(s[i], i);
