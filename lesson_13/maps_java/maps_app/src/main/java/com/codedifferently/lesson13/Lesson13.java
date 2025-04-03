@@ -20,4 +20,5 @@ public class Lesson13 {
     return difference;
   }
 }
-// I got help from chat gpt and co pilot. I used chat gpt to further explain the code that I was putting in.
+// I got help from chat gpt and co pilot. I used chat gpt to further explain the code that I was
+// putting in.
