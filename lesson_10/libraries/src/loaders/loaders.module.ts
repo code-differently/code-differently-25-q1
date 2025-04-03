@@ -3,7 +3,7 @@ import { AnthonyMaysLoader } from './anthony_mays_loader.js';
 import { ChanelHuttLoader } from './chanel_hutt_loader.js';
 import { DavidAdenaikeLoader } from './david_adenaike_loader.js';
 import { DavisDLoader } from './davis_d_loader.js';
-import { DylanLaffertysLoader } from './dylan_lafferty_loaders.js';\
+import { DylanLaffertysLoader } from './dylan_lafferty_loaders.js';
 import { JBeyLoader } from './JBey_loader.js';
 import { KarenAlabiLoader } from './karen_alabi_loader.js';
 import { MercedesMathewsLoader } from './mercedes_mathews_loader.js';
