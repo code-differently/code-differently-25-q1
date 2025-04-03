@@ -20,15 +20,15 @@ export class AnanatawasLoader implements Loader {
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    const credits = [];
+    const MediaItems = [];
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
-        const { media_item_id, role, name } = row;
-        credits.push(new Credit(media_item_id, name, role));
+        const { id, title, type, year } = row;
+        MediaItems.push(new MediaItem(id, title, type, year, []));
     }
-    return [];
+    return MediaItems;
   }
 
   async loadCredits(): Promise<Credit[]> {
