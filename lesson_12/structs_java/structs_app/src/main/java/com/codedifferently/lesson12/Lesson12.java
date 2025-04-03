@@ -7,44 +7,36 @@ public class Lesson12 {
    * https://github.com/yang-su2000/Leetcode-algorithm-practice/tree/master/3062-winner-of-the-linked-list-game
    */
   public String gameResult(ListNode head) {
-    
-    //team values
-    int oddValue = 0;
-    int evenValue = 0;
 
-    //iterate through listNode
-    //grabbed items
-    //accessed value
+    // ititialize counter for even and odd team
+    int evenTeam = 0;
+    int oddTeam = 0;
 
+    // iterate through listNode
     while (head != null && head.next != null) {
-      int val1 = head.val; //at head node, accessing value. head val is even
-      int val2 = head.next.val; // at next node, accessing value. next val is odd
+      int headNode = head.val; // grabbed head node, accessing value. head val is even
+      int nextNode = head.next.val; // grabbed next node, accessing value. next val is odd
 
-      //compare values
-      if (val1 > val2) {
-         evenValue += 1;
-      } else if (val1 < val2) {
-        oddValue += 1;
+      // used AI for this part of implementation
+      // compare values
+      if (headNode > nextNode) {
+        evenTeam += 1;
+      } else if (headNode < nextNode) {
+        oddTeam += 1;
       }
       // go to next value
-        
+      head = head.next.next;
+
+      // used AI for this part of the implementation
+      // return statements for whichever team wins
+      if (evenTeam > oddTeam) {
+        return "Even team wins!";
+      } else if (oddTeam > evenTeam) {
+        return "Odd team wins!";
+      } else {
+        return "It's a tie!";
+      }
     }
-    
-
-
-
-
-
-
-    // loop through lstNode
-    
-    // grab lstNode values
-    //compare them
-    //return even or odd depending on which value is higher
-
-  
-  
-
+    return "Even team wins!";
   }
-
 }
