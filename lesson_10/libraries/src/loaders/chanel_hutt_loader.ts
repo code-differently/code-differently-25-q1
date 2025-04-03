@@ -23,9 +23,6 @@ export class ChanelHuttLoader implements Loader {
       if (mediaItem) {
         mediaItem.addCredit(credit);
       }
-      console.log(
-        `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
-      );
     }
     // Returns an array of the values from the hashmap.
     return Array.from(hashMapIndex.values());
