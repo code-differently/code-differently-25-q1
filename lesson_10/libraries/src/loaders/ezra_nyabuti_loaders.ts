@@ -3,44 +3,38 @@ import fs from 'fs';
 import { Credit, MediaItem } from '../models/index.js';
 import { Loader } from './loader.js';
 
-export class MercedesMathewsLoader implements Loader {
+export class EzraNyabutiLoaders implements Loader {
   getLoaderName(): string {
-    return 'mercedesmathews';
+    return 'ezranyabuti';
   }
 
   async loadData(): Promise<MediaItem[]> {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
-
     const mediaMap = new Map<string, MediaItem>();
-    for (const media of mediaItems) {
-      mediaMap.set(media.getId(), media);
-    }
-
-    for (const credit of credits) {
+    mediaItems.forEach((mediaItem) =>
+      mediaMap.set(mediaItem.getId(), mediaItem),
+    );
+    credits.forEach((credit) => {
       const mediaItem = mediaMap.get(credit.getMediaItemId());
       if (mediaItem) {
         mediaItem.addCredit(credit);
       }
-    }
-
-    console.log(
-      `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
-    );
+    });
 
     return [...mediaItems.values()];
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    const medias = [];
+    const mediaItems = [];
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
-      const { id, title, type, year } = row;
-      medias.push(new MediaItem(id, title, type, year, []));
+      const { id, type, title, year } = row;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
     }
-    return medias;
+    return mediaItems;
   }
 
   async loadCredits(): Promise<Credit[]> {

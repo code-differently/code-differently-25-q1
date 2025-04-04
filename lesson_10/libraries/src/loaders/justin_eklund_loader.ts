@@ -3,44 +3,46 @@ import fs from 'fs';
 import { Credit, MediaItem } from '../models/index.js';
 import { Loader } from './loader.js';
 
-export class MercedesMathewsLoader implements Loader {
+export class JustinEklundLoader implements Loader {
   getLoaderName(): string {
-    return 'mercedesmathews';
+    return 'justineklund';
   }
 
   async loadData(): Promise<MediaItem[]> {
     const credits = await this.loadCredits();
     const mediaItems = await this.loadMediaItems();
-
-    const mediaMap = new Map<string, MediaItem>();
-    for (const media of mediaItems) {
-      mediaMap.set(media.getId(), media);
+    const mediamap = new Map<string, MediaItem>();
+    mediaItems.forEach((mediaItem) => {
+      mediamap.set(mediaItem.getId(), mediaItem);
+    });
+    for (const mediaitem of mediaItems) {
+      mediamap.set(mediaitem.getId(), mediaitem);
     }
-
     for (const credit of credits) {
-      const mediaItem = mediaMap.get(credit.getMediaItemId());
+      const mediaItem = mediamap.get(credit.getMediaItemId());
+      
       if (mediaItem) {
         mediaItem.addCredit(credit);
       }
     }
-
     console.log(
       `Loaded ${credits.length} credits and ${mediaItems.length} media items`,
     );
+  
 
-    return [...mediaItems.values()];
+    return Array.from(mediamap.values());
   }
 
   async loadMediaItems(): Promise<MediaItem[]> {
-    const medias = [];
+    const mediaItems = [];
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
     for await (const row of readable) {
-      const { id, title, type, year } = row;
-      medias.push(new MediaItem(id, title, type, year, []));
+      const { id, type, title, year } = row;
+      mediaItems.push(new MediaItem(id, title, type, year, []));
     }
-    return medias;
+    return mediaItems;
   }
 
   async loadCredits(): Promise<Credit[]> {
@@ -55,3 +57,4 @@ export class MercedesMathewsLoader implements Loader {
     return credits;
   }
 }
+// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon.
