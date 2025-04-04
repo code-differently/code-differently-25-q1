@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/permutation-difference-between-two-strings
  */
 export function findPermutationDifference(s: string, t: string): number {
-  // used chat gpt for this solution implementation
+  // used chat gpt for this extra credit solution implementation
     
   // variable difference keeps track of absolute difference between character index
   let difference = 0;
