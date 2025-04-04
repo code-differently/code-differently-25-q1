@@ -8,5 +8,7 @@ public class Lesson13 {
    */
   public int findPermutationDifference(String s, String t) {
     return 0;
+
+        for (int i = 0; i < s.length(); i++) {
   }
 }
