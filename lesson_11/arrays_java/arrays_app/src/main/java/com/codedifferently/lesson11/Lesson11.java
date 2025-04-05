@@ -9,7 +9,6 @@ public class Lesson11 {
    * Provide the solution to LeetCode 1929 here:
    * https://leetcode.com/problems/concatenation-of-array
    */
-  public class Solution {
     public int[] getConcatenation(int[] nums) {
       int n = nums.length;
       int[] ans = new int[2 * n];
@@ -25,7 +24,6 @@ public class Lesson11 {
    * Provide the solution to LeetCode 2942 here:
    * https://leetcode.com/problems/find-words-containing-character/
    */
-  public class WorldFilter {
     public List<Integer> findWordsContaining(String[] words, char x) {
       List<Integer> result = new ArrayList<>();
 
@@ -37,3 +35,4 @@ public class Lesson11 {
 
       return result;
     }
+  }
