@@ -5,7 +5,7 @@ import { AnthonyMaysLoader } from './anthony_mays_loader.js';
 
 export const Loaders = Symbol.for('Loaders');
 
-const LOADER_PROVIDERS = [AnthonyMaysLoader, AnanatawasLoader];
+const LOADER_PROVIDERS = [AnthonyMaysLoader, AnanatawasLoader]; 
 
 
 @Module({

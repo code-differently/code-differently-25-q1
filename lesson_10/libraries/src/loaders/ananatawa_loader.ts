@@ -24,7 +24,7 @@ export class AnanatawasLoader implements Loader {
     const readable = fs
       .createReadStream('data/media_items.csv', 'utf-8')
       .pipe(csv());
-    for await (const row of readable) {
+    for await (const row of readable) { 
         const { id, title, type, year } = row;
         MediaItems.push(new MediaItem(id, title, type, year, []));
     }
