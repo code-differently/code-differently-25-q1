@@ -19,7 +19,7 @@ public class Lesson11 {
       }
       return ans;
     }
-  }
+
   /**
    * Provide the solution to LeetCode 2942 here:
    * https://leetcode.com/problems/find-words-containing-character/
@@ -35,4 +35,4 @@ public class Lesson11 {
 
       return result;
     }
-  }
+}
