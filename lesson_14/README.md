@@ -9,4 +9,13 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Add some details when you get a chance.
+- [ ] Complete [Exception Handling](#exception-handling) assignment.
+- [ ] Do pre-work for [lesson 15](/lesson_15/).
+
+### Exception Handling
+
+For this assignment, you will update existing code to add exceptions for unsupported operations in an e-commerce system.
+
+To complete this assignment, [use the tests][test-link] to understand what you need to implement in order to get the tests to pass.
+
+[test-link]: ./exceptions/exceptions_app/src/test/java/com/codedifferently/lesson14/ecommerce/EcommerceSystemTest.java
