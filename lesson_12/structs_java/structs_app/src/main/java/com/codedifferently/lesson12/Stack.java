@@ -9,18 +9,37 @@ public class Stack {
   }
 
   public void push(int value) {
-    // Your code here
+  ListNode newNode = new ListNode(value);
+    newNode.next = top;
+    top = newNode;
   }
 
   public int pop() {
-    return 0;
+   if (isEmpty()) {
+      throw new RuntimeException("Stack Underflow: Can't pop from an empty stack");
+    }
+    int poppedValue = top.val;
+    top = top.next;
+    return poppedValue;
   }
 
   public int peek() {
-    return 0;
+     if (isEmpty()) {
+      throw new RuntimeException("Stack is empty: Cannot peek");
+    }
+    return top.val;
   }
 
   public boolean isEmpty() {
-    return true;
+    return top == null;
   }
+
+  public void printStack() {
+    ListNode current = top;
+    while (current != null) {
+      System.out.print(current.val + " -> ");
+      current = current.next;
+    }
+    System.out.println("null");
+  } 
 }
