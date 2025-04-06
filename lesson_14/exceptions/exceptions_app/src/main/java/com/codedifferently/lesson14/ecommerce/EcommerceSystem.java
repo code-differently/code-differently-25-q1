@@ -30,7 +30,7 @@ public class EcommerceSystem {
   public void cancelOrder(String orderId) throws OrderNotFoundException {
     Order order = orders.remove(orderId);
     if (order == null) {
-      throw new OrderNotFoundException("Order with ID 1 " + orderId + " not found");
+      throw new OrderNotFoundException("Order with ID " + orderId + " not found");
     }
   }
 
