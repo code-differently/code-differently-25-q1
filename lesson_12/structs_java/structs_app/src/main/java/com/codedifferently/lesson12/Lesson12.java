@@ -29,4 +29,4 @@ public class Lesson12 {
    * https://github.com/yang-su2000/Leetcode-algorithm-practice/tree/master/3062-winner-of-the-linked-list-game
    */
 
-   //used chatgpt for assistance to complete 
+   // used chatgpt for assistance to complete
