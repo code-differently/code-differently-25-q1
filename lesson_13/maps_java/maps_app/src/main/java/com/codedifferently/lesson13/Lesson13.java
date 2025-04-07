@@ -5,9 +5,8 @@ import java.util.Map;
 
 public class Lesson13 {
 
-  
   public int findPermutationDifference(String s, String t) {
-    
+
     Map<Character, Integer> sIndexMap = new HashMap<>();
     for (int i = 0; i < s.length(); i++) {
       sIndexMap.put(s.charAt(i), i);
