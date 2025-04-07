@@ -17,9 +17,16 @@ public class EcommerceSystem {
     products.put(productId, new Product(productId, name));
   }
 
-  public String placeOrder(String productId, int quantity) {
+  // Tells the method that it should expect to throw an exception
+  public String placeOrder(String productId, int quantity) throws ProductNotFoundException {
+
     Product product = products.get(productId);
     String orderId = UUID.randomUUID().toString();
+
+    if (product == null) {
+      throw new ProductNotFoundException("Product with ID " + productId + " not found");
+    }
+
     orders.put(orderId, new Order(orderId, product, quantity));
     return orderId;
   }
@@ -28,8 +35,16 @@ public class EcommerceSystem {
     orders.remove(orderId);
   }
 
-  public String checkOrderStatus(String orderId) {
+  // Modified the method declaration to tell this method to expect and Exception.
+  public String checkOrderStatus(String orderId) throws OrderNotFoundException {
     Order order = orders.get(orderId);
+
+    // Checks if the user has entered nothing
+    if (order == null) {
+      // Throws and error and sends back a message
+      throw new OrderNotFoundException("Order with ID " + orderId + " not found");
+    }
+
     return "Order ID: "
         + orderId
         + ", Product: "
