@@ -23,16 +23,10 @@ public class Lesson13 {
     return difference;
   }
 
-  // used chatgpt because I needed help creating an instance before calling
   public static void main(String[] args) {
-    // Create an object of Lesson13 to call the method
     Lesson13 obj = new Lesson13();
-    System.out.println(obj.findPermutationDifference("abc", "bac")); // Output: 2
-    System.out.println(obj.findPermutationDifference("abcde", "edbac")); // Output: 12
+    System.out.println(obj.findPermutationDifference("abc", "bac")); 
+    System.out.println(obj.findPermutationDifference("abcde", "edbac")); 
   }
 }
-// Constraints:
-// 1 <= s.length <= 26
-// Each character occurs at most once in s.
-// t is a permutation of s.
-// s consists only of lowercase English letters.
+//got ta help on this assignment
