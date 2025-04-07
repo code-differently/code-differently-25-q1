@@ -25,8 +25,8 @@ public class Lesson13 {
 
   public static void main(String[] args) {
     Lesson13 obj = new Lesson13();
-    System.out.println(obj.findPermutationDifference("abc", "bac")); 
-    System.out.println(obj.findPermutationDifference("abcde", "edbac")); 
+    System.out.println(obj.findPermutationDifference("abc", "bac"));
+    System.out.println(obj.findPermutationDifference("abcde", "edbac"));
   }
 }
-//got ta help on this assignment
+// got ta help on this assignment
