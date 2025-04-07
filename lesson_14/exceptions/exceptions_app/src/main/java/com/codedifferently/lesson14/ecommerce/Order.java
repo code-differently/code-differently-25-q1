@@ -1,18 +1,18 @@
 package com.codedifferently.lesson14.ecommerce;
 
 public class Order {
-  private String orderId;
-  private Product product;
-  private int quantity;
+  private final String id;
+  private final Product product;
+  private final int quantity;
 
-  public Order(String orderId, Product product, int quantity) {
-    this.orderId = orderId;
+  public Order(String id, Product product, int quantity) {
+    this.id = id;
     this.product = product;
     this.quantity = quantity;
   }
 
-  public String getOrderId() {
-    return orderId;
+  public String getId() {
+    return id;
   }
 
   public Product getProduct() {
