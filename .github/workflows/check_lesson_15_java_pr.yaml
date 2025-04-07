@@ -1,0 +1,35 @@
+name: Check Lesson 15 Java Pull Request
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "lesson_15/tdd/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Build Lesson 15 with Java
+      working-directory: ./lesson_15/tdd
+      run: ./gradlew check
+
+    - name: Add coverage to PR
+      id: jacoco
+      uses: madrapps/jacoco-report@v1.7.1
+      with:
+        paths: ./lesson_15/tdd/tdd_app/build/reports/jacoco/test/jacocoTestReport.xml
+        token: ${{ secrets.GITHUB_TOKEN }}
