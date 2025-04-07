@@ -22,6 +22,10 @@ public class Employee {
     this.id = id;
   }
 
+  public String getDetails() {
+    return "The Employee's ID: " + id + " Name: " + name + " Department: " + department + " Salary: " + salary;
+  }
+
   public String getName() {
     return name;
   }
