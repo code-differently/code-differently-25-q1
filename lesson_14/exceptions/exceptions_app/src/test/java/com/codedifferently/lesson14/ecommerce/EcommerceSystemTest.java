@@ -3,6 +3,8 @@ package com.codedifferently.lesson14.ecommerce;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.util.UUID;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,16 +17,31 @@ class EcommerceSystemTest {
     ecommerceSystem = new EcommerceSystem();
   }
 
-  @Test
-  void testAddProduct() {
-    // Act
-    ecommerceSystem.addProduct("1", "Laptop");
+  public void AddProduct(String productID, String name) {
+  products.put(productID, new Product(productID, name));
+}
+  public String placeOrder(String produtID, int quantity) {
+    Product product = products.get(productId);
+    if (product == null) {
+      throw new ProductNotFoundException("Product with ID " + productID + "not found");
+    }
+    String orderID = UUID.randomUUID().toString();
+    orders.put(orderID, new Order(orderID, product, quantity));
+    return orderID;
   }
 
   @Test
   void testPlaceOrder() throws Exception {
     // Arrange
     ecommerceSystem.addProduct("1", "Laptop");
+  public class UnsupportedOperationException extends Exception {
+    public UnsupportedOperationException(String message) {
+        super(message);
+    }
+}
+      
+    }
+  }
 
     // Act
     String orderId = ecommerceSystem.placeOrder("1", 1);
