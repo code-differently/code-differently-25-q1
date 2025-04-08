@@ -9,26 +9,26 @@ public class Lesson15TestEmployee {
 
   @Test
   public void getEmployeeId() {
-    // Arrange
-    var employeeId = 4;
-
-    // Act
-    Employee myEmployee = new Employee(employeeId, "", "", 0);
-
-    // Assert
-    assertEquals(4, myEmployee.getId());
+    // given
+    Employee employee = new Employee(1, "Ken", "Tech", 80);
+    // when
+    int expected = 1;
+    int actual = employee.getId();
+    // then
+    assertEquals(expected, actual);
   }
 
   @Test
   public void setEmployeeId() {
-    // Arrange
-    var expectedId = 5;
+    // given
+    Employee employee = new Employee(1, "Kushmir", "Tech", 80);
+    // when
+    employee.setId(1);
+    // then
+    int expected = 1;
+    int actual = employee.getId();
 
-    // Act
-    Employee setEmployee = new Employee(5, "", "", 0);
-
-    // Assert
-    assertEquals(expectedId, setEmployee.getId());
+    assertEquals(expected, actual);
   }
 
   @Test
@@ -45,14 +45,15 @@ public class Lesson15TestEmployee {
 
   @Test
   public void setName() {
-    // Arrange
-    var getName = "Khai";
+    // given
+    Employee employee = new Employee(2, "jamie", "2k", 600);
 
-    // Act
-    Employee setEmployeeName = new Employee(0, "Khai", "", 0);
-
-    // Assert
-    assertEquals(getName, setEmployeeName.getName());
+    // when
+    employee.setName("Kody");
+    String actual = employee.getName();
+    // then
+    assertEquals("Kody", actual);
+    ;
   }
 
   @Test
@@ -70,13 +71,13 @@ public class Lesson15TestEmployee {
   @Test
   public void setDepartment() {
     // Arrange
-    var expectedDepartment = "Software";
+    Employee employee = new Employee(2, "jamie", "hacker", 600);
 
-    // Act
-    Employee placeDepartment = new Employee(0, "", "Software", 0);
-
-    // Assert
-    assertEquals(expectedDepartment, placeDepartment.getDepartment());
+    // when
+    employee.setDepartment("hacker");
+    String actual = employee.getDepartment();
+    // then
+    assertEquals("hacker", actual);
   }
 
   @Test
@@ -109,5 +110,19 @@ public class Lesson15TestEmployee {
     String details = employee1.getDetails();
 
     assertThat(details).isEqualTo("Employee ID: 1, Name: Karsen, Department: Football, Salary: 25");
+  }
+
+  @Test
+  public void testZeroSalary() {
+    Employee employee2 = new Employee(1, "Khayla", "Engineering", 50000);
+    employee2.setSalary(0);
+    assertThat(employee2.getSalary()).isEqualTo(0);
+  }
+
+  @Test
+  public void negativeSalary() {
+    Employee employee3 = new Employee(2, "Sonya", null, 9999);
+    employee3.setSalary(-800);
+    assertThat(employee3.getSalary()).isEqualTo(-800);
   }
 }
