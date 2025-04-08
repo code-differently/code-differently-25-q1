@@ -51,6 +51,7 @@ public class Employee {
   public string getgetDetails() {
     return getDetails;
   }
+
   public string setgetDetails(string getDetails) {
     this.getDetails = getDetails;
   }
