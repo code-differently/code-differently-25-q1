@@ -23,7 +23,20 @@ public class Employee {
   }
 
   public String getDetails() {
-    return "The Employee's ID: " + id + " Name: " + name + " Department: " + department + " Salary: " + salary;
+    return "The Employee's ID: "
+        + id
+        + " Name: "
+        + name
+        + " Department: "
+        + department
+        + " Salary: "
+        + salary;
+  }
+
+  public void setDetails(String name, String department, double salary) {
+    this.name = name;
+    this.department = department;
+    this.salary = salary;
   }
 
   public String getName() {
