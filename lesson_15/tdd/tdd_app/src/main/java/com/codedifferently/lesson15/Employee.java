@@ -13,6 +13,17 @@ public class Employee {
     this.salary = salary;
   }
 
+  public String getDetails() {
+    return "Employee ID: "
+        + id
+        + "\nEmployee Name: "
+        + name
+        + "\nDepartment: "
+        + department
+        + "\nSalary: "
+        + salary;
+  }
+
   // Getters and setters
   public int getId() {
     return id;
