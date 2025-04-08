@@ -7,6 +7,26 @@ public class Lesson12 {
    * https://github.com/yang-su2000/Leetcode-algorithm-practice/tree/master/3062-winner-of-the-linked-list-game
    */
   public String gameResult(ListNode head) {
-    return null;
+    int oddValue = 0;
+    int evenValue = 0;
+
+    while (head != null && head.next != null) {
+      int val1 = head.val;
+      int val2 = head.next.val;
+
+      if (val1 < val2) {
+        oddValue += 1;
+      } else if (val2 < val1) {
+        evenValue += 1;
+      }
+      head = head.next.next;
+    }
+    if (oddValue > evenValue) {
+      return "Odd";
+    } else if (evenValue > oddValue) {
+      return "Even";
+    } else {
+      return "Tie";
+    }
   }
 }
