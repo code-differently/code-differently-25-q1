@@ -46,18 +46,21 @@ public class Employee {
     this.salary = salary;
   }
 
-  public String getDetails(){
-    return "Employee's ID: "+ id +" Name: "+ name +" Department: " + department +" Salary: " + salary;
+  public String getDetails() {
+    return "Employee's ID: "
+        + id
+        + " Name: "
+        + name
+        + " Department: "
+        + department
+        + " Salary: "
+        + salary;
   }
 
-  public void setDetails(int id, String name, String department, double salary){
+  public void setDetails(int id, String name, String department, double salary) {
     this.id = id;
     this.name = name;
     this.department = department;
     this.salary = salary;
   }
-
-
 }
-
-
