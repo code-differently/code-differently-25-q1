@@ -10,3 +10,4 @@ class ProductNotFoundException extends Exception {
         super(message);
     }
 }
+ 
