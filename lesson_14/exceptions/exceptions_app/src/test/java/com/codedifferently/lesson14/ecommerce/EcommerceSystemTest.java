@@ -58,7 +58,7 @@ class EcommerceSystemTest {
   }
 
   @Test
-  void testCheckOrderStatus_orderDoesNotExist() {
+  void testCheckOrderStatus_orderDoesNotExist() throws Exception {
     // Act
     assertThatThrownBy(() -> ecommerceSystem.checkOrderStatus("1"))
         .isInstanceOf(OrderNotFoundException.class)
