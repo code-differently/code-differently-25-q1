@@ -2,7 +2,6 @@ package com.codedifferently.lesson15;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 class Lesson15Test {
@@ -118,5 +117,12 @@ class Lesson15Test {
     manager.addEmployee(employee1);
 
     assertEquals(1, manager.getEmployeeCount());
+  }
+
+  @Test
+  public void testGetDetails() {
+    Employee employee1 = new Employee(2004, "Edmar", "Tech", 60000.0);
+
+    assertEquals("ID: " + employee1.getId() + " Name: " + employee1.getName() + " Department: " + employee1.getDepartment() + " Salary " + employee1.getSalary(), employee1.getDetails());
   }
 }
