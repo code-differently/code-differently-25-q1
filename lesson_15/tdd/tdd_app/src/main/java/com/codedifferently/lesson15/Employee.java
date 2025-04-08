@@ -47,6 +47,6 @@ public class Employee {
   }
 
   public String getDetails() {
-    return "ID: " + this.id + " Name: " + this.name + " Department: " + this.department + " Salary " + this.salary; 
+    return "ID: " + id + " Name: " + name + " Department: " + department + " Salary " + salary;
   }
 }
