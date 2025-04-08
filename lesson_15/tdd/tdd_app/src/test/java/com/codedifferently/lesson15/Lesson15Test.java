@@ -12,11 +12,16 @@ class Lesson15Test {
   }
 
   @Test
-  public void testGetGreeting() {
+  public void testGetGreeting() {}
+
+  @Test
+  public void testGetDetails() {
+    // Arrange
+    Employee employee = new Employee(1, "Ezra Nyabuti", "Software Engineer", 100000);
     // Act
-    String greeting = new Lesson15().getGreeting("World");
+    String details = employee.getDetails();
     // Assert
-    assertThat(greeting).isEqualTo("Hello, World!");
+    assertThat(details).isEqualTo("1, Ezra Nyabuti, Software Engineer,100000.0");
   }
 
   @Test
@@ -54,6 +59,19 @@ class Lesson15Test {
   }
 
   @Test
+  public void testUpdateEmployee() {
+    // Arrange
+    EmployeeManager employeeManager = new EmployeeManager();
+    Employee employee = new Employee(1, "Ezra Nyabuti", "Software Engineer", 100000);
+    employeeManager.addEmployee(employee);
+    // Act
+    employee.setName("Ezra Nyabuti Makini");
+    employeeManager.updateEmployee(employee);
+    // Assert
+    assertThat(employeeManager.getEmployee(1).getName()).isEqualTo("Ezra Nyabuti Makini");
+  }
+
+  @Test
   public void testRemoveEmployee() {
     // Arrange
     EmployeeManager employeeManager = new EmployeeManager();
@@ -80,9 +98,9 @@ class Lesson15Test {
     // Arrange
     Employee employee = new Employee(1, "Ezra Nyabuti", "Software Engineer", 0);
     // Act
-    employee.setId(2);
+    employee.setId(1);
     // Assert
-    assertThat(employee.getId()).isEqualTo(2);
+    assertThat(employee.getId()).isEqualTo(1);
   }
 
   @Test
