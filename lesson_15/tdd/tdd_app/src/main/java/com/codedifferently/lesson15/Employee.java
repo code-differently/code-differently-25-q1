@@ -35,7 +35,8 @@ public class Employee {
   }
 
   // Method to set all employee details at once
-  public void setDetails(String name, String department, double salary) {
+  public void setDetails(String name, String department, double salary, int id) {
+    this.id = id;
     this.name = name;
     this.department = department;
     this.salary = salary;
