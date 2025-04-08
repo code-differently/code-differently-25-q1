@@ -31,7 +31,7 @@ class Lesson15Test {
   @Test
   public void testSetDetails() {
     Employee employee = new Employee(1, "John Doe", "Engineering", 50000);
-    employee.setDetails("Jane Doe", "Marketing", 60000);
+    employee.setDetails("Jane Doe", "Marketing", 60000, 1);
 
     String result = employee.getDetails();
     String expected = "The Employee's ID: 1 Name: Jane Doe Department: Marketing Salary: 60000.0";
