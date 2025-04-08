@@ -13,6 +13,13 @@ public class Employee {
     this.salary = salary;
   }
 
+  public String getDetails() {
+    // used chatGpt because I could not figure out how to get rid of decimal format within the code
+    // to make the test pass
+    return String.format(
+        "Employee ID: %d, Name: %s, Department: %s, Salary: %.0f", id, name, department, salary);
+  }
+
   // Getters and setters
   public int getId() {
     return id;
