@@ -22,6 +22,7 @@ public class Employee {
     this.id = id;
   }
 
+  // Method to get all details of an employee
   public String getDetails() {
     return "The Employee's ID: "
         + id
@@ -33,6 +34,7 @@ public class Employee {
         + salary;
   }
 
+  // Method to set all employee details at once
   public void setDetails(String name, String department, double salary) {
     this.name = name;
     this.department = department;
