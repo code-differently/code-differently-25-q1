@@ -5,12 +5,14 @@ public class Employee {
   private String name;
   private String department;
   private double salary;
+  private String details;
 
-  public Employee(int id, String name, String department, double salary) {
+  public Employee(int id, String name, String department, double salary, String details) {
     this.id = id;
     this.name = name;
     this.department = department;
     this.salary = salary;
+    this.details = details;
   }
 
   // Getters and setters
@@ -44,5 +46,12 @@ public class Employee {
 
   public void setSalary(double salary) {
     this.salary = salary;
+  }
+
+  public String getDetails() {
+    return details;
+  }
+  public void setDetail(String detail) {
+    this.details = details; 
   }
 }
