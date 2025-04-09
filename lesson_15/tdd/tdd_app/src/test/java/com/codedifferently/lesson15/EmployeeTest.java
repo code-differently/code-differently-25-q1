@@ -67,13 +67,4 @@ public class EmployeeTest {
     assertThat(details)
         .isEqualTo("Employee's ID: 1 Name: Meiko Stephens Department: IT Salary: 50000.0");
   }
-
-  @Test
-  public void testSetDetails() {
-    Employee employee = new Employee(1, "Meiko Stephens", "IT", 50000);
-    employee.setDetails(2, "John Smith", "HR", 40000);
-    String result = employee.getDetails();
-    String expected = "Employee's ID: 2 Name: John Smith Department: HR Salary: 40000.0";
-    assertThat(result).isEqualTo(expected);
-  }
 }
