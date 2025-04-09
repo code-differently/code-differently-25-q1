@@ -51,7 +51,8 @@ public class Employee {
   public String getDetails() {
     return details;
   }
+
   public void setDetail(String detail) {
-    this.details = details; 
+    this.details = details;
   }
 }

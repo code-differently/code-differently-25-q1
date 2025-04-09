@@ -1,6 +1,7 @@
 package com.codedifferently.lesson15;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
@@ -15,8 +16,7 @@ class EmployeeTest {
     assertEquals(expectedId, actual);
   }
 
-
-  @Test 
+  @Test
   public void setId() {
     int expectedId = 7;
 
@@ -24,11 +24,10 @@ class EmployeeTest {
 
     employee1.setId(expectedId);
 
-    assertEquals( expectedId, employee1.getId());
+    assertEquals(expectedId, employee1.getId());
   }
 
-
-  @Test 
+  @Test
   public void getName() {
     var expectedNameString = "Montez";
 
@@ -36,11 +35,10 @@ class EmployeeTest {
 
     var actual = employee1.getName();
 
-    assertEquals( expectedNameString, actual);
+    assertEquals(expectedNameString, actual);
   }
 
-
-  @Test 
+  @Test
   public void setName() {
     var expectedNameString = "Montez";
 
@@ -48,21 +46,21 @@ class EmployeeTest {
 
     employee1.setName(expectedNameString);
 
-    assertEquals( expectedNameString, employee1.getName());
+    assertEquals(expectedNameString, employee1.getName());
   }
 
-  @Test 
+  @Test
   public void getDepartment() {
     var expectedString = "Tech";
 
-    Employee employee1 = new Employee(0, null, "Tech", 0, null );
+    Employee employee1 = new Employee(0, null, "Tech", 0, null);
 
     var actual = employee1.getDepartment();
 
-    assertEquals( expectedString, actual);
+    assertEquals(expectedString, actual);
   }
 
-  @Test 
+  @Test
   public void setDepartment() {
     var expectedDepartment = "Sales";
 
@@ -70,21 +68,21 @@ class EmployeeTest {
 
     employee1.setDepartment("Sales");
 
-    assertEquals( expectedDepartment, employee1.getDepartment());
+    assertEquals(expectedDepartment, employee1.getDepartment());
   }
 
-  @Test 
+  @Test
   public void getSalary() {
     var expectedSalary = 50000;
 
-    Employee employye2 = new Employee( 0, null, null, expectedSalary, null);
+    Employee employye2 = new Employee(0, null, null, expectedSalary, null);
 
     var actual = employye2.getSalary();
 
-    assertEquals( expectedSalary, actual);
+    assertEquals(expectedSalary, actual);
   }
 
-  @Test 
+  @Test
   public void setSalary() {
     int expectedSalary = 4200;
 
@@ -92,20 +90,17 @@ class EmployeeTest {
 
     employee1.setSalary(expectedSalary);
 
-    assertEquals( expectedSalary, employee1.getSalary());
+    assertEquals(expectedSalary, employee1.getSalary());
   }
 
   @Test
-  public void setDetails() {
-    var  expectedDetailString = "Non Hipanic Black";
+  public void getDetails() {
+    var expectedString = "Detail";
 
-    Employee employee = new Employee(0, null, null, 0, "Non Hispanic Black");
+    Employee employee1 = new Employee(0, null, null, 0, "Detail");
 
-    var actual = employee.getDetails();
+    var actual = employee1.getDetails();
 
-    assertEquals(expectedDetailString, actual);
+    assertEquals(expectedString, actual);
   }
 }
-
-
-
