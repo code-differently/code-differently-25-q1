@@ -1,0 +1,27 @@
+name: Check Lesson 11 Pull Request
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "lesson_11/arrays_java/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Build Lesson 11 with Java
+      working-directory: ./lesson_11/arrays_java
+      run: ./gradlew check
