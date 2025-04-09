@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { AnanatawasLoader } from './ananatawa_loader.js';
 import { AnthonyMaysLoader } from './anthony_mays_loader.js';
 import { BryanaSingletonBarnhartLoader } from './bryana_singleton_barnhart_loader.js';
 import { ChanelHuttLoader } from './chanel_hutt_loader.js';
@@ -21,6 +22,7 @@ import { OliviaJamesLoader } from './olivia_james_loader.js';
 export const Loaders = Symbol.for('Loaders');
 
 const LOADER_PROVIDERS = [
+  AnanatawasLoader,
   AnthonyMaysLoader,
   NiaPackLoader,
   BryanaSingletonBarnhartLoader,
@@ -53,4 +55,3 @@ const LOADER_PROVIDERS = [
   exports: [Loaders],
 })
 export class LoadersModule {}
-// got assistance from ai and copilot aswell as Meiko ,Mercedes and Dillon
