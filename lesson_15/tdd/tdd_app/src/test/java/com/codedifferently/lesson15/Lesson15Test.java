@@ -1,5 +1,6 @@
 package com.codedifferently.lesson15;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class Lesson15Test {
@@ -32,7 +33,7 @@ class Lesson15Test {
   }
 
   @Test
-  void testssertEmployeeInCollection() {
+  void testassertEmployeeInCollection() {
     //add stuff
     //throw new is needed
   }
