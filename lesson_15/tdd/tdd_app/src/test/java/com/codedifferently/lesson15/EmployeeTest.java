@@ -1,21 +1,10 @@
-package com.codedifferently.lesson15;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.codedifferently.lesson15.Employee;
 import org.junit.jupiter.api.Test;
 
-class Lesson15Test {
+public class EmployeeTest {
 
-  @Test
-  public void testLesson15() {
-    assertThat(new Lesson15()).isNotNull();
-  }
-
-  @Test
-  public void testGetGreeting() {}
-
-  // ------------
-  // Tests for Employee class
   @Test
   public void testGetDetails() {
     // Create an instance of Employee by adding in temporary values
@@ -97,7 +86,4 @@ class Lesson15Test {
     double result = employee.getSalary();
     assertThat(result).isEqualTo(60000);
   }
-
-  // -------
-
 }
