@@ -3,11 +3,10 @@ package com.codedifferently.lesson15;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test; // got this from chatGpt
 
-public class Lesson15TestManager {
+public class ManagerTest {
 
   EmployeeManager manager;
 
