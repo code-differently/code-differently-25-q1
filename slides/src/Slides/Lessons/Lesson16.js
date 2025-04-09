@@ -115,7 +115,7 @@ public void testCreateCar() {
     var car = new Car("Toyota", "Camry", 120);
     
     // Assert
-    Assertions.assertFalse(car.isOn());
+    Assertions.assertFalse(car.getIsOn());
     Assertions.assertEquals(Gear.PARK, car.getGear());
 }
 `}
@@ -358,7 +358,7 @@ public class Car { // <-- Class definition, public to things outside this packag
        if (currentGear != Gear.DRIVE) {
            throw new IllegalStateException("Car is not in drive");
        }
-       speedInMph = Math.max(speedInMph, maxSpeedInMph);
+       this.speedInMph = Math.max(speedInMph, maxSpeedInMph); // Disambiguation!
    }
 }
 `}
