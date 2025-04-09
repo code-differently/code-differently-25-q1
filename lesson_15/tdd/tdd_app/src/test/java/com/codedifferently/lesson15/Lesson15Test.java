@@ -10,18 +10,15 @@ public class Lesson15Test {
 
   @Test
   public void testMainPrintsGreetingAndEmployeeDetails() {
-    // Capture console output
+
     PrintStream originalOut = System.out;
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     System.setOut(new PrintStream(outContent));
 
-    // Execute main
     Lesson15.main(new String[] {});
 
-    // Restore System.out
     System.setOut(originalOut);
 
-    // Get output and verify
     String output = outContent.toString().trim();
     assertThat(output).contains("Hello, World!");
     assertThat(output)

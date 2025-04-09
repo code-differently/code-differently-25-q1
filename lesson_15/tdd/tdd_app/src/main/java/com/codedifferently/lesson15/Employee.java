@@ -31,7 +31,6 @@ public class Employee {
     this.salary = salary;
   }
 
-  // Getters and setters
   public int getId() {
     return id;
   }
