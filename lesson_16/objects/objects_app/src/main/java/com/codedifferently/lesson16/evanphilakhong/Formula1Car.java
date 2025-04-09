@@ -1,11 +1,10 @@
 package com.codedifferently.lesson16.evanphilakhong;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+import lombok.Getter;
+import lombok.Setter;
 
-@Configuration
-@SpringBootApplication(scanBasePackages = "com.codedifferently")
-
+@Getter
+@Setter
 public class Formula1Car {
     private Team team;
     private String[] sponsors;
@@ -33,56 +32,6 @@ public class Formula1Car {
         this.isDrs = false;
     }
 
-    // setters
-    public void setTeam(Team team) {
-        this.team = team;
-    }
-
-    public void setSponsors(String[] sponsors) {
-        this.sponsors = sponsors;
-    }
-
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
-    }
-
-    public void setDriverNum(int driverNum) {
-        this.driverNum = driverNum;
-    }
-
-    public void setCurrTyre(TyreCompound newTyre) {
-        this.currTyre = newTyre;
-    }
-
-    public void setIsDrsOn(boolean isDrs) {
-        this.isDrs = isDrs;
-    }
-
-    // getters
-    public String getTeam() {
-        return this.team.toString();
-    }
-
-    public String[] getSponsors() {
-        return this.sponsors;
-    }
-
-    public String getDriverName() {
-        return this.driverName;
-    }
-
-    public int getDriverNum() {
-        return this.driverNum;
-    }
-
-    public TyreCompound getTyreCompound() {
-        return this.currTyre;
-    }
-
-    public boolean getIsDrsOn() {
-        return this.isDrs;
-    }
-
     // methods
     public void printSponsors() {
         for (String sponsor : sponsors) {
@@ -90,6 +39,8 @@ public class Formula1Car {
         }
     }
     public static void main(String[] args) {
-
+        Formula1Car formula1Car = new Formula1Car();
+        Team team = Team.MCLAREN;
+        formula1Car.setTeam(team);
     }
 }
