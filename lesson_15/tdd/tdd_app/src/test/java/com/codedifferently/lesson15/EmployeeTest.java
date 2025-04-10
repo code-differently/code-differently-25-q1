@@ -67,7 +67,6 @@ public void getDetails(){
 
 }
 
-
 }
 
 
