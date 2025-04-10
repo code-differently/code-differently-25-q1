@@ -37,6 +37,4 @@ public class Track {
     this.drsZone = drsZone;
     this.weather = weather;
   }
-
-  public static void main(String[] args) {}
 }
