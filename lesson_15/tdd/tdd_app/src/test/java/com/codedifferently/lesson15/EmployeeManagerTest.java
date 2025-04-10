@@ -1,18 +1,19 @@
 package com.codedifferently.lesson15;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 
 public class EmployeeManagerTest {
-    @Test
-    public void testAddEmployee() {
+  @Test
+  public void testAddEmployee() {
     EmployeeManager manager = new EmployeeManager();
     Employee employee = new Employee(1, "Olivia James", "IT", 100000);
     manager.addEmployee(employee);
     assertThat(manager.getEmployee(1)).isEqualTo(employee);
   }
 
-  @Test 
+  @Test
   public void testGetEmployee() {
     EmployeeManager manager = new EmployeeManager();
     Employee employee = new Employee(1, "Olivia James", "IT", 100000);
@@ -21,19 +22,16 @@ public class EmployeeManagerTest {
   }
 
   @Test
-  public void testRemoveEmployee () {
-    //Arrange
+  public void testRemoveEmployee() {
+    // Arrange
     EmployeeManager manager = new EmployeeManager();
     Employee employee = new Employee(1, "Olivia James", "IT", 100000);
-    
-    //Act
+
+    // Act
     manager.addEmployee(employee);
     manager.removeEmployee(1);
-    
-    //Assertion
+
+    // Assertion
     assertThat(manager.getEmployeeCount()).isEqualTo(0);
   }
 }
-
-
-
