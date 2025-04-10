@@ -15,10 +15,9 @@ public class Formula1Car {
   private TyreCompound currTyre;
   private boolean drs;
 
-  /**    
-   * Default Constructor for a Formula1Car with no team, empty
-   * sponsors array, empty driver name, driver number 0, no tyre 
-   * compound, and DRS is disabled by default
+  /**
+   * Default Constructor for a Formula1Car with no team, empty sponsors array, empty driver name,
+   * driver number 0, no tyre compound, and DRS is disabled by default
    */
   public Formula1Car() {
     this.team = null;
@@ -28,14 +27,14 @@ public class Formula1Car {
     this.currTyre = null;
     this.drs = false;
   }
+
   /**
-   * @param team       the tean that this Formula1Car belongs
-   * @param sponsors   array of sponsor names accosicated with this Formula1Car
+   * @param team the tean that this Formula1Car belongs
+   * @param sponsors array of sponsor names accosicated with this Formula1Car
    * @param driverName the name of the driver of this Formula1Car
-   * @param driverNum  the drivers number for the Formula1Car 
-   * @param position   drivers current racing position on the grid
-   * @param currTyre   current TyreCompound fitted on this Formula1Car
-   *
+   * @param driverNum the drivers number for the Formula1Car
+   * @param position drivers current racing position on the grid
+   * @param currTyre current TyreCompound fitted on this Formula1Car
    * @see Team
    * @see TyreCompound
    */
@@ -56,11 +55,9 @@ public class Formula1Car {
   }
 
   /**
-   * Displays a header line then,
-   * Prints a list of sponsors to the console.
+   * Displays a header line then, Prints a list of sponsors to the console.
    *
    * @throws NoSponsorsException if there are no sponsors associated with this Formula1Car
-   *
    * @see NoSponsorsException
    */
   public void printSponsors() throws NoSponsorsException {
@@ -73,14 +70,13 @@ public class Formula1Car {
       }
     }
   }
+
   /**
-   * Checks if DRS (Drag Reduction System) is availible to use 
-   * This method determines DRS availibility based on weather or not
-   * your Formula1Car is in the current track's designated DRS zone.
+   * Checks if DRS (Drag Reduction System) is availible to use This method determines DRS
+   * availibility based on weather or not your Formula1Car is in the current track's designated DRS
+   * zone.
    *
-   * @return {@code true} if DRS is availible (track has a DRS zone),
-   *         {@code false} otherwise
-   *
+   * @return {@code true} if DRS is availible (track has a DRS zone), {@code false} otherwise
    * @see Track#isDrsZone()
    */
   public boolean isDrsAvailible() {
@@ -90,14 +86,13 @@ public class Formula1Car {
     }
     return false;
   }
+
   /**
-   * Checks if we need to switch race strategy to account for the rainy weather
-   * if the weather is LIGHT_RAIN we change the TyreCompound to INTERMEDIATE 
-   * if the weather is HEAVY_RAIN we change the TyreCompound to WET
+   * Checks if we need to switch race strategy to account for the rainy weather if the weather is
+   * LIGHT_RAIN we change the TyreCompound to INTERMEDIATE if the weather is HEAVY_RAIN we change
+   * the TyreCompound to WET
    *
-   * @return {@code true} if track.getWeather is LIGHT_RAIN || HEAVY_RAIN 
-   *         {@code false} otherwise
-   *
+   * @return {@code true} if track.getWeather is LIGHT_RAIN || HEAVY_RAIN {@code false} otherwise
    * @see Track#getWeather()
    */
   public boolean rainStrategy() {
