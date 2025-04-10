@@ -22,24 +22,26 @@ enum Breed {
 
 public class Cat {
   // Member variables
-  private String name;
-  private int age;
-  private double weight;
-  private boolean isIndoor;
-  private Breed breed;
-  private ArrayList<String> favoriteFoods;
+  public String name;
+  public int age;
+  public double weight;
+  public boolean isIndoor;
+  public Breed breed;
+  public ArrayList<String> favoriteFoods;
+  public boolean isFemale;
 
   // Constructor
-  public Cat(String name, int age, double weight, Breed breed, boolean isIndoor)
-      throws InvalidCatNameException {
-    if (name == null || name.trim().isEmpty()) {
-      throw new InvalidCatNameException("Cat name cannot be empty.");
-    }
-    this.name = name;
-    this.age = age;
-    this.weight = weight;
-    this.isIndoor = isIndoor;
-    this.breed = breed;
+  public Cat(String name, int age, double weight, Breed breed, boolean isIndoor, boolean isFemale)
+        throws InvalidCatNameException {
+      if (name == null || name.trim().isEmpty()) {
+        throw new InvalidCatNameException("Cat name cannot be empty.");
+      }
+      this.name = name;
+      this.age = age;
+      this.weight = weight;
+      this.isIndoor = isIndoor;
+      this.breed = breed;
+      this.isFemale = isFemale;
     this.favoriteFoods =
         new ArrayList<>(Arrays.asList("Fancy Feast", "Purina Naturals")); // Default for Ninja
   }
@@ -85,5 +87,38 @@ public class Cat {
 
   public ArrayList<String> getfavoriteFoods() {
     return favoriteFoods;
+  }
+
+  public String meow() {
+    return "Meow!";
+  }
+
+  public String walk() {
+    return name + " is walking.";
+  }
+
+  public String sleep() {
+    return name + " is sleeping.";
+  }
+
+  public boolean isKitten() {
+    return age < 1;
+  }
+
+  public String play() {
+    return name + " is playing.";
+  }
+
+  public String scratchFurniture() {
+    return name + " is scratching furniture.";
+  }
+
+  public String useLitterbox() {
+    return name + " is using the litterbox.";
+  }
+
+  public enum Gender {
+    MALE,
+    FEMALE
   }
 }
