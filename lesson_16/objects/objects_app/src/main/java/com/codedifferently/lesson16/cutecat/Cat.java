@@ -32,16 +32,16 @@ public class Cat {
 
   // Constructor
   public Cat(String name, int age, double weight, Breed breed, boolean isIndoor, boolean isFemale)
-        throws InvalidCatNameException {
-      if (name == null || name.trim().isEmpty()) {
-        throw new InvalidCatNameException("Cat name cannot be empty.");
-      }
-      this.name = name;
-      this.age = age;
-      this.weight = weight;
-      this.isIndoor = isIndoor;
-      this.breed = breed;
-      this.isFemale = isFemale;
+      throws InvalidCatNameException {
+    if (name == null || name.trim().isEmpty()) {
+      throw new InvalidCatNameException("Cat name cannot be empty.");
+    }
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+    this.isIndoor = isIndoor;
+    this.breed = breed;
+    this.isFemale = isFemale;
     this.favoriteFoods =
         new ArrayList<>(Arrays.asList("Fancy Feast", "Purina Naturals")); // Default for Ninja
   }
