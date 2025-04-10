@@ -13,6 +13,16 @@ public class Track {
     private boolean drsZone;
     private Weather weather;
 
+    // constructors
+    public Track() {
+        this.trackName = "";
+        this.trackLocation = "";
+        this.numLaps = 0;
+        this.trackLengthInKm = 0;
+        this.drsZone = false;
+        this.weather = null;
+    }
+
     public static void main(String[] args) {
         
     }

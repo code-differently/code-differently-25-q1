@@ -15,7 +15,7 @@ public class Formula1Car {
     private TyreCompound currTyre;
     private boolean drs;
 
-    //Constructors
+    // constructors
     public Formula1Car() {
         this.team = null;
         this.sponsors = new String[0];
