@@ -11,7 +11,7 @@ public class Track {
     private int numLaps;
     private int trackLengthInKm;
     private boolean drsZone;
-    private boolean raining;
+    private Weather weather;
 
     public static void main(String[] args) {
         

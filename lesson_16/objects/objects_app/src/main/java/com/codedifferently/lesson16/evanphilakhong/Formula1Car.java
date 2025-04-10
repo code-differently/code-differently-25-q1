@@ -56,9 +56,14 @@ public class Formula1Car {
     }
 
     public boolean rainStrategy() {
-        if (track.isRaining()) {
-            currTyre.setCurrTyre(TyreCompound.WET);
+        if (track.getWeather() == Weather.LIGHT_RAIN) {
+            this.currTyre = TyreCompound.INTERMEDIATE;
+            return true;
+        } else if (track.getWeather() == Weather.HEAVY_RAIN) {
+            this.currTyre = TyreCompound.WET;
+            return true;
         }
+        return false;
     }
 
     public static void main(String[] args) {
