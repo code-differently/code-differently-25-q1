@@ -6,12 +6,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Formula1Car {
+    private Track track;
     private Team team;
     private String[] sponsors;
     private String driverName;
     private int driverNum;
+    private int position;
     private TyreCompound currTyre;
-    private boolean isDrs;
+    private boolean drs;
 
     //Constructors
     public Formula1Car() {
@@ -20,24 +22,45 @@ public class Formula1Car {
         this.driverName = "";
         this.driverNum = 0;
         this.currTyre = null;
-        this.isDrs = false;
+        this.drs = false;
     }
 
-    public Formula1Car(Team team, String[] sponsors, String driverName, int driverNum, TyreCompound currTyre) {
+    public Formula1Car(Team team, String[] sponsors, String driverName, int driverNum, int position, TyreCompound currTyre) {
         this.team = team;
         this.sponsors = sponsors;
         this.driverName = driverName;
         this.driverNum = driverNum;
+        this.position = position;
         this.currTyre = currTyre;
-        this.isDrs = false;
+        this.drs = false;
     }
 
     // methods
     public void printSponsors() {
-        for (String sponsor : sponsors) {
-            System.out.println(sponsor);
+        if (sponsors.length == 0) {
+            System.out.println("There are no Sponsors");
+        } else {
+            System.out.println("Here's a list of our Sponsors:");
+            for (String sponsor : sponsors) {
+                System.out.println(sponsor);
+            }
         }
     }
+
+    public boolean isDrsAvailible() {
+        if (track.isDrsZone()) {
+            this.drs = true;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean rainStrategy() {
+        if (track.isRaining()) {
+            currTyre.setCurrTyre(TyreCompound.WET);
+        }
+    }
+
     public static void main(String[] args) {
         Formula1Car formula1Car = new Formula1Car();
         Team team = Team.MCLAREN;

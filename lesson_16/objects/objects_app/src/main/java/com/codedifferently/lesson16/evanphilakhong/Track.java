@@ -10,8 +10,8 @@ public class Track {
     private String trackLocation;
     private int numLaps;
     private int trackLengthInKm;
-    private boolean isDrsZone;
-    private boolean isRaining;
+    private boolean drsZone;
+    private boolean raining;
 
     public static void main(String[] args) {
         
