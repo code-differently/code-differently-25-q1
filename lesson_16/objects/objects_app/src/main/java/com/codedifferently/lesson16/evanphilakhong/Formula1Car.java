@@ -36,9 +36,9 @@ public class Formula1Car {
     }
 
     // methods
-    public void printSponsors() {
+    public void printSponsors() throws NoSponsorsException {
         if (sponsors.length == 0) {
-            System.out.println("There are no Sponsors");
+            throw new NoSponsorsException(team + " has no Sponsors");
         } else {
             System.out.println("Here's a list of our Sponsors:");
             for (String sponsor : sponsors) {
