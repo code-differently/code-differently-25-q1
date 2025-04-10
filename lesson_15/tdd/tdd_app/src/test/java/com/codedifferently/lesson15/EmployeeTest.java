@@ -56,6 +56,19 @@ public void setSalary(){
     employee.setSalary(50000);
     assertThat(employee.getSalary()).isEqualTo(50000);
 }
+
+@Test
+public void getDetails(){
+ 
+    Employee employee = new Employee(1, "Olivia James", "IT", 150000);
+    assertThat(employee.getDetails()).isEqualTo("1 Olivia James IT 150000.0");
+
+
+
 }
+
+
+}
+
 
 
