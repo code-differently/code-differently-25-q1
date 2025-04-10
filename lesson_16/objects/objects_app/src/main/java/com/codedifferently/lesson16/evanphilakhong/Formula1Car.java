@@ -71,10 +71,4 @@ public class Formula1Car {
     }
     return false;
   }
-
-  public static void main(String[] args) {
-    Formula1Car formula1Car = new Formula1Car();
-    Team team = Team.MCLAREN;
-    formula1Car.setTeam(team);
-  }
 }
