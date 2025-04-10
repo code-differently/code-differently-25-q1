@@ -63,8 +63,6 @@ public void getDetails(){
     Employee employee = new Employee(1, "Olivia James", "IT", 150000);
     assertThat(employee.getDetails()).isEqualTo("1 Olivia James IT 150000.0");
 
-
-
 }
 
 }
