@@ -21,8 +21,7 @@ public class LoadGame {
 
           int id = Integer.parseInt(gameDetails[0].trim());
           String name = gameDetails[1].trim();
-          xbox.inputGame(id, name);
-          xbox.setDiskDriveFull(false); // Set diskDriveFull to true after adding a game
+          xbox.getGames().put(id, name);
         }
       }
     } catch (IOException e) {

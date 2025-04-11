@@ -1,16 +1,16 @@
-package XboxTest;
+package xboxtest;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.HashMap; // Ensure LoadGame is imported
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals; // Ensure LoadGame is imported
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
-import org.junit.jupiter.api.Test;
 
+import com.codedifferently.lesson16.dylans_xbox.DiskDriveFullException;
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.HashMap;
+import org.junit.jupiter.api.Test;
 
 public class XboxTest {
 
@@ -36,12 +36,25 @@ public class XboxTest {
 
   @Test
   public void testAddGameIfFull() {
-    Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, true); // Set diskDriveFull to true
+    Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false); // false means not full yet
+    LoadGame loader =
+        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
+
     try {
-      xbox.inputGame(1, "Call of Duty");
-      fail("Expected an exception to be thrown when adding a game to a full disk drive.");
-    } catch (Exception e) {
+      loader.loadGamesFromFile(xbox);
+
+      // Insert two games (disk limit)
+      xbox.inputGame(1);
+      xbox.inputGame(2);
+
+      // This third insert should throw an exception
+      xbox.inputGame(3);
+      fail("Expected DiskDriveFullException to be thrown.");
+    } catch (DiskDriveFullException e) {
       assertEquals("Disk drive is full. Cannot insert game.", e.getMessage());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Unexpected exception: " + e.getMessage());
     }
   }
 
@@ -49,19 +62,8 @@ public class XboxTest {
   public void testXboxModelEnumValues() {
     Xbox.XboxModel[] models = Xbox.XboxModel.values();
     assertEquals(6, models.length);
-    assertEquals(
-        Xbox.XboxModel.XBOX360, models[0]); 
+    assertEquals(Xbox.XboxModel.XBOX360, models[0]);
     assertEquals(Xbox.XboxModel.XBOXSERIESX, models[5]);
-  }
-
-  @Test
-  public void testDiskDrive() {
-    Xbox xbox =
-        new Xbox(
-            "XBOXONE", 400, "White", true,
-            false);
-    assertTrue(
-        xbox.DiskDrive(), "Disk drive should be empty"); 
   }
 
   @Test
@@ -105,17 +107,18 @@ public class XboxTest {
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
         new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
+
     try {
-      loader.loadGamesFromFile(xbox);
+      loader.loadGamesFromFile(xbox); // Load games into library
+      xbox.inputGame(1); // Insert game with ID 1
+      assertEquals(1, xbox.getInsertedGamesSize(), "Game should be inserted.");
+
+      xbox.ejectGame(1); // Eject by name (you may use ID instead if implemented that way)
+      assertEquals(0, xbox.getInsertedGamesSize(), "The game should be ejected.");
     } catch (Exception e) {
       e.printStackTrace();
-      fail("Exception occurred while loading games: " + e.getMessage());
+      fail("Exception occurred: " + e.getMessage());
     }
-
-    xbox.ejectGame(1);
-
-    assertTrue(
-        !xbox.getGames().containsKey(1), "Game with ID 1 should be removed from the games list.");
   }
 
   @Test
