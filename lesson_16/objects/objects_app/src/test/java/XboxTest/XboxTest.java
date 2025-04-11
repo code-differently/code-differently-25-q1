@@ -1,16 +1,15 @@
 package XboxTest;
 
-import java.io.ByteArrayOutputStream; // Ensure LoadGame is imported
-import java.io.PrintStream;
-import java.util.HashMap;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.fail; // Ensure LoadGame is imported
 
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.HashMap;
+import org.junit.jupiter.api.Test;
 
 public class XboxTest {
 
@@ -18,7 +17,8 @@ public class XboxTest {
   public void testAddGame() {
     LoadGame loader =
         new LoadGame(
-            "src/main/java/com/codedifferently/lesson16/dylans_xbox/games.csv"); // Ensure LoadGame
+            "src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv"); // Ensure
+    // LoadGame
 
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false); // Create an instance of Xbox
     try {
@@ -67,7 +67,7 @@ public class XboxTest {
   public void testPrintAllGames() {
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
-        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/games.csv");
+        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
     try {
       loader.loadGamesFromFile(xbox);
     } catch (Exception e) {
@@ -103,7 +103,7 @@ public class XboxTest {
   public void testEjectGame() {
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
-        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/games.csv");
+        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
     try {
       loader.loadGamesFromFile(xbox);
     } catch (Exception e) {
@@ -125,7 +125,7 @@ public class XboxTest {
 
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
-        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/games.csv");
+        new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
 
     try {
       loader.loadGamesFromFile(xbox);
@@ -139,7 +139,7 @@ public class XboxTest {
     assertEquals(10, games.size(), "There should be 10 games loaded.");
   }
 
-  @Test 
+  @Test
   public void testGetPrice() {
     Xbox xbox = new Xbox("XBOX360", 400, "White", true, false);
     int price = xbox.getPrice();

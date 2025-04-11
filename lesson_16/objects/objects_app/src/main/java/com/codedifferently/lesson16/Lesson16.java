@@ -12,5 +12,4 @@ public class Lesson16 {
     var application = new SpringApplication(Lesson16.class);
     application.run(args);
   }
-
 }
