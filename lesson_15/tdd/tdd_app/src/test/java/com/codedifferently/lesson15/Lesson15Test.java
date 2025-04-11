@@ -10,9 +10,6 @@ class Lesson15Test {
     assertThat(new Lesson15()).isNotNull();
   }
 
-  @Test
-  public void testGetGreeting() {}
-
   // ------------
   // Tests for Employee class
   @Test
