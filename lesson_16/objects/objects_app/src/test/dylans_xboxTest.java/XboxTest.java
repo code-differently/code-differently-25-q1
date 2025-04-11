@@ -1,15 +1,11 @@
-package xboxtest;
-
-import static org.junit.jupiter.api.Assertions.assertEquals; // Ensure LoadGame is imported
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
-
-import com.codedifferently.lesson16.dylans_xbox.DiskDriveFullException;
-import com.codedifferently.lesson16.dylans_xbox.LoadGame;
-import com.codedifferently.lesson16.dylans_xbox.Xbox;
-import java.io.ByteArrayOutputStream;
+package com.codedifferently.lesson16.dylans_xbox;
+import java.io.ByteArrayOutputStream; // Ensure LoadGame is imported
 import java.io.PrintStream;
 import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 public class XboxTest {

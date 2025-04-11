@@ -1,11 +1,7 @@
-package xboxtest;
+package com.codedifferently.lesson16.dylans_xbox;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
-
-import com.codedifferently.lesson16.dylans_xbox.DiskDriveFullException;
-import com.codedifferently.lesson16.dylans_xbox.LoadGame;
-import com.codedifferently.lesson16.dylans_xbox.Xbox;
 import org.junit.jupiter.api.Test;
 
 public class DiskdrivefullTest {
