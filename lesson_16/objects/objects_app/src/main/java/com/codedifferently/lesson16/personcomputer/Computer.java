@@ -1,4 +1,4 @@
-package com.codedifferently.lesson16.PersonalComputer;
+package com.codedifferently.lesson16.personcomputer;
 
 import java.util.ArrayList;
 import java.util.List;
