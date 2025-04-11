@@ -15,4 +15,5 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "java.debug.settings.onBuildFailureProceed": true,
 }
