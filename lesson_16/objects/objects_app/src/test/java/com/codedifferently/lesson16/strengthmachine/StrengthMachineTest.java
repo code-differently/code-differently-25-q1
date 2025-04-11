@@ -1,11 +1,11 @@
-package com.codedifferently.lesson16.strengthmachine1;
+package com.codedifferently.lesson16.strengthmachine;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codedifferently.lesson16.strengthmachine1.StrengthMachine.MuscleGroup;
+import com.codedifferently.lesson16.strengthmachine.StrengthMachine.MuscleGroup;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
