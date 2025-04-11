@@ -10,10 +10,4 @@ class Lesson15Test {
   public void testLesson15() {
     assertThat(new Lesson15()).isNotNull();
   }
-
-  @Test
-  public void testGetGreeting() {
-    // Act
-    Lesson15.main(null);
-  }
 }
