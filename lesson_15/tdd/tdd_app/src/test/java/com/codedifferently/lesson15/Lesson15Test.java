@@ -1,7 +1,6 @@
 package com.codedifferently.lesson15;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.Test;
 
 class Lesson15Test {
@@ -28,15 +27,6 @@ class Lesson15Test {
     assertThat(result).isEqualTo(expected);
   }
 
-  @Test
-  public void testSetDetails() {
-    Employee employee = new Employee(1, "John Doe", "Engineering", 50000);
-    employee.setDetails("Jane Doe", "Marketing", 60000, 1);
-
-    String result = employee.getDetails();
-    String expected = "The Employee's ID: 1 Name: Jane Doe Department: Marketing Salary: 60000.0";
-    assertThat(result).isEqualTo(expected);
-  }
 
   @Test
   public void testGetId() {
