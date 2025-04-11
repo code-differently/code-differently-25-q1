@@ -13,11 +13,6 @@ public class Party {
   private Vibe vibe;
   private ArrayList<String> guestList;
 
-  public Party() {
-    this.guestList = new ArrayList<>();
-    this.ticketNumber = 10;
-  }
-
   public Party(
       String name,
       String location,
@@ -102,13 +97,5 @@ public class Party {
 
   public void setGuestList(ArrayList<String> guestList) {
     this.guestList = guestList;
-  }
-
-  public void addGuest(String guest) throws PartyException {
-    if (guestList.size() < ticketNumber) {
-      guestList.add(guest);
-    } else {
-      throw new PartyException("Party is full");
-    }
   }
 }

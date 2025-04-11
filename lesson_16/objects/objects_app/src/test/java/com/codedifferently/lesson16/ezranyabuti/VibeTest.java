@@ -1,8 +1,7 @@
-package test.java.com.codedifferently.lesson16.ezranyabuti;
+package com.codedifferently.lesson16.ezranyabuti;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.codedifferently.lesson16.ezranyabuti.Vibe;
 import org.junit.jupiter.api.Test;
 
 public class VibeTest {
