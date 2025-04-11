@@ -6,14 +6,19 @@ public class Party {
 
   private String name;
   private String location;
-  private String LocalDate;
+  private String localDate;
   private Boolean isPrivate;
   private double coverCharge;
   private int ticketNumber;
   private Vibe vibe;
   private ArrayList<String> guestList;
 
-  public void partyClass(
+  public Party() {
+    this.guestList = new ArrayList<>();
+    this.ticketNumber = 10;
+  }
+
+  public Party(
       String name,
       String location,
       String localDate,
@@ -47,7 +52,13 @@ public class Party {
     this.location = location;
   }
 
-  
+  public String getLocalDate() {
+    return localDate;
+  }
+
+  public void setLocalDate(String localDate) {
+    this.localDate = localDate;
+  }
 
   public Boolean getIsPrivate() {
     return isPrivate;
@@ -55,6 +66,30 @@ public class Party {
 
   public void setIsPrivate(Boolean isPrivate) {
     this.isPrivate = isPrivate;
+  }
+
+  public double getCoverCharge() {
+    return coverCharge;
+  }
+
+  public void setCoverCharge(double coverCharge) {
+    this.coverCharge = coverCharge;
+  }
+
+  public int getTicketNumber() {
+    return ticketNumber;
+  }
+
+  public void setTicketNumber(int ticketNumber) {
+    this.ticketNumber = ticketNumber;
+  }
+
+  public Vibe getVibe() {
+    return vibe;
+  }
+
+  public void setVibe(Vibe vibe) {
+    this.vibe = vibe;
   }
 
   public ArrayList<String> getGuestList() {
@@ -69,11 +104,11 @@ public class Party {
     this.guestList = guestList;
   }
 
-  public void addGuest(String guest) throws partyException {
+  public void addGuest(String guest) throws PartyException {
     if (guestList.size() < ticketNumber) {
       guestList.add(guest);
     } else {
-      throw new partyException("Party is full");
+      throw new PartyException("Party is full");
     }
   }
 }

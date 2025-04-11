@@ -1,7 +1,7 @@
 package com.codedifferently.lesson16.ezranyabuti;
 
-public class partyException extends Exception {
-  public partyException(String message) {
+public class PartyException extends Exception {
+  public PartyException(String message) {
     super(message);
   }
 }

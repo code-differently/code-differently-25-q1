@@ -1,16 +1,16 @@
-package test.java.com.codedifferently.lesson16.ezranyabutitest;
+package test.java.com.codedifferently.lesson16.ezranyabuti;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.codedifferently.lesson16.ezranyabuti.partyException;
+import com.codedifferently.lesson16.ezranyabuti.PartyException;
 import org.junit.jupiter.api.Test;
 
-public class partyExceptionTest {
+public class PartyExceptionTest {
   // Test for the constructor
   @Test
   void testConstructor() {
     String expectedMessage = "Party is not private";
-    partyException exception = new partyException(expectedMessage);
+    PartyException exception = new PartyException(expectedMessage);
     String actualMessage = exception.getMessage();
     assertThat(actualMessage).isEqualTo(expectedMessage);
   }
