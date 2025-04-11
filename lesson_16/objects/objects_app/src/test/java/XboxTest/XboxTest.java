@@ -1,16 +1,15 @@
 package XboxTest;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.HashMap;
-
 import static org.junit.jupiter.api.Assertions.assertEquals; // Ensure LoadGame is imported
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
-import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.HashMap;
+import org.junit.jupiter.api.Test;
 
 public class XboxTest {
 
@@ -79,13 +78,10 @@ public class XboxTest {
     PrintStream originalOut = System.out;
     System.setOut(new PrintStream(outputStream));
 
-    // Act: Calls the printAllGames method
     xbox.printAllGames();
 
-    // Restore the original console output
     System.setOut(originalOut);
 
-    // Assert: Verify the captured output
     String expectedOutput =
         """
             Game ID: 1, Game Name: Call of Duty
@@ -119,14 +115,17 @@ public class XboxTest {
     xbox.ejectGame(1);
 
     // Assert: Verify the game was ejected (if needed, check the state of the Xbox object)
-    assertTrue(!xbox.getGames().containsKey(1), "Game with ID 1 should be removed from the games list.");
+    assertTrue(
+        !xbox.getGames().containsKey(1), "Game with ID 1 should be removed from the games list.");
   }
 
-  @Test 
+  @Test
   public void testGetGames() {
+
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
         new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/games.csv");
+
     try {
       loader.loadGamesFromFile(xbox);
     } catch (Exception e) {
@@ -134,10 +133,8 @@ public class XboxTest {
       fail("Exception occurred while loading games: " + e.getMessage());
     }
 
-    // Act: Get the games
     HashMap<Integer, String> games = xbox.getGames();
 
-    // Assert: Verify the games are loaded correctly
     assertEquals(10, games.size(), "There should be 10 games loaded.");
   }
 }
