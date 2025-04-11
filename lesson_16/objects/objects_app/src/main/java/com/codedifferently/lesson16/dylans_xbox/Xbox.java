@@ -37,8 +37,8 @@ public class Xbox {
   private int price;
   private static final int MAX_GAMES = 10;
   private boolean diskDrive; // Declares if there is a disk drive on the Xbox
-  private boolean
-      diskDriveFull; // If there is a disk drive, this will be t/f based on if there is a disk
+  private boolean diskDriveFull =
+      true; // If there is a disk drive, this will be t/f based on if there is a disk
 
   // inside the xbox
 
@@ -52,11 +52,12 @@ public class Xbox {
     XBOXSERIESX
   }
 
-  public Xbox(String model, int price, String color, boolean diskDrive) {
+  public Xbox(String model, int price, String color, boolean diskDrive, boolean diskDriveFull) {
     this.model = XboxModel.valueOf(model.toUpperCase());
     this.price = price;
     this.color = color;
     this.diskDrive = diskDrive;
+    this.diskDriveFull = diskDriveFull;
     this.games = new HashMap<>();
   }
 
@@ -111,5 +112,9 @@ public class Xbox {
     for (Integer id : games.keySet()) {
       System.out.println("Game ID: " + id + ", Game Name: " + games.get(id));
     }
+  }
+
+  public void setDiskDriveFull(boolean b) {
+    this.diskDriveFull = b;
   }
 }

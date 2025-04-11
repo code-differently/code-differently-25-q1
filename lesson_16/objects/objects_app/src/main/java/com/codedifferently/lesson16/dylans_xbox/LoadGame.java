@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LoadGames {
+public class LoadGame {
   private String filePath;
 
-  public LoadGames(String filePath) {
+  public LoadGame(String filePath) {
     this.filePath = filePath;
   }
 
@@ -17,10 +17,13 @@ public class LoadGames {
       br.readLine(); // Skip the header line
       while ((line = br.readLine()) != null) {
         String[] gameDetails = line.split(",");
-        int id = Integer.parseInt(gameDetails[0].trim());
-        String name = gameDetails[1].trim();
+        if (gameDetails.length >= 2) {
 
-        xbox.inputGame(id, name);
+          int id = Integer.parseInt(gameDetails[0].trim());
+          String name = gameDetails[1].trim();
+          xbox.inputGame(id, name);
+          xbox.setDiskDriveFull(false); // Set diskDriveFull to true after adding a game
+        }
       }
     } catch (IOException e) {
       throw new Exception("Error reading the games file: " + e.getMessage());
