@@ -1,14 +1,15 @@
 package com.codedifferently.lesson16.tiktokvideosystem;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import com.codedifferently.lesson16.tiktokvideosystem.TiktokVideo.VideoCategory;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.codedifferently.lesson16.tiktokvideosystem.TiktokVideo.VideoCategory;
 
 public class TiktokVideoTest {
 
@@ -50,8 +51,6 @@ public class TiktokVideoTest {
 
   @Test
   void testDecreaseViewsNegative() {
-    // tiktokVideo.InvalidViewIncrementException(-78);
-    // assertThrows(InvalidViewIncrementException.class, () -> tiktokVideo);
     InvalidViewIncrementException exception =
         assertThrows(
             InvalidViewIncrementException.class,
