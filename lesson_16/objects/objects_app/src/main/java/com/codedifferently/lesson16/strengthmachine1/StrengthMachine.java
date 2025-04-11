@@ -1,4 +1,4 @@
-package com.codedifferently.lesson16.strengthMachine;
+package com.codedifferently.lesson16.strengthmachine1;
 
 import java.util.ArrayList;
 
