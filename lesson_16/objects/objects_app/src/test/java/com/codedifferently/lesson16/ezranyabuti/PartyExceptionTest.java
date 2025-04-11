@@ -8,7 +8,7 @@ public class PartyExceptionTest {
   @Test
   void testConstructor() {
     String expectedMessage = "Party is not private";
-    PartyException exception = new PartyException(expectedMessage);
+    PartyCityException exception = new PartyCityException(expectedMessage);
     String actualMessage = exception.getMessage();
     assertThat(actualMessage).isEqualTo(expectedMessage);
   }
