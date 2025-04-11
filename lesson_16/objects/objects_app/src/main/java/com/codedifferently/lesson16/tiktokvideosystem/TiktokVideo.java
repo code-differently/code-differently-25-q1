@@ -69,6 +69,10 @@ public class TiktokVideo {
     commentsList.add(comment);
   }
 
+  public ArrayList<String> getCommentsList() {
+    return commentsList;
+  }
+
   public String getCreator() {
     return this.creatorName;
   }
