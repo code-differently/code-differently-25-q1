@@ -1,15 +1,16 @@
 package XboxTest;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.HashMap; // Ensure LoadGame is imported
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail; // Ensure LoadGame is imported
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.HashMap;
-import org.junit.jupiter.api.Test;
 
 public class XboxTest {
 
@@ -49,7 +50,7 @@ public class XboxTest {
     Xbox.XboxModel[] models = Xbox.XboxModel.values();
     assertEquals(6, models.length);
     assertEquals(
-        Xbox.XboxModel.XBOX360, models[0]); // Fixed: Corrected the first model to match the enum
+        Xbox.XboxModel.XBOX360, models[0]); 
     assertEquals(Xbox.XboxModel.XBOXSERIESX, models[5]);
   }
 
@@ -58,9 +59,9 @@ public class XboxTest {
     Xbox xbox =
         new Xbox(
             "XBOXONE", 400, "White", true,
-            false); // Fixed: Set diskDrive to `false` to match the test
+            false);
     assertTrue(
-        xbox.DiskDrive(), "Disk drive should be empty"); // Fixed: Corrected the assertion syntax
+        xbox.DiskDrive(), "Disk drive should be empty"); 
   }
 
   @Test
@@ -111,11 +112,8 @@ public class XboxTest {
       fail("Exception occurred while loading games: " + e.getMessage());
     }
 
-    // Act: Eject a game
-    // Act: Eject a game
     xbox.ejectGame(1);
 
-    // Assert: Verify the game was ejected (if needed, check the state of the Xbox object)
     assertTrue(
         !xbox.getGames().containsKey(1), "Game with ID 1 should be removed from the games list.");
   }
@@ -144,5 +142,19 @@ public class XboxTest {
     Xbox xbox = new Xbox("XBOX360", 400, "White", true, false);
     int price = xbox.getPrice();
     assertEquals(400, price, "The price should be 400.");
+  }
+
+  @Test
+  public void testGetColor() {
+    Xbox xbox = new Xbox("XBOX360", 400, "White", true, false);
+    String color = xbox.getColor();
+    assertEquals("White", color, "The color should be White.");
+  }
+
+  @Test
+  public void testDiskDrive() {
+    Xbox xbox = new Xbox("XBOX360", 400, "White", true, false);
+    boolean diskDrive = xbox.DiskDrive();
+    assertTrue(diskDrive, "The disk drive should be present.");
   }
 }
