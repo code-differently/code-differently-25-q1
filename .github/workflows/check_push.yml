@@ -19,6 +19,10 @@ on:
       - "lesson_12/structs_ts/**"
       - "lesson_13/maps_java/**"
       - "lesson_13/maps_ts/**"
+      - "lesson_14/exceptions/**"
+      - "lesson_15/tdd/**"
+      - "lesson_16/objects/**"
+      - "lesson_17/bank/**"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -141,3 +145,22 @@ jobs:
       run: |
         npm ci
         npm run compile
+        
+    - name: Build Lesson 14 with Java
+      working-directory: ./lesson_14/exceptions
+      run: ./gradlew assemble
+
+    - name: Build Lesson 15 with Java
+      working-directory: ./lesson_15/tdd
+      run: |
+        ./gradlew assemble
+        ./gradlew spotlessCheck
+
+    - name: Build Lesson 16 with Java
+      working-directory: ./lesson_16/objects
+      run: ./gradlew check
+
+    - name: Build Lesson 17 with Java
+      working-directory: ./lesson_17/bank
+      run: ./gradlew check
+
