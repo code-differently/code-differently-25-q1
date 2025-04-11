@@ -1,15 +1,16 @@
 package XboxTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals; // Ensure LoadGame is imported
+import java.io.ByteArrayOutputStream; // Ensure LoadGame is imported
+import java.io.PrintStream;
+import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.HashMap;
-import org.junit.jupiter.api.Test;
 
 public class XboxTest {
 
@@ -136,5 +137,12 @@ public class XboxTest {
     HashMap<Integer, String> games = xbox.getGames();
 
     assertEquals(10, games.size(), "There should be 10 games loaded.");
+  }
+
+  @Test 
+  public void testGetPrice() {
+    Xbox xbox = new Xbox("XBOX360", 400, "White", true, false);
+    int price = xbox.getPrice();
+    assertEquals(400, price, "The price should be 400.");
   }
 }
