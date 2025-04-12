@@ -36,7 +36,7 @@ public class HipHopArtist {
     System.out.println(album + " was added to " + stageName + "'s discography.");
   }
 
-  public void listAlbums() throws NoAlbumsException {
+  public String listAlbums() throws NoAlbumsException {
     if (albums.isEmpty()) {
       throw new NoAlbumsException(stageName + " has no albums listed.");
     }
@@ -44,6 +44,7 @@ public class HipHopArtist {
     for (String album : albums) {
       System.out.println("- " + album);
     }
+    return stageName;
   }
 
   public String getBio() {
