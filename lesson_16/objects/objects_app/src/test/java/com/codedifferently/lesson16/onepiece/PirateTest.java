@@ -1,6 +1,12 @@
 package com.codedifferently.lesson16.onepiece;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.codedifferently.lesson16.onepiece.Pirate.HakiType;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,73 +16,112 @@ public class PirateTest {
 
   @BeforeEach
   void setUp() {
-    pirate = new Pirate(2, "Zoro", "Swordsman", 900000);
-  }
-
-  @Test
-  void testGetId() {
-    int actual = pirate.getId();
-
-    assertThat(actual).isEqualTo(2);
-  }
-
-  @Test
-  void testSetId() {
-    pirate.setId(3);
-    int actual = pirate.getId();
-
-    assertThat(actual).isEqualTo(3);
+    pirate = new Pirate("Luffy", "StrawHatPirates", 3000000000L, "Captain", true);
   }
 
   @Test
   void testGetName() {
     String actual = pirate.getName();
 
-    assertThat(actual).isEqualTo("Zoro");
+    assertThat(actual).isEqualTo("Luffy");
   }
 
   @Test
   void testSetName() {
-    pirate.setName("Sanji");
+    pirate.setName("BlackBeard");
     String actual = pirate.getName();
 
-    assertThat(actual).isEqualTo("Sanji");
+    assertThat(actual).isEqualTo("BlackBeard");
   }
 
   @Test
-  void testGetDepartment() {
-    String actual = pirate.getDepartment();
+  void testGetCrew() {
+    String actual = pirate.getCrew();
 
-    assertThat(actual).isEqualTo("Swordsman");
+    assertThat(actual).isEqualTo("StrawHatPirates");
   }
 
   @Test
-  void testSetDepartment() {
-    pirate.setDepartment("Cook");
-    String actual = pirate.getDepartment();
+  void testSetCrew() {
+    pirate.setCrew("BlackBeardPirates");
+    String actual = pirate.getCrew();
 
-    assertThat(actual).isEqualTo("Cook");
+    assertThat(actual).isEqualTo("BlackBeardPirates");
   }
 
   @Test
-  void testGetSalary() {
-    double actual = pirate.getSalary();
+  void testGetBounty() {
+    Long actual = pirate.getBounty();
 
-    assertThat(actual).isEqualTo(900000);
+    assertThat(actual).isEqualTo(3000000000L);
   }
 
   @Test
-  void testSetSalary() {
-    pirate.setSalary(850000);
-    double actual = pirate.getSalary();
+  void testSetBounty() {
+    pirate.setBounty(3996000000L);
+    Long actual = pirate.getBounty();
 
-    assertThat(actual).isEqualTo(850000);
+    assertThat(actual).isEqualTo(3996000000L);
   }
 
   @Test
-  void testGetDetails() {
-    String actual = pirate.getDetails();
+  void testGetRole() {
+    String actual = pirate.getRole();
 
-    assertThat(actual).isEqualTo("2 Zoro Swordsman 900000.0");
+    assertThat(actual).isEqualTo("Captain");
+  }
+
+  @Test
+  void testSetRole() {
+    pirate.setRole("Captain");
+    String actual = pirate.getRole();
+
+    assertThat(actual).isEqualTo("Captain");
+  }
+
+  @Test
+  void testgetHasDream() {
+    try {
+      pirate.getHasDream();
+    } catch (HasNoDreamException e) {
+      System.out.println(e.getMessage());
+    }
+  }
+
+  @Test
+  void testRollPowers() {
+    pirate.rollPowers();
+    assertNotNull(pirate.getPowers(), "Powers should not be null after rolling");
+    boolean isValid = false;
+    for (HakiType h : HakiType.values()) {
+      if (pirate.getPowers() == h) {
+        isValid = true;
+        break;
+      }
+    }
+    assertTrue(isValid, "Powers should be a valid HakiType");
+  }
+
+  @Test
+  void testRollPowersOutput() {
+
+    // Capture console output
+    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(outputStream));
+
+    pirate.rollPowers();
+
+    String output = outputStream.toString().trim();
+    boolean matches = false;
+    for (HakiType h : HakiType.values()) {
+      if (output.equals("Random Haki: " + h)) {
+        matches = true;
+        break;
+      }
+    }
+
+    assertTrue(matches, "Haki Options");
+
+    System.setOut(System.out);
   }
 }

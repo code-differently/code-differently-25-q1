@@ -4,31 +4,32 @@ import java.util.Random;
 
 public class Pirate {
   public enum HakiType {
-    Observation,
-    Armament,
-    Conquerors,
-    Advanced_Observation,
-    Advanced_Armament,
-    Advanced_Conquerors,
-    Will_of_D;
+    OBSERVATION,
+    ARMANENT,
+    CONQUERORS,
+    ADVANCED_OBSERVATION,
+    ADVANCED_ARMANENT,
+    ADVANCED_CONQUERORS,
+    WILL_OF_D;
   }
 
   private String name;
   private String crew;
-  private long bounty;
-  private boolean hasDream;
-  private boolean isPirate;
+  private Long bounty;
+  private String role;
+  private Boolean hasDream;
   private HakiType powers;
+
   private final HakiType[] haki = HakiType.values();
   private static final Random cflip = new Random();
 
-  public Pirate(String name, String crew, long bounty) {
+  public Pirate(String name, String crew, Long bounty, String role, Boolean hasDream) {
     this.name = name;
     this.crew = crew;
     this.bounty = bounty;
+    this.role = role;
     this.hasDream = true;
-    this.isPirate = true;
-    this.powers = HakiType.Will_of_D;
+    this.powers = HakiType.WILL_OF_D;
   }
 
   // Getters and setters
@@ -44,12 +45,20 @@ public class Pirate {
     return bounty;
   }
 
-  public boolean getHasDream() {
-    return hasDream;
+  public String getRole() {
+    return role;
   }
 
-  public boolean getIsPirate() {
-    return isPirate;
+  public boolean getHasDream() throws HasNoDreamException {
+    if (!hasDream) {
+      throw new HasNoDreamException(name + " has no dream!");
+    }
+    System.out.println("Has Dream");
+    return true;
+  }
+
+  public HakiType getPowers() {
+    return powers;
   }
 
   public void rollPowers() {
@@ -71,11 +80,11 @@ public class Pirate {
     this.bounty = bounty;
   }
 
-  public void setHasDream(boolean hasDream) {
-    this.hasDream = hasDream;
+  public void setRole(String role) {
+    this.role = role;
   }
 
-  public void setIsPirate(boolean isPirate) {
-    this.isPirate = isPirate;
+  public void setHasDream(boolean hasDream) {
+    this.hasDream = hasDream;
   }
 }
