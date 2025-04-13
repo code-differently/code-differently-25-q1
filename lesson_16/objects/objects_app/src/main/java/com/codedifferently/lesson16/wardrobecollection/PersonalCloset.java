@@ -73,8 +73,22 @@ public class PersonalCloset {
 
 
    // method creates outfit by selecting items based on the season
-   public List<Clothing Item> createOutfit(Season season) {
-    return new ArrayList<>();
+   public List<ClothingItem> createOutfit(Season season) {
+        // creating empty list that stores clothing items
+        List<ClothingItem> outfit = new ArrayList<>();
+
+        // iterating through all items in the closet and grabbing item at index 
+        for (int i = 0; i < items.size(); i++) {
+            ClothingItem item = items.get(i);
+
+            //check if clothign item matches particular season or is good for all seasons
+            if (item.getSeason() == season || item.getSeason() == Season.ALL_SEASON) {
+                //add item to list
+                outfit.add(item);
+            }
+        }
+        // returns final list of clothing items in an outfit
+        return outfits;
    }
 
    // method organizes closet by type of item and color
