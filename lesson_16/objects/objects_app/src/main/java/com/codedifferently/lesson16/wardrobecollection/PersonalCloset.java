@@ -85,7 +85,7 @@ public class PersonalCloset {
    }
 
    public List<ClothingItem> getItems() {
-        return new ArrayList<>(items);
+        return new ArrayList<>(items);      
    }
 
 }
