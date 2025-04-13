@@ -34,70 +34,93 @@ public class PersonalCloset {
         this.seasonalItems = new HashMap<>();
    }
  
-    //core methods  
+    // Core methods  
     
-    // method adds item to closet
+    // Method adds item to closet
    public boolean addItem(ClothingItem item) {
-         // if closet is full, cannot add item
-        if (items.size(0) >= maxCapacity) {
+         // If closet is full, cannot add item
+        if (items.size() >= maxCapacity) {
             return false;
         }
     
-        //adding item to closet and increasing closet total value of closet
+        // Adding item to closet and increasing total value of closet
         items.add(item);
         totalValue += item.getValue();
 
-        // checks what season item is meant for and keeps track of number of items in that season 
-        Season seaason = item.getSeason();
+        // Checks what season item is meant for and keeps track of number of items in that season 
+        Season season = item.getSeason();
         seasonalItems.put(season, seasonalItems.getOrDefault(season, 0) + 1);
     
-        // returns true if item is added
+        // Returns true if item is added
         return true;
    }
 
-   // method removes item from closet
+   // Method removes item from closet
    public void removeItem(ClothingItem item) throws ItemNotFoundException {
-        // if item is not in closet, throws an error
-        if (!item.contains(item)) {
+        // If item is not in closet, throws an error
+        if (!items.contains(item)) {
             throw new ItemNotFoundException("Item is not in closet.");
         }
 
-         //remove item from closet and decreases toal value of closet
-        item.remove(item);
+         // Remove item from closet and decreases toal value of closet
+        items.remove(item);
         totalValue -= item.getValue();
 
-        //grab clothing item based on season and decrease count
+        // Grab clothing item based on season and decrease count
         Season season = item.getSeason();
         seasonalItems.put(season, seasonalItems.get(season) - 1);
    }
 
 
-   // method creates outfit by selecting items based on the season
+   // Method creates outfit by selecting items based on the season
    public List<ClothingItem> createOutfit(Season season) {
-        // creating empty list that stores clothing items
+        // Creating empty list that stores clothing items
         List<ClothingItem> outfit = new ArrayList<>();
 
-        // iterating through all items in the closet and grabbing item at index 
+        // Iterating through all items in the closet and grabbing item at index 
         for (int i = 0; i < items.size(); i++) {
             ClothingItem item = items.get(i);
 
-            //check if clothign item matches particular season or is good for all seasons
+            // Check if clothing item matches particular season or is good for all seasons
             if (item.getSeason() == season || item.getSeason() == Season.ALL_SEASON) {
                 //add item to list
                 outfit.add(item);
             }
         }
-        // returns final list of clothing items in an outfit
-        return outfits;
+        // Returns final list of clothing items in an outfit
+        return outfit;
    }
 
-   // method organizes closet by type of item and color
+   // Method organizes closet by type of item and color
    public void organizeCloset() {
+        // Create a map where key is type of clothing and value is list of clothing items of that type
+        Map<String, List<ClothingItem>> organized = new HashMap<>();
+
+
+        // Iterate through every item in closet
+        for (int i = 0; i < items.size(); i++) {
+            ClothingItem item = items.get(i);
+            String type = item.getType();
+
+            // Check if that type of clothing item is in the list
+            List<ClothingItem> itemList = organized.get(type);
+            if (itemList == null) {
+                // If it doesn’t exist, make a new list and put it in the map
+                itemList = new ArrayList<>();
+                organized.put(type, itemList);
+            }
+
+            // Adding items to list by type
+            itemList.add(item);
+        }
+
+        // Mark closet as organized 
+        isOrganized = true;
    }
 
-   // method calculates amount of clothing items are in closet based on season 
+   // method returns a map shwoing how many items are in closet based on season 
    public Map<Season, Double> getSeasonalItem() {
-        return new HashMap<>();
+        return new HashMap<>(seasonalItems);
    }
 
    // getters and setters
@@ -125,7 +148,7 @@ public class PersonalCloset {
         return new ArrayList<>(items);      
    }
 
-   // custom exception if item is not found in closet
+   // Custom exception if item is not found in closet
     public static class ItemNotFoundException extends Exception{
         public ItemNotFoundException(String message) {
             super(message);
