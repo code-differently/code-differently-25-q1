@@ -36,45 +36,52 @@ public class PersonalCloset {
  
     //core methods  
     
-    // adds item to closet
+    // method adds item to closet
    public boolean addItem(ClothingItem item) {
-    // if closet is full, cannot add item
-    if (items.size(0) >= maxCapacity) {
+         // if closet is full, cannot add item
+        if (items.size(0) >= maxCapacity) {
             return false;
         }
     
-    //adding item to closet and increasing closet total value of closet
-    items.add(item);
-    totalValue += item.getValue();
+        //adding item to closet and increasing closet total value of closet
+        items.add(item);
+        totalValue += item.getValue();
 
-    // checks what season item is meant for and keeps track of number of items in that season 
-    Season seaason = item.getSeason();
-    seasonalItems.put(season, seasonalItems.getOrDefault(season, 0) + 1);
+        // checks what season item is meant for and keeps track of number of items in that season 
+        Season seaason = item.getSeason();
+        seasonalItems.put(season, seasonalItems.getOrDefault(season, 0) + 1);
     
-    // returns true if item is added
-    return true;
+        // returns true if item is added
+        return true;
    }
 
-   // removes item from closet
-   public void removeItem(ClothingItem item) {
-        return;
+   // method removes item from closet
+   public void removeItem(ClothingItem item) throws ItemNotFoundException {
+        // if item is not in closet, throws an error
+        if (!item.contains(item)) {
+            throw new ItemNotFoundException("Item is not in closet.");
+        }
+
+         //remove item from closet and decreases toal value of closet
+        item.remove(item);
+        totalValue -= item.getValue();
+
+        //grab clothing item based on season and decrease count
+        Season season = item.getSeason();
+        seasonalItems.put(season, seasonalItems.get(season) - 1);
    }
 
-   // throws exception if item is not found in closet
-    public static class ItemNotFoundException extends Exception{
-    }
 
-
-   // creates outfit by selecting items based on the season
+   // method creates outfit by selecting items based on the season
    public List<Clothing Item> createOutfit(Season season) {
     return new ArrayList<>();
    }
 
-   // organizes closet by type of item and color
+   // method organizes closet by type of item and color
    public void organizeCloset() {
    }
 
-   // calculates amount of clothing items are in closet based on season 
+   // method calculates amount of clothing items are in closet based on season 
    public Map<Season, Double> getSeasonalItem() {
         return new HashMap<>();
    }
@@ -104,5 +111,11 @@ public class PersonalCloset {
         return new ArrayList<>(items);      
    }
 
+   // custom exception if item is not found in closet
+    public static class ItemNotFoundException extends Exception{
+        public ItemNotFoundException(String message) {
+            super(message);
+        }
+    }
 }
 
