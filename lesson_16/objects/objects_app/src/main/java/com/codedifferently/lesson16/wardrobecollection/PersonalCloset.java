@@ -21,7 +21,7 @@ public class PersonalCloset {
    private int maxCapacity;
    private double totalValue;
    private boolean isOrganized;
-   private ArrayList<Clothing Item> items;
+   private ArrayList<ClothingItem> items;
    private HashMap<Season, Integer> seasonalItems;
 
     // Constructor for personal closet
@@ -31,23 +31,39 @@ public class PersonalCloset {
         this.totalValue = 0.0;
         this.isOrganized = false;
         this.items = new ArrayList<>();
-        this.seaonalItems = new HashMap<>();
+        this.seasonalItems = new HashMap<>();
    }
  
     //core methods  
     
     // adds item to closet
    public boolean addItem(ClothingItem item) {
-        return false;
+    // if closet is full, cannot add item
+    if (items.size(0) >= maxCapacity) {
+            return false;
+        }
+    
+    //adding item to closet and increasing closet total value of closet
+    items.add(item);
+    totalValue += item.getValue();
+
+    // checks what season item is meant for and keeps track of number of items in that season 
+    Season seaason = item.getSeason();
+    seasonalItems.put(season, seasonalItems.getOrDefault(season, 0) + 1);
+    
+    // returns true if item is added
+    return true;
    }
 
    // removes item from closet
    public void removeItem(ClothingItem item) {
-        // throws exception if item is not found in closet
-        public static class ItemNotFoundException extends Exception{
-
-    }
+        return;
    }
+
+   // throws exception if item is not found in closet
+    public static class ItemNotFoundException extends Exception{
+    }
+
 
    // creates outfit by selecting items based on the season
    public List<Clothing Item> createOutfit(Season season) {
@@ -68,7 +84,7 @@ public class PersonalCloset {
         return ownerName;
    }
 
-   public void setOwnerName() {
+   public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
    }
 
