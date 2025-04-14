@@ -6,6 +6,19 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+public class AuditLog {
+    private static List<String> logEntries = new ArrayList<>();
+
+    public static void record(String message) {
+        logEntries.add(message);
+        System.out.println("LOG: " + message);
+    }
+
+    public static List<String> getLog() {
+        return logEntries;
+    }
+}
+
 /** Represents a bank ATM. */
 public class BankAtm {
 
@@ -86,3 +99,4 @@ public class BankAtm {
     return account;
   }
 }
+ 
