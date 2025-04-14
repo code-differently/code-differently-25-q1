@@ -9,7 +9,7 @@ public class SavingsAccount extends Account {
    * Creates a new sacings account.
    *
    * @param accountNumber The account number.
-   * @param owners        The ownders of the account.
+   * @param owners The ownders of the account.
    * @param initalBalance The inital balance of the account.
    */
   public SavingsAccount(String accountNumber, Set<Customer> owners, double initalBalance) {

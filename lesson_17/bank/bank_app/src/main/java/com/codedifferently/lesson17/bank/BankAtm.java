@@ -43,7 +43,7 @@ public class BankAtm {
    * Deposits funds into an account.
    *
    * @param accountNumber The account number.
-   * @param amount        The amount to deposit.
+   * @param amount The amount to deposit.
    */
   public void depositFunds(String accountNumber, double amount) {
     Account account = getAccountOrThrow(accountNumber);
@@ -54,7 +54,7 @@ public class BankAtm {
    * Deposits funds into an account using a check.
    *
    * @param accountNumber The account number.
-   * @param check         The check to deposit.
+   * @param check The check to deposit.
    */
   public void depositFunds(String accountNumber, Check check) {
     Account account = getAccountOrThrow(accountNumber);

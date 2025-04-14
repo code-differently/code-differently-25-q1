@@ -14,8 +14,8 @@ public class Check {
    * Creates a new check.
    *
    * @param checkNumber The check number.
-   * @param amount      The amount of the check.
-   * @param account     The account the check is drawn on.
+   * @param amount The amount of the check.
+   * @param account The account the check is drawn on.
    */
   public Check(String checkNumber, double amount, Account account) {
     if (amount < 0) {

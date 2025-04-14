@@ -3,7 +3,6 @@ package com.codedifferently.lesson17.bank;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,17 +13,20 @@ public class Customer {
 
   private final UUID id;
   private final String name;
+  private final CustomerType type;
   private final Set<Account> accounts = new HashSet<>();
 
   /**
    * Creates a new customer.
    *
-   * @param id   The ID of the customer.
+   * @param id The ID of the customer.
    * @param name The name of the customer.
+   * @param type The type of customer (individual or business)
    */
-  public Customer(UUID id, String name) {
+  public Customer(UUID id, String name, CustomerType type) {
     this.id = id;
     this.name = name;
+    this.type = type;
   }
 
   /**

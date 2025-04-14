@@ -1,15 +1,11 @@
 package com.codedifferently.lesson17.bank;
 
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
-
+import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Set;
-
-/**
- * Abstract base class for all bank accounts.
- */
+/** Abstract base class for all bank accounts. */
 @Getter
 @Setter
 public abstract class Account {
@@ -22,7 +18,7 @@ public abstract class Account {
    * Creates a new account.
    *
    * @param accountNumber The account number.
-   * @param owners        The owners of the account.
+   * @param owners The owners of the account.
    * @param initalBalance The inital balance of the account.
    */
   public Account(String accountNumber, Set<Customer> owners, double initalBalance) {
@@ -66,9 +62,7 @@ public abstract class Account {
     balance -= amount;
   }
 
-  /**
-   * Closes the account.
-   */
+  /** Closes the account. */
   public void closeAccount() throws IllegalStateException {
     if (balance > 0) {
       throw new IllegalStateException("Cannot close account with a positive balance");
