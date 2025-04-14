@@ -1,11 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
-import lombok.Getter;
-
 import java.util.Set;
 
 /** Represents a checking account. */
-@Getter
 public class CheckingAccount extends Account {
 
   /**

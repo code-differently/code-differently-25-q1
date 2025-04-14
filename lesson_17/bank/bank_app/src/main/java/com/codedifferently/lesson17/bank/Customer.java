@@ -4,17 +4,22 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 /** Represents a customer of the bank. */
 public class Customer {
 
   private final UUID id;
   private final String name;
-  private final Set<CheckingAccount> accounts = new HashSet<>();
+  private final Set<Account> accounts = new HashSet<>();
 
   /**
    * Creates a new customer.
    *
-   * @param id The ID of the customer.
+   * @param id   The ID of the customer.
    * @param name The name of the customer.
    */
   public Customer(UUID id, String name) {
@@ -23,29 +28,11 @@ public class Customer {
   }
 
   /**
-   * Gets the ID of the customer.
-   *
-   * @return The ID of the customer.
-   */
-  public UUID getId() {
-    return id;
-  }
-
-  /**
-   * Gets the name of the customer.
-   *
-   * @return The name of the customer.
-   */
-  public String getName() {
-    return name;
-  }
-
-  /**
    * Adds a checking account to the customer.
    *
    * @param account The account to add.
    */
-  public void addAccount(CheckingAccount account) {
+  public void addAccount(Account account) {
     accounts.add(account);
   }
 
@@ -54,7 +41,7 @@ public class Customer {
    *
    * @return The unique set of accounts owned by the customer.
    */
-  public Set<CheckingAccount> getAccounts() {
+  public Set<Account> getAccounts() {
     return accounts;
   }
 
