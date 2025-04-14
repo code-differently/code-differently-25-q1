@@ -7,7 +7,7 @@ public class Check {
 
   private final String checkNumber;
   private final double amount;
-  private final BankAccount account;
+  private final CheckingAccount account;
   private boolean isVoided = false;
 
   /**
