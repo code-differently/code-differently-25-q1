@@ -114,7 +114,7 @@ public class PersonalCloset {
             itemList.add(item);
         }
 
-        // Mark closet as organized 
+        // closet is organized 
         isOrganized = true;
    }
 
@@ -136,13 +136,23 @@ public class PersonalCloset {
         return maxCapacity;
    }
 
+   public void setMaxCapacity() {
+        this.maxCapacity = maxCapacity;
+   }
+
    public double getTotalValue() {
         return totalValue;
+   }
+
+   public void setTotalValue() {
+        this.totalValue = totalValue;
    }
 
    public boolean isOrganized () {
     return isOrganized;
    }
+
+   public void set
 
    public List<ClothingItem> getItems() {
         return new ArrayList<>(items);      
