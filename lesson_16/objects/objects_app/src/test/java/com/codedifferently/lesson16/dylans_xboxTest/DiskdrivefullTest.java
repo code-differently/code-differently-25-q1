@@ -1,7 +1,7 @@
 package com.codedifferently.lesson16.dylans_xboxTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.codedifferently.lesson16.dylans_xbox.DiskDriveFullException;
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
@@ -22,11 +22,13 @@ public class DiskdrivefullTest {
     xbox.inputGame(1);
     xbox.inputGame(2);
 
-    try {
-      xbox.inputGame(3); // This should trigger the exception
-      fail("Expected DiskDriveFullException to be thrown.");
-    } catch (DiskDriveFullException e) {
-      assertEquals("Disk drive is full. Cannot insert game.", e.getMessage());
-    }
+    DiskDriveFullException exception =
+        assertThrows(
+            DiskDriveFullException.class,
+            () -> {
+              xbox.inputGame(3); // This should trigger the exception
+            });
+
+    assertEquals("Disk drive is full. Cannot insert game.", exception.getMessage());
   }
 }

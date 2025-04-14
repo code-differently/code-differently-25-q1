@@ -2,7 +2,6 @@ package com.codedifferently.lesson16.dylans_xboxTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import com.codedifferently.lesson16.dylans_xbox.LoadGame;
 import com.codedifferently.lesson16.dylans_xbox.Xbox;
@@ -11,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class LoadgameTest {
   @Test
-  public void testLoadGame() {
+  public void testLoadGame() throws Exception {
     // Create an instance of Xbox
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
 
@@ -19,14 +18,7 @@ public class LoadgameTest {
     LoadGame loader =
         new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
 
-    // Load games from the file
-    try {
-      loader.loadGamesFromFile(xbox);
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception occurred while loading games: " + e.getMessage());
-    }
-
+    loader.loadGamesFromFile(xbox);
     // Check if the game was loaded correctly
     HashMap<Integer, String> games = xbox.getGames();
     assertTrue(games.containsKey(1)); // Check that the first game is loaded (ID 1)

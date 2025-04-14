@@ -67,16 +67,12 @@ public class XboxTest {
   }
 
   @Test
-  public void testPrintAllGames() {
+  public void testPrintAllGames() throws Exception {
     Xbox xbox = new Xbox("XBOXSERIESX", 600, "Black", true, false);
     LoadGame loader =
         new LoadGame("src/main/java/com/codedifferently/lesson16/dylans_xbox/data/games.csv");
-    try {
-      loader.loadGamesFromFile(xbox);
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception occurred while loading games: " + e.getMessage());
-    }
+
+    loader.loadGamesFromFile(xbox); // Load games into library
 
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     PrintStream originalOut = System.out;
