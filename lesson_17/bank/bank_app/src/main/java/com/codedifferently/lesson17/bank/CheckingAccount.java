@@ -1,7 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
+
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 
 /** Represents a checking account. */
 public class CheckingAccount {
@@ -86,6 +87,10 @@ public class CheckingAccount {
     return balance;
   }
 
+  public boolean getStatus() {
+    return isActive;
+  }
+  
   /** Closes the account. */
   public void closeAccount() throws IllegalStateException {
     if (balance > 0) {
