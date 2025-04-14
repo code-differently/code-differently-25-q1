@@ -1,17 +1,30 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
+
 /** Represents a bank ATM. */
 public class BankAtm {
 
+
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private final AuditLog auditLog();
+  private final CurrencyConverter currencyConverter();
 
+  public BankAtm(AuditLog auditLog, CurrencyConverter currencyConverter){
+
+    this.auditLog() = auditLog;
+    this.currencyConverter() = currencyConverter;
+  }
+  
+
+
+  }
   /**
    * Adds a checking account to the bank.
    *
@@ -85,4 +98,4 @@ public class BankAtm {
     }
     return account;
   }
-}
+
