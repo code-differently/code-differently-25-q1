@@ -1,5 +1,6 @@
 package com.codedifferently.lesson17.bank;
 
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
 
 public abstract class BankAccount {
@@ -55,7 +56,24 @@ public abstract class BankAccount {
     balance += amount;
   }
 
-  public abstract void withdraw(double amount) throws Exception;
+  /**
+   * Withdraws funds from the account.
+   *
+   * @param amount
+   * @throws InsufficientFundsException
+   */
+  public void withdraw(double amount) throws InsufficientFundsException {
+    if (isClosed()) {
+      throw new IllegalStateException("Cannot withdraw from a closed account");
+    }
+    if (amount <= 0) {
+      throw new IllegalStateException("Withdrawal amount must be positive");
+    }
+    if (balance < amount) {
+      throw new InsufficientFundsException("Account does not have enough funds for withdrawal");
+    }
+    balance -= amount;
+  }
 
   /**
    * Gets the balance of the account.

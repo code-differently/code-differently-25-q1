@@ -15,10 +15,10 @@ import org.junit.jupiter.api.Test;
 class BankAtmTest {
 
   private BankAtm classUnderTest;
-  private BankAccount checkingAccount1;
-  private BankAccount checkingAccount2;
-  private BankAccount savingsAccount1;
-  private BankAccount savingsAccount2;
+  private CheckingAccount checkingAccount1;
+  private CheckingAccount checkingAccount2;
+  private SavingsAccount savingsAccount1;
+  private SavingsAccount savingsAccount2;
   private Customer customer1;
   private Customer customer2;
 
@@ -49,8 +49,8 @@ class BankAtmTest {
   void testAddAccount() {
     // Arrange
     Customer customer3 = new Customer(UUID.randomUUID(), "Alice Johnson", false);
-    BankAccount checkingAccount3 = new CheckingAccount("555555555", Set.of(customer3), 300.0);
-    BankAccount savingsAccount3 = new SavingsAccount("666666666", Set.of(customer3), 300.0);
+    CheckingAccount checkingAccount3 = new CheckingAccount("555555555", Set.of(customer3), 300.0);
+    SavingsAccount savingsAccount3 = new SavingsAccount("666666666", Set.of(customer3), 300.0);
     customer3.addAccount(checkingAccount3);
     customer3.addAccount(savingsAccount3);
 
@@ -124,9 +124,6 @@ class BankAtmTest {
     // Assert
     assertThat(checkingAccount1.getBalance()).isEqualTo(0);
     assertThat(checkingAccount2.getBalance()).isEqualTo(300.0);
-    assertThatThrownBy(() -> new Check("88888", 100.0, savingsAccount1))
-        .isInstanceOf(IllegalArgumentException.class)
-        .hasMessage("Cannot write a check from a savings account");
   }
 
   @Test
@@ -144,9 +141,11 @@ class BankAtmTest {
   void testWithdrawFunds() throws Exception {
     // Act
     classUnderTest.withdrawFunds(checkingAccount2.getAccountNumber(), 50.0);
+    classUnderTest.withdrawFunds(savingsAccount2.getAccountNumber(), 50.0);
 
     // Assert
     assertThat(checkingAccount2.getBalance()).isEqualTo(150.0);
+    assertThat(savingsAccount2.getBalance()).isEqualTo(150.0);
   }
 
   @Test
