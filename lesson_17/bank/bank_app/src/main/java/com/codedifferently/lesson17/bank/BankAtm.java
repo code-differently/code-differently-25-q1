@@ -11,6 +11,7 @@ public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private final Map<String, SavingsAccount> savingsAccountByNumber = new HashMap<>();
 
   /**
    * Adds a checking account to the bank.
@@ -19,6 +20,21 @@ public class BankAtm {
    */
   public void addAccount(CheckingAccount account) {
     accountByNumber.put(account.getAccountNumber(), account);
+    account
+        .getOwners()
+        .forEach(
+            owner -> {
+              customerById.put(owner.getId(), owner);
+            });
+  }
+
+  /**
+   * Adds a savings account to the bank.
+   *
+   * @param account The account to add.
+   */
+  public void addAccount(SavingsAccount account) {
+    savingsAccountByNumber.put(account.getAccountNumber(), account);
     account
         .getOwners()
         .forEach(
