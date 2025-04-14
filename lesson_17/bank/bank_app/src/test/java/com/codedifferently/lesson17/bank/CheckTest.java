@@ -21,7 +21,7 @@ class CheckTest {
   }
 
   @Test
-  void testDepositFunds() {
+  void testDepositFunds() throws Exception {
     // Act
     classUnderTest.depositFunds(account2);
 
