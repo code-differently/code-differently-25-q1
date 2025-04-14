@@ -1,10 +1,14 @@
-package com.codedifferently.lesson17.bank;
+ package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 
-/** Represents a checking account. */
-public class CheckingAccount {
+import main.java.com.codedifferently.lesson17.bank.BankAccount;
+
+public class CheckingAccount extends BankAccount {
+
+    public CheckingAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
+        super(accountNumber, owners, initialBalance);{
 
   private final Set<Customer> owners;
   private final String accountNumber;
@@ -128,4 +132,19 @@ public class CheckingAccount {
         + isActive
         + '}';
   }
+     @Override
+    public void withdraw(double amount) throws InsufficientFundsException {
+        if (isClosed()) {
+            throw new IllegalStateException("Cannot withdraw from a closed account");
+        }
+        if (amount <= 0) {
+            throw new IllegalStateException("Withdrawal amount must be positive");
+        }
+        if (balance < amount) {
+            throw new InsufficientFundsException("Account does not have enough funds for withdrawal");
+        }
+        balance -= amount;
+    }
+
 }
+

@@ -1,6 +1,6 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
+// Correct import
 
 /** Represents a check. */
 public class Check {
@@ -45,13 +45,11 @@ public class Check {
    *
    * @param toAccount The account to deposit the check into.
    */
-  public void depositFunds(CheckingAccount toAccount) {
-    if (isVoided) {
-      throw new CheckVoidedException("Check is voided");
+  public void depositFunds(BankAccount account) {
+    if (account instanceof SavingsAccount) {
+      throw new UnsupportedOperationException("Cannot deposit checks into a savings account");
     }
-    account.withdraw(amount);
-    toAccount.deposit(amount);
-    voidCheck();
+    account.deposit(amount);
   }
 
   @Override

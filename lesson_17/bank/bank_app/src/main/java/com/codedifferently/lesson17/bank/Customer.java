@@ -11,6 +11,18 @@ public class Customer {
   private final String name;
   private final Set<CheckingAccount> accounts = new HashSet<>();
 
+  private boolean isBusiness;
+
+  public Customer(String name, boolean isBusiness) {
+    this.name = name;
+    this.id = UUID.randomUUID();
+    this.isBusiness = isBusiness;
+  }
+
+  public boolean isBusiness() {
+    return isBusiness;
+  }
+
   /**
    * Creates a new customer.
    *
