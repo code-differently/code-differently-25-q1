@@ -9,21 +9,27 @@ public class Check {
   private final double amount;
   private final CheckingAccount account;
   private boolean isVoided = false;
+  private final SavingsAccount savings;
 
   /**
    * Creates a new check.
    *
    * @param checkNumber The check number.
    * @param amount The amount of the check.
-   * @param account The account the check is drawn on.
+   * @param account The account the check is drawn on. Because account is represents checking it could also represent savings.so if 
+   * we call saving account saving we should be able to throw the exception on the check.
    */
-  public Check(String checkNumber, double amount, CheckingAccount account) {
-    if (amount < 0) {
+  public Check(String checkNumber, double amount, CheckingAccount account, SavingsAccount savings) {
+    if (checkNumber == null || checkNumber.isEmpty()) {
+      throw new IllegalArgumentException("Check number cannot be null or empty");
+    }
+    if (amount < 0 ) {
       throw new IllegalArgumentException("Check amount must be positive");
     }
     this.checkNumber = checkNumber;
     this.amount = amount;
     this.account = account;
+    this.savings = null;
   }
 
   /**
