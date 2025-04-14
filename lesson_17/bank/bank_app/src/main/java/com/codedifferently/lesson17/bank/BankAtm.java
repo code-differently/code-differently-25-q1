@@ -1,16 +1,19 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
+
 /** Represents a bank ATM. */
 public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
-  private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  final Map<String, CheckingAccount> checkingAccountsByNumber = new HashMap<>();
+  public Object accountByNumber;
+  
 
   /**
    * Adds a checking account to the bank.
@@ -18,7 +21,7 @@ public class BankAtm {
    * @param account The account to add.
    */
   public void addAccount(CheckingAccount account) {
-    accountByNumber.put(account.getAccountNumber(), account);
+    checkingAccountsByNumber.put(account.getAccountNumber(), account);
     account
         .getOwners()
         .forEach(
@@ -26,6 +29,8 @@ public class BankAtm {
               customerById.put(owner.getId(), owner);
             });
   }
+
+
 
   /**
    * Finds all accounts owned by a customer.
@@ -79,10 +84,12 @@ public class BankAtm {
    * @return The account.
    */
   private CheckingAccount getAccountOrThrow(String accountNumber) {
-    CheckingAccount account = accountByNumber.get(accountNumber);
-    if (account == null || account.isClosed()) {
-      throw new AccountNotFoundException("Account not found");
+    CheckingAccount checkingAccount = checkingAccountsByNumber.get(accountNumber);
+    if (checkingAccount != null && !checkingAccount.isClosed()) {
+      throw new AccountNotFoundException("Account not foudn");
+    }  
+      return checkingAccount;
     }
-    return account;
+    
   }
-}
+

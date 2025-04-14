@@ -1,12 +1,13 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
+
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 
 /** Represents a checking account. */
 public class CheckingAccount {
 
-  private final Set<Customer> owners;
+  private static Set<Customer> owners;
   private final String accountNumber;
   private double balance;
   private boolean isActive;
@@ -20,7 +21,7 @@ public class CheckingAccount {
    */
   public CheckingAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
     this.accountNumber = accountNumber;
-    this.owners = owners;
+    CheckingAccount.owners = owners;
     this.balance = initialBalance;
     isActive = true;
   }
