@@ -1,17 +1,18 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+
+import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 
 /** Represents a bank ATM. */
 public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
-
+  private final AuditLog auditLog = new AuditLog();
   /**
    * Adds a checking account to the bank.
    *
@@ -48,6 +49,7 @@ public class BankAtm {
   public void depositFunds(String accountNumber, double amount) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.deposit(amount);
+    auditLog.log("Deposited " + amount + " into account " + accountNumber);
   }
 
   /**
@@ -58,8 +60,11 @@ public class BankAtm {
    */
   public void depositFunds(String accountNumber, Check check) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
+
     check.depositFunds(account);
-  }
+    auditLog.log("Deposited check into account " + accountNumber);
+    
+    }
 
   /**
    * Withdraws funds from an account.
