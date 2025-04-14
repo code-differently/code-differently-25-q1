@@ -136,7 +136,7 @@ public class PersonalCloset {
         return maxCapacity;
    }
 
-   public void setMaxCapacity() {
+   public void setMaxCapacity(int maxCapacity) {
         this.maxCapacity = maxCapacity;
    }
 
@@ -144,15 +144,17 @@ public class PersonalCloset {
         return totalValue;
    }
 
-   public void setTotalValue() {
+   public void setTotalValue(double totalValue) {
         this.totalValue = totalValue;
    }
 
    public boolean isOrganized () {
-    return isOrganized;
+        return isOrganized;
    }
 
-   public void set
+   public void setOrganized(boolean isOrganized) {
+        this.isOrganized = isOrganized;
+   }
 
    public List<ClothingItem> getItems() {
         return new ArrayList<>(items);      
