@@ -1,7 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
+
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 
 /** Base class for all bank accounts. */
 public abstract class BankAccount {
@@ -14,18 +15,11 @@ public abstract class BankAccount {
     this.owners = owners;
     this.balance = initialBalance;
   }
-
-  public String getAccountNumber() {
-    return accountNumber;
-  }
-
-  public double getBalance() {
-    return balance;
-  }
-
-  public Set<Customer> getOwners() {
-    return owners;
-  }
+    /**
+     * Gets the account number.
+     *
+     * @return The account number.
+     */
 
   public void withdraw(double amount) throws InsufficientFundsException {
     if (amount > balance) {
@@ -34,10 +28,19 @@ public abstract class BankAccount {
     balance -= amount;
   }
 
-  public void deposit(double amount) {
-    if (amount <= 0) {
-      throw new IllegalArgumentException("Deposit amount must be positive");
-    }
-    balance += amount;
-  }
+  /**
+   * Deposits funds into the account.
+   *
+   * @param amount The amount to deposit.
+   */
+  public void deposit(double amount) throws IllegalStateException {
+    if (isClosed()) {
+          throw new IllegalStateException("Cannot deposit to a closed account");
+        }
+        if (amount <= 0) {
+          throw new IllegalArgumentException("Deposit amount must be positive");
+        }
+        balance += amount;
+      }
+      protected abstract boolean isClosed();
 }

@@ -45,20 +45,7 @@ public class CheckingAccount extends BankAccount {
     return owners;
   }
 
-  /**
-   * Deposits funds into the account.
-   *
-   * @param amount The amount to deposit.
-   */
-  public void deposit(double amount) throws IllegalStateException {
-    if (isClosed()) {
-      throw new IllegalStateException("Cannot deposit to a closed account");
-    }
-    if (amount <= 0) {
-      throw new IllegalArgumentException("Deposit amount must be positive");
-    }
-    balance += amount;
-  }
+  
 
   /**
    * Withdraws funds from the account.
