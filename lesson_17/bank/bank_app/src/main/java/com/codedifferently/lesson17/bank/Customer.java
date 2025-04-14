@@ -9,51 +9,31 @@ public class Customer {
 
   private final UUID id;
   private final String name;
+  private final boolean isBusiness;
   private final Set<CheckingAccount> accounts = new HashSet<>();
 
-  /**
-   * Creates a new customer.
-   *
-   * @param id The ID of the customer.
-   * @param name The name of the customer.
-   */
-  public Customer(UUID id, String name) {
+  public Customer(UUID id, String name, boolean isBusiness) {
     this.id = id;
     this.name = name;
+    this.isBusiness = isBusiness;
   }
 
-  /**
-   * Gets the ID of the customer.
-   *
-   * @return The ID of the customer.
-   */
   public UUID getId() {
     return id;
   }
 
-  /**
-   * Gets the name of the customer.
-   *
-   * @return The name of the customer.
-   */
   public String getName() {
     return name;
   }
 
-  /**
-   * Adds a checking account to the customer.
-   *
-   * @param account The account to add.
-   */
+  public boolean isBusiness() {
+    return isBusiness;
+  }
+
   public void addAccount(CheckingAccount account) {
     accounts.add(account);
   }
 
-  /**
-   * Gets the accounts owned by the customer.
-   *
-   * @return The unique set of accounts owned by the customer.
-   */
   public Set<CheckingAccount> getAccounts() {
     return accounts;
   }
@@ -73,6 +53,6 @@ public class Customer {
 
   @Override
   public String toString() {
-    return "Customer{" + "id=" + id + ", name='" + name + '\'' + '}';
+    return "Customer{" + "id=" + id + ", name='" + name + '\'' + ", isBusiness=" + isBusiness + '}';
   }
 }

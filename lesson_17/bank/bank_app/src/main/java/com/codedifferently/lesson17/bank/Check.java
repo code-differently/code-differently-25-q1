@@ -43,14 +43,14 @@ public class Check {
   /**
    * Deposits the check into an account.
    *
-   * @param toAccount The account to deposit the check into.
+   * @param account2 The account to deposit the check into.
    */
-  public void depositFunds(CheckingAccount toAccount) {
+  public void depositFunds(Account account2) {
     if (isVoided) {
       throw new CheckVoidedException("Check is voided");
     }
     account.withdraw(amount);
-    toAccount.deposit(amount);
+    account2.deposit(amount);
     voidCheck();
   }
 
@@ -78,5 +78,10 @@ public class Check {
         + ", account="
         + account.getAccountNumber()
         + '}';
+  }
+
+  public double getAmount() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getAmount'");
   }
 }
