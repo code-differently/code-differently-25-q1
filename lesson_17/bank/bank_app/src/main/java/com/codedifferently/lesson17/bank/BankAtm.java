@@ -36,6 +36,7 @@ public class BankAtm {
    * @return The unique set of accounts owned by the customer.
    */
   public Set<CheckingAccount> findAccountsByCustomerId(UUID customerId) {
+    auditLog.log("Finding accounts for customer " + customerId);
     return customerById.containsKey(customerId)
         ? customerById.get(customerId).getAccounts()
         : Set.of();
@@ -75,6 +76,7 @@ public class BankAtm {
   public void withdrawFunds(String accountNumber, double amount) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
+    auditLog.log("Withdrew " + amount + " from account " + accountNumber);
   }
 
   /**
@@ -88,6 +90,7 @@ public class BankAtm {
     if (account == null || account.isClosed()) {
       throw new AccountNotFoundException("Account not found");
     }
+    auditLog.log("Retrieved account " + accountNumber);
     return account;
   }
 }
