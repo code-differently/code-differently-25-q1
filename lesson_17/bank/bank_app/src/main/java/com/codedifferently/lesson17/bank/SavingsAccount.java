@@ -1,18 +1,46 @@
 package com.codedifferently.lesson17.bank;
 
-public abstract class SavingsAccount extends BankAccount {
-    @Override
-    public void deposit(double amount, String method) {
-        if("check".equalsIgnoreCase(method)) {
-            throw new UnsupportedOperationException("Cannot withdraw checks from the savings account");
-        }
+import java.util.Set;
 
-        this.balance += amount;
-    }
+public class SavingsAccount extends CheckingAccount {
 
-    @Override
-    public void withdraw(double amount) {
-       throw new IllegalArgumentException("Insufficient funds"); 
+  public SavingsAccount(String accountNumber, Set<Customer> owners, double balance) {
+    super(accountNumber, owners, balance);
+  }
+
+  @Override
+  public int hashCode() {
+    return getAccountNumber().hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof SavingsAccount other) {
+      return getAccountNumber().equals(other.getAccountNumber())
+          && getOwners().equals(other.getOwners())
+          && getBalance() == other.getBalance()
+          && isClosed() == other.isClosed();
     }
-}
+    return false;
+  }
+
+  @Override
+  public void withdraw(double amount) {
+    throw new RuntimeException("Cannot withdraw from a savings account using a check");
+  }
+
+  @Override
+  public String toString() {
+    return "SavingsAccount"
+        + "accountNumber='"
+        + getAccountNumber()
+        + '\''
+        + ", owners="
+        + getOwners()
+        + ", balance="
+        + getBalance()
+        + ", isActive="
+        + isClosed()
+        + '}';
+  }
 }
