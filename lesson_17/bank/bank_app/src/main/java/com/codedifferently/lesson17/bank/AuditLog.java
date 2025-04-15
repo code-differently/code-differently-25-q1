@@ -6,22 +6,20 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class AuditLog {
-    private static final Logger logger = LogManager.getLogger(AuditLog.class.getName());
+  private static final Logger logger = LogManager.getLogger(AuditLog.class.getName());
+  private final List<String> logEntries = new ArrayList<>();
 
-    private List<String> logEntries = new ArrayList<>();
+  public void log(String message) {
+    logger.info(message);
+    logEntries.add(message);
+  }
 
-    public void log(String message) {
-        logEntries.add(message);
-        logger.info(message);
+  public List<String> getLogEntries() {
+    return logEntries;
+  }
 
-    }
-
-    private List<String> getEntries() {
-        return logEntries;
-    }
-
-    public void clear() {
-        logEntries.clear();
-        logger.debug("Audit log cleared");
-    }
+  public void clear() {
+    logEntries.clear();
+    logger.debug("Audit log cleared");
+  }
 }
