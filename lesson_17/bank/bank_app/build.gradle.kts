@@ -28,6 +28,9 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("org.projectlombok:lombok:1.18.30")
     implementation("org.springframework.boot:spring-boot-starter")
+
+    implementation('org.apache.logging.log4j:log4j-api:2.17.1')
+    implementation('org.apache.logging.log4j:log4j-core:2.17.1')
 }
 
 application {
