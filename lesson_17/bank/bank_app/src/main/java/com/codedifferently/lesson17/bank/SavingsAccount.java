@@ -1,11 +1,10 @@
-//Only Allows Deposits when accessing Atm on your Savings Account
+package com.codedifferently.lesson17.bank;
 
-public class SavingsAccount extends BankAccount {
-
+public abstract class SavingsAccount extends BankAccount {
     @Override
     public void deposit(double amount, String method) {
         if("check".equalsIgnoreCase(method)) {
-            throw new UnsupportedOperationException("Deposit not allowed");
+            throw new UnsupportedOperationException("Cannot withdraw checks from the savings account");
         }
 
         this.balance += amount;
@@ -15,4 +14,5 @@ public class SavingsAccount extends BankAccount {
     public void withdraw(double amount) {
        throw new IllegalArgumentException("Insufficient funds"); 
     }
+}
 }

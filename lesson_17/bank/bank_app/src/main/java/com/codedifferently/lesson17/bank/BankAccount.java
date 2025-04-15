@@ -17,15 +17,9 @@ public abstract class BankAccount {
     public double getBalance() {
         return balance;
     }
+
     public String getAccountNumber() {
         return accountNumber;
     }
 
-    //Follows LSP 
-    public interface depositable {
-        void deposit(double amount, String method);
-    }
-    public interface withdrawable {
-        void withdraw(double amount);
-    }
 }
