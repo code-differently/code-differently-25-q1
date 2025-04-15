@@ -1,23 +1,23 @@
 package com.codedifferently.lesson17.bank;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
 
-/**
- * Creates a new saving account.
- *
- * @param accountNumber The account number as log transaction key.
- * @param value The actual debit/credit transaction.
- * @param accountNumberByValueLog The audit log object.
- */
 public class AuditLog {
+    private List<String> logEntries;
 
-  // Method to add a value to an existing ArrayList or create a new one if accountNumber doesn't
-  // exist
-  public void addToMap(
-      HashMap<String, ArrayList<Double>> accountNumberByValueLog,
-      String accountNumber,
-      Double value) {
-    accountNumberByValueLog.computeIfAbsent(accountNumber, k -> new ArrayList<>()).add(value);
-  }
+    public AuditLog() {
+        logEntries = new ArrayList<>();
+    }
+
+    public void logTransaction(BankAccount account, double amount, String transactionType) {
+        String entry = String.format("%s transaction: %s | Amount: %.2f | Balance: %.2f",
+            transactionType, account.getAccountNumber(), amount, account.getBalance());
+        logEntries.add(entry);
+        System.out.println(entry);  // You can remove this line if you prefer logging to a file or database
+    }
+
+    public List<String> getLogEntries() {
+        return logEntries;
+    }
 }

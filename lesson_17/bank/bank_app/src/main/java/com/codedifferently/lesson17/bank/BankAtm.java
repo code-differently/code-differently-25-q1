@@ -1,6 +1,12 @@
 package com.codedifferently.lesson17.bank;
 
 import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+
+import main.java.com.codedifferently.lesson17.bank.AuditLog;
+import main.java.com.codedifferently.lesson17.bank.BankAccount;
+import main.java.com.codedifferently.lesson17.bank.MoneyOrder;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -70,7 +76,15 @@ public class BankAtm {
     account.withdraw(amount);
     auditLog.record("Withdrew $" + amount + " from account " + accountNumber);
   }
-
+   /**
+    * Handles a money order transaction.
+    * @param moneyOrder The money order to process.
+    */
+  public void handleMoneyOrder(MoneyOrder moneyOrder) throws InsufficientFundsException {
+    BankAccount account = getAccountOrThrow(moneyOrder.getSourceAccount().getAccountNumber());
+    moneyOrder.process();
+    auditLog.record("Processed money order of $" + moneyOrder.getAmount() + " from account " + account.getAccountNumber());
+  }
   /**
    * Gets an account by its number or throws an exception if not found.
    *

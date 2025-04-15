@@ -9,8 +9,7 @@ public class Customer {
 
   private final UUID id;
   private final String name;
-  private final Set<CheckingAccount> accounts = new HashSet<>();
-
+  private final Set<BankAccount> accounts = new HashSet<>();
   private boolean isBusiness;
 
   public Customer(String name, boolean isBusiness) {
@@ -66,7 +65,7 @@ public class Customer {
    *
    * @return The unique set of accounts owned by the customer.
    */
-  public Set<CheckingAccount> getAccounts() {
+  public Set<BankAccount> getAccounts() {
     return accounts;
   }
 
