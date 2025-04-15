@@ -2,10 +2,10 @@ package com.codedifferently.lesson17.bank;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 
 class CheckTest {
 
@@ -21,7 +21,7 @@ class CheckTest {
   }
 
   @Test
-  void testDepositFunds() {
+  void testDepositFunds() throws Exception {
     // Act
     classUnderTest.depositFunds(account2);
 

@@ -1,10 +1,11 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+
+import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 
 /** Represents a bank ATM. */
 public class BankAtm {
@@ -13,21 +14,11 @@ public class BankAtm {
   private final Map<String, Account> accountByNumber = new HashMap<>();
 
   /**
-   * Adds a checking or savings account to the bank.
+   * Adds an account to the bank.
    *
    * @param account The account to add.
    */
   public void addAccount(Account account) {
-    accountByNumber.put(account.getAccountNumber(), account);
-    account
-        .getOwners()
-        .forEach(
-            owner -> {
-              customerById.put(owner.getId(), owner);
-            });
-  }
-
-  public void addAccount(SavingsAccount account) {
     accountByNumber.put(account.getAccountNumber(), account);
     account
         .getOwners()
@@ -44,9 +35,8 @@ public class BankAtm {
    * @return The unique set of accounts owned by the customer.
    */
   public Set<CheckingAccount> findAccountsByCustomerId(UUID customerId) {
-    return customerById.containsKey(customerId)
-        ? customerById.get(customerId).getAccounts()
-        : Set.of();
+    Customer customer = customerById.get(customerId);
+    return customer != null ? customer.getAccounts() : Set.of();
   }
 
   /**
@@ -65,8 +55,9 @@ public class BankAtm {
    *
    * @param accountNumber The account number.
    * @param check The check to deposit.
+   * @throws Exception
    */
-  public void depositFunds(String accountNumber, Check check) {
+  public void depositFunds(String accountNumber, Check check) throws Exception {
     Account account = getAccountOrThrow(accountNumber);
     check.depositFunds(account);
   }
@@ -76,8 +67,9 @@ public class BankAtm {
    *
    * @param accountNumber
    * @param amount
+   * @throws Exception
    */
-  public void withdrawFunds(String accountNumber, double amount) {
+  public void withdrawFunds(String accountNumber, double amount) throws Exception {
     Account account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
   }
