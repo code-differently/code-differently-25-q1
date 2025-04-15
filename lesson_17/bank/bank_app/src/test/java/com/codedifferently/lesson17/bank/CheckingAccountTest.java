@@ -1,17 +1,16 @@
 package com.codedifferently.lesson17.bank;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
-
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class CheckingAccountTest {
 
@@ -21,8 +20,8 @@ class CheckingAccountTest {
   @BeforeEach
   void setUp() {
     owners = new HashSet<>();
-    owners.add(new Customer(UUID.randomUUID(), "John Doe", false));
-    owners.add(new Customer(UUID.randomUUID(), "Jane Smith", false));
+    owners.add(new Customer(UUID.randomUUID(), "John Doe"));
+    owners.add(new Customer(UUID.randomUUID(), "Jane Smith"));
     classUnderTest = new CheckingAccount("123456789", owners, 100.0);
   }
 
