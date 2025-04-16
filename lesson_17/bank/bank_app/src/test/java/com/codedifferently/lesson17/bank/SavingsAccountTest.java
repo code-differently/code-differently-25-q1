@@ -1,8 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
-import java.util.Set;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Set;
 import org.junit.jupiter.api.Test;
 
 public class SavingsAccountTest {
@@ -24,5 +24,4 @@ public class SavingsAccountTest {
     savingsAccount.deposit(500.0);
     assertEquals(1500.0, savingsAccount.getBalance());
   }
-
 }
