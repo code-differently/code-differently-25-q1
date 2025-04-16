@@ -12,8 +12,9 @@ import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CheckTest {
-  private CheckingAccount classUnderTest;
+class SavingAccountTest {
+
+  private SavingsAccount classUnderTest;
   private Set<Customer> owners;
 
   @BeforeEach
@@ -21,7 +22,7 @@ class CheckTest {
     owners = new HashSet<>();
     owners.add(new Customer(UUID.randomUUID(), "John Doe", false));
     owners.add(new Customer(UUID.randomUUID(), "Jane Smith", false));
-    classUnderTest = new CheckingAccount("123456789", owners, 100.0);
+    classUnderTest = new SavingsAccount("123456789", owners, 100.0);
   }
 
   @Test
@@ -93,13 +94,25 @@ class CheckTest {
 
   @Test
   void hashCodeTest() {
-    CheckingAccount otherAccount = new CheckingAccount("123456789", owners, 200.0);
+    SavingsAccount otherAccount = new SavingsAccount("123456789", owners, 200.0);
     assertEquals(classUnderTest.hashCode(), otherAccount.hashCode());
   }
 
   @Test
   void toStringTest() {
-    String expected = "CheckingAccount{accountNumber='123456789', balance=100.0, isActive=true}";
+    String expected = "SavingsAccount{accountNumber='123456789', balance=100.0, isActive=true}";
     assertEquals(expected, classUnderTest.toString());
+  }
+
+  @Test
+  public void testIsCheckCreationAllowed_WhenFalse() {
+    // Arrange:
+
+    // Act:
+    boolean result = classUnderTest.isCheckCreationAllowed();
+
+    // Assert:
+    assertFalse(
+        result, "Check creation should not be allowed when isCheckCreationAllowed is false");
   }
 }
