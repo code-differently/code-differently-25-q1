@@ -54,6 +54,10 @@ public class Check {
     voidCheck();
   }
 
+  public double getAmount() {
+    return amount;
+  }
+
   @Override
   public int hashCode() {
     return checkNumber.hashCode();

@@ -17,10 +17,13 @@ class BankAtmTest {
   private CheckingAccount account2;
   private Customer customer1;
   private Customer customer2;
+  private BankAtm BankAtm;
 
   @BeforeEach
   void setUp() {
     classUnderTest = new BankAtm();
+    new BankAtm();
+
     customer1 = new Customer(UUID.randomUUID(), "John Doe");
     customer2 = new Customer(UUID.randomUUID(), "Jane Smith");
     account1 = new CheckingAccount("123456789", Set.of(customer1), 100.0);
@@ -28,6 +31,7 @@ class BankAtmTest {
     customer1.addAccount(account1);
     customer1.addAccount(account2);
     customer2.addAccount(account2);
+
     classUnderTest.addAccount(account1);
     classUnderTest.addAccount(account2);
   }
@@ -58,10 +62,8 @@ class BankAtmTest {
 
   @Test
   void testDepositFunds() {
-    // Act
     classUnderTest.depositFunds(account1.getAccountNumber(), 50.0);
 
-    // Assert
     assertThat(account1.getBalance()).isEqualTo(150.0);
   }
 
