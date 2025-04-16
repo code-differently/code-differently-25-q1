@@ -1,6 +1,7 @@
 package com.codedifferently.lesson17.bank;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.HashSet;
 import java.util.UUID;
@@ -33,5 +34,19 @@ public class SavingsAccountTest {
     boolean expected = true;
     boolean actual = classUnderTest.equals(other);
     assertEquals(expected, actual);
+  }
+
+  @Test
+  void testCheckWithdrawl() {
+    Check check = new Check("123456789", 1000.0, classUnderTest);
+
+    IllegalStateException exception =
+        assertThrows(
+            IllegalStateException.class,
+            () -> {
+              classUnderTest.withdraw(1000, check);
+            });
+
+    assertEquals("Cannot withdraw from a savings account using a check", exception.getMessage());
   }
 }

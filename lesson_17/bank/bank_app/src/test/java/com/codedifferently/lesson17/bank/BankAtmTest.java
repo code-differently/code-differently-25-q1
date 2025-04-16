@@ -1,14 +1,15 @@
 package com.codedifferently.lesson17.bank;
 
+import java.util.Set;
+import java.util.UUID;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
-import java.util.Set;
-import java.util.UUID;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 class BankAtmTest {
 
@@ -92,7 +93,7 @@ class BankAtmTest {
   @Test
   void testWithdrawFunds() {
     // Act
-    classUnderTest.withdrawFunds(account2.getAccountNumber(), 50.0);
+    classUnderTest.withdrawFunds(account2.getAccountNumber(), 50.0, null);
 
     // Assert
     assertThat(account2.getBalance()).isEqualTo(150.0);
@@ -104,7 +105,7 @@ class BankAtmTest {
 
     // Act & Assert
     assertThatExceptionOfType(AccountNotFoundException.class)
-        .isThrownBy(() -> classUnderTest.withdrawFunds(nonExistingAccountNumber, 50.0))
+        .isThrownBy(() -> classUnderTest.withdrawFunds(nonExistingAccountNumber, 50.0, null))
         .withMessage("Account not found");
   }
 }

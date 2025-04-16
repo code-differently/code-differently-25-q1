@@ -2,6 +2,8 @@ package com.codedifferently.lesson17.bank;
 
 import java.util.Set;
 
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+
 /**
  * The {@code SavingsAccount} class represents a savings account in a banking system. It extends the
  * {@code CheckingAccount} class and provides additional functionality specific to savings accounts.
@@ -49,12 +51,22 @@ public class SavingsAccount extends CheckingAccount {
   /**
    * Will throw and exception if the user attempt to make a withdrawl while under the instance of
    * SavingsAccount.
+   * 
+   * And the makes a second withdrawl that will check if there 
+   * is a check and throw an error if one comes in.
    *
    * @param amount The amount to deposit.
    */
   @Override
-  public void withdraw(double amount) {
-    throw new RuntimeException("Cannot withdraw from a savings account using a check");
+  public void withdraw(double amount) throws InsufficientFundsException {
+    throw new IllegalStateException("you cannot write a check from the savings account");
+  }
+
+  public void withdraw(double amount, Check check) {
+    if (check != null) {
+      throw new IllegalStateException("Cannot withdraw from a savings account using a check");
+    }
+    withdraw(amount); // Call the original withdraw method
   }
 
   /**

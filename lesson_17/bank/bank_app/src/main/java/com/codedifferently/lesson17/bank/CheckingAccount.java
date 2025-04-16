@@ -68,9 +68,11 @@ public class CheckingAccount {
     if (isClosed()) {
       throw new IllegalStateException("Cannot withdraw from a closed account");
     }
+
     if (amount <= 0) {
       throw new IllegalStateException("Withdrawal amount must be positive");
     }
+
     if (balance < amount) {
       throw new InsufficientFundsException("Account does not have enough funds for withdrawal");
     }

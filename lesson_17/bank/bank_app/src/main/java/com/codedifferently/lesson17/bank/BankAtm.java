@@ -73,9 +73,10 @@ public class BankAtm {
    * @param accountNumber
    * @param amount
    */
-  public void withdrawFunds(String accountNumber, double amount) {
+  public void withdrawFunds(String accountNumber, double amount, Check check) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
+
     auditLog.log("Withdrew " + amount + " from account " + accountNumber);
   }
 
