@@ -22,12 +22,12 @@ public class SavingAccountTest {
     owners = new HashSet<>();
     owners.add(new Customer(UUID.randomUUID(), "John Doe"));
     owners.add(new Customer(UUID.randomUUID(), "Jane Smith"));
-    classUnderTest = new SavingAccount("987654321", owners, 100.0);
+    classUnderTest = new SavingAccount("123987645", owners, 100.0);
   }
 
   @Test
   void getAccountNumber() {
-    assertEquals("987654321", classUnderTest.getAccountNumber());
+    assertEquals("123987645", classUnderTest.getAccountNumber());
   }
 
   @Test
@@ -88,19 +88,19 @@ public class SavingAccountTest {
 
   @Test
   void equals() {
-    SavingAccount otherAccount = new SavingAccount("987654321", owners, 200.0);
+    SavingAccount otherAccount = new SavingAccount("123987645", owners, 200.0);
     assertEquals(classUnderTest, otherAccount);
   }
 
   @Test
   void hashCodeTest() {
-    SavingAccount otherAccount = new SavingAccount("987654321", owners, 200.0);
+    SavingAccount otherAccount = new SavingAccount("123987645", owners, 200.0);
     assertEquals(classUnderTest.hashCode(), otherAccount.hashCode());
   }
 
   @Test
   void toStringTest() {
-    String expected = "SavingAccount{accountNumber='987654321', balance=100.0, isActive=true}";
+    String expected = "SavingAccount{accountNumber='123987645', balance=100.0, isActive=true}";
     assertEquals(expected, classUnderTest.toString());
   }
 }
