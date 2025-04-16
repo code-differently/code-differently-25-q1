@@ -19,7 +19,7 @@ public class Customer {
   /**
    * Creates a new customer.
    *
-   * @param id   The ID of the customer.
+   * @param id The ID of the customer.
    * @param name The name of the customer.
    * @param type The type of customer (individual or business)
    */
@@ -32,11 +32,11 @@ public class Customer {
   /**
    * Creates an new individual customer.
    *
-   * @param id   The ID of the customer.
+   * @param id The ID of the customer.
    * @param name The name of the customer.
    * @param type The type of custimer (individual or business)
    */
-  public Customer(UUID id, String name, Customer type) {
+  public Customer(UUID id, String name) {
     this.id = id;
     this.name = name;
     this.type = CustomerType.INDIVIDUAL;
