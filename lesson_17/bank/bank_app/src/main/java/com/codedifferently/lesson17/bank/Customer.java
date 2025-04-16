@@ -79,6 +79,6 @@ public class Customer {
   }
 
   public boolean isBusiness() {
-   return isBusiness;
+    return isBusiness;
   }
 }

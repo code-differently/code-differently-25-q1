@@ -5,11 +5,9 @@
 
 package com.codedifferently.lesson17.bank;
 
-
 class account {
 
-    static Object getOwners() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
+  static Object getOwners() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
 }
