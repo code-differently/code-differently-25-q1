@@ -78,13 +78,13 @@ public class Customer {
     return id.hashCode();
   }
 
-  /*@Override
+  @Override
   public boolean equals(Object obj) {
     if (obj instanceof Customer other) {
       return id.equals(other.id);
     }
     return false;
-  } */
+  }
 
   @Override
   public String toString() {
