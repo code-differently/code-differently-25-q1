@@ -1,4 +1,4 @@
-package com.codedifferently.lesson16.JustinsPylaylist;
+package com.codedifferently.lesson16.justins_playlist;
 
 import java.util.ArrayList;
 import java.util.List;

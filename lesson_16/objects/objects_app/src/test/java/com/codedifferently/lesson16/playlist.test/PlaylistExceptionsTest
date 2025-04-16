@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class PlaylistTest {
 
-    private playlist playlist;
+    private Playlist playlist;
 
     @BeforeEach
     public void setUp() {
