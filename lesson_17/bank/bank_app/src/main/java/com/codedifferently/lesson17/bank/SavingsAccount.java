@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /** Represents a saving account. */
 public class SavingsAccount extends BankAccount {
   // private boolean isActive;
-  private boolean isCheckCreationAllowed;
+  private final boolean isCheckCreationAllowed;
   private static final Logger logger = LoggerFactory.getLogger(SavingsAccount.class);
 
   /**
