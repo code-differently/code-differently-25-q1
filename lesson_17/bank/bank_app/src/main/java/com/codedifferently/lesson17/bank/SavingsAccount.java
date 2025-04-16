@@ -1,8 +1,7 @@
 package com.codedifferently.lesson17.bank;
 
-import java.util.Set;
-
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+import java.util.Set;
 
 /**
  * The {@code SavingsAccount} class represents a savings account in a banking system. It extends the
@@ -51,9 +50,9 @@ public class SavingsAccount extends CheckingAccount {
   /**
    * Will throw and exception if the user attempt to make a withdrawl while under the instance of
    * SavingsAccount.
-   * 
-   * And the makes a second withdrawl that will check if there 
-   * is a check and throw an error if one comes in.
+   *
+   * <p>And the makes a second withdrawl that will check if there is a check and throw an error if
+   * one comes in.
    *
    * @param amount The amount to deposit.
    */
