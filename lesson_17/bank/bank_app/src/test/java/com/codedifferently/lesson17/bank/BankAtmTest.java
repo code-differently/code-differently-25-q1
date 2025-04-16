@@ -2,9 +2,13 @@ package com.codedifferently.lesson17.bank;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,16 +22,26 @@ class BankAtmTest {
   private Customer customer1;
   private Customer customer2;
 
+  Map<String, Double> rates =
+      Map.of(
+          "USD_TO_EUR", 0.85,
+          "EUR_TO_USD", 1.18);
+  SimpleCurrencyConverter converter = new SimpleCurrencyConverter(rates);
+
   @BeforeEach
   void setUp() {
-    classUnderTest = new BankAtm();
+    AuditLog auditLog = new AuditLog();
+    classUnderTest = new BankAtm(auditLog);
     customer1 = new Customer(UUID.randomUUID(), "John Doe");
     customer2 = new Customer(UUID.randomUUID(), "Jane Smith");
+
     account1 = new CheckingAccount("123456789", Set.of(customer1), 100.0);
     account2 = new CheckingAccount("987654321", Set.of(customer1, customer2), 200.0);
+
     customer1.addAccount(account1);
     customer1.addAccount(account2);
     customer2.addAccount(account2);
+
     classUnderTest.addAccount(account1);
     classUnderTest.addAccount(account2);
   }
@@ -106,5 +120,35 @@ class BankAtmTest {
     assertThatExceptionOfType(AccountNotFoundException.class)
         .isThrownBy(() -> classUnderTest.withdrawFunds(nonExistingAccountNumber, 50.0))
         .withMessage("Account not found");
+  }
+
+  @Test
+  void testDeposit_LogsToConsole() {
+    classUnderTest.depositFunds(account1.getAccountNumber(), 50.0);
+
+    assertThat(account1.getBalance()).isEqualTo(150.0);
+
+    System.out.println("🧾 Audit Log:");
+    classUnderTest.printAuditLog();
+  }
+
+  @Test
+  public void testConvert_USDToEUR() {
+    double result = converter.convert(100.0, "USD", "EUR");
+    assertEquals(85.0, result, 0.001);
+  }
+
+  @Test
+  public void testConvert_SameCurrency() {
+    double result = converter.convert(100.0, "USD", "USD");
+    assertEquals(100.0, result, 0.001);
+  }
+
+  @Test
+  public void testUnsupportedConversion_ThrowsException() {
+    Exception exception =
+        assertThrows(
+            CurrencyConverterException.class, () -> converter.convert(100.0, "USD", "JPY"));
+    assertTrue(exception.getMessage().contains("Unsupported conversion"));
   }
 }
