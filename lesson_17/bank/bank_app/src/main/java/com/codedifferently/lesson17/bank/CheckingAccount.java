@@ -2,7 +2,7 @@ package com.codedifferently.lesson17.bank;
 
 import java.util.Set;
 
-public class CheckingAccount extends Account {
+public class CheckingAccount extends BankAccount {
 
   /**
    * Creates a new saving account.

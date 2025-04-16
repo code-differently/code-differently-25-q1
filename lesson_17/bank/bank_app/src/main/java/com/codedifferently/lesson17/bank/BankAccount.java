@@ -4,21 +4,21 @@ import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
 
 /** Represents a account. */
-public class Account {
+abstract class BankAccount {
 
-  private final Set<Customer> owners;
-  private final String accountNumber;
+  protected final Set<Customer> owners;
+  protected final String accountNumber;
   protected double balance;
   protected boolean isActive;
 
   /**
-   * Creates a new account.
+   * Creates a new Bank account.
    *
    * @param accountNumber The account number.
    * @param owners The owners of the account.
    * @param initialBalance The initial balance of the account.
    */
-  public Account(String accountNumber, Set<Customer> owners, double initialBalance) {
+  public BankAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
     this.accountNumber = accountNumber;
     this.owners = owners;
     this.balance = initialBalance;
@@ -110,7 +110,7 @@ public class Account {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Account other) {
+    if (obj instanceof BankAccount other) {
       return accountNumber.equals(other.accountNumber);
     }
     return false;

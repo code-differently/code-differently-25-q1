@@ -14,7 +14,7 @@ class BankAtmTest {
 
   private BankAtm classUnderTest;
   private CheckingAccount account1;
-  private CheckingAccount account2;
+  private SavingAccount account2;
   private Customer customer1;
   private Customer customer2;
 
@@ -24,7 +24,7 @@ class BankAtmTest {
     customer1 = new Customer(UUID.randomUUID(), "John Doe");
     customer2 = new Customer(UUID.randomUUID(), "Jane Smith");
     account1 = new CheckingAccount("123456789", Set.of(customer1), 100.0);
-    account2 = new CheckingAccount("987654321", Set.of(customer1, customer2), 200.0);
+    account2 = new SavingAccount("987654321", Set.of(customer1, customer2), 200.0);
     customer1.addAccount(account1);
     customer1.addAccount(account2);
     customer2.addAccount(account2);
@@ -43,14 +43,14 @@ class BankAtmTest {
     classUnderTest.addAccount(account3);
 
     // Assert
-    Set<CheckingAccount> accounts = classUnderTest.findAccountsByCustomerId(customer3.getId());
+    Set<BankAccount> accounts = classUnderTest.findAccountsByCustomerId(customer3.getId());
     assertThat(accounts).containsOnly(account3);
   }
 
   @Test
   void testFindAccountsByCustomerId() {
     // Act
-    Set<CheckingAccount> accounts = classUnderTest.findAccountsByCustomerId(customer1.getId());
+    Set<BankAccount> accounts = classUnderTest.findAccountsByCustomerId(customer1.getId());
 
     // Assert
     assertThat(accounts).containsOnly(account1, account2);

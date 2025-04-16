@@ -7,7 +7,7 @@ public class Check {
 
   private final String checkNumber;
   private final double amount;
-  private final CheckingAccount account;
+  private final BankAccount account;
   private boolean isVoided = false;
 
   /**
@@ -17,7 +17,7 @@ public class Check {
    * @param amount The amount of the check.
    * @param account The account the check is drawn on.
    */
-  public Check(String checkNumber, double amount, CheckingAccount account) {
+  public Check(String checkNumber, double amount, BankAccount account) {
     if (amount < 0) {
       throw new IllegalArgumentException("Check amount must be positive");
     }
@@ -45,7 +45,7 @@ public class Check {
    *
    * @param toAccount The account to deposit the check into.
    */
-  public void depositFunds(CheckingAccount toAccount) {
+  public void depositFunds(BankAccount toAccount) {
     if (isVoided) {
       throw new CheckVoidedException("Check is voided");
     }
