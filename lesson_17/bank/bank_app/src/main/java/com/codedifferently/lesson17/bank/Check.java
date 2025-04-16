@@ -49,6 +49,9 @@ public class Check {
     if (account instanceof SavingsAccount) {
       throw new UnsupportedOperationException("Cannot deposit checks into a savings account");
     }
+    if (account == null) {
+      throw new IllegalArgumentException("Account cannot be null");
+    }
     account.deposit(amount);
   }
 
@@ -76,5 +79,14 @@ public class Check {
         + ", account="
         + account.getAccountNumber()
         + '}';
+  }
+
+  /**
+   * Gets the check number.
+   *
+   * @return The check number.
+   */
+  public double getAmount() {
+    return amount;
   }
 }

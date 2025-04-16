@@ -1,12 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
 import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
+import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
-
-import main.java.com.codedifferently.lesson17.bank.AuditLog;
-import main.java.com.codedifferently.lesson17.bank.BankAccount;
-import main.java.com.codedifferently.lesson17.bank.MoneyOrder;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -59,10 +55,15 @@ public class BankAtm {
    * @param accountNumber The account number.
    * @param check The check to deposit.
    */
-  public void depositFunds(String accountNumber, Check check) {
+  public void depositFunds(String accountNumber, Check check) throws CheckVoidedException {
     BankAccount account = getAccountOrThrow(accountNumber);
+
+    if (check.getIsVoided()) {
+      throw new CheckVoidedException("Check is voided");
+    }
+
     check.depositFunds(account);
-    auditLog.record("Deposited check of $" + check.getAmount() + " into account " + accountNumber);
+    auditLog.record("Deposited check of $" + check.getAmount() + " to account " + accountNumber);
   }
 
   /**
@@ -76,15 +77,22 @@ public class BankAtm {
     account.withdraw(amount);
     auditLog.record("Withdrew $" + amount + " from account " + accountNumber);
   }
-   /**
-    * Handles a money order transaction.
-    * @param moneyOrder The money order to process.
-    */
+
+  /**
+   * Handles a money order transaction.
+   *
+   * @param moneyOrder The money order to process.
+   */
   public void handleMoneyOrder(MoneyOrder moneyOrder) throws InsufficientFundsException {
     BankAccount account = getAccountOrThrow(moneyOrder.getSourceAccount().getAccountNumber());
     moneyOrder.process();
-    auditLog.record("Processed money order of $" + moneyOrder.getAmount() + " from account " + account.getAccountNumber());
+    auditLog.record(
+        "Processed money order of $"
+            + moneyOrder.getAmount()
+            + " from account "
+            + account.getAccountNumber());
   }
+
   /**
    * Gets an account by its number or throws an exception if not found.
    *

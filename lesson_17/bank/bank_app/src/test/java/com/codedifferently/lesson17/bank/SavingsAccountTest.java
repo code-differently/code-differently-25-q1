@@ -12,9 +12,9 @@ import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CheckingAccountTest {
+class SavingsAccountTest {
 
-  private CheckingAccount classUnderTest;
+  private SavingsAccount classUnderTest;
   private Set<Customer> owners;
 
   @BeforeEach
@@ -22,7 +22,7 @@ class CheckingAccountTest {
     owners = new HashSet<>();
     owners.add(new Customer(UUID.randomUUID(), "John Doe"));
     owners.add(new Customer(UUID.randomUUID(), "Jane Smith"));
-    classUnderTest = new CheckingAccount("123456789", owners, 100.0);
+    classUnderTest = new SavingsAccount("123456789", owners, 100.0);
   }
 
   @Test
@@ -54,17 +54,10 @@ class CheckingAccountTest {
   }
 
   @Test
-  void withdraw_withNegativeAmount() {
-    assertThatExceptionOfType(IllegalStateException.class)
-        .isThrownBy(() -> classUnderTest.withdraw(-50.0))
-        .withMessage("Withdrawal amount must be positive");
-  }
-
-  @Test
   void withdraw_withInsufficientBalance() {
     assertThatExceptionOfType(InsufficientFundsException.class)
         .isThrownBy(() -> classUnderTest.withdraw(150.0))
-        .withMessage("Account does not have enough funds for withdrawal");
+        .withMessage("Insufficient funds in savings account.");
   }
 
   @Test
@@ -88,7 +81,7 @@ class CheckingAccountTest {
 
   @Test
   void equals() {
-    CheckingAccount otherAccount = new CheckingAccount("123456789", owners, 200.0);
+    SavingsAccount otherAccount = new SavingsAccount("123456789", owners, 200.0);
     assertEquals(classUnderTest, otherAccount);
   }
 
