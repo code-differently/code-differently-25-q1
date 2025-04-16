@@ -1,27 +1,18 @@
 package com.codedifferently.lesson17.bank;
 
-import java.util.Set;
-
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+import java.util.Set;
 
 /** Represents a checking account. */
 public class CheckingAccount {
-
   private static Set<Customer> owners;
   private final String accountNumber;
   private double balance;
   private boolean isActive;
 
-  /**
-   * Creates a new checking account.
-   *
-   * @param accountNumber The account number.
-   * @param owners The owners of the account.
-   * @param initialBalance The initial balance of the account.
-   */
   public CheckingAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
     this.accountNumber = accountNumber;
-    CheckingAccount.owners = owners;
+    this.owners = owners;
     this.balance = initialBalance;
     isActive = true;
   }
@@ -42,6 +33,23 @@ public class CheckingAccount {
    */
   public Set<Customer> getOwners() {
     return owners;
+  }
+
+  /**
+   * Gets the balance of the account.
+   *
+   * @return The balance of the account.
+   */
+  public double getBalance() {
+    return balance;
+  }
+
+  /** Closes the account. */
+  public void closeAccount() throws IllegalStateException {
+    if (balance > 0) {
+      throw new IllegalStateException("Cannot close account with positive balance");
+    }
+    isActive = false;
   }
 
   /**
@@ -72,27 +80,10 @@ public class CheckingAccount {
     if (amount <= 0) {
       throw new IllegalStateException("Withdrawal amount must be positive");
     }
-    if (balance < amount) {
+    if (amount > balance) {
       throw new InsufficientFundsException("Account does not have enough funds for withdrawal");
     }
     balance -= amount;
-  }
-
-  /**
-   * Gets the balance of the account.
-   *
-   * @return The balance of the account.
-   */
-  public double getBalance() {
-    return balance;
-  }
-
-  /** Closes the account. */
-  public void closeAccount() throws IllegalStateException {
-    if (balance > 0) {
-      throw new IllegalStateException("Cannot close account with a positive balance");
-    }
-    isActive = false;
   }
 
   /**

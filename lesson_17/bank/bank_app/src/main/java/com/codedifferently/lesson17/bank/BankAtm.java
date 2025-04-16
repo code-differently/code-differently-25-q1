@@ -13,7 +13,6 @@ public class BankAtm {
   private final Map<UUID, Customer> customerById = new HashMap<>();
   final Map<String, CheckingAccount> checkingAccountsByNumber = new HashMap<>();
   public Object accountByNumber;
-  
 
   /**
    * Adds a checking account to the bank.
@@ -29,8 +28,6 @@ public class BankAtm {
               customerById.put(owner.getId(), owner);
             });
   }
-
-
 
   /**
    * Finds all accounts owned by a customer.
@@ -85,11 +82,9 @@ public class BankAtm {
    */
   private CheckingAccount getAccountOrThrow(String accountNumber) {
     CheckingAccount checkingAccount = checkingAccountsByNumber.get(accountNumber);
-    if (checkingAccount != null && !checkingAccount.isClosed()) {
-      throw new AccountNotFoundException("Account not foudn");
-    }  
-      return checkingAccount;
+    if (checkingAccount == null || checkingAccount.isClosed()) {
+      throw new AccountNotFoundException("Account not found");
     }
-    
+    return checkingAccount;
   }
-
+}
