@@ -3,14 +3,18 @@ package com.codedifferently.lesson17.bank;
 import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
 
-/** Represents a checking account. */
-public class CheckingAccount {
-  private static Set<Customer> owners;
+public class SavingsAccount {
+  private final Set<Customer> owners;
   private final String accountNumber;
   private double balance;
   private boolean isActive;
 
-  public CheckingAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
+  /**
+   * Represents a savings account.
+   *
+   * <p>It is a subclass of BankAccount and inherits its properties and methods.
+   */
+  public SavingsAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
     this.accountNumber = accountNumber;
     this.owners = owners;
     this.balance = initialBalance;
@@ -44,14 +48,6 @@ public class CheckingAccount {
     return balance;
   }
 
-  /** Closes the account. */
-  public void closeAccount() throws IllegalStateException {
-    if (balance > 0) {
-      throw new IllegalStateException("Cannot close account with positive balance");
-    }
-    isActive = false;
-  }
-
   /**
    * Deposits funds into the account.
    *
@@ -80,10 +76,6 @@ public class CheckingAccount {
     if (amount <= 0) {
       throw new IllegalStateException("Withdrawal amount must be positive");
     }
-    if (amount > balance) {
-      throw new InsufficientFundsException("Account does not have enough funds for withdrawal");
-    }
-    balance -= amount;
   }
 
   /**
@@ -102,7 +94,7 @@ public class CheckingAccount {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof CheckingAccount other) {
+    if (obj instanceof SavingsAccount other) {
       return accountNumber.equals(other.accountNumber);
     }
     return false;

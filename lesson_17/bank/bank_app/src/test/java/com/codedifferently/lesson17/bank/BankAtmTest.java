@@ -27,6 +27,7 @@ class BankAtmTest {
     account2 = new CheckingAccount("987654321", Set.of(customer1, customer2), 200.0);
     customer1.addAccount(account1);
     customer1.addAccount(account2);
+    customer2.addAccount(account1);
     customer2.addAccount(account2);
     classUnderTest.addAccount(account1);
     classUnderTest.addAccount(account2);
@@ -74,7 +75,7 @@ class BankAtmTest {
     classUnderTest.depositFunds("987654321", check);
 
     // Assert
-    assertThat(account1.getBalance()).isEqualTo(0);
+    assertThat(account1.getBalance()).isEqualTo(0.0);
     assertThat(account2.getBalance()).isEqualTo(300.0);
   }
 

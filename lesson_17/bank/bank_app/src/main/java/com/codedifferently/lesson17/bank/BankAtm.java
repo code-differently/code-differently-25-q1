@@ -10,7 +10,8 @@ import java.util.UUID;
 public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
-  private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  final Map<String, CheckingAccount> checkingAccountsByNumber = new HashMap<>();
+  public Object accountByNumber;
 
   /**
    * Adds a checking account to the bank.
@@ -18,7 +19,7 @@ public class BankAtm {
    * @param account The account to add.
    */
   public void addAccount(CheckingAccount account) {
-    accountByNumber.put(account.getAccountNumber(), account);
+    checkingAccountsByNumber.put(account.getAccountNumber(), account);
     account
         .getOwners()
         .forEach(
@@ -79,10 +80,10 @@ public class BankAtm {
    * @return The account.
    */
   private CheckingAccount getAccountOrThrow(String accountNumber) {
-    CheckingAccount account = accountByNumber.get(accountNumber);
-    if (account == null || account.isClosed()) {
+    CheckingAccount checkingAccount = checkingAccountsByNumber.get(accountNumber);
+    if (checkingAccount == null || checkingAccount.isClosed()) {
       throw new AccountNotFoundException("Account not found");
     }
-    return account;
+    return checkingAccount;
   }
 }
