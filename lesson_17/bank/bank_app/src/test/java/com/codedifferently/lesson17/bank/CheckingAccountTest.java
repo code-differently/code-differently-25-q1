@@ -13,15 +13,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CheckingAccountTest {
-
   private CheckingAccount classUnderTest;
   private Set<Customer> owners;
 
   @BeforeEach
   void setUp() {
     owners = new HashSet<>();
-    owners.add(new Customer(UUID.randomUUID(), "John Doe"));
-    owners.add(new Customer(UUID.randomUUID(), "Jane Smith"));
+    owners.add(new Customer(UUID.randomUUID(), "John Doe", false));
+    owners.add(new Customer(UUID.randomUUID(), "Jane Smith", false));
     classUnderTest = new CheckingAccount("123456789", owners, 100.0);
   }
 
