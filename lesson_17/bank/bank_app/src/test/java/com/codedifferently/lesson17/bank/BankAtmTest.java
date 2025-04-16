@@ -1,14 +1,15 @@
 package com.codedifferently.lesson17.bank;
 
+import java.util.Set;
+import java.util.UUID;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.codedifferently.lesson17.bank.exceptions.AccountNotFoundException;
 import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
-import java.util.Set;
-import java.util.UUID;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 class BankAtmTest {
 
@@ -21,8 +22,8 @@ class BankAtmTest {
   @BeforeEach
   void setUp() {
     classUnderTest = new BankAtm();
-    customer1 = new Customer(UUID.randomUUID(), "John Doe");
-    customer2 = new Customer(UUID.randomUUID(), "Jane Smith");
+    customer1 = new Customer(UUID.randomUUID(), "John Doe", false);
+    customer2 = new Customer(UUID.randomUUID(), "Jane Smith", false);
     account1 = new CheckingAccount("123456789", Set.of(customer1), 100.0);
     account2 = new CheckingAccount("987654321", Set.of(customer1, customer2), 200.0);
     customer1.addAccount(account1);
@@ -35,7 +36,7 @@ class BankAtmTest {
   @Test
   void testAddAccount() {
     // Arrange
-    Customer customer3 = new Customer(UUID.randomUUID(), "Alice Johnson");
+    Customer customer3 = new Customer(UUID.randomUUID(), "Alice Johnson", false);
     CheckingAccount account3 = new CheckingAccount("555555555", Set.of(customer3), 300.0);
     customer3.addAccount(account3);
 
