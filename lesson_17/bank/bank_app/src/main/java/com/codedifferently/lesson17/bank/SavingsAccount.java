@@ -1,37 +1,25 @@
 package com.codedifferently.lesson17.bank;
 
 import java.util.Set;
-import java.util.UUID;
 
-/** Represents a savings account. */
+/** Represents a savings account that doesn't allow checks. */
 public class SavingsAccount extends BankAccount {
+  private boolean isActive = true;
 
   public SavingsAccount(String accountNumber, Set<Customer> owners, double initialBalance) {
     super(accountNumber, owners, initialBalance);
   }
 
-  /**
-   * Gets the account number.
-   *
-   * @return The account number.
-   */
-  public void depositFunds(Check check) {
-    throw new UnsupportedOperationException("Cannot withdraw from savings account.");
-  }
-
-  public String getAccountNumber() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getAccountNumber'");
-  }
-
-  public Map<UUID getOwners() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getOwners'");
+  protected boolean isClosed() {
+    throw new IllegalStateException("Cannot check if account is closed");
   }
 
   @Override
-  protected boolean isClosed() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'isClosed'");
+  public boolean isActive() {
+    return true;
+  }
+
+  public void closeAccount() {
+    throw new IllegalStateException("Cannot close account with a positive balance");
   }
 }
