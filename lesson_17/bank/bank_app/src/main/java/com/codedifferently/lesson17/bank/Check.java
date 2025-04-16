@@ -79,4 +79,8 @@ public class Check {
         + account.getAccountNumber()
         + '}';
   }
+
+  public Object getAmount() {
+    throw new UnsupportedOperationException("Unimplemented method 'getAmount'");
+  }
 }

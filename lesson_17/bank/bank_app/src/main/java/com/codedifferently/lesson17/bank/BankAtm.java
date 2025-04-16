@@ -11,6 +11,7 @@ public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private final Map<String, SavingsAccount> savingsAccountByNumber = new HashMap<>();
 
   /**
    * Adds a checking account to the bank.
@@ -28,12 +29,27 @@ public class BankAtm {
   }
 
   /**
+   * Adds a savings account to the bank.
+   *
+   * @param account The account to add.
+   */
+  public void addAccount(SavingsAccount account) {
+    savingsAccountByNumber.put(account.getAccountNumber(), account);
+    account
+        .getOwners()
+        .forEach(
+            owner -> {
+              customerById.put(owner.getId(), owner);
+            });
+  }
+
+  /**
    * Finds all accounts owned by a customer.
    *
    * @param customerId The ID of the customer.
    * @return The unique set of accounts owned by the customer.
    */
-  public Set<CheckingAccount> findAccountsByCustomerId(UUID customerId) {
+  public Set<BankAccount> findAccountsByCustomerId(UUID customerId) {
     return customerById.containsKey(customerId)
         ? customerById.get(customerId).getAccounts()
         : Set.of();
