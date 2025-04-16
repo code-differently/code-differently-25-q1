@@ -60,6 +60,15 @@ public class Customer {
     return accounts;
   }
 
+  /**
+   * Checks if the owner is a business.
+   *
+   * @return True if the customer is a business, false otherwise.
+   */
+  public boolean isBusiness() {
+    return this.type == CustomerType.BUSINESS;
+  }
+
   @Override
   public int hashCode() {
     return id.hashCode();
