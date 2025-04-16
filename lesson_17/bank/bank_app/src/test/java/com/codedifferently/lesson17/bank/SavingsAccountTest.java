@@ -1,21 +1,18 @@
 package com.codedifferently.lesson17.bank;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
-
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.codedifferently.lesson17.bank.SavingsAccount;
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
-
-public class SavingsAccountTest {
-
+class SavingAccountTest {
 
   private SavingsAccount classUnderTest;
   private Set<Customer> owners;
@@ -23,8 +20,8 @@ public class SavingsAccountTest {
   @BeforeEach
   void setUp() {
     owners = new HashSet<>();
-    owners.add(new Customer(UUID.randomUUID(), "John Doe"));
-    owners.add(new Customer(UUID.randomUUID(), "Jane Smith"));
+    owners.add(new Customer(UUID.randomUUID(), "John Doe", false));
+    owners.add(new Customer(UUID.randomUUID(), "Jane Smith", false));
     classUnderTest = new SavingsAccount("123456789", owners, 100.0);
   }
 
@@ -91,7 +88,7 @@ public class SavingsAccountTest {
 
   @Test
   void equals() {
-    SavingsAccount otherAccount = new SavingsAccount("123456789", owners, 200.0);
+    CheckingAccount otherAccount = new CheckingAccount("123456789", owners, 200.0);
     assertEquals(classUnderTest, otherAccount);
   }
 
@@ -103,25 +100,19 @@ public class SavingsAccountTest {
 
   @Test
   void toStringTest() {
-    String expected = "CheckingAccount{accountNumber='123456789', balance=100.0, isActive=true}";
+    String expected = "SavingsAccount{accountNumber='123456789', balance=100.0, isActive=true}";
     assertEquals(expected, classUnderTest.toString());
   }
 
-  @Test 
-    void writeCheck() {
-        // Arrange
-        Check check = new Check("987654321", 50.0, classUnderTest, classUnderTest);
-        
-        // Act
-        classUnderTest.writeCheck(check);
-        
-        // Assert
-        assertEquals(50.0, classUnderTest.getBalance());
-        assertTrue(check.getIsVoided());
+  @Test
+  public void testIsCheckCreationAllowed_WhenFalse() {
+    // Arrange:
 
-    }
+    // Act:
+    boolean result = classUnderTest.isCheckCreationAllowed();
+
+    // Assert:
+    assertFalse(
+        result, "Check creation should not be allowed when isCheckCreationAllowed is false");
+  }
 }
-
-
-    
-

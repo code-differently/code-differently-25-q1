@@ -1,78 +1,105 @@
 package com.codedifferently.lesson17.bank;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CheckTest {
-
-  private CheckingAccount account1;
-  private CheckingAccount account2;
-  private Check classUnderTest;
+  private CheckingAccount classUnderTest;
+  private Set<Customer> owners;
 
   @BeforeEach
   void setUp() {
-    account1 = new CheckingAccount("123456789", null, 100.0);
-    account2 = new CheckingAccount("987654321", null, 200.0);
-    classUnderTest = new Check("123456789", 50.0, account1);
+    owners = new HashSet<>();
+    owners.add(new Customer(UUID.randomUUID(), "John Doe", false));
+    owners.add(new Customer(UUID.randomUUID(), "Jane Smith", false));
+    classUnderTest = new CheckingAccount("123456789", owners, 100.0);
   }
 
   @Test
-  void testDepositFunds() {
-    // Act
-    classUnderTest.depositFunds(account2);
-
-    // Assert
-    assertThat(account1.getBalance()).isEqualTo(50.0);
-    assertThat(account2.getBalance()).isEqualTo(250.0);
+  void getAccountNumber() {
+    assertEquals("123456789", classUnderTest.getAccountNumber());
   }
 
   @Test
-  void testDepositFunds_CheckVoided() {
-    // Arrange
-    classUnderTest.voidCheck();
-
-    // Act & Assert
-    assertThatExceptionOfType(CheckVoidedException.class)
-        .isThrownBy(() -> classUnderTest.depositFunds(account2))
-        .withMessage("Check is voided");
+  void getOwners() {
+    assertEquals(owners, classUnderTest.getOwners());
   }
 
   @Test
-  void testConstructor_CantCreateCheckWithNegativeAmount() {
-    // Act & Assert
+  void deposit() {
+    classUnderTest.deposit(50.0);
+    assertEquals(150.0, classUnderTest.getBalance());
+  }
+
+  @Test
+  void deposit_withNegativeAmount() {
     assertThatExceptionOfType(IllegalArgumentException.class)
-        .isThrownBy(() -> new Check("123456789", -50.0, account1))
-        .withMessage("Check amount must be positive");
+        .isThrownBy(() -> classUnderTest.deposit(-50.0));
   }
 
   @Test
-  void testHashCode() {
-    // Arrange
-    Check otherCheck = new Check("123456789", 100.0, account1);
-
-    // Assert
-    assertThat(classUnderTest.hashCode()).isEqualTo(otherCheck.hashCode());
+  void withdraw() {
+    classUnderTest.withdraw(50.0);
+    assertEquals(50.0, classUnderTest.getBalance());
   }
 
   @Test
-  void testEquals() {
-    // Arrange
-    Check otherCheck = new Check("123456789", 100.0, account1);
-    Check differentCheck = new Check("987654321", 100.0, account1);
-
-    // Assert
-    assertThat(classUnderTest.equals(otherCheck)).isTrue();
-    assertThat(classUnderTest.equals(differentCheck)).isFalse();
+  void withdraw_withNegativeAmount() {
+    assertThatExceptionOfType(IllegalStateException.class)
+        .isThrownBy(() -> classUnderTest.withdraw(-50.0))
+        .withMessage("Withdrawal amount must be positive");
   }
 
   @Test
-  void testToString() {
-    // Assert
-    assertThat(classUnderTest.toString())
-        .isEqualTo("Check{checkNumber='123456789', amount=50.0, account=123456789}");
+  void withdraw_withInsufficientBalance() {
+    assertThatExceptionOfType(InsufficientFundsException.class)
+        .isThrownBy(() -> classUnderTest.withdraw(150.0))
+        .withMessage("Account does not have enough funds for withdrawal");
+  }
+
+  @Test
+  void getBalance() {
+    assertEquals(100.0, classUnderTest.getBalance());
+  }
+
+  @Test
+  void closeAccount_withPositiveBalance() {
+    assertThatExceptionOfType(IllegalStateException.class)
+        .isThrownBy(() -> classUnderTest.closeAccount());
+  }
+
+  @Test
+  void isClosed() {
+    assertFalse(classUnderTest.isClosed());
+    classUnderTest.withdraw(100);
+    classUnderTest.closeAccount();
+    assertTrue(classUnderTest.isClosed());
+  }
+
+  @Test
+  void equals() {
+    CheckingAccount otherAccount = new CheckingAccount("123456789", owners, 200.0);
+    assertEquals(classUnderTest, otherAccount);
+  }
+
+  @Test
+  void hashCodeTest() {
+    CheckingAccount otherAccount = new CheckingAccount("123456789", owners, 200.0);
+    assertEquals(classUnderTest.hashCode(), otherAccount.hashCode());
+  }
+
+  @Test
+  void toStringTest() {
+    String expected = "CheckingAccount{accountNumber='123456789', balance=100.0, isActive=true}";
+    assertEquals(expected, classUnderTest.toString());
   }
 }

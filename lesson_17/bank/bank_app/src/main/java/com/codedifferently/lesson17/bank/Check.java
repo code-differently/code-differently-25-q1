@@ -2,34 +2,27 @@ package com.codedifferently.lesson17.bank;
 
 import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 
-/** Represents a check. */
 public class Check {
 
   private final String checkNumber;
   private final double amount;
   private final CheckingAccount account;
   private boolean isVoided = false;
-  private final SavingsAccount savings;
 
   /**
    * Creates a new check.
    *
    * @param checkNumber The check number.
    * @param amount The amount of the check.
-   * @param account The account the check is drawn on. Because account is represents checking it could also represent savings.so if 
-   * we call saving account saving we should be able to throw the exception on the check.
+   * @param account The account the check is drawn on.
    */
-  public Check(String checkNumber, double amount, CheckingAccount account, SavingsAccount savings) {
-    if (checkNumber == null || checkNumber.isEmpty()) {
-      throw new IllegalArgumentException("Check number cannot be null or empty");
-    }
-    if (amount < 0 ) {
+  public Check(String checkNumber, double amount, CheckingAccount account) {
+    if (amount < 0) {
       throw new IllegalArgumentException("Check amount must be positive");
     }
     this.checkNumber = checkNumber;
     this.amount = amount;
     this.account = account;
-    this.savings = null;
   }
 
   /**
@@ -50,8 +43,9 @@ public class Check {
    * Deposits the check into an account.
    *
    * @param toAccount The account to deposit the check into.
+   * @throws Exception
    */
-  public void depositFunds(CheckingAccount toAccount) {
+  public void depositFunds(BankAccount toAccount) throws Exception {
     if (isVoided) {
       throw new CheckVoidedException("Check is voided");
     }

@@ -7,9 +7,14 @@ import java.util.UUID;
 /** Represents a customer of the bank. */
 public class Customer {
 
+  static boolean isBusinessStatic() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
   private final UUID id;
   private final String name;
-  private final Set<CheckingAccount> accounts = new HashSet<>();
+  private final Set<BankAccount> accounts = new HashSet<>();
+  private final boolean isBusiness;
 
   /**
    * Creates a new customer.
@@ -17,9 +22,10 @@ public class Customer {
    * @param id The ID of the customer.
    * @param name The name of the customer.
    */
-  public Customer(UUID id, String name) {
+  public Customer(UUID id, String name, boolean isBusiness) {
     this.id = id;
     this.name = name;
+    this.isBusiness = isBusiness;
   }
 
   /**
@@ -41,11 +47,20 @@ public class Customer {
   }
 
   /**
-   * Adds a checking account to the customer.
+   * Adds a checking account to the customer. Checks if this is a business
    *
-   * @param account The account to add.
+   * @return True if this is a business, otherwise false.
    */
-  public void addAccount(CheckingAccount account) {
+  public boolean isBusiness() {
+    return isBusiness;
+  }
+
+  /**
+   * Adds an account to the customer.
+   *
+   * @param checkingAccount2 The account to add.
+   */
+  public void addAccount(BankAccount account) {
     accounts.add(account);
   }
 
@@ -54,7 +69,7 @@ public class Customer {
    *
    * @return The unique set of accounts owned by the customer.
    */
-  public Set<CheckingAccount> getAccounts() {
+  public Set<BankAccount> getAccounts() {
     return accounts;
   }
 
@@ -63,13 +78,13 @@ public class Customer {
     return id.hashCode();
   }
 
-  @Override
+/*@Override
   public boolean equals(Object obj) {
     if (obj instanceof Customer other) {
       return id.equals(other.id);
     }
     return false;
-  }
+  } */
 
   @Override
   public String toString() {
