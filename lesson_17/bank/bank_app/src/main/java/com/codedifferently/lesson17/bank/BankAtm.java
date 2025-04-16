@@ -11,6 +11,7 @@ public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private Map<UUID, CheckingAccount> accounts;
 
   /**
    * Adds a checking account to the bank.
@@ -48,6 +49,7 @@ public class BankAtm {
   public void depositFunds(String accountNumber, double amount) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.deposit(amount);
+    AuditLog.getInstance().log("DEPOSIT", account.getAccountNumber(), amount);
   }
 
   /**
@@ -59,6 +61,13 @@ public class BankAtm {
   public void depositFunds(String accountNumber, Check check) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     check.depositFunds(account);
+    AuditLog.getInstance().log("CHECK DEPOSIT", account.getAccountNumber(), check.getAmount());
+  }
+
+  public void depositFunds(String accountNumber, MoneyOrder mo) {
+    CheckingAccount toAccount = (CheckingAccount) accounts.get(accountNumber); // ✅ must not be null
+    mo.depositFunds(toAccount);
+    AuditLog.getInstance().log("MONEY ORDER DEPOSIT", toAccount.getAccountNumber(), mo.getAmount());
   }
 
   /**
@@ -70,6 +79,7 @@ public class BankAtm {
   public void withdrawFunds(String accountNumber, double amount) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
+    AuditLog.getInstance().log("WITHDRAWAL", account.getAccountNumber(), amount);
   }
 
   /**
@@ -84,5 +94,10 @@ public class BankAtm {
       throw new AccountNotFoundException("Account not found");
     }
     return account;
+  }
+
+  public BankAtm getBank() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getBank'");
   }
 }
