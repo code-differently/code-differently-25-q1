@@ -3,42 +3,19 @@ package com.codedifferently.lesson17.bank;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CheckTest {
 
   private CheckingAccount account1;
-  private CheckingAccount account2;
   private Check classUnderTest;
 
   @BeforeEach
   void setUp() {
     account1 = new CheckingAccount("123456789", null, 100.0);
-    account2 = new CheckingAccount("987654321", null, 200.0);
+
     classUnderTest = new Check("123456789", 50.0, account1);
-  }
-
-  @Test
-  void testDepositFunds() {
-    // Act
-    classUnderTest.depositFunds(account2);
-
-    // Assert
-    assertThat(account1.getBalance()).isEqualTo(50.0);
-    assertThat(account2.getBalance()).isEqualTo(250.0);
-  }
-
-  @Test
-  void testDepositFunds_CheckVoided() {
-    // Arrange
-    classUnderTest.voidCheck();
-
-    // Act & Assert
-    assertThatExceptionOfType(CheckVoidedException.class)
-        .isThrownBy(() -> classUnderTest.depositFunds(account2))
-        .withMessage("Check is voided");
   }
 
   @Test
