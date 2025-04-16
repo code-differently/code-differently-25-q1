@@ -48,7 +48,8 @@ class CheckingAccountTest {
   }
 
   @Test
-  void withdraw() {
+  void withdraw() { // Assuming Check has a constructor with id and amount
+    // Assuming Check has a constructor with id and amount
     classUnderTest.withdraw(50.0);
     assertEquals(50.0, classUnderTest.getBalance());
   }

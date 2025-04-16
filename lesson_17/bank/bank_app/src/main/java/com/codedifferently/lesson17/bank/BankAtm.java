@@ -11,6 +11,7 @@ public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
   private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private final AuditLog auditLog = new AuditLog();
 
   /**
    * Adds a checking account to the bank.
@@ -25,6 +26,7 @@ public class BankAtm {
             owner -> {
               customerById.put(owner.getId(), owner);
             });
+    auditLog.log("Added account " + account.getAccountNumber() + " to the bank");
   }
 
   /**
@@ -34,6 +36,7 @@ public class BankAtm {
    * @return The unique set of accounts owned by the customer.
    */
   public Set<CheckingAccount> findAccountsByCustomerId(UUID customerId) {
+    auditLog.log("Finding accounts for customer " + customerId);
     return customerById.containsKey(customerId)
         ? customerById.get(customerId).getAccounts()
         : Set.of();
@@ -48,6 +51,7 @@ public class BankAtm {
   public void depositFunds(String accountNumber, double amount) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.deposit(amount);
+    auditLog.log("Deposited " + amount + " into account " + accountNumber);
   }
 
   /**
@@ -58,7 +62,9 @@ public class BankAtm {
    */
   public void depositFunds(String accountNumber, Check check) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
+
     check.depositFunds(account);
+    auditLog.log("Deposited check into account " + accountNumber);
   }
 
   /**
@@ -67,9 +73,11 @@ public class BankAtm {
    * @param accountNumber
    * @param amount
    */
-  public void withdrawFunds(String accountNumber, double amount) {
+  public void withdrawFunds(String accountNumber, double amount, Check check) {
     CheckingAccount account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
+
+    auditLog.log("Withdrew " + amount + " from account " + accountNumber);
   }
 
   /**
@@ -83,6 +91,7 @@ public class BankAtm {
     if (account == null || account.isClosed()) {
       throw new AccountNotFoundException("Account not found");
     }
+    auditLog.log("Retrieved account " + accountNumber);
     return account;
   }
 }
