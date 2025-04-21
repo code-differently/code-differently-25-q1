@@ -1,7 +1,8 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
+
+import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 
 /** Represents a checking account. */
 public class CheckingAccount {
