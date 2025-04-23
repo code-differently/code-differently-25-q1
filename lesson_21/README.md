@@ -9,4 +9,7 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Figure this out
+- [ ] Complete [Project OOP Team Member Surveys][survey-link] (for each team member).
+- [ ] Do pre-work for [lesson 22](/lesson_22/).
+
+[survey-link]: https://forms.gle/VtPkEUYT1fh6B82D8
