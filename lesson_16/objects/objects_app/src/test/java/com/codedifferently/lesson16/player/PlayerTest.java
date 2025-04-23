@@ -1,10 +1,9 @@
-package com.codedifferently.lesson16.playertest;
+package com.codedifferently.lesson16.player;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codedifferently.lesson16.playerleveling.Player;
-import com.codedifferently.lesson16.playerleveling.Player.Type;
+import com.codedifferently.lesson16.player.Player.Type;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 

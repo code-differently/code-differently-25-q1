@@ -1,6 +1,7 @@
-package com.codedifferently.lesson16.playerleveling;
+package com.codedifferently.lesson16.player;
 
 public class Player {
+
   private String name;
   private Type type;
   private int level;
@@ -31,7 +32,6 @@ public class Player {
   }
 
   // Getters and Setters
-
   public String getName() {
     return name;
   }
