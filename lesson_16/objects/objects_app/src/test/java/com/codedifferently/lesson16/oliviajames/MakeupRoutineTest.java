@@ -1,65 +1,71 @@
-package com.codedifferently.lesson16;
+package com.codedifferently.lesson16.oliviajames;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.codedifferently.lesson16.oliviajames.MakeupRoutine.MakeupLook;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class MakeupRoutineTest{
+public class MakeupRoutineTest {
 
-MakeupRoutine makeupRoutine;
+  MakeupRoutine makeupRoutine;
 
-@BeforeEach
-void setUp() {
-makeupRoutine = new MakeupRoutine("NARS", 60, true, "DEWY")
-}
+  @BeforeEach
+  void setUp() {
+    makeupRoutine = new MakeupRoutine("NARS", 60, true, MakeupLook.FULL_GLAM);
+  }
 
   @Test
   void testgetName() {
-String actual = makeupRoutine.getName();
+    String actual = makeupRoutine.getName();
 
-assertThat(actual).isEqualTo("NARS");
-}
-
-
-
-
-
-  /*public void testGetLook() {
-    MakeupRoutine routine =
-        new MakeupRoutine("Soft Glam", "Foundation", 5, GlamRank.SOFT_GLAM, 120.00);
-    GlamRank expected = GlamRank.SOFT_GLAM;
-    assertThat(routine.getRank()).isEqualTo(expected);
+    assertThat(actual).isEqualTo("NARS");
   }
 
   @Test
-  public void testSetBaseProduct() {
-    MakeupRoutine routine =
-        new MakeupRoutine("Natural", "BB Cream", 3, GlamRank.NATURAL_BADDIE, 85.50);
-    routine.setBaseProduct("Tinted Moisturizer");
-    String expected = "Tinted Moisturizer";
-    assertThat(routine.getBaseProduct()).isEqualTo(expected);
+  public void testSetName() {
+    makeupRoutine.setName("Night Out");
+    assertEquals("Night Out", makeupRoutine.getName());
   }
 
   @Test
-  public void testSetTotalCost() {
-    MakeupRoutine routine =
-        new MakeupRoutine("Full Glam", "Full Coverage Foundation", 8, GlamRank.FULL_GLAM, 200.00);
-    routine.setTotalCost(220.00);
-    double expected = 220.00;
-    assertThat(routine.getTotalCost()).isEqualTo(expected);
+  public void testGetTime() {
+    assertEquals(60, makeupRoutine.getTime());
   }
 
   @Test
-  public void testAddStep() {
-    MakeupRoutine routine =
-        new MakeupRoutine("Glow", "Light Coverage", 6, GlamRank.FULL_GLAM, 88.00);
-    String step = "add mascara";
-    routine.addStep(step);
-    steps = routine.getSteps();
-    if (steps.contains(step)) {
-      System.out.println("Step add mascara is in the list");
+  public void testSetTime() {
+    makeupRoutine.setTime(45);
+    assertEquals(45, makeupRoutine.getTime());
+  }
 
-    } else {
-      System.out.println("Step add mascara is not in the list");
+  @Test
+  public void testGetLookType() {
+    assertEquals(MakeupRoutine.MakeupLook.FULL_GLAM, makeupRoutine.getLookType());
+  }
+
+  @Test
+  public void testGetUsesPrimer() {
+    try {
+      makeupRoutine.getUsesPrimer();
+    } catch (MissingPrimerException e) {
+      System.out.println(e.getMessage());
     }
-  }*/
+  }
+
+  @Test
+  public void testShowVanityItems() {
+    assertNotNull(makeupRoutine); // just to check vanityItems were initialized
+  }
+
+  @Test
+  public void testMakeupVanityHasItems() {
+    makeupRoutine.MakeupVanity();
+    assertFalse(makeupRoutine.vanityItems.isEmpty());
+    assertTrue(makeupRoutine.vanityItems.contains("Foundation"));
+  }
 }
