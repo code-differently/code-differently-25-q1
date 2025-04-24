@@ -4,7 +4,7 @@ import com.codedifferently.lesson17.bank.exceptions.InsufficientFundsException;
 import java.util.Set;
 
 /** Represents a checking account. */
-public class CheckingAccount {
+public class CheckingAccount extends BankAccount{
 
   private final Set<Customer> owners;
   private final String accountNumber;
