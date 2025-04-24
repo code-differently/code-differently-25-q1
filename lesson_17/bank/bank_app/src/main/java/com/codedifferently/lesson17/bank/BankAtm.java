@@ -6,24 +6,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-public class AuditLog {
-    private static List<String> logEntries = new ArrayList<>();
-
-    public static void record(String message) {
-        logEntries.add(message);
-        System.out.println("LOG: " + message);
-    }
-
-    public static List<String> getLog() {
-        return logEntries;
-    }
-}
-
 /** Represents a bank ATM. */
 public class BankAtm {
 
   private final Map<UUID, Customer> customerById = new HashMap<>();
-  private final Map<String, CheckingAccount> accountByNumber = new HashMap<>();
+  private final Map<String, Account> accountByNumber = new HashMap<>();
 
   /**
    * Adds a checking account to the bank.
@@ -46,7 +33,7 @@ public class BankAtm {
    * @param customerId The ID of the customer.
    * @return The unique set of accounts owned by the customer.
    */
-  public Set<CheckingAccount> findAccountsByCustomerId(UUID customerId) {
+  public Set<Account> findAccountsByCustomerId(UUID customerId) {
     return customerById.containsKey(customerId)
         ? customerById.get(customerId).getAccounts()
         : Set.of();
@@ -59,7 +46,7 @@ public class BankAtm {
    * @param amount The amount to deposit.
    */
   public void depositFunds(String accountNumber, double amount) {
-    CheckingAccount account = getAccountOrThrow(accountNumber);
+    Account account = getAccountOrThrow(accountNumber);
     account.deposit(amount);
   }
 
@@ -70,18 +57,22 @@ public class BankAtm {
    * @param check The check to deposit.
    */
   public void depositFunds(String accountNumber, Check check) {
-    CheckingAccount account = getAccountOrThrow(accountNumber);
-    check.depositFunds(account);
+    Account account = getAccountOrThrow(accountNumber);
+    if (account instanceof Account) {
+      check.depositFunds((Account) account);
+    } else {
+      throw new UnsupportedOperationException("This account does not support check deposits.");
+    }
   }
 
   /**
    * Withdraws funds from an account.
    *
-   * @param accountNumber
-   * @param amount
+   * @param accountNumber The account number.
+   * @param amount The amount to withdraw.
    */
   public void withdrawFunds(String accountNumber, double amount) {
-    CheckingAccount account = getAccountOrThrow(accountNumber);
+    Account account = getAccountOrThrow(accountNumber);
     account.withdraw(amount);
   }
 
@@ -91,12 +82,11 @@ public class BankAtm {
    * @param accountNumber The account number.
    * @return The account.
    */
-  private CheckingAccount getAccountOrThrow(String accountNumber) {
-    CheckingAccount account = accountByNumber.get(accountNumber);
+  private Account getAccountOrThrow(String accountNumber) {
+    Account account = accountByNumber.get(accountNumber);
     if (account == null || account.isClosed()) {
       throw new AccountNotFoundException("Account not found");
     }
     return account;
   }
 }
- 
