@@ -11,6 +11,8 @@
 * {
     box-sizing: border-box;
     font-family: var(--font);
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -112,7 +114,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    margin-top: 142px;
+    margin: 0px 0px 143px;
 }
 
 .hero-overlay {
@@ -139,19 +141,45 @@ body {
 
 em {
     font-style: normal;
-    font-weight:lighter;
     font-family: montserrat;
 }
 
 .highlight {
     position: relative;
-    text-transform: inherit;
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
     line-height: 1em;
-    text-decoration-skip-ink: none;
+    overflow: hidden;
+    /*text-decoration-skip-ink: none;
     text-decoration: underline;
     text-decoration-color: var(--cd-color);
     text-decoration-thickness: 10px;
-    text-underline-offset: -5px;
+    text-underline-offset: -5px;*/
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cd-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: underline-load 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    z-index: -1;
+}
+
+h2 .highlight::after {
+    height: 25px;
+    bottom: 8px;
+}
+
+.programs-section > h2 > .highlight::after {
+    height: 15px;
+    bottom: 5px;
 }
 
 .hero-text {
@@ -170,54 +198,145 @@ em {
     font-weight: 600;
 }
 /*Program section*/
-.program-section {
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    background-color: var(--background2);
-    min-height: 100vh;
+
+.programs-section {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+    box-shadow: 12px 12px 2px 0.5px rgba(0, 0, 0, 0.101);
+    z-index: 2;
 }
+section > h2 {
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    line-height: 31.5px !important;    
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
 
-.program-section h2 {
-    font-size: 42px !important;
-    line-height: 31.5px !important;
-    font-weight: 900;
-    position: relative;
-    color: var(--text1);
-    margin-bottom: 40px;
 }
-
-
 
 .programs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-rows: repeat(3, auto);
+    gap: 60px;
     list-style: none;
+    width: 100%;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.programs h3 {
+    font-size: 17.6px !important;
+    line-height: 31.5px !important;
+}
+
+.programs p {
+    text-align: left;
+    font-size: 16px !important;
+    padding-bottom: 50px;
+
+}
+
+
+
+/*Foot */
+.footer {
+    border-top: 1px solid brown;
+    display: flex;
+    justify-content: center;
     padding: 40px;
-    width: 100vwi;
-    max-width: 1000px;
-}
-
-.program {
-    background-color: var(--background);
-
+    z-index: 0;
 }
 
 
-
+/* Media Queries for Responsiveness */
 @media (max-width: 980px) {
-    .hero-title {
-        font-size: 2rem;
+
+    .header {
+        align-items: flex-start;
     }
+
+    .header-top-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-top-menu li a {
+        font-size: 18px;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .programs {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-logo img {
+        max-width: 180px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
     .hero-text {
         font-size: 1rem;
     }
 
+    .programs h3 {
+        font-size: 16px !important;
+    }
+
+    .programs p {
+        font-size: 14px !important;
+    }
+
+    .hero-section {
+        background-attachment: scroll;
+        height: auto;
+    }
+
     .programs {
-        grid-row-start: auto;
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-title {
+        font-size: 1.2rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .sign-up-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@keyframes underline-load {
+    to {
+        transform: scaleX(1);
     }
 }
