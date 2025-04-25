@@ -70,8 +70,7 @@ a {
     color: rgb(33, 44, 165);
     font-weight: 600;
     font-size: 25px;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;   
 }
 
 .header-top-menu li a:hover {
@@ -114,6 +113,10 @@ a {
     background: rgba(0, 0, 0, 0.5);
 }
 
+.hero-title {
+        font-size: 28px;
+    }
+
 .hero-content {
     position: relative;
     text-align: left;
@@ -138,5 +141,76 @@ a {
     background: rgb(33, 44, 165);
 }
 
+.programs-section {
+    padding: 75px 50px;
+    text-align: left;
+    background-color: #ffffff;
+}
 
+.programs-section h2{
+    font-weight: 1000;
+    margin-bottom: 1px;
+    font-style: italic; 
+}
 
+.programs-section .highlight {
+    font-weight: 700;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.programs {
+    list-style-type: none; 
+    padding-left: 0; 
+    list-style-type: none; 
+    position: relative; 
+    padding-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.program h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.program p {
+    font-size: 16px;
+    line-height: 2;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.footer {
+    background-color: white;
+    color:  rgb(33, 44, 165);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .header-top-menu {
+        margin-top: 20px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .header-top-menu li {
+        margin: 10px 0;
+    }
+  }
