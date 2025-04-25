@@ -129,7 +129,7 @@ body {
 .hero-content {
     max-width: 65%;   
     z-index: 2;
-    
+    font-size: 1.2rem;
 }
 
 .hero-title {
@@ -137,6 +137,11 @@ body {
     font-size: 54px;
     font-weight: 800;
     max-width: 100%;
+}
+
+.hero-text {
+    animation: slideInFromLeft 3s ease forwards;
+
 }
 
 em {
@@ -151,11 +156,7 @@ em {
     font-weight: inherit;
     line-height: 1em;
     overflow: hidden;
-    /*text-decoration-skip-ink: none;
-    text-decoration: underline;
-    text-decoration-color: var(--cd-color);
-    text-decoration-thickness: 10px;
-    text-underline-offset: -5px;*/
+
 }
 
 .highlight::after {
@@ -338,5 +339,16 @@ section > h2 {
 @keyframes underline-load {
     to {
         transform: scaleX(1);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
