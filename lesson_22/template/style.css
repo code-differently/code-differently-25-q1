@@ -78,7 +78,7 @@ ul {
     color: white;
     position: relative;
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("hero.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -97,6 +97,7 @@ ul {
     
 }
 
+/* This targets "together we can move the needle" */
 .hero-title {
     font-family: 'montserrat', sans-serif;
     font-size: 45px;
@@ -106,12 +107,18 @@ ul {
     font-weight: 800;
 }
 
+/* This targets "provides hands on training" */
 .hero-text {
     background-color: #243e90;
     padding: 30px;
-    padding-left: 150px;
-    margin-right: 150px;
+    padding-left: 140px;
+    box-shadow: 45px 0 0 #243e90;
+    margin-right: 145px;
     font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'poppins', sans-serif;
     
 }
 
@@ -138,33 +145,46 @@ ul {
 .programs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 35px;
+    -webkit-font-smoothing: antialiased;
+    color: #676767;
+    font-size: 15px;
+    
 }
 
 .programs-section {
-    padding: 100px;
+    padding: 200px;
+    padding-top: 130px;
 }
 
 /* This targets our programs */
 .programs-section h2 .highlight {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat';
     font-style: normal;
     text-decoration: underline;
     text-decoration-color: #f47d26;
     text-decoration-thickness: 10px;
     text-underline-offset: -4px;
     text-decoration-skip-ink: none;
+    
 }
 
 .programs-section h2 {
-    font-family: 'montserrat', sans-serif;
+    font-family: 'montserrat';
     font-weight: 900;
     padding-bottom: 45px;
     display: inline-block;
     font-size: 30px;
-    color: #444444
+    color: #444;
+    font-size: 28px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0;
+    font-style: normal;
 }
+
+
 
 .programs li h3 {
     margin-bottom: 20px;
+    
 }
