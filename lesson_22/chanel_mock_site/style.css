@@ -89,6 +89,7 @@ a {
 }
 
 .header-cta .sign-up-button:hover {
+  /* Hover tool to highlight the button ~ free codecamp*/ 
     background-color: rgb(33, 44, 165);
 }
 
@@ -114,7 +115,7 @@ a {
 }
 
 .hero-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
 .hero-content {
@@ -158,18 +159,14 @@ a {
 }
 
 .programs {
+  /* This seperate the paragraph into columns Ai assisted*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-}
-
-.programs {
-    list-style-type: none; 
     padding-left: 0; 
-    list-style-type: none; 
+    background-color: #fff;
     position: relative; 
     padding-bottom: 40px;
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
    
@@ -192,25 +189,6 @@ a {
     color:  rgb(33, 44, 165);
     text-align: center;
     padding: 20px;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.5px;
 }
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .header-top-menu {
-        margin-top: 20px;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center; 
-        gap: 10px; 
-    }
-
-    .header-top-menu li {
-        margin: 10px 0;
-    }
-  }
