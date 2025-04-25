@@ -98,15 +98,56 @@ ul {
 }
 
 .hero-title {
-    font-family: 'poppins', sans-serif;
-    font-size: 3em;
+    font-family: 'montserrat', sans-serif;
+    font-size: 45px;
     line-height: 1.2em;
     margin-bottom: 20px;
-
+    margin-top: -200px;
+    font-weight: 800;
 }
 
-.highlight {
-    font-family: 'poppins', sans-serif;
+.hero-text {
+    background-color: #243e90;
+    padding: 30px;
+    padding-left: 150px;
+    margin-right: 150px;
+    font-size: 17px;
+    
+}
+
+/* This targets diversity in tech */
+.hero-section h2 .highlight {
+    font-family: 'montserrat', sans-serif;
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: #f47d26;
+    text-decoration-thickness: 10px;
+    text-underline-offset: -4px;
+    text-decoration-skip-ink: none;
+    font-weight: 800;
+}
+
+.hero-text span {
+    color: #f47d26;
+    font-weight: bold;
+}
+
+/* It's time for the program classes. */
+
+/* This creates a grid layout for the program classes */
+.programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.programs-section {
+    padding: 100px;
+}
+
+/* This targets our programs */
+.programs-section h2 .highlight {
+    font-family: 'montserrat', sans-serif;
     font-style: normal;
     text-decoration: underline;
     text-decoration-color: #f47d26;
@@ -115,7 +156,15 @@ ul {
     text-decoration-skip-ink: none;
 }
 
-.hero-text span {
-    color: #f47d26;
-    font-weight: bold;
+.programs-section h2 {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 900;
+    padding-bottom: 45px;
+    display: inline-block;
+    font-size: 30px;
+    color: #444444
+}
+
+.programs li h3 {
+    margin-bottom: 20px;
 }
