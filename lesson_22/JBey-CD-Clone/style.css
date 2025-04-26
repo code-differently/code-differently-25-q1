@@ -211,27 +211,61 @@ ul {
     color: #444;
 }
 
-/* Media queries for responsiveness */
+.footer {
+  border-top: 2px solid #9a41029d;
+  text-align: center;
+  background: #fff;
+  padding: 5.5%;
+  font-size: 13px;
+}
 
-@media (max-width: 768px) {
+/* Media queries for responsiveness */
+@media screen and (min-width: 357px) and (max-width: 999px)  {
     .header-top-menu {
-        display: none;
+        
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .header-cta .sign-up-button {
-        padding: 10px 20px;
+        
+        padding: 8px 15px;
+    }
+
+    .header-logo img {
+        height: 50px;
     }
 
     .hero-section {
-        padding: 80px 20px;
+        padding: 80px 50px;
         text-align: center;
-        
+        background-position: 90% 100%;
+        height: 55vh;
     }
 
     .hero-content {
         padding-right: 0;
     }
 
+    .hero-title {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+
+    .hero-text {
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        margin: 0;
+        padding: 30px 45px;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+    }
+    
     .programs {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -240,46 +274,8 @@ ul {
     .programs-section {
         padding: 100px 20px;
     }
-}
-@media (max-width: 480px) {
-    .header-logo img {
-        height: 50px;
-    }
-
-    .background-image {
-        background-size: 200px;
-        background-attachment: fixed;
-        background-position: center;
-    }
-
-    .header-cta .sign-up-button {
-        padding: 8px 15px;
-    }
-
-    .hero-title {
-        font-size: 30px;
-    }
-
-   .hero-text {
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #243e90;
-    color: white;
-    margin: 0;
-    padding: 20px;
-
-    /* Make it full width */
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-}
-
 
     .programs-section h2 {
         font-size: 24px;
     }
 }
-/* Footer styles */
-
