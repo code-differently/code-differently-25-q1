@@ -1,4 +1,4 @@
-package com.codedifferently.lesson16.NintendoSwitch;
+package com.codedifferently.lesson16.nintendoswitch;
 
 public class InvalidBatteryException extends Exception {
   public InvalidBatteryException(String message) {

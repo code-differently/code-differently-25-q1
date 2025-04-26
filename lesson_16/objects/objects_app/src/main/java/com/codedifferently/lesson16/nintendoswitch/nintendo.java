@@ -1,8 +1,8 @@
-package com.codedifferently.lesson16.NintendoSwitch;
+package com.codedifferently.lesson16.nintendoswitch;
 
 import java.util.ArrayList;
 
-public class NintendoSwitch {
+public class nintendo {
 
   public enum Model {
     STANDARD,
@@ -18,7 +18,7 @@ public class NintendoSwitch {
   private ArrayList<String> installedGames;
 
   // This will be the constructor for the NintendoSwitch class.
-  public NintendoSwitch(
+  public nintendo(
       String serialNumber,
       Model model,
       boolean isDocked,
@@ -37,32 +37,31 @@ public class NintendoSwitch {
     }
   }
 
-  // Function 1: This will check the battery status. This also has the exception handling.
+  /** Function 1: This will check the battery status. This also has the exception handling. */
   public void checkBatteryStatus() throws InvalidBatteryException {
-    // Conditional expression checking battery status
+    /** Conditional expression checking battery status */
     if (batteryLife < 0) {
       throw new InvalidBatteryException("Battery life cannot be negative.");
     }
     System.out.println("Battery life: " + batteryLife + " hours.");
   }
 
-  // Function 2: Adds a game to the installed games collection
+  /** Function 2: Adds a game to the installed games collection */
   public void installGame(String game) {
     installedGames.add(game);
     System.out.println(game + " has been added to your Nintendo Switch.");
   }
 
-  // Function 3: Displays all installed games using a loop
+  /** Function 3: Displays all installed games using a loop */
   public void displayInstalledGames() {
     System.out.println("Installed games on the Nintendo Switch:");
-    // Using a normal for loop to iterate over installed games
+    /** Using a normal for loop to iterate over installed games */
     for (int i = 0; i < installedGames.size(); i++) {
       System.out.println("- " + installedGames.get(i));
     }
   }
 
-  // Getter methods
-
+  /** Getter methods */
   public String getSerialNumber() {
     return serialNumber;
   }

@@ -1,26 +1,25 @@
-package com.codedifferently.lesson16.Switch;
+package com.codedifferently.lesson16.nintendoswitch;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.codedifferently.lesson16.NintendoSwitch.NintendoSwitch;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class NintendoSwitchTest {
+public class nintendoswitchtest {
 
-  private NintendoSwitch ns;
+  private nintendo ns;
   private ArrayList<String> games;
 
   @BeforeEach
   void setUp() {
     games = new ArrayList<>();
-    ns = new NintendoSwitch("SN001", NintendoSwitch.Model.STANDARD, true, 5.0, games);
+    ns = new nintendo("SN001", nintendo.Model.STANDARD, true, 5.0, games);
   }
 
   @Test
@@ -39,11 +38,11 @@ public class NintendoSwitchTest {
 
   @Test
   void testCheckBatteryStatusInvalid() {
-    NintendoSwitch faultySwitch =
-        new NintendoSwitch("SN002", NintendoSwitch.Model.LITE, false, -2.0, new ArrayList<>());
+    nintendo faultySwitch =
+        new nintendo("SN002", nintendo.Model.LITE, false, -2.0, new ArrayList<>());
 
     assertThrows(
-        NintendoSwitch.InvalidBatteryException.class,
+        nintendo.InvalidBatteryException.class,
         faultySwitch::checkBatteryStatus,
         "Negative battery should throw InvalidBatteryException");
   }
@@ -63,7 +62,7 @@ public class NintendoSwitchTest {
     assertTrue(printedOutput.contains("Mario Kart"));
     assertTrue(printedOutput.contains("Smash Bros"));
 
-    System.setOut(System.out); // Reset output
+    System.setOut(System.out);
   }
 
   @Test
