@@ -167,7 +167,7 @@ Regular course work and homework assignments will be provided throughout lessons
                 <ul>
                     <li><a href="../lesson_21"> Lesson 21 - Computer Languages</a></li>
                     <li><a href="../lesson_22">Lesson 22 - Building Applications</a></li>
-                    <li><a href="/lesson_23">Lesson 23 - Intro to HTML, CSS, and JS</a></li>
+                    <li><a href="../lesson_23">Lesson 23 - Intro to HTML, CSS, and JS</a></li>
                 </ul>
             </td>
         </tr>
@@ -176,8 +176,8 @@ Regular course work and homework assignments will be provided throughout lessons
             <td>
                 <b>Frontend Programming, Week 2</b>
                 <ul>
-                    <li><a href="/lesson_24">Lesson 24 - JavaScript Deep Dive</a></li>
-                    <li><a href="/lesson_25">Lesson 25 - Intro to React</a></li>
+                    <li><a href="../lesson_24">Lesson 24 - JavaScript Deep Dive</a></li>
+                    <li><a href="../lesson_25">Lesson 25 - Intro to React</a></li>
                     <li><a href="../lesson_26">Lesson 26 - Web APIs using REST</a></li>
                 </ul>
             </td>
