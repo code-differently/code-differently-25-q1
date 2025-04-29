@@ -8,7 +8,7 @@ const app = express()
 app.set("view engine", "ejs")
 
 app.use(morgan("dev")) //Sets morgan middleware
-//app.use(express.static(path.join(__dirname,"public"))) //this will get the files from public
+app.use(express.static(path.join(__dirname,"public"))) //this will get the files from public
 
 const PORT = process.env.PORT || 3000
 
@@ -22,8 +22,12 @@ app.get('/', (req, res) => {
     res.render("contact")
 })
 
-app.get('/contacts', (req, res) => {
-    res.send("You have entered the contact page ")
+const contactRouter = require('./routes/contacts') //calls for my router
+
+app.use("/contacts", contactRouter)
+
+app.post("/", (req, res) => {
+    res.render("public")
 })
 
 app.listen(PORT, () => {

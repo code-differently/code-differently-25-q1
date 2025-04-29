@@ -62,7 +62,6 @@ body {
 .header-top-menu li a::after {
   content: '';
   position: absolute;
-  bottom: -5;
   left: 0;
   gap: 20px;
   width: 100%;
