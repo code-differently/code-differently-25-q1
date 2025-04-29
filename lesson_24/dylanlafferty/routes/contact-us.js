@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.send("You have entered the contact page ")
+    res.render("contact.ejs")
 })
 
 router.get('/new', (req, res) => {

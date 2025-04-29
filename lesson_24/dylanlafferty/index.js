@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
     res.render("contact")
 })
 
-const contactRouter = require('./routes/contacts') //calls for my router
+const contactRouter = require('./routes/contact-us') //calls for my router
 
-app.use("/contacts", contactRouter)
+app.use("/contact-us", contactRouter)
 
 app.post("/", (req, res) => {
     res.render("public")
