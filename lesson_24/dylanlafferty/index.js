@@ -1,11 +1,31 @@
 const express = require('express')
+const morgan = require("morgan")
+const path = require("path")
+var debug = require('debug')('dylanlafferty:server')
+
 const app = express()
-const port = 3000
+
+app.set("view engine", "ejs")
+
+app.use(morgan("dev")) //Sets morgan middleware
+//app.use(express.static(path.join(__dirname,"public"))) //this will get the files from public
+
+const PORT = process.env.PORT || 3000
+
+//we can get put post delete or patch with app
+//Route take in a request and a response req res
+//send data res.send("Hi")
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    console.log("here")
+    //res.status(500).send("Error : 505")
+    res.render("contact")
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.get('/contacts', (req, res) => {
+    res.send("You have entered the contact page ")
+})
+
+app.listen(PORT, () => {
+    debug(`Example app listening on port ${PORT}`)
 })
