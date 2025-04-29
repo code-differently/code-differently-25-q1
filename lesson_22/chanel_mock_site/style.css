@@ -1,6 +1,6 @@
 .header-logo img {
-    width: 220px;
-    height: 70px;
+    width: 151px;
+    height: 50px;
     position: relative;
     top: 0;
     left: 0;
@@ -30,7 +30,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color:  rgb(33, 44, 165);
+    color:  #243e90;
     background-color: #fff;
 }
 
@@ -49,10 +49,6 @@ a {
     align-items: center;
     padding: 20px 40px;
     background-color: #ffffff;
-}
-
-.header-logo img {
-    height: 55px;
 }
 
 .header-top-menu {
@@ -101,7 +97,7 @@ a {
     background-position: center;
     height: 400px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
@@ -141,54 +137,20 @@ a {
     line-height: 1.8;
     background: rgb(33, 44, 165);
 }
-
-.programs-section {
-    padding: 75px 50px;
-    text-align: left;
-    background-color: #ffffff;
-}
-
-.programs-section h2{
-    font-weight: 1000;
-    margin-bottom: 1px;
-    font-style: italic; 
-}
-
-.programs-section .highlight {
-    font-weight: 700;
-}
-
-.programs {
-  /* This seperate the paragraph into columns Ai assisted*/
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-left: 0; 
-    background-color: #fff;
-    position: relative; 
-    padding-bottom: 40px;
-    padding: 20px;
-    border-radius: 8px;
-   
-}
-
-.program h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-.program p {
-    font-size: 16px;
-    line-height: 2;
-    color: black;
-    margin-bottom: 50px;
-}
-
+    /* Footer */
 .footer {
     background-color: white;
-    color:  rgb(33, 44, 165);
+    color: black;
     text-align: center;
     padding: 20px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
