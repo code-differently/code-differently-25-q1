@@ -19,21 +19,7 @@ app.get("/", (req, res) => {
 
 // Handle form submission
 app.post("/submit", (req, res) => {
-    const { name, email, message } = req.body;
-
-    // Log the form data to the console
-    console.log("Received submission:");
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
-
-    // Send a response back to the user
-    res.send(`
-        <h1>Thank you for your submission, ${name}!</h1>
-        <p>We have received your message and will get back to you at ${email} soon.</p>
-        <a href="/">Go back to the contact form</a>
-    `);
-});
+    const { name, email, message } = req.body;});
 
 // Start the server
 app.listen(port, () => {
