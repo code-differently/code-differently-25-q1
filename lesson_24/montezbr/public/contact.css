@@ -1,0 +1,97 @@
+.body{
+    width: 100%;
+    height: 5000px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    height: 131px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.header-logo {
+    width: 70px;
+    height: 75px;
+    margin-bottom: 0;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+.header-logo a {
+    display: block;
+    cursor: pointer;
+}
+.header-logo img {
+    width: 226px;
+    height: 75px;
+}
+.header-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: 16px;
+
+}
+
+.header-top-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top-menu li a {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #3c3c3c;
+    
+}
+
+.header-top-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f39e61; 
+  transition: width 0.3s ease;
+}
+
+.header-top-menu li a:hover::after {
+    width: 100%;
+}
+
+
+.header-cta {
+   display: flex; 
+}
+.sign-up-button {
+    background-color: #f47d26;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sign-up-button:hover {
+    background-color: #f39e61;
+    color: #fff;
+}
