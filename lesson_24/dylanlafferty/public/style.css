@@ -35,7 +35,9 @@ body {
     z-index: 3;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 .header-logo img {
     flex-shrink: 0;
