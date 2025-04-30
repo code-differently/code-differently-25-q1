@@ -15,4 +15,4 @@
 
 ## Homework
 
-- TODO(anthonydmays): Add details here
+- [ ] Do pre-work for [lesson 24](/lesson_24/).
