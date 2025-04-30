@@ -19,7 +19,7 @@ app.get('/contact', (req, res) => {
       <button type="submit">Send</button>
     </form>
   `);
-});
+}); 
 
 // Handle form submission
 app.post('/contact', (req, res) => {
