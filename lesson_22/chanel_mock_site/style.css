@@ -97,7 +97,7 @@ a {
     background-position: center;
     height: 400px;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
 }
 
