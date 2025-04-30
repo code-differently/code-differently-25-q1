@@ -1,0 +1,160 @@
+/* === Reset and Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* You can change this */
+  color: #222; /
+  p {
+  line-height: 24px;
+}
+}
+
+/* === Header === */
+.header {
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #3c3c3c;
+}
+
+.header-logo img {
+    max-width: 150px;
+}
+
+.header-top-menu {
+    list-style: none;
+    display: flex;
+}
+
+.header-top-menu li {
+    margin: 0 15px;
+}
+
+
+
+.header-top-menu a {
+    color: #3c3c3c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-top-menu li::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f47d26;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-top-menu li:hover::after {
+  transform: scaleX(1);
+}
+
+.header-cta .sign-up-button {
+    background-color: #f47d26; /* Secondary color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.hero-section {
+  background: url('hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 4rem 2rem;
+  position: relative;
+  min-height: 60vh;
+  padding-left: 0;
+
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #f47d26; 
+}
+
+.hero-text {
+  font-size: 20px;
+  font-family: 'poppins';
+  background-color: #243e90;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-right: 8%;
+  padding-left: 8%;
+}
+
+/* === Programs Section === */
+/* Programs section styles */
+
+.programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns */
+    gap: 20px;
+    max-width: fit-content;
+}
+
+.programs-section {
+    padding: 160px;
+    margin-left: 60px;
+    font-size: 25px;
+    color: #444;
+}
+
+.programs-section h2 {
+    font-weight: 900;
+    margin-bottom: 70px;
+}
+
+.programs-section h2 .highlight {
+    font-style: normal;
+}
+
+.programs-section li {
+    list-style: none;
+}
+
+.programs li h3 {
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.programs li p {
+    font-weight: lighter;
+    font-family: 'Poppins';
+    color: #676767;
+    font-size: small;
+    font-weight: 400;
+}
