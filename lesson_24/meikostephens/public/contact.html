@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactstyle.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Contact</h2>
+      <form action="submit.html">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+          </div>
+        </div>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="info-section">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> 1200 N. French Street<br>Wilmington, DE 19801</p>
+      <p><strong>Phone:</strong> 302.669.9182</p>
+      <p><strong>Email:</strong> info@codedifferently.com</p>
+      
+    </div>
+  </div>
+</body>
+</html>
