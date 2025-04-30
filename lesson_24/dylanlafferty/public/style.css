@@ -103,9 +103,9 @@ a {
 /*Creates overlay for the background image*/
 
 .hero-section {
-    background-image: url(hero.jpg);
-    background-attachment: sticky;
-    position: relative;
+    background-image: url(images/hero.jpg);
+    background-attachment: local;
+    position: sticky;
     background-position: top;
     color: var(--background);
     background-size: cover;
@@ -113,7 +113,7 @@ a {
     align-items: center;
     text-align: left;
     display: flex;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     overflow: hidden;
     margin: 0px 0px 143px;
@@ -204,9 +204,10 @@ h2 .highlight::after {
 
 .programs-section {
     overflow: hidden;
+    position: sticky;
     padding-bottom: 60px;
-    box-shadow: 12px 12px 2px 0.5px rgba(0, 0, 0, 0.101);
-    z-index: 2;
+    box-shadow: 12px 12px 20px 0.5px rgba(0, 0, 0, 0.101);
+    z-index: 3;
 }
 section > h2 {
     font-size: 34px !important;

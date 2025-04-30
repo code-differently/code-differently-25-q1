@@ -8,8 +8,11 @@ const app = express()
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views")); 
 
-app.use(morgan("dev")) //Sets morgan middleware
-app.use(express.static(path.join(__dirname,"public"))) //this will get the files from public
+ //Sets morgan middleware
+app.use(morgan("dev"))
+
+//this will get the files from public
+app.use(express.static(path.join(__dirname,"public"))) 
 app.use(express.urlencoded({ extended: true }))
 
 const PORT = process.env.PORT || 3000
@@ -20,12 +23,11 @@ const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     console.log("here")
-    //res.status(500).send("Error : 505")
     res.render("contact")
 })
 
-const contactRouter = require('./routes/contact-us') //calls for my router
-
+const contactRouter = require('./routes/contact-us')
+ 
 app.use("/contact-us", contactRouter)
 
 app.post("/", (req, res) => {
