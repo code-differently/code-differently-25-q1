@@ -1,10 +1,23 @@
 const express = require("express")
+const morgan = require("morgan")
+const path  = require("path")
+var debug = require('debug')('myapp:server')
+
+
 const app = express()
 
-app.get('/', (req, res)) => {
-    console.log('Here')
-    res.sendStatus(500)
-}
+app.use(morgan("dev"))
+app.use(express.static(path.join(__dirname, "public")))
+app.use(express.urlencoded({ extended: true}))
 
-app.listen(3000)
+const PORT = process.env.port || 3000
+
+const userRouter = require('./routes/contact')
+
+app.use('/contact', userRouter)
+
+app.listen(PORT, () => {
+    debug(`Server listening on http://localhost:${PORT}`)
+})
+
 
