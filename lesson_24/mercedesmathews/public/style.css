@@ -306,6 +306,13 @@ textarea {
     font-weight: 400;
 }
 
+.thank-you-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
 
 @media only screen and (max-width: 690px) {
     .header {

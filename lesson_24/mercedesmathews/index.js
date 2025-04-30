@@ -16,7 +16,7 @@ app.get('/contact', (req, res) => {
 
 app.post('/submit', (req, res) => {
   const { firstName, message } = req.body;
-  res.send(`<h1>Thanks for reaching out, ${firstName}!</h1><p>We got your message: "${message}"</p>`);
+  res.render("receiveContact", { firstName, message });
 });
 
 app.listen(3000, () => {
