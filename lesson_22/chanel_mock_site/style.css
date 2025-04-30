@@ -63,7 +63,7 @@ a {
 }
 
 .header-top-menu li a {
-    color: rgb(33, 44, 165);
+    color:#243e90;
     font-weight: 600;
     font-size: 25px;
     text-transform: uppercase;   
@@ -86,7 +86,7 @@ a {
 
 .header-cta .sign-up-button:hover {
   /* Hover tool to highlight the button ~ free codecamp*/ 
-    background-color: rgb(33, 44, 165);
+    background-color: #243e90;
 }
 
 /* Create the Hero Section to mimick the original; ChatGPT helped with these features*/
@@ -135,8 +135,9 @@ a {
     font-size: 21px;
     font-weight: 400;
     line-height: 1.8;
-    background: rgb(33, 44, 165);
+    background: #243e90;
 }
+
 .programs-section {
     padding: 75px 50px;
     text-align: left;
@@ -155,7 +156,7 @@ a {
 }
 
 .programs-section .highlight {
-    font-weight: 700; /* Optional: Make the highlighted text bold to match the surrounding text style */
+    font-weight: 700; 
 }
 
 .programs {
@@ -193,7 +194,7 @@ a {
     color: #555;
     margin-bottom: 50px;
 }
-    /* Footer */
+
 .footer {
     background-color: white;
     color: black;
