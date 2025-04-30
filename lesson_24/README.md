@@ -14,4 +14,13 @@ Please review the following resources before lecture:
 
 ## Homework
 
-- TODO(anthonydmays): Add HW details
+- [ ] Complete the [Working with Express](#working-with-express) exercise.
+- [ ] Do pre-work for [lesson 25](/lesson_25/).
+
+### Working with Express
+
+Use the assets you developed for the previous lesson to implement a web server using Express and NodeJS. Provide your files in a uniquely named folder when you submit your PR.
+
+In addition, add a new page that features a form which accepts input from the user (say, a contact form) and show the results of what they posted using a HTML form submit.
+
+Note: You may need to open a new port in the dev container to support serving traffic from your web server. Read how to do this [using this article on port forwarding](https://code.visualstudio.com/docs/editor/port-forwarding).
