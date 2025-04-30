@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(218, 83, 50, 0);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.header-logo img {
+    max-width: 200px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.header-top-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-top-menu a {
+    color: black;             
+    text-decoration: none;     
+    font-weight: 600;           
+}
+
+.header-cta .sign-up-button {
+    background-color: #ff7b00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    background-image: url(hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    height: 500px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    display: flex;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left; 
+    padding-left: 0%;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    text-align: left;
+    background-color: rgb(53, 53, 193);
+}
+
+
+/* Programs Section Styles */
+.programs-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.programs-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.programs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.program {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.program h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.program p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 50px;
+}
