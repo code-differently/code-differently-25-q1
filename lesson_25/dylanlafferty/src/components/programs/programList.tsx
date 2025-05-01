@@ -12,7 +12,7 @@ interface ProgramListProps {
 
 const ProgramList: React.FC<ProgramListProps> = ({ programs }) => {
     return (
-        <ul className="program">
+        <ul className="programs">
             {programs.map((program, index) => (
                 <Program
                     key={index}

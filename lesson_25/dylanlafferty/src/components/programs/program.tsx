@@ -1,4 +1,5 @@
 import React from "react";
+import "./program.css"
 
 interface ProgramProps {
     title: string;
