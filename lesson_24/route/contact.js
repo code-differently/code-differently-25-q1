@@ -6,7 +6,7 @@ router.get("/" , (req, res) => {
 })
 
 router.get("/new", (req, res) => {
-    res.send("Contact New Form")
+    res.render("contact/new" , {firstName: "Test" })
 })
 
 router.post('/', (req, res) => {
