@@ -1,6 +1,6 @@
 .body{
     width: 100%;
-    height: 5000px;
+    height: 1246px;
 }
 
 .header {
@@ -94,4 +94,119 @@
 .sign-up-button:hover {
     background-color: #f39e61;
     color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 924px;
+    display: flex;
+    box-shadow: #797979 0px 20px 20px 0px;
+}
+
+.form {
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    background-color: #f4f4f4;
+}
+.form-top{
+    width: 80%;
+    height: 125px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0 0 20px;
+    
+}
+.form-top input{
+    width: 70%;
+    height: 50px;
+    background-color: #eaeaea;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: none;
+}
+
+
+.form-top input .firstname {
+    
+    height: 10px;
+    background-color: #eaeaea;
+    color: #797979;
+    border: none;
+    border-radius: 2px;
+}
+.form-bottom {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-bottom select {
+    width: 70%;
+    height: 50px;
+    background-color: #fafafa;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    box-shadow: #797979 0px 1px 1px 0px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.form-bottom textarea {
+    width: 65%;
+    height: 150px;
+    background-color: #eaeaea;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form-bottom .btn {
+    width: 70%;
+    height: 50px;
+    background-color: #f47d26;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.other-info {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://codedifferently.com/wp-content/uploads/2020/06/0CEDE007-9795-4005-88D7-D9BC2FD9BEC0-e1593643058426.jpeg);
+    background-color: #3340a5;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.other-info .headers {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 200px;
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+
+.address {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: left;
+    padding: 0;
 }
