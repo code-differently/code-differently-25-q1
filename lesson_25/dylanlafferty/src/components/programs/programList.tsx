@@ -24,4 +24,4 @@ const ProgramList: React.FC<ProgramListProps> = ({ programs }) => {
     )
 }
 
-export default ProgramList;
+export default ProgramList

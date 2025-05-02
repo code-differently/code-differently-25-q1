@@ -5,7 +5,7 @@ import {programsData} from '../../components/programs/programData';
 import ProgramList from '../../components/programs/programList';
 
 //Imports Link from our React Router
-import { Link } from "reat-router-dom";
+import { Link } from "react-router-dom";
 
 export const Home: React.FC = () => {
   return (
@@ -34,8 +34,7 @@ export const Home: React.FC = () => {
         </ul>
       </section>
 
-      {/* Links to the New Program page by calling to that router to get /new-program */}
-      <Link to="/new-program">Adds a new Program</Link>
+      <Link className = "program-link" to="/new-program">Adds a new Program</Link>
     </article>
   );
 };

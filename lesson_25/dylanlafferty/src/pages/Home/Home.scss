@@ -75,6 +75,22 @@ article {
   max-width: 48%;
 }
 
+.program-link {
+  background: linear-gradient(145deg, #ff6b6b, #ff9472);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  margin: 20px auto;
+  width: 500px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.program-link:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
 @media screen and (max-width: 1080px) {
   .program {
     min-width: 100%;
