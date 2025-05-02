@@ -1,6 +1,8 @@
 import './Home.scss';
 import React from 'react';
+import {Link} from 'react-router-dom';
 
+import Button from '@/components/Button/Button';
 import {ProgramList} from '@/components/programList/ProgramList';
 
 export const Home: React.FC = () => {
@@ -26,6 +28,9 @@ export const Home: React.FC = () => {
           Our <em className="highlight">Programs</em>
         </h2>
         <ProgramList />
+        <Link to="/add-program">
+          <Button label="Add Program" />
+        </Link>
       </section>
     </article>
   );

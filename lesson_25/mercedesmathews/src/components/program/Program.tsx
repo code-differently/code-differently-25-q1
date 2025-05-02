@@ -1,5 +1,3 @@
-import './Program.scss';
-
 interface programProps {
   header: string;
   content: string;
