@@ -105,7 +105,7 @@ function Lesson26() {
                     </tr>
                     <tr>
                         <td>/api/books/{book id}</td>
-                        <td>POST</td>
+                        <td>PUT</td>
                         <td>Update an existing book with the given ID</td>
                     </tr>
                     <tr>
