@@ -1,10 +1,12 @@
 import './NewProgram.css';
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 export const NewProgram: React.FC = () => {
   const [title, setTitle] = useState('Add New Program');
   const [description, setDescription] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();

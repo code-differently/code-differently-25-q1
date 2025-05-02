@@ -1,7 +1,6 @@
 import './Home.scss';
 import React from 'react';
 
-import {NewProgram} from '@/components/NewProgram/NewProgram';
 import {ProgramList} from '@/components/ProgramList/ProgramList';
 
 export const Home: React.FC = () => {
@@ -23,7 +22,6 @@ export const Home: React.FC = () => {
         </div>
       </section>
       <ProgramList />
-      <NewProgram />
     </article>
   );
 };
