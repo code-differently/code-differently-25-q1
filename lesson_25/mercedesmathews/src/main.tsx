@@ -1,5 +1,6 @@
 import App from './App.tsx';
 import {AddProgram} from './pages/AddProgram/AddProgram.tsx';
+import {FormAccepted} from './pages/FormAccepted/FormAccepted.tsx';
 import {Home} from './pages/Home/Home.tsx';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import React from 'react';
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
         path: '/add-program',
         element: <AddProgram />,
       },
+      {path: '/form-accepted', element: <FormAccepted />},
     ],
   },
 ]);

@@ -14,7 +14,7 @@ export const AddProgram = () => {
     console.log('Submitted:', {title, content});
     setTitle('');
     setContent('');
-    navigate('/');
+    navigate('/form-accepted');
   };
 
   return (
