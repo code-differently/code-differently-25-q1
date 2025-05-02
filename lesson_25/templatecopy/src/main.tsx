@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import './index.scss';
+import AddProgram from './pages/AddProgram.tsx';
 
 const queryClient = new QueryClient();
 
