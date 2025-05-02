@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submission Result</title>
+</head>
+<body>
+  <h1>Submission Received</h1>
+  <div id="result"></div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem('contactData'));
+    if (data) {
+      document.getElementById('result').innerHTML = `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.message}</p>
+      `;
+    } else {
+      document.getElementById('result').textContent = 'No data submitted.';
+    }
+  </script>
+</body>
+</html>
