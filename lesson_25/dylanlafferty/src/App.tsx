@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
 import { programsData } from './components/programs/programData';
-import { NewProgram } from './components/newProgram/newProgram';
+import { NewProgram } from './components/newPrograms/NewProgram';
 
 function App() {
   const [programs, setPrograms] = useState(programsData);

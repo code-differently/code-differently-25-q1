@@ -24,6 +24,11 @@ export const programsData: ProgramData[] = [
     {
         title: "Kevin Chicken T-Bone",
         description: "Kevin chicken t-bone spare ribs shankle bacon drumstick kielbasa cow jowl doner salami chuck andouille. Rump spare ribs bresaola frankfurter shankle. Bresaola ribeye turducken, cow leberkas boudin biltong sirloin filet mignon ham pork belly shank. Tenderloin sirloin pancetta pork loin shankle venison turducken boudin. Brisket tenderloin salami ham bresaola burgdoggen."
+    },
+
+    {
+        title: "title",
+        description: "description"
     }
 ]
 

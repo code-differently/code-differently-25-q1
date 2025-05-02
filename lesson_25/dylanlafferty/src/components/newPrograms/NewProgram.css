@@ -80,14 +80,14 @@ textarea {
 /* --- Focus & Hover Effects --- */
 input:focus,
 textarea:focus {
-  border-color: #0073e6; /* Blue border on focus */
+  border-color: #0073e6;
   background-color: #ffffff; /* White background on focus */
   outline: none;
 }
 
 input:focus,
 textarea:focus {
-  transform: scale(1.02); /* Slightly grow the input when focused */
+  transform: scale(1.02); 
 }
 
 /* --- Button Styles --- */

@@ -1,9 +1,11 @@
 import './newProgram.css';
 import React, {useState} from 'react';
 
-type NewProgramProps = {
-  addProgram: (program: {title: string; description: string}) => void;
-};
+import {ProgramData} from '../programs/programData';
+
+interface NewProgramProps {
+  addProgram: (program: ProgramData) => void;
+}
 
 export const NewProgram: React.FC<NewProgramProps> = ({addProgram}) => {
   const [title, setTitle] = useState('');
@@ -11,7 +13,10 @@ export const NewProgram: React.FC<NewProgramProps> = ({addProgram}) => {
 
   const handleSubmission = (e: React.FormEvent) => {
     e.preventDefault();
-    <NewProgramProps />
+    const newProgram: ProgramData = {title, description};
+    addProgram(newProgram);
+    setTitle('');
+    setDescription('');
   };
 
   return (
@@ -45,10 +50,10 @@ export const NewProgram: React.FC<NewProgramProps> = ({addProgram}) => {
           </div>
 
           <button type="submit">Submit your Program!</button>
-
-          <p> {title}</p>
-          <p> {description} </p>
         </form>
+
+        <p>{title}</p>
+        <p>{description}</p>
       </div>
     </section>
   );

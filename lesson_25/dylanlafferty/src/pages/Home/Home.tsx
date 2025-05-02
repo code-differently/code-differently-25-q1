@@ -1,6 +1,5 @@
 import './Home.scss';
 import React from 'react';
-
 import {programsData} from '../../components/programs/programData';
 import ProgramList from '../../components/programs/programList';
 
@@ -31,6 +30,7 @@ export const Home: React.FC = () => {
         </h2>
         <ul className="programs">
           <ProgramList programs={programsData} />
+
         </ul>
       </section>
 
