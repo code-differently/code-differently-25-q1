@@ -105,7 +105,7 @@ function Lesson26() {
                     </tr>
                     <tr>
                         <td>/api/books/{book id}</td>
-                        <td>POST</td>
+                        <td>PUT</td>
                         <td>Update an existing book with the given ID</td>
                     </tr>
                     <tr>
@@ -155,10 +155,10 @@ ${`
 `}
             <//>
             <section>
-                <p>We can use languages that we’ve learned so far (Java or JavaScript) in order to implement our API</p>
+                <p>We can use languages that we’ve learned so far (Java or TypeScript) in order to implement our API</p>
             </section>
             <section>
-                <p>For this lesson, we’ll use <em>Java</em></p>
+                <p>For this lesson, we’ll use <em>TypeScript</em></p>
             </section>
             <${DemoSlide} />
             <${QuestionsSlide} />
