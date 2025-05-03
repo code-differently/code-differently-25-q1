@@ -13,11 +13,11 @@ const express = require('express');
  
  // Routes
  app.get('/', (req, res) => {
-   res.sendFile(path.join(__dirname, 'public/index.html'));
+   res.sendFile(path.join(__dirname, 'index.html'));
  });
  
  app.get('/contact', (req, res) => {
-   res.sendFile(path.join(__dirname, 'public/contact.html'));
+   res.sendFile(path.join(__dirname, 'contact.html'));
  });
  
  app.post('/submit-form', (req, res) => {
