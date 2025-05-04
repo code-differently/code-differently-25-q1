@@ -1,8 +1,6 @@
 import './Home.scss';
-import {Program} from '../components/program';
-import {programLists} from '../components/programList';
+import {Programs} from '../../components/Programs';
 import React from 'react';
-
 
 
 
@@ -10,6 +8,8 @@ import React from 'react';
 export const Home: React.FC = () => {
   return (
     <article>
+      <Programs title={''} description={''} />
+    
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <div className="hero-content">
@@ -24,6 +24,7 @@ export const Home: React.FC = () => {
             technology-driven workplaces.
           </div>
         </div>
+        
       </section>
       
     </article>

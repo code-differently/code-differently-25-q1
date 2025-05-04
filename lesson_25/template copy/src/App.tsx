@@ -1,6 +1,6 @@
 import './App.scss';
 import {Outlet} from 'react-router-dom';
-
+import {Program} from './components/Program';
 import {Footer} from './components/footer';
 import {Header} from './components/header';
 
@@ -12,7 +12,9 @@ function App() {
         <div className="content">
           <Outlet />
         </div>
+        <Program />
       </div>
+      
       <Footer />
     </>
   );
