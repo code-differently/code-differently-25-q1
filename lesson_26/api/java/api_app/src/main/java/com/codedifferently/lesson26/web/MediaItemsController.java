@@ -65,25 +65,18 @@ public class MediaItemsController {
   }
 
   @DeleteMapping("/items/{id}")
-  public ResponseEntity<Void> deleteItem(@PathVariable String id) { // Takes String id
-    UUID itemUuid;
-
-    try {
-      itemUuid = UUID.fromString(id);
-    } catch (IllegalArgumentException e) {
-      return ResponseEntity.badRequest().build();
-    }
+  public ResponseEntity<Void> deleteItem(@PathVariable UUID id) {
 
     Set<MediaItem> items = library.search(SearchCriteria.builder().build());
     MediaItem foundItem =
-        items.stream().filter(item -> item.getId().equals(itemUuid)).findFirst().orElse(null);
+        items.stream().filter(item -> item.getId().equals(id)).findFirst().orElse(null);
 
     if (foundItem == null) {
       return ResponseEntity.notFound().build();
     }
 
     try {
-      library.removeMediaItem(itemUuid, this.librarian);
+      library.removeMediaItem(id, this.librarian);
       return ResponseEntity.noContent().build();
     } catch (MediaItemCheckedOutException ex) {
       return ResponseEntity.status(HttpStatus.CONFLICT).build();
