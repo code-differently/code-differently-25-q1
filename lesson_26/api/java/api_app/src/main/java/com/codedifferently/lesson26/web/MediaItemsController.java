@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Set;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -31,4 +33,36 @@ public class MediaItemsController {
     var response = GetMediaItemsResponse.builder().items(responseItems).build();
     return ResponseEntity.ok(response);
   }
+
+  /**
+   * @param id
+   * @return
+   */
+  @PostMapping("/items/{id}")
+  public ResponseEntity<MediaItemResponse> getItemById(String id) {
+    MediaItem item = librarian.getItemById(id);
+    MediaItemResponse response = MediaItemResponse.from(item);
+    return ResponseEntity.ok(response);
+  }
+
+  /**
+   * @param id
+   * @return
+   */
+  @DeleteMapping("/items/{id}")
+  public ResponseEntity<Void> deleteItemById(String id) {
+    SearchCriteria criteria = SearchCriteria.builder().id(id).build();
+    Set<MediaItem> items = library.search(criteria);
+    if (items.isEmpty()) {
+      return ResponseEntity.notFound().build();
+    }
+    MediaItem item = items.iterator().next();
+    
+    librarian.deleteItemById(id);
+    return ResponseEntity.noContent().build();
+
+  
+  }
+
 }
+
