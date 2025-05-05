@@ -6,6 +6,7 @@ import com.codedifferently.lesson26.library.search.SearchCriteria;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -296,5 +297,13 @@ public class Library {
         + ", guestIds="
         + guestsById
         + '}';
+  }
+
+  public List<MediaItem> getAllItems() {
+    throw new UnsupportedOperationException("Not supported yet.");
+  }
+
+  public Object getAnItem(UUID id) {
+    throw new UnsupportedOperationException("Not supported yet.");
   }
 }
