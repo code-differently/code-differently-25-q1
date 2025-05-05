@@ -164,3 +164,13 @@ jobs:
       working-directory: ./lesson_17/bank
       run: ./gradlew check
 
+    - name: Build Lesson 26 with Java
+      working-directory: ./lesson_26/api/java
+      run: ./gradlew assemble
+
+    - name: Build Lesson 26 with Node.js
+      working-directory: ./lesson_26/api/javascript/api_app
+      run: |
+        npm ci
+        npm run build
+
