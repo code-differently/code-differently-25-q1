@@ -7,3 +7,7 @@ spring:
   datasource:
     url: jdbc:sqlite::resource:sqlite/data.db
     driver-class-name: org.sqlite.JDBC
+logging:
+  level:
+    root: WARN
+    org.springframework: WARN
