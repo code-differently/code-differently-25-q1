@@ -39,9 +39,9 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.36.0")
     implementation("org.hibernate.orm:hibernate-community-dialects:6.2.7.Final") 
     compileOnly("org.projectlombok:lombok:1.18.38")
-	  annotationProcessor("org.projectlombok:lombok:1.18.38")
-	  testCompileOnly("org.projectlombok:lombok:1.18.38")
-	  testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+    testCompileOnly("org.projectlombok:lombok:1.18.38")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
 application {
