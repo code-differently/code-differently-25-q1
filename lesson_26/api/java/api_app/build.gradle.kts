@@ -5,7 +5,6 @@ plugins {
     id("com.diffplug.spotless") version "6.25.0"
 	  id("org.springframework.boot") version "3.4.0"
     id("com.adarshr.test-logger") version "4.0.0"
-    id("io.freefair.lombok") version "8.6"
 }
 
 apply(plugin = "io.spring.dependency-management")
@@ -39,6 +38,10 @@ dependencies {
     implementation("org.apache.commons:commons-csv:1.10.0")
     implementation("org.xerial:sqlite-jdbc:3.36.0")
     implementation("org.hibernate.orm:hibernate-community-dialects:6.2.7.Final") 
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+    testCompileOnly("org.projectlombok:lombok:1.18.38")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
 application {
