@@ -1,0 +1,49 @@
+.add-program-section {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-program-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-program-section label {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-program-section input,
+.add-program-section textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.add-program-section button {
+  margin-top: 20px;
+  background-color: #f37f0b;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-program-section button:hover {
+  background-color: #d46e00;
+}
