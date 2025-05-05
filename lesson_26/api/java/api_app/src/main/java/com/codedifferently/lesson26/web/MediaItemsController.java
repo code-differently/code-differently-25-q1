@@ -1,14 +1,10 @@
 package com.codedifferently.lesson26.web;
 
-import com.codedifferently.lesson26.library.Librarian;
-import com.codedifferently.lesson26.library.Library;
-import com.codedifferently.lesson26.library.MediaItem;
-import com.codedifferently.lesson26.library.search.SearchCriteria;
-import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,6 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.codedifferently.lesson26.library.Librarian;
+import com.codedifferently.lesson26.library.Library;
+import com.codedifferently.lesson26.library.MediaItem;
+import com.codedifferently.lesson26.library.search.SearchCriteria;
+
+import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin
@@ -39,10 +42,14 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public CreateMediaItemResponse postItem(@Valid @RequestBody CreateMediaItemRequest request) {
-    MediaItem item = MediaItemRequest.asMediaItem(request.getItem());
+  public ResponseEntity<CreateMediaItemResponse> postItem(
+      @Valid @RequestBody CreateMediaItemRequest request) {
+    MediaItemRequest itemRequest = request.getItem();
+    MediaItem item = MediaItemRequest.asMediaItem(itemRequest);
     library.addMediaItem(item, librarian);
-    return CreateMediaItemResponse.builder().item(MediaItemResponse.from(item)).build();
+    MediaItemResponse itemResponse = MediaItemResponse.from(item);
+    CreateMediaItemResponse response = CreateMediaItemResponse.builder().item(itemResponse).build();
+    return ResponseEntity.ok(response);
   }
 
   @GetMapping("/items/{id}")
