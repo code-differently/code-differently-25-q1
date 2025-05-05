@@ -36,7 +36,7 @@ public class MediaItemsController {
     var response = GetMediaItemsResponse.builder().items(responseItems).build();
     return ResponseEntity.ok(response);
   }
- 
+
   @GetMapping("/items/{id}")
   public ResponseEntity<MediaItemResponse> getItemById(@PathVariable UUID id) {
     SearchCriteria criteria = SearchCriteria.builder().id(id.toString()).build();
