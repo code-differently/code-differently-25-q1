@@ -6,7 +6,7 @@ import java.util.Set;
 /** Represents a account. */
 abstract class BankAccount {
 
-  protected final Set<Customer> owners;
+  protected static Set<Customer> owners = null;
   protected final String accountNumber;
   protected double balance;
   protected boolean isActive;

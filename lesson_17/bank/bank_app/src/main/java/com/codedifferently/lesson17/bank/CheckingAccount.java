@@ -5,7 +5,7 @@ import java.util.Set;
 public class CheckingAccount extends BankAccount {
 
   /**
-   * Creates a new saving account.
+   * Creates a new checking account.
    *
    * @param accountNumber The account number.
    * @param owners The owners of the account.
