@@ -1,0 +1,68 @@
+/* submit.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #243e90;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.result {
+  background-color: #ffffff;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+  max-width: 600px;
+  width: 100%;
+}
+
+.result p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.result p strong {
+  color: #f47d26;
+  font-weight: 600;
+}
+
+#name,
+#email,
+#message {
+  color: #3c3c3c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .result {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .result p {
+    font-size: 16px;
+  }
+}
