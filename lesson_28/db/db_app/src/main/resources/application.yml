@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    generate-ddl: true
+  datasource:
+    url: jdbc:sqlite::resource:sqlite/data.db
+    driver-class-name: org.sqlite.JDBC
