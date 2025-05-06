@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Contact Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" id="redux-google-fonts-salient_redux-css" href="https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&amp;ver=1597678827" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&#038;ver=1597678827' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="contactstyle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Code Differently Logo" />
+            </a>
+        </div>
+        <ul class="header-top-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="header-cta">
+            <a class="sign-up-button" href="#">Sign Up</a>
+        </div>
+    </header>
+    <div class="spacer"></div><div>
+        <div class="container">
+
+            <form id="contact-form" action="/submit" method="POST">
+            <div class="row">
+            <input type="text" name="firstname" id="first-name" placeholder="FIRST NAME *" required><br>
+            <input type="text" name="lastname" id="last-name" placeholder="LAST NAME *" required><br>
+            </div>
+            <div class="row">
+            <input type="text" name="phone" id="phone" placeholder="PHONE *" required><br>
+            <input type="text" name="email" id="email" placeholder="EMAIL *" required><br>
+            </div>
+            <select id="dropdown" name="program" required>
+                <option value="">PROGRAM OF INTEREST*</option>
+                <option value="option1">1000 Kids Coding</option>
+                <option value="option2">Pipeline DevShop</option>
+                <option value="option3">Return Ready</option>
+                <option value="option4">Stay Ready</option>
+                <option value="option5">Platform Programs</option>
+                <option value="option6">Partner With Us</option>
+                <option value="option7">Learn With Us</option>
+                <option value="option8">Donate/Volunteer</option>
+            </select><br>
+            <textarea rows="10" cols="10" type="textbox" name="message" id="message" placeholder="MESSAGE"></textarea>
+            <div class="controls">
+                <button id="sendBtn" type="submit">Send</button>
+            </div>
+             </form>
+
+             <section id="contact">
+                <h2>Contact Us.</h2>
+                <p><strong>Code Differently</strong></p>
+                <p>1200 N. French Street<br>Wilmington, DE 19801</p>
+                <p>302.669.9182</p>
+                <p><a href="mailto:info@codedifferently.com">info@codedifferently.com</a></p>
+                
+                <h3>Follow Us</h3>
+            </section>
+        </div>
+    <footer class="footer">
+        &copy; 2025 Code Differently
+    </footer>
+    
+</body>
+</html>

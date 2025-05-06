@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100vw;        /* Ensures full-viewport fit */
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.header.shrunk {
+    padding: 15px 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo img {
+    height: 75px;
+}
+
+.header-top-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-top-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header-top-menu li a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.header-top-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease;
+}
+
+/* Normal hover effect */
+.header-top-menu li a:hover::after {
+    width: 100%;
+}
+
+/* New: Always underline the FIRST link (Home) */
+.header-top-menu li:first-child a::after {
+    width: 100%;
+}
+
+.header-cta .sign-up-button {
+    background-color: #f37f0b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    .btn-contact {
+  font-family: 'Poppins', sans-serif;  /* use Poppins, which you’ve already imported */
+    font-weight: 700;                    /* boldest available weight you have */
+    font-size: 1.1rem;
+  text-transform: uppercase; 
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+    transition: background-color 0.3s ease;
+}
+
+.header-cta .sign-up-button:hover {
+    background-color: #0056b3;
+}
+
+.main {
+    padding-top: 120px; /* So the hero and rest of page starts AFTER header */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+.hero-section {
+    position: relative;
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    filter: brightness(1.5);
+    padding-top: 125px; /* <-- NEW, creates white space under the header */
+    box-sizing: border-box;
+}
+
+
+.hero-overlay { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 1.2;
+    color: #ffffff;
+    text-align: left;
+    max-width: 800px; /* keeps the line breaks like the real site */
+    margin: -80px 0 0 -60px;
+    letter-spacing: 0.5px;
+}
+
+.highlight {
+    color: #ddff00; /* Gold Highlight */
+    font-style: normal; /* removes italic */
+    font-weight: 800;
+    font-family: inherit;
+}
+
+
+
+.hero-text {
+    background-color: #1A2C6B; /* deep blue background */
+    padding: 40px;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; 
+    border-radius: 4px;
+    max-width: 920px;
+    margin-top: 30px;
+    line-height: 1.25;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-left: -60px;
+}
+
+.hero-text span {
+    color: #F26E21;
+    font-weight: 550;
+}
+
+.programs-section {
+    margin-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.programs-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 0; /* Remove left push */
+    padding-left: 0;
+}
+
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    gap: 60px 40px; /* vertical gap, then horizontal gap */
+    padding: 0;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.program {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    
+}
+
+.program h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.program p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.highlight {
+    color: inherit;
+    background-image: linear-gradient(to bottom, transparent 80%, #F26E21 80%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: 60px;
+    margin-top: 100px; /* vertically aligns the hero-title */
+}
