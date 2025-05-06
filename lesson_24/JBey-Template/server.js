@@ -9,11 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Home route
-app.get('/', (req, res) => {
-  res.send('<h1>Welcome to the Express Contact Form Server</h1><a href="/contact.html">Go to Contact Form</a>');
-});
-
 // Handle form submission
 app.post('/submit', (req, res) => {
   console.log(req.body); // Log the submitted form data to the console
