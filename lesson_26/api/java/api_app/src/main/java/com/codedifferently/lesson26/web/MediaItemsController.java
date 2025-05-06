@@ -42,12 +42,11 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public ResponseEntity<CreateMediaItemResponse> postItem(
-      @Valid @RequestBody CreateMediaItemRequest request) {
+  public ResponseEntity<CreateMediaItemResponse> postItem(@Valid @RequestBody CreateMediaItemRequest request) {
     MediaItemRequest itemRequest = request.getItem();
-    MediaItem item = MediaItemRequest.asMediaItem(itemRequest);
-    library.addMediaItem(item, librarian);
-    MediaItemResponse itemResponse = MediaItemResponse.from(item);
+    MediaItem newItem = MediaItemRequest.asMediaItem(itemRequest);
+    library.addMediaItem(newItem, librarian);
+    MediaItemResponse itemResponse = MediaItemResponse.from(newItem);
     CreateMediaItemResponse response = CreateMediaItemResponse.builder().item(itemResponse).build();
     return ResponseEntity.ok(response);
   }
