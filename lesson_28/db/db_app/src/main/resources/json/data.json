@@ -1,0 +1,268 @@
+{
+    "mediaItems": [
+        {
+            "type": "book",
+            "id": "e27a4e0d-9664-420d-955e-c0e295d0ce02",
+            "title": "To Kill a Mockingbird",
+            "isbn": "978-0061120084",
+            "authors": [
+                "Harper Lee"
+            ],
+            "pages": 336
+        },
+        {
+            "type": "book",
+            "id": "17dd5d20-98f5-4a26-be09-449fea88a3c3",
+            "title": "1984",
+            "isbn": "978-0451524935",
+            "authors": [
+                "George Orwell"
+            ],
+            "pages": 328
+        },
+        {
+            "type": "dvd",
+            "id": "28e5c91f-0e4b-4be5-abb1-8da01fd5587e",
+            "title": "The Shawshank Redemption",
+            "runtime": 142
+        },
+        {
+            "type": "dvd",
+            "id": "295ea581-cd61-4319-8b0c-e5c0c03286c5",
+            "title": "Inception",
+            "runtime": 148
+        },
+        {
+            "type": "magazine",
+            "id": "222111dd-c561-462a-8854-853ada4d3421",
+            "title": "National Geographic",
+            "edition": "March 2024"
+        },
+        {
+            "type": "magazine",
+            "id": "0afd425b-973f-4af9-a6aa-8febe943a8f6",
+            "title": "Time",
+            "edition": "March 15, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "91b74a71-97ad-4fea-b17c-a640c98d355f",
+            "title": "The New York Times",
+            "edition": "Morning Edition, March 22, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "45cab344-b792-484c-9156-d929237dde67",
+            "title": "The Guardian",
+            "edition": "March 22, 2024"
+        },
+        {
+            "type": "book",
+            "id": "218b55fa-a3cd-4803-805e-7cd1ef3115ac",
+            "title": "The Great Gatsby",
+            "isbn": "978-0743273565",
+            "authors": [
+                "F. Scott Fitzgerald"
+            ],
+            "pages": 180
+        },
+        {
+            "type": "book",
+            "id": "b4249c17-f77b-46da-aa82-7aa227eca5e2",
+            "title": "Harry Potter and the Sorcerer's Stone",
+            "isbn": "978-0590353427",
+            "authors": [
+                "J.K. Rowling"
+            ],
+            "pages": 309
+        },
+        {
+            "type": "dvd",
+            "id": "a3cc5ccb-e2fd-4cd0-a6f8-dc1f2f07589b",
+            "title": "The Godfather",
+            "runtime": 175
+        },
+        {
+            "type": "dvd",
+            "id": "6386364c-8505-4dbe-8731-ff8fa0d6e381",
+            "title": "The Dark Knight",
+            "runtime": 152
+        },
+        {
+            "type": "magazine",
+            "id": "e5060cc1-33f0-431c-a1b3-d1979e38b6f2",
+            "title": "Scientific American",
+            "edition": "April 2024"
+        },
+        {
+            "type": "magazine",
+            "id": "7048bd13-49ee-4693-8900-e396bbdf3f98",
+            "title": "Vogue",
+            "edition": "Spring 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "6f80a5ce-5958-48f3-a029-ff3d76f2c3fe",
+            "title": "The Washington Post",
+            "edition": "Evening Edition, March 22, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "f5f1196c-7935-417e-bc52-7144f63da3cb",
+            "title": "The Times",
+            "edition": "March 23, 2024"
+        },
+        {
+            "type": "book",
+            "id": "faf5a804-e02c-4bbc-8505-4ba90a526e28",
+            "title": "Pride and Prejudice",
+            "isbn": "978-0141439518",
+            "authors": [
+                "Jane Austen"
+            ],
+            "pages": 279
+        },
+        {
+            "type": "book",
+            "id": "1aab8182-4345-4ead-98e8-0db53682311b",
+            "title": "The Catcher in the Rye",
+            "isbn": "978-0316769488",
+            "authors": [
+                "J.D. Salinger"
+            ],
+            "pages": 277
+        },
+        {
+            "type": "dvd",
+            "id": "2b92ef3d-b224-4589-9a59-cdaba758affd",
+            "title": "The Matrix",
+            "runtime": 136
+        },
+        {
+            "type": "dvd",
+            "id": "e5d75a1d-f3b4-430f-ba63-b6e4603228eb",
+            "title": "Pulp Fiction",
+            "runtime": 154
+        },
+        {
+            "type": "magazine",
+            "id": "75fb71ad-ea84-45b8-8396-b790c833573e",
+            "title": "Wired",
+            "edition": "May 2024"
+        },
+        {
+            "type": "magazine",
+            "id": "e30a6739-cdc9-4b2e-ac67-7278fcfb9a59",
+            "title": "Forbes",
+            "edition": "April 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "3e228c29-6163-477a-8b70-e873a3788758",
+            "title": "Los Angeles Times",
+            "edition": "Morning Edition, March 23, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "8e3946e2-d5a6-4cb4-ac92-17cc44935d2d",
+            "title": "Chicago Tribune",
+            "edition": "March 23, 2024"
+        },
+        {
+            "type": "book",
+            "id": "b08c9da7-5c01-494c-84ec-af3fef9dc480",
+            "title": "The Lord of the Rings",
+            "isbn": "978-0544003415",
+            "authors": [
+                "J.R.R. Tolkien"
+            ],
+            "pages": 1178
+        },
+        {
+            "type": "dvd",
+            "id": "af1ae237-d29a-49d8-a18a-d6193c07a033",
+            "title": "The Silence of the Lambs",
+            "runtime": 118
+        },
+        {
+            "type": "dvd",
+            "id": "215af9ba-e881-48fb-8284-a3dc6a1c096d",
+            "title": "The Departed",
+            "runtime": 151
+        },
+        {
+            "type": "magazine",
+            "id": "8efcbbb2-5c1e-486c-924d-63c3503f498c",
+            "title": "The Economist",
+            "edition": "March 23, 2024"
+        },
+        {
+            "type": "magazine",
+            "id": "d39f5cf3-9574-4fdc-b81b-99d31b26ee92",
+            "title": "The New Yorker",
+            "edition": "March 25, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "8b369c0f-6c68-4a84-8e15-8b85a2dd1949",
+            "title": "USA Today",
+            "edition": "Morning Edition, March 23, 2024"
+        },
+        {
+            "type": "newspaper",
+            "id": "eaf356a3-ae28-4cc5-92a2-9b0264165b5d",
+            "title": "The Wall Street Journal",
+            "edition": "March 23, 2024"
+        }
+    ],
+    "guests": [
+        {
+            "type": "librarian",
+            "name": "John Doe",
+            "email": "john.doe@fakelibrary.org",
+            "checkedOutItems": []
+        },
+        {
+            "type": "patron",
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com",
+            "checkedOutItems": [
+                {
+                    "itemId": "e27a4e0d-9664-420d-955e-c0e295d0ce02",
+                    "dueDate": "2024-04-05T00:00:00Z" 
+                },
+                {
+                    "itemId": "295ea581-cd61-4319-8b0c-e5c0c03286c5",
+                    "dueDate": "2024-04-07T00:00:00Z" 
+                }
+            ]
+        },
+        {
+            "type": "patron",
+            "name": "Alice Johnson",
+            "email": "alice.johnson@example.com",
+            "checkedOutItems": [
+                {
+                    "itemId": "17dd5d20-98f5-4a26-be09-449fea88a3c3",
+                    "dueDate": "2024-04-03T00:00:00Z" 
+                },
+                {
+                    "itemId": "28e5c91f-0e4b-4be5-abb1-8da01fd5587e",
+                    "dueDate": "2024-04-06T00:00:00Z" 
+                }
+            ]
+        },
+        {
+            "type": "librarian",
+            "name": "Bob Williams",
+            "email": "bob.williams@fakelibrary.org",
+            "checkedOutItems": []
+        },
+        {
+            "type": "patron",
+            "name": "Emily Brown",
+            "email": "emily.brown@example.com",
+            "checkedOutItems": []
+        }
+    ]
+}
