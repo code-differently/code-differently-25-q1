@@ -37,7 +37,7 @@ class MediaItemsControllerTest {
   @Test
   void testController_getsAllItems() throws Exception {
     mockMvc
-        .perform(get("/items").contentType(MediaType.APPLICATION_JSON))
+        .perform(get("/api/items").contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.items").isArray())
         .andExpect(jsonPath("$.items.length()").value(31));
@@ -47,7 +47,7 @@ class MediaItemsControllerTest {
   void testController_getsAnItem() throws Exception {
     mockMvc
         .perform(
-            get("/items/31616162-3831-3832-2d34-3334352d3465")
+            get("/api/items/31616162-3831-3832-2d34-3334352d3465")
                 .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk());
   }
@@ -56,7 +56,7 @@ class MediaItemsControllerTest {
   void testController_returnsNotFoundOnGetItem() throws Exception {
     mockMvc
         .perform(
-            get("/items/00000000-0000-0000-0000-000000000000")
+            get("/api/items/00000000-0000-0000-0000-000000000000")
                 .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isNotFound());
   }
@@ -66,7 +66,7 @@ class MediaItemsControllerTest {
     String json = "{}";
 
     mockMvc
-        .perform(post("/items").contentType(MediaType.APPLICATION_JSON).content(json))
+        .perform(post("/api/items").contentType(MediaType.APPLICATION_JSON).content(json))
         .andExpect(status().isBadRequest())
         .andExpect(jsonPath("$.errors").isArray())
         .andExpect(jsonPath("$.errors.length()").value(1));
@@ -89,7 +89,7 @@ class MediaItemsControllerTest {
         """;
 
     mockMvc
-        .perform(post("/items").contentType(MediaType.APPLICATION_JSON).content(json))
+        .perform(post("/api/items").contentType(MediaType.APPLICATION_JSON).content(json))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.item.id").value("e27a4e0d-9664-420d-955e-c0e295d0ce02"));
 
@@ -105,7 +105,7 @@ class MediaItemsControllerTest {
   void testController_returnsNotFoundOnDeleteItem() throws Exception {
     mockMvc
         .perform(
-            delete("/items/00000000-0000-0000-0000-000000000000")
+            delete("/api/items/00000000-0000-0000-0000-000000000000")
                 .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isNotFound());
   }
@@ -114,7 +114,7 @@ class MediaItemsControllerTest {
   void testController_deletesItem() throws Exception {
     mockMvc
         .perform(
-            delete("/items/32623932-6566-3364-2d62-3232342d3435")
+            delete("/api/items/32623932-6566-3364-2d62-3232342d3435")
                 .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isNoContent());
 
