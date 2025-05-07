@@ -1,0 +1,6 @@
+type,name,email
+librarian,John Doe,john.doe@fakelibrary.org
+patron,Jane Smith,jane.smith@example.com
+patron,Alice Johnson,alice.johnson@example.com
+librarian,Bob Williams,bob.williams@fakelibrary.org
+patron,Emily Brown,emily.brown@example.com

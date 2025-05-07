@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Thanks!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header"></header>
+
+  <main class="contact-page">
+    <div class="contact-card">
+      <h2>Thanks for Reaching Out, <%= name %>!</h2>
+      <p>We’ve received your message and will be in touch shortly.</p>
+
+      <ul class="submission-details">
+        <li><strong>Email:</strong> <%= email %></li>
+        <li><strong>Your Message:</strong></li>
+        <blockquote><%= message %></blockquote>
+      </ul>
+
+      <p><a href="/contact">Send Another Message</a> • <a href="/">Home</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">&copy; 2024 Code Differently</footer>
+</body>
+</html>
