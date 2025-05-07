@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us | Code Differently</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" id="redux-google-fonts-salient_redux-css" href="https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&amp;ver=1597678827" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&#038;ver=1597678827' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .header-top-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .header-top-menu li a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+            padding-bottom: 5px;
+        }
+
+        .header-top-menu li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: var(--cd-color);
+            transition: width 0.3s;
+        }
+
+        .header-top-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .sign-up-button {
+            background-color: var(--cd-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .sign-up-button:hover {
+            background-color: #ff8345;
+        }
+
+        /* The core contact container styling */
+        .contact-container {
+            display: flex; /* This makes it a flex container */
+            flex-direction: row; /* This ensures horizontal layout (side by side) */
+            width: 100%;
+            height: 80vh;
+            margin: 50px auto;
+            box-shadow:     
+                6px 6px 9px rgba(0, 0, 0, 0.2),
+                12px 12px 50px rgba(0, 0, 0, 0.4),
+            }
+
+        .contact-form-section {
+            flex: 1; /* Takes up 50% of the container */
+            padding: 40px;
+            background-color: white;
+        }
+
+        .contact-info-section {
+            flex: 1; /* Takes up 50% of the container */
+            position: relative;
+            background-image: url("images/teamcode.jpeg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .contact-info-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(12, 5, 219, 0.583);
+        }
+
+        .contact-info-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+        }
+
+        .contact-content {
+            max-width: 100%;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row input,
+        .form-row select,
+        .form-row textarea {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: var(--cd-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .submit-button:hover {
+            background-color: #ff8345;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .contact-info-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-info-item p {
+            margin-bottom: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--cd-color);
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-size: 14px;
+            color: #666;
+                    box-shadow: inset 0 5px 12px 4px #e5e5e5f3;
+
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="Code Differently Logo" />
+            </a>
+        </div>
+        <ul class="header-top-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul> 
+        <div class="header-cta">
+            <button class="sign-up-button">Contact Us!</button>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-form-section">
+            <div class="contact-content">
+                <form class="contact-form" action="" method="POST">
+
+                    <div class="form-row">
+                        <input name="firstname" value = "<%= locals.firstname %>" class="inputfield" type="text" placeholder="FIRST NAME *">
+                        <input name="lastname" class="inputfield" type="text" placeholder="LAST NAME *" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input name="phone" class="inputfield" type="tel" placeholder="PHONE *" required>
+                        <input name="email" valueclass="inputfield" type="email" placeholder="EMAIL *" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <select name="program">
+                            <option>PROGRAM OF INTEREST*</option>
+                            <option>1000 Kids Coding</option>
+                            <option>Pipeline DevShop</option>
+                            <option>Return Ready</option>
+                            <option>Stay Ready</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <textarea id="message" name="message" placeholder="YOUR MESSAGE"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="contact-info-section">
+            <div class="contact-info-overlay"></div>
+            <div class="contact-info-content">
+                <h2 class="section-title">Contact Us.</h2>
+                
+                <div class="contact-info-item">
+                    <p>Code Differently</p>
+                    <p>1200 N. French Street</p>
+                    <p>Wilmington, DE 19801</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <p>302.669.9182</p>
+                    <p>info@codedifferently.com</p>
+                </div>
+
+                <!-- AI Helped Implement social links. Claude.ai -->
+                <div class="social-item">
+                    <p>Follow Us</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        © 2025 Code Differently Refactoring The Code.
+    </div>
+</body>
+</html>

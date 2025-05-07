@@ -1,0 +1,82 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Heading */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #243e90;
+    margin-bottom: 40px;
+}
+
+/* Form Container */
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Label styling */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #3c3c3c;
+}
+
+/* Input and textarea styling */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #f47d26;
+    outline: none;
+}
+
+/* Submit button */
+form button {
+    background-color: #f47d26;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #e66c1a;
+    transform: translateY(-2px);
+}

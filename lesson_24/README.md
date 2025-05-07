@@ -21,6 +21,6 @@ Please review the following resources before lecture:
 
 Use the assets you developed for the previous lesson to implement a web server using Express and NodeJS. Provide your files in a uniquely named folder when you submit your PR.
 
-In addition, add a new page that features a form which accepts input from the user (say, a contact form) and show the results of what they posted using a HTML form submit.
+In addition, add a new page that features a form which accepts input from the user (say, a contact form) and show the results of what they provided. The form must perform an HTTP POST to the web server.
 
 Note: You may need to open a new port in the dev container to support serving traffic from your web server. Read how to do this [using this article on port forwarding](https://code.visualstudio.com/docs/editor/port-forwarding).

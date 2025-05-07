@@ -1,0 +1,212 @@
+.body{
+    width: 100%;
+    height: 1246px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    height: 131px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.header-logo {
+    width: 70px;
+    height: 75px;
+    margin-bottom: 0;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+.header-logo a {
+    display: block;
+    cursor: pointer;
+}
+.header-logo img {
+    width: 226px;
+    height: 75px;
+}
+.header-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: 16px;
+
+}
+
+.header-top-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top-menu li a {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #3c3c3c;
+    
+}
+
+.header-top-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f39e61; 
+  transition: width 0.3s ease;
+}
+
+.header-top-menu li a:hover::after {
+    width: 100%;
+}
+
+
+.header-cta {
+   display: flex; 
+}
+.sign-up-button {
+    background-color: #f47d26;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sign-up-button:hover {
+    background-color: #f39e61;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 924px;
+    display: flex;
+    box-shadow: #797979 0px 20px 20px 0px;
+}
+
+.form {
+    width: 1500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    background-color: #f4f4f4;
+}
+.form-top{
+    width: 80%;
+    height: 125px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0 0 20px;
+    
+}
+.form-top input{
+    width: 70%;
+    height: 50px;
+    background-color: #eaeaea;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: none;
+}
+
+
+.form-top input .firstname {
+    
+    height: 10px;
+    background-color: #eaeaea;
+    color: #797979;
+    border: none;
+    border-radius: 2px;
+}
+.form-bottom {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-bottom select {
+    width: 70%;
+    height: 50px;
+    background-color: #fafafa;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    box-shadow: #797979 0px 1px 1px 0px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.form-bottom textarea {
+    width: 65%;
+    height: 150px;
+    background-color: #eaeaea;
+    color: #797979;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form-bottom .btn {
+    width: 70%;
+    height: 50px;
+    background-color: #f47d26;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.other-info {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://codedifferently.com/wp-content/uploads/2020/06/0CEDE007-9795-4005-88D7-D9BC2FD9BEC0-e1593643058426.jpeg);
+    background-color: #3340a5;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.other-info .headers {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 200px;
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+
+.address {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: left;
+    padding: 0;
+}
