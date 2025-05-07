@@ -1,18 +1,18 @@
-import { useProgramContext } from "../contexts/ProgramContext";
-import { Program } from "./Program";
+import { ProgramContext } from "./ProgramContext";
+import { ProgramList } from "./ProgramList";
 
 export const ProgramList = () => {
-  const { programs } = useProgramContext();
+  const { programs } = ProgramContext();
 
   return (
     <div className="program-list">
       {programs.map((program, idx) => (
-        <Program
+        <ProgramList
           key={idx}
           title={program.title}
           description={program.description}
         />
       ))}
-    </div>
+    </div> 
   );
 };
