@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codedifferently.lesson26.library.Librarian;
 import com.codedifferently.lesson26.library.Library;
 import com.codedifferently.lesson26.library.MediaItem;
+import com.codedifferently.lesson26.library.exceptions.MediaItemCheckedOutException;
 import com.codedifferently.lesson26.library.search.SearchCriteria;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -61,5 +63,23 @@ public class MediaItemsController {
     CreateMediaItemResponse response = CreateMediaItemResponse.builder().item(itemResponse).build();
     
     return ResponseEntity.ok(response);
+  }
+
+  @DeleteMapping("/items/{id}")
+  public ResponseEntity<Void> deleteItem(@PathVariable("id") UUID id) {
+    Set<MediaItem> items = library.search(SearchCriteria.builder().id(id.toString()).build());
+
+    if (items.isEmpty()) {
+      return ResponseEntity.notFound().build();
+    }
+  
+    MediaItem itemToDelete = items.iterator().next();
+
+    try {
+      library.removeMediaItem(itemToDelete, librarian);
+      return ResponseEntity.noContent().build();
+    } catch (MediaItemCheckedOutException e) {
+      return ResponseEntity.badRequest().build();
+    }
   }
 }
