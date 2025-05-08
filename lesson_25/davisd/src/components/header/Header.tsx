@@ -1,6 +1,7 @@
 import './Header.scss';
 import logoImg from '@/assets/logo.png';
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Header: React.FC = () => {
   return (
@@ -19,6 +20,9 @@ export const Header: React.FC = () => {
         </li>
         <li>
           <a href="#">Contact</a>
+        </li>
+        <li>
+          <Link to="/add">Add Program</Link>
         </li>
       </ul>
       <div className="header-cta">
