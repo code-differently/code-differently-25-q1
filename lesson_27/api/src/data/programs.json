@@ -1,0 +1,24 @@
+{
+  "programs": [
+    {
+      "id": "28348204-a665-48ea-a436-d962bca07e2d",
+      "title": "1000 Kids Coding",
+      "description": "The Code Differently 1000 Kids Coding program was created to expose New Castle County students to computing and programming. The 1000 Kids Coding courses are designed for all experience levels, no experience required."
+    },
+    {
+      "id": "66521c31-f37d-47b2-9f5e-6ddeb8bc218a",
+      "title": "Return Ready",
+      "description": "The Code Differently Workforce Training Initiatives were created to help individuals underrepresented in tech reinvent their skills to align with the changing workforce market. If you are ready to start your tech journey, join our talent community today."
+    },
+    {
+      "id": "516190b1-89cf-4e75-858a-11e728034022",
+      "title": "Pipeline DevShops",
+      "description": "Pipeline DevShop is a youth work-based learning program. Youth participants experience working in a real software development environment while sharpening their technology and soft skills."
+    },
+    {
+      "id": "a06f970a-03b7-4cbb-9efd-f4e99029a456",
+      "title": "Platform Programs",
+      "description": "Platform programs are designed for high school graduates, college students, career changers, or professionals looking to develop the technology job readiness skills for today’s workforce."
+    }
+  ]
+}

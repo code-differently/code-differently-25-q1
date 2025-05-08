@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="submitstyle.css">
+  <title>Thank You</title>
+</head>
+<body>
+  <div class="thank-you-container">
+    <h1>Thank You for Contacting Us</h1>
+    <p>We've received your submission and will get back to you shortly.</p>
+    <hr>
+
+    <h2>Submitted Information:</h2>
+    <p><span class="label">First Name:</span> <span id="firstName"></span></p>
+    <p><span class="label">Last Name:</span> <span id="lastName"></span></p>
+    <p><span class="label">Phone:</span> <span id="phone"></span></p>
+    <p><span class="label">Email:</span> <span id="email"></span></p>
+    <p><span class="label">Message:</span><br><span id="message"></span></p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+      document.getElementById('firstName').textContent = params.get('firstName');
+      document.getElementById('lastName').textContent = params.get('lastName');
+      document.getElementById('phone').textContent = params.get("phone");
+      document.getElementById('email').textContent = params.get("email");
+      document.getElementById('message').textContent = params.get("message");
+    </script>
+</body>
+</html>

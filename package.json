@@ -11,16 +11,21 @@
   },
   "repository": {
     "type": "git",
+
     "url": "git+https://github.com/bryanasb251/code-differently-25-q1.git"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
+
     "url": "https://github.com/bryanasb251/code-differently-25-q1/issues"
   },
   "homepage": "https://github.com/bryanasb251/code-differently-25-q1#readme",
   "devDependencies": {
     "jest": "^29.7.0"
   }
+    "url": "https://github.com/kksaunders251/code-differently-25-q1/issues"
+  },
 }

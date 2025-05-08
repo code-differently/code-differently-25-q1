@@ -156,7 +156,7 @@ Regular course work and homework assignments will be provided throughout lessons
             <td>
                 <b>Software Design - Project Week</b>
                 <ul>
-                    <li><a href="../project_oop/README.md">Project OOP</a></li>
+                    <li><a href="../project_oop">Project OOP</a></li>
                 </ul>
             </td>
         </tr>
@@ -187,7 +187,7 @@ Regular course work and homework assignments will be provided throughout lessons
             <td>
                 <b>Capstone Project, Week 1</b>
                 <ul>
-                    <li><a href="../capstone/README.md">Capstone Project</a></li>
+                    <li><a href="../capstone">Capstone Project</a></li>
                     <li><a href="../lesson_27">Lesson 27 - Integrating with Backend APIs</a></li>
                     <li><a href="../lesson_28">Lesson 28 - Intro to Databases</a></li>
                 </ul>
@@ -198,7 +198,7 @@ Regular course work and homework assignments will be provided throughout lessons
             <td>
                 <b>Capstone Project, Week 2</b>
                 <ul>
-                    <li><a href="../capstone/README.md">Capstone Project</a></li>
+                    <li><a href="../capstone">Capstone Project</a></li>
                 </ul>
             </td>
         </tr>
@@ -207,7 +207,7 @@ Regular course work and homework assignments will be provided throughout lessons
             <td>
                 <b>Capstone Project, Week 3</b>
                 <ul>
-                    <li><a href="../capstone/README.md">Capstone Project</a></li>
+                    <li><a href="../capstone">Capstone Project</a></li>
                 </ul>
             </td>
         </tr>
