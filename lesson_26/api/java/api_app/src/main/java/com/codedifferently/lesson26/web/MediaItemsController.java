@@ -4,7 +4,6 @@ import com.codedifferently.lesson26.library.Librarian;
 import com.codedifferently.lesson26.library.Library;
 import com.codedifferently.lesson26.library.MediaItem;
 import com.codedifferently.lesson26.library.search.SearchCriteria;
-import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +51,7 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public CreateMediaItemResponse addItem(@Valid @RequestBody CreateMediaItemRequest request) {
+  public CreateMediaItemResponse addItem(@RequestBody CreateMediaItemRequest request) {
     MediaItemRequest itemCreation = request.getItem();
     MediaItem item = MediaItemRequest.asMediaItem(itemCreation);
     library.addMediaItem(item, librarian);
