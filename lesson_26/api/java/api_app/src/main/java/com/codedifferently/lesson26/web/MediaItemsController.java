@@ -1,6 +1,6 @@
 package com.codedifferently.lesson26.web;
 
-import com.codedifferently.lesson26.library.Librarian; // Ensure this import is present
+import com.codedifferently.lesson26.library.Librarian; 
 import com.codedifferently.lesson26.library.Library;
 import com.codedifferently.lesson26.library.MediaItem;
 import com.codedifferently.lesson26.library.search.SearchCriteria;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// DTO imports
+
 
 @RestController
 @CrossOrigin
@@ -63,7 +63,7 @@ public class MediaItemsController {
       @Valid @RequestBody CreateMediaItemRequest request) {
     try {
       MediaItem item = MediaItemRequest.asMediaItem(request.getItem());
-      library.addMediaItem(item, librarian); // Ensure you're passing a Librarian object
+      library.addMediaItem(item, librarian); 
       var response = CreateMediaItemResponse.builder().item(MediaItemResponse.from(item)).build();
       return ResponseEntity.ok(response);
     } catch (IllegalArgumentException e) {
@@ -79,7 +79,7 @@ public class MediaItemsController {
       if (items.isEmpty()) {
         return ResponseEntity.notFound().build();
       }
-      library.removeMediaItem(uuid, librarian); // Ensure you're passing a Librarian object
+      library.removeMediaItem(uuid, librarian); 
       return ResponseEntity.noContent().build();
     } catch (IllegalArgumentException e) {
       return ResponseEntity.notFound().build();
@@ -98,7 +98,7 @@ public class MediaItemsController {
                         "message", fieldError.getDefaultMessage()))
             .toList();
 
-    // Optional: Log the validation errors
+    
     System.out.println("Validation errors: " + errors);
 
     return ResponseEntity.badRequest().body(Map.of("errors", errors));
