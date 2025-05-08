@@ -6,6 +6,8 @@ var debug = require('debug')('myapp:server')
 
 const app = express()
 
+app.set("view engine", "ejs")
+
 app.use(morgan("dev"))
 app.use(express.static(path.join(__dirname, "public")))
 app.use(express.urlencoded({ extended: true}))
