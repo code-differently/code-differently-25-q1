@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+  </header>
+
+  <section class="contact-hero">
+    
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>Have a question or want to get involved? Drop us a line below.</p>
+  </div>
+ </section>
+
+  <section class="contact-layout container">
+  <form class="styled-form" action="/contact" method="post">
+  <div class="input-row">
+    <input type="text" name="firstName" placeholder="First Name *" required />
+    <input type="text" name="lastName" placeholder="Last Name *" required />
+  </div>
+  <div class="input-row">
+    <input type="text" name="phone" placeholder="Phone *" required />
+    <input type="email" name="email" placeholder="Email *" required />
+  </div>
+  <select name="interest" required>
+    <option value="" disabled selected>Program of Interest*</option>
+    <option value="coding">1000 Kids Coding</option>
+    <option value="return-ready">Return Ready</option>
+    <option value="pipeline">Pipeline DevShop</option>
+    <option value="platform">Platform Programs</option>
+  </select>
+  <textarea name="message" rows="5" placeholder="Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+  <div class="contact-info-block">
+  <div class="contact-overlay">
+    <h2>Contact Us.</h2>
+    <p><strong>Code Differently</strong><br>
+      1200 N. French Street<br>
+      Wilmington, DE 19801<br>
+      <br>
+      <a href="tel:3026699182">302.669.9182</a><br>
+      <a href="mailto:info@codedifferently.com">info@codedifferently.com</a>
+    </p>
+    <h3>Follow Us</h3>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+  <footer class="footer">
+    &copy; 2024 Code Differently
+  </footer>
+</body>
+</html>
