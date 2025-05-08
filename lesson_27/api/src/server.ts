@@ -9,11 +9,13 @@ const UUID_PATTERN =
 export const createServer = (db: Db): Express => {
   const app: Express = express();
 
+  // Serve static files from the public directory
   app.use(express.static('public'));
   app.use(express.json());
   app.use(express.urlencoded({extended: true}));
   app.use(cors());
 
+  
   app.get('/programs/:id', async (req: Request, res: Response<Program>) => {
     if (!isUuidValid(req.params.id)) {
       res.status(400).send();
