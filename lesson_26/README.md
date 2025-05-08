@@ -36,7 +36,7 @@ We are continuing to build atop the foundation of our library app. For this assi
 
 #### Running the API
 
-You can run the server using the usual `./gradlew run` command from the `api/java` directory. If you want to test that the server is running correctly, you can use `curl` like so:
+You can run the server using the usual `./gradlew run --console=plain` command from the `api/java` directory. If you want to test that the server is running correctly, you can use `curl` like so:
 
 ```bash
 curl http://localhost:3001/items | json_pp

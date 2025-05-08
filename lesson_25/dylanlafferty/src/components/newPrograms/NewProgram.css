@@ -1,0 +1,128 @@
+/* --- Form Page Styles --- */
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 0 20px;
+}
+
+.form-page h2 {
+  font-size: 48px;
+  font-weight: bolder;
+  z-index: 1;
+  margin-bottom: 40px; /* Added some spacing to avoid text collision with the form */
+}
+
+/* --- Form Container --- */
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 80vw;
+  height: auto; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Form Elements --- */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* --- Labels --- */
+label {
+  font-size: 26px;
+  color: #333333;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* --- Input & Textarea Fields --- */
+input,
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd; /* Light border for inputs */
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  resize: none; /* Prevent textareas from resizing */
+  box-sizing: border-box; /* Ensures padding does not mess with width */
+  margin-bottom: 10px; /* Space between fields */
+}
+
+/* --- Input Padding --- */
+input {
+  padding: 16px;
+}
+
+textarea {
+  padding: 12px 16px;
+  min-height: 150px; /* Set minimum height for better look */
+  max-height: 300px; /* Restrict maximum height to maintain design integrity */
+  text-align: left;
+  vertical-align: top; /* Ensures text starts from the top-left of the textarea */
+}
+
+/* --- Focus & Hover Effects --- */
+input:focus,
+textarea:focus {
+  border-color: #0073e6;
+  background-color: #ffffff; /* White background on focus */
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  transform: scale(1.02); 
+}
+
+/* --- Button Styles --- */
+button {
+  background: linear-gradient(145deg, #ff6b6b, #ff9472);
+  color: #fff;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
+
+button:active {
+  box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
