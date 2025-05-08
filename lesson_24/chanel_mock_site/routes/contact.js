@@ -2,16 +2,13 @@ const express = require("express");
 const router = express.Router()
 
 router.get("/", (req, res) => {
-    res.send("Contact")
+    res.render("index");
 
-})
-
-router.get("/new", (req, res) => {
-    res.render("contact/new", { firstName: "Test"})
 })
 
 router.post('/', (req, res) =>{
-    res.send('Create Contact')
+    const { name, email, message } = req.body;
+    res.render('contact-submitted', { name, email, message });
 })
 
 router
