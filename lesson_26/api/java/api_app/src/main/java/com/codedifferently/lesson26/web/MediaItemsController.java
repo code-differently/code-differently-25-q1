@@ -4,6 +4,7 @@ import com.codedifferently.lesson26.library.Librarian;
 import com.codedifferently.lesson26.library.Library;
 import com.codedifferently.lesson26.library.MediaItem;
 import com.codedifferently.lesson26.library.search.SearchCriteria;
+import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -40,13 +41,11 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public ResponseEntity<MediaItemResponse> createItem(@RequestBody MediaItemRequest request) {
+  public ResponseEntity<MediaItemResponse> createItem(
+      @Valid @RequestBody MediaItemRequest request) {
     MediaItem newItem = MediaItemRequest.asMediaItem(request);
-
     Librarian librarian = new Librarian("system", "system@example.com");
-
     library.addMediaItem(newItem, librarian);
-
     return new ResponseEntity<>(MediaItemResponse.from(newItem), HttpStatus.CREATED);
   }
 
@@ -77,9 +76,9 @@ public class MediaItemsController {
     }
 
     MediaItem item = itemOpt.get();
-    Librarian librarian = new Librarian("system", "system@example.com"); // placeholder
+    Librarian librarian = new Librarian("system", "system@example.com");
     library.removeMediaItem(item, librarian);
 
-    return ResponseEntity.noContent().build(); // 204 No Content
+    return ResponseEntity.noContent().build();
   }
 }
