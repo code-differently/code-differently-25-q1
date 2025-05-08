@@ -9,16 +9,9 @@ const express = require('express');
  app.use(bodyParser.urlencoded({ extended: true }));
  app.use(express.static('.'));
 
-//  app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
  
  // Routes
- app.get('/', (req, res) => {
-   res.sendFile(path.join(__dirname, 'index.html'));
- });
- 
- app.get('/contact', (req, res) => {
-   res.sendFile(path.join(__dirname, 'contact.html'));
- });
  
  app.post('/submit-form', (req, res) => {
    const { name, email, message } = req.body;
