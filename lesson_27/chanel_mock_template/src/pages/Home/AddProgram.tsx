@@ -18,13 +18,13 @@ export const AddProgram: React.FC = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/programs', {
+      const response = await fetch('http://localhost:4000/programs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          program: {title, description},
+          title, description,
         }),
       });
 

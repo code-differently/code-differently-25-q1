@@ -12,10 +12,11 @@ export const ProgramList: React.FC = () => {
   const [programs, setPrograms] = useState<ProgramData[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/programs")
+    fetch("http://localhost:4000/programs")
       .then(response => response.json())
       .then(data => {
-        setPrograms(data.programs);
+       console.log(data)
+        setPrograms(data);
       })
       .catch(error => {
         console.error("Error fetching programs:", error);
@@ -24,7 +25,7 @@ export const ProgramList: React.FC = () => {
 
   return (
     <ul className="programs">
-      {programs.map((program) => (
+      {programs?.map((program) => (
         <Program key={program.id} title={program.title}>
           <p>{program.description}</p>
         </Program>
