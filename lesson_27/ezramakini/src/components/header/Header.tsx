@@ -1,18 +1,22 @@
 import './Header.scss';
 import logoImg from '@/assets/logo.png';
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-logo">
-        <a href="/">
+        <Link to="/">
           <img src={logoImg} alt="Code Differently Logo" />
-        </a>
+        </Link>
       </div>
       <ul className="header-top-menu">
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/new-program">Add Program</Link>
         </li>
         <li>
           <a href="#">About</a>

@@ -16,7 +16,6 @@
   "dependencies": {
     "@code-differently/types": "file:../types",
     "@tanstack/react-query": "^5.62.7",
-    "axios": "^1.9.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2"
