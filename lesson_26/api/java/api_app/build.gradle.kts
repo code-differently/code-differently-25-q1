@@ -3,7 +3,7 @@ plugins {
     application
     eclipse
     id("com.diffplug.spotless") version "6.25.0"
-	  id("org.springframework.boot") version "3.4.0"
+    id("org.springframework.boot") version "3.2.3"
     id("com.adarshr.test-logger") version "4.0.0"
 }
 
@@ -21,7 +21,6 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.assertj:assertj-core:3.26.3")
     testImplementation("at.favre.lib:bcrypt:0.10.2")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     // This dependency is used by the application.
     implementation("com.codedifferently.instructional:instructional-lib")
