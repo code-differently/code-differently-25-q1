@@ -1,0 +1,23 @@
+{
+  "name": "code-differently-25-q1",
+  "version": "1.0.0",
+  "description": "[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/code-differently/code-differently-25-q1) [![Check Push](https://github.com/code-differently/code-differently-25-q1/actions/workflows/check_push.yml/badge.svg)](https://github.com/code-differently/code-differently-25-q1/actions/workflows/check_push.yml)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kksaunders251/code-differently-25-q1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kksaunders251/code-differently-25-q1/issues"
+  },
+  "homepage": "https://github.com/kksaunders251/code-differently-25-q1#readme"
+}

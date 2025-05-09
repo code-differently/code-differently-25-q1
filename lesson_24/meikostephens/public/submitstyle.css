@@ -1,0 +1,22 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #F47D26;
+      padding: 40px;
+    }
+    .thank-you-container {
+      max-width: 600px;
+      background: white;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0072ce;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .label {
+      font-weight: bold;
+    }
