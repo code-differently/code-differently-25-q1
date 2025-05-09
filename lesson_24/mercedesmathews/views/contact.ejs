@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" id="redux-google-fonts-salient_redux-css" href="https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&amp;ver=1597678827" type="text/css" media="all">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A600%2C400%7CMontserrat%3A800%2C900%2C700&#038;ver=1597678827' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+      <header class="header">
+        <div class="header-logo">
+            <a href="/">
+                <img src="logo.png" alt="Code Differently Logo" />
+            </a>
+        </div>
+        <ul class="header-top-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="header-cta">
+            <a class="sign-up-button" href="#">Sign Up</a>
+        </div>
+    </header>
+    <div class="main">
+      <article>
+        <section class="contact-container">
+          <div class="form-section">
+            <form class="contact-form" action="/submit" method="POST">
+              <div class="row">
+                <input type="text" name="firstName" placeholder="First Name *" required>
+                <input type="text" name="lastName" placeholder="Last Name *" required>
+              </div>
+              <div class="row">
+                <input type="text" name="phone" placeholder="Phone *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+              </div>
+              <br>
+              <select name="programInterest" required>
+                <option value="">Program of Interest *</option>
+                <option value="1000 Kids Coding">1000 Kids Coding</option>
+                <option value="Pipeline DevShop">Pipeline DevShop</option>
+                <option value="Return Ready">Return Ready</option>
+                <option value="Stay Ready">Stay Ready</option>
+                <option value="Platform Programs">Platform Programs</option>
+                <option value="Partner With Us">Partner With Us</option>
+                <option value="Learn With Us">Learn With Us</option>
+                <option value="Donate/Volunteer">Donate/Volunteer</option>
+              </select>
+              <textarea name="message" placeholder="Message *" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="content-overlay"></div>
+          <div class="image-section"></div>
+        </section>
+      </article>
+  </div>
+</body>
+</html>
