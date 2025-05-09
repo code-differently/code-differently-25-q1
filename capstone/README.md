@@ -3,6 +3,7 @@
 For the next two weeks, you and your team will ideate and implement a working software system. You will have the opportunity to apply the skills that you have learned to solve an interesting problem or contribute a meaningful tool that improves our lives.
 
 ### Changelog
+- 5/9 @anthonydmays Clarified 3rd-party API requirement.
 - 4/24 @anthonydmays Published initial version
 
 ### Technical Requirements
@@ -14,7 +15,7 @@ Your project submission must include the following elements:
 * Write unit tests achieving 80% code coverage (using JaCoCo for Java or Jest for Typescript).
 * Must have a working front-end that interacts with a back-end web service to retrieve and persist data.
 * Your app must be publicly accessible. It is recommended that you use [Vercel](https://vercel.com) or [Fly.io](https://fly.io) to deploy your apps.
-* The system must incorporate one third-party API.
+* The system must incorporate one third-party web API.
 * Your repo must include a README with the following elements:
     * The team
     * Screenshot
