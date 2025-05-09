@@ -20,7 +20,6 @@ SELECT
     'Guest Name' AS source
 FROM 
     guests
-LIMIT 5
 UNION
 
 SELECT
