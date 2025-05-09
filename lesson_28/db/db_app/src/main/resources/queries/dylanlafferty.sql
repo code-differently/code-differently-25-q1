@@ -11,22 +11,18 @@ GROUP BY
 SELECT
     SUM(pages) AS total_pages
 FROM 
-    media_items;
+    media_items m 
+JOIN 
+    checked_out_items c ON m.id = c.item_id;
 
 -- 3. All 5 guests and their corresponding checked-out items
 SELECT 
-    email,
-    name AS value,
-    'Guest Name' AS source
+    g.*,
+    c.email, 
+    item.title
 FROM 
-    guests
-UNION
-
-SELECT
-    c.email,
-    m.title AS value,
-    'Checked Out Title' AS source
-FROM
-    checked_out_items c
-JOIN 
-    media_items m ON m.id = c.item_id;
+    guests g
+LEFT JOIN
+    checked_out_items c ON c.email = g.email
+LEFT JOIN
+    media_items item ON item.id = c.item_id;
