@@ -38,26 +38,31 @@ const mutation = useMutation({
   };
 
   return (
+    <div className="form-page">
+  <div className="form-container">
+    <h2>Create New Program</h2>
     <form onSubmit={handleSubmit}>
-      <h2>Create New Program</h2>
       <label>
         Title:
         <input type="text" name="title" required />
       </label>
-      <br />
       <label>
         Description:
         <textarea name="description" required />
       </label>
-      <br />
       <button type="submit" disabled={mutation.isPending}>
         {mutation.isPending ? 'Creating...' : 'Create Program'}
       </button>
       {mutation.isError && (
-        <p style={{ color: 'red' }}>Error: {mutation.error.message}</p>
+        <p className="error-message">Error: {mutation.error.message}</p>
       )}
-      {mutation.isSuccess && <p>Program successfully created!</p>}
+      {mutation.isSuccess && (
+        <p className="success-message">Program successfully created!</p>
+      )}
     </form>
+  </div>
+</div>
+
   );
 };
 
