@@ -1,0 +1,15 @@
+.programs-section {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: auto;
+
+  .programs {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+  }
+}
