@@ -7,10 +7,10 @@ import com.codedifferently.lesson26.library.search.SearchCriteria;
 import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -41,16 +41,22 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public ResponseEntity<MediaItemResponse> createItem(
-      @Valid @RequestBody MediaItemRequest request) {
+  public ResponseEntity<Map<String, MediaItemResponse>> createItem(
+      @Valid @RequestBody MediaItemWrapper wrapper) {
+
+    MediaItemRequest request = wrapper.getItem();
+    if (request == null) {
+      throw new IllegalArgumentException("Item must be provided in request body");
+    }
+
     MediaItem newItem = MediaItemRequest.asMediaItem(request);
-    Librarian librarian = new Librarian("system", "system@example.com");
     library.addMediaItem(newItem, librarian);
-    return new ResponseEntity<>(MediaItemResponse.from(newItem), HttpStatus.CREATED);
+    return ResponseEntity.ok(Map.of("item", MediaItemResponse.from(newItem)));
   }
 
   @GetMapping("/items/{id}")
-  public ResponseEntity<MediaItemResponse> getItemById(@PathVariable UUID id) {
+  public ResponseEntity<MediaItemResponse> getItemById(@PathVariable("id") UUID id) {
+
     Set<MediaItem> allItems = library.search(SearchCriteria.builder().build());
 
     Optional<MediaItem> itemOpt =
@@ -65,7 +71,7 @@ public class MediaItemsController {
   }
 
   @DeleteMapping("/items/{id}")
-  public ResponseEntity<Void> deleteItemById(@PathVariable UUID id) {
+  public ResponseEntity<Void> deleteItemById(@PathVariable("id") UUID id) {
     Optional<MediaItem> itemOpt =
         library.search(SearchCriteria.builder().build()).stream()
             .filter(item -> item.getId().equals(id))
