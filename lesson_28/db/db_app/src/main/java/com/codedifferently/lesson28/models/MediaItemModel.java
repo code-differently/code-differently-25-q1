@@ -11,7 +11,7 @@ import java.util.UUID;
 @Table(name = "media_items")
 public class MediaItemModel {
   public String type;
-  @Id public UUID id;kw
+  @Id public UUID id;
   public String isbn;
   public String title;
 

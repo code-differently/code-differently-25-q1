@@ -61,7 +61,6 @@ public class LibraryDataModel {
   }
 
   public List<LibraryUsersModel> getUsers() {
-    
 
     return users;
   }
