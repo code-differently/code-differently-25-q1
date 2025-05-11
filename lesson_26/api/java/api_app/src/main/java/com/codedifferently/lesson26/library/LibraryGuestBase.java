@@ -9,10 +9,14 @@ import java.util.UUID;
 /** Base implementation of a library guest. */
 public class LibraryGuestBase implements LibraryGuest {
 
-  private Library library;
+  protected Library library;
   private final UUID id = UUID.randomUUID();
   private final String name;
   private final String email;
+
+  public Library getLibrary() {
+    return library;
+  }
 
   public LibraryGuestBase(String name, String email) {
     this.name = name;

@@ -8,5 +8,5 @@ import lombok.Singular;
 @Data
 @Builder
 public class GetMediaItemsResponse {
-  @Singular private List<MediaItemResponse> items;
+  @Singular List<MediaItemResponse> items;
 }

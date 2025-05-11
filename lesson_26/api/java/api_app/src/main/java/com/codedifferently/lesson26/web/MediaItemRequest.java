@@ -26,6 +26,9 @@ public class MediaItemRequest {
   @NotBlank(message = "Title is required")
   private String title;
 
+  private String genre;
+  private String author;
+
   private String[] authors;
   private String edition;
   private int pages;

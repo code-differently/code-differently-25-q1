@@ -16,5 +16,5 @@ public class LibraryInfo {
   public String id;
   public Set<MediaItem> items;
   public Set<LibraryGuest> guests;
-  public Map<UUID, Set<MediaItem>> checkedOutItemsByGuest;
+  public Map<UUID, Set<MediaItem>> checkedOutItemsByGuestMap;
 }

@@ -15,10 +15,10 @@ public class MediaItemResponse {
   private UUID id;
   private String isbn;
   private String title;
-  public List<String> authors;
-  public String edition;
-  public int pages;
-  public int runtime;
+  private List<String> authors;
+  private String edition;
+  private int pages;
+  private int runtime;
 
   public static MediaItemResponse from(MediaItem item) {
     var result =

@@ -25,6 +25,10 @@ public class Library {
    *
    * @param id The id of the library.
    */
+  public void addItem(MediaItem item) {
+    this.itemsById.put(item.getId(), item);
+  }
+
   public Library(String id) {
     this.id = id;
     this.searcher = new CatalogSearcher(this.itemsById.values());
@@ -280,7 +284,7 @@ public class Library {
         .id(this.id)
         .items(Collections.unmodifiableSet(new HashSet<>(this.itemsById.values())))
         .guests(Collections.unmodifiableSet(new HashSet<>(this.guestsById.values())))
-        .checkedOutItemsByGuest(Collections.unmodifiableMap(itemsByGuest))
+        .checkedOutItemsByGuestMap(Collections.unmodifiableMap(itemsByGuest))
         .build();
   }
 
@@ -296,5 +300,14 @@ public class Library {
         + ", guestIds="
         + guestsById
         + '}';
+  }
+
+  public MediaItem findById(String id) {
+    return itemsById.get(id);
+  }
+
+  public void deleteById(String id) {
+    UUID uuid = UUID.fromString(id);
+    itemsById.remove(uuid);
   }
 }

@@ -42,7 +42,7 @@ public final class LibraryApp {
 
   private void printLibraryInfo(Library library) {
     LibraryInfo info = library.getInfo();
-    Map<UUID, Set<MediaItem>> checkedOutItemsByGuest = info.getCheckedOutItemsByGuest();
+    Map<UUID, Set<MediaItem>> checkedOutItemsByGuest = info.getCheckedOutItemsByGuestMap();
     int numCheckedOutItems = checkedOutItemsByGuest.values().stream().mapToInt(Set::size).sum();
     System.out.println();
     System.out.println("========================================");
