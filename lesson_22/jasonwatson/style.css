@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Poppins';
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 24px;
+}
+
+.highlight {
+    text-decoration-skip-ink: none;
+    text-decoration: underline;
+    text-decoration-color: #f47d26;
+    text-decoration-thickness: 10px;
+    text-underline-offset: -4px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 16px 52px;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 10;
+}
+
+.header-logo img {
+    width: 275px;
+    padding: 0 20px;
+    
+}
+
+.header-top-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.header-top-menu li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.header-top-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: orange;
+    transition: width 0.3s ease;
+}
+
+.header-top-menu li a:hover::after {
+    width: 100%;
+}
+
+.header-cta .sign-up-button {
+    background-color: rgb(255, 128, 0);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.header-cta .sign-up-button:hover {
+    background-color: rgb(251, 148, 44);
+    transition-duration: 0.5s;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.239),
+            rgba(0, 0, 0, 0.239)),
+        url("hero.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 97%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 30%;
+    z-index: 0;
+    background-position-y: 50px;
+    padding-top: 80px;
+}
+
+.hero-content {
+    margin-top: 0%;
+    padding-top: 100px;
+    padding-right: 250px;
+    text-align: left;
+    line-height: 5px;
+}
+
+.hero-title {
+    font-size: 54px;
+    padding-right: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-right: 20%;
+    line-height: 1.2em;
+}
+
+.hero-title .highlight {
+    font-style: normal;
+}
+
+.hero-text {
+    position: relative;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 30px 100px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 22% 7% 0;
+}
+
+.hero-content div {
+    background: #243e90;
+}
+
+.hero-text span {
+    color: rgb(255, 128, 0);
+    font-weight: bold;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: fit-content;
+}
+
+.programs-section {
+    padding: 160px;
+    margin-left: 60px;
+    font-size: 25px;
+    color: #444;
+}
+
+.programs-section h2 {
+    font-weight: 900;
+    margin-bottom: 70px;
+}
+
+.programs-section h2 .highlight {
+    font-style: normal;
+}
+
+.programs-section li {
+    list-style: none;
+}
+
+.programs li h3 {
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.programs li p {
+    font-weight: lighter;
+    font-family: 'Poppins';
+    color: #676767;
+    font-size: medium;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    color: #444;
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 13px;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 999px) and (min-width: 690px) {
+    .hero-title {
+        font-size: 37.8px;
+        line-height: 42px;
+    }
+}
+
+@media (min-width: 30em) and (max-width: 50em) {
+    .programs li p {
+        left: 0;
+
+    }
+}
+
+@media (width <=1250px) {
+    .hero-section {
+        min-width: 300px;
+    }
+
+    .programs {
+        grid-template-columns: 1fr;
+    }
+
+    .programs-section {
+        margin-left: 0;
+        padding: 50px;
+        margin-top: 50px;
+    }
+
+    .programs-section h2 {
+        font-weight: 900;
+        margin-bottom: 25px;
+        font-size: 25px;
+    }
+
+    .programs li h3 {
+        font-size: 18px;
+        font-weight: lighter;
+        margin-bottom: 25px;
+    }
+
+    .programs li p {
+        margin-right: 70px;
+    }
+
+    .hero-content {
+        padding-top: 200px;
+        padding-right: 0;
+        text-align: left;
+        line-height: 5px;
+    }
+
+    .hero-text {
+        padding: 15px;
+        left: 0;
+    }
+
+    .header-top-menu {
+        display: none;
+        justify-content: space-between;
+        left: 0;
+    }
+
+    .header-logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+
+    .header-cta {
+        margin-left: auto;
+    }
+}

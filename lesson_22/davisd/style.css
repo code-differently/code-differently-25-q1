@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.header-logo img {
+  width: 226px;
+  height: 75px;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #3c3c3c;
+}
+
+.header-logo img {
+    max-width: 150px;
+}
+
+.header-top-menu {
+    list-style: none;
+    display: flex;
+}
+
+.header-top-menu li {
+    margin: 0 15px;
+}
+
+.header-top-menu a {
+    color: #3c3c3c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-top-menu li::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f47d26;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-top-menu li:hover::after {
+  transform: scaleX(1);
+}
+
+.header-cta .sign-up-button {
+    background-color: #f47d26;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url('hero.jpg');
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    text-align: center;
+}
+
+
+
+

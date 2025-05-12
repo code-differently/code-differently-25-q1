@@ -1,0 +1,32 @@
+type,id,title,isbn,authors,pages,runtime,edition
+book,e27a4e0d-9664-420d-955e-c0e295d0ce02,To Kill a Mockingbird,978-0061120084,"Harper Lee",336,,
+book,17dd5d20-98f5-4a26-be09-449fea88a3c3,1984,978-0451524935,"George Orwell",328,,
+dvd,28e5c91f-0e4b-4be5-abb1-8da01fd5587e,The Shawshank Redemption,,,,142,
+dvd,295ea581-cd61-4319-8b0c-e5c0c03286c5,Inception,,,,148,
+magazine,222111dd-c561-462a-8854-853ada4d3421,National Geographic,,,,,March 2024
+magazine,0afd425b-973f-4af9-a6aa-8febe943a8f6,Time,,,,,"March 15, 2024"
+newspaper,91b74a71-97ad-4fea-b17c-a640c98d355f,The New York Times,,,,,"Morning Edition, March 22, 2024"
+newspaper,45cab344-b792-484c-9156-d929237dde67,The Guardian,,,,,"March 22, 2024"
+book,218b55fa-a3cd-4803-805e-7cd1ef3115ac,The Great Gatsby,978-0743273565,"F. Scott Fitzgerald",180,,
+book,b4249c17-f77b-46da-aa82-7aa227eca5e2,Harry Potter and the Sorcerer's Stone,978-0590353427,"J.K. Rowling",309,,
+dvd,a3cc5ccb-e2fd-4cd0-a6f8-dc1f2f07589b,The Godfather,,,,175,
+dvd,6386364c-8505-4dbe-8731-ff8fa0d6e381,The Dark Knight,,,,152,
+magazine,e5060cc1-33f0-431c-a1b3-d1979e38b6f2,Scientific American,,,,,April 2024
+magazine,7048bd13-49ee-4693-8900-e396bbdf3f98,Vogue,,,,,Spring 2024
+newspaper,6f80a5ce-5958-48f3-a029-ff3d76f2c3fe,The Washington Post,,,,,"Evening Edition, March 22, 2024"
+newspaper,f5f1196c-7935-417e-bc52-7144f63da3cb,The Times,,,,,"March 23, 2024"
+book,faf5a804-e02c-4bbc-8505-4ba90a526e28,Pride and Prejudice,978-0141439518,"Jane Austen",279,,
+book,1aab8182-4345-4ead-98e8-0db53682311b,The Catcher in the Rye,978-0316769488,"J.D. Salinger",277,,
+dvd,2b92ef3d-b224-4589-9a59-cdaba758affd,The Matrix,,,,136,
+dvd,e5d75a1d-f3b4-430f-ba63-b6e4603228eb,Pulp Fiction,,,,154,
+magazine,75fb71ad-ea84-45b8-8396-b790c833573e,Wired,,,,,"May 2024"
+magazine,e30a6739-cdc9-4b2e-ac67-7278fcfb9a59,Forbes,,,,,"April 2024"
+newspaper,3e228c29-6163-477a-8b70-e873a3788758,Los Angeles Times,,,,,"Morning Edition, March 23, 2024"
+newspaper,8e3946e2-d5a6-4cb4-ac92-17cc44935d2d,Chicago Tribune,,,,,"March 23, 2024"
+book,b08c9da7-5c01-494c-84ec-af3fef9dc480,The Lord of the Rings,978-0544003415,"J.R.R. Tolkien",1178,,
+dvd,af1ae237-d29a-49d8-a18a-d6193c07a033,The Silence of the Lambs,,,,118,
+dvd,215af9ba-e881-48fb-8284-a3dc6a1c096d,The Departed,,,,151,
+magazine,8efcbbb2-5c1e-486c-924d-63c3503f498c,The Economist,,,,,"March 23, 2024"
+magazine,d39f5cf3-9574-4fdc-b81b-99d31b26ee92,The New Yorker,,,,,"March 25, 2024"
+newspaper,8b369c0f-6c68-4a84-8e15-8b85a2dd1949,USA Today,,,,,"Morning Edition, March 23, 2024"
+newspaper,eaf356a3-ae28-4cc5-92a2-9b0264165b5d,The Wall Street Journal,,,,,"March 23, 2024"

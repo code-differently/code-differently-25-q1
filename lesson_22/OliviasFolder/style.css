@@ -1,0 +1,273 @@
+body {
+    font-family: Poppins, sans-serif; /* Global font */
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   HEADER STYLES
+   ============================ */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 96px 4px 25px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    margin: 0;
+    height: 20%;
+}
+
+.header-logo img {
+    position:absolute
+    left:5;
+    width: 226.64px;
+    height: 75px;
+    margin-bottom: 40%;
+}
+
+.header-top-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 225px;
+    margin-right: 20%;
+    margin-bottom: 10%;
+}
+
+.header-top-menu li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+.header-top-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease;
+}
+
+
+.header-top-menu li:first-child a::after {
+    width: 100%;
+}
+
+.header-cta .sign-up-button {
+    background-color: #f26522;
+    color: #ffffff;
+    padding: 4px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    line-height: 34px;
+}
+
+.header-cta .sign-up-button:hover {
+    background-color: #ea893ff7;
+    opacity: 0.7;
+
+}
+
+.header-cta .sign-up-button: ::after{
+    z-index: -1;
+    background-color: #df833c;
+}
+
+/* ============================
+   HERO SECTION STYLES
+   ============================ */
+
+.hero-section {
+    position: relative;
+    background-image: url("hero.jpg");
+    background-size: 100%;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    height: 77vh;
+    margin-top: 67px;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.hero-content h2 {
+    font-weight: 800;
+    font-size: 35.px;
+    line-height: 62px;
+    color: #ffffff;
+}
+
+
+.hero-content .highlight {
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+    padding-left: 3px;
+    display: inline-block;
+}
+
+.hero-content .highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 100%;
+    height: 15px;
+    width: 100.6%;
+    background-color: rgb(244, 125, 38);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: underlineIn 1s ease forwards;
+    z-index: -1;
+}
+
+@keyframes underlineIn {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hero-title {
+    width: 40%;
+    height: 100px;
+    margin: 100px 0 0 -20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    color: #fff;
+    padding: 100px 20px 20px 20px;
+    text-align: left;
+}
+
+.hero-text {
+    font-family: Poppins;
+    font-weight: 100;
+    background-color: rgb(36, 62, 144);
+    font-size: 20px;
+}
+
+
+.hero-text{
+    background-color: #243e90;
+    background-position: center;
+    height: 100px;
+    width: 55%;
+    padding:  30px 120px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 70px;
+    color: white;
+
+}
+
+.hero-text span {
+    color:#f47d26;
+}
+
+
+
+/* ============================
+   PROGRAMS SECTION STYLES
+   ============================ */
+.programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: fit-content;
+}
+.programs-section {
+    margin: 150px 110px;
+}
+
+.programs-section h2{  /* our program */
+    font-size: 34px;
+    color: rgb(68, 68, 68);
+    font-weight: 1000;
+    line-height: 34px;
+    padding-left: 40;
+}
+
+.program p{ /* program descriptions */
+    color: rgb(103, 103, 103);
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 24px;
+    margin-bottom: 42px;
+
+}
+
+.programs li p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: medium;
+      olor: #676767;
+}
+
+
+.programs-section ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    color: #a9a9a9;
+    font-weight: 100;
+}
+
+.programs li h3  { /* program headlines */
+    color: #444444;
+    font-size: 17.6px;
+    line-height: 34px;
+    margin-bottom: 27px;
+    text-decoration: none;
+}
+
+.programs-section .highlight { 
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+    padding-left: 3px;
+    display: inline-block;
+}
+
+.programs-section .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 9.5px;
+  width: 101.7%;
+  background-color: rgb(244, 125, 38);
+  transform-origin: left;
+  animation: underlineIn 1s ease forwards;
+  z-index: -1;
+  transform: scaleX(0);
+}
+
+
+.footer {
+    text-align: center;
+    line-height: 22px;
+    margin-top: 3px;
+    color: #3C3C3C;
+    padding: 20px 0;
+    font-family: 'Poppins';
+}
+
