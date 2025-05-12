@@ -46,4 +46,6 @@ public class MediaItemsController {
     Optional<MediaItem> matchedItem =
         items.stream().filter(item -> item.getId().equals(id)).findFirst();
     System.out.println("items");
+      return null;
+}
 }
