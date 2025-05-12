@@ -14,4 +14,8 @@ import lombok.NoArgsConstructor;
 public class CreateMediaItemRequest {
   @NotNull(message = "item is required") @Valid
   private MediaItemRequest item;
+
+    MediaItemRequest getItem() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
