@@ -75,6 +75,15 @@ article {
   max-width: 48%;
 }
 
+.add-program {
+  border-radius: 10px;
+  color: white;
+  background-color: #f47d26;
+  padding: 10px 20px;
+  width: 10%;
+  margin: 1rem;
+}
+
 @media screen and (max-width: 1080px) {
   .program {
     min-width: 100%;

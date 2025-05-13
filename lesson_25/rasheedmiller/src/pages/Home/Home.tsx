@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Home.scss';
 import {ProgramList} from './ProgramList';
 import React from 'react';
@@ -21,6 +22,9 @@ export const Home: React.FC = () => {
         </div>
       </section>
       <ProgramList />
+        <Link to="/addprogram" className="add-program">
+          Add Program
+        </Link>
     </article>
   );
 };

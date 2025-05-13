@@ -4,8 +4,8 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
-
 import './index.scss';
+import { AddProgramPage } from './pages/Home/AddProgramPage.tsx';
 
 const queryClient = new QueryClient();
 
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/addprogram',
+        element: <AddProgramPage />
       },
     ],
   },
