@@ -2,14 +2,18 @@
 <html>
 <head>
   <title>Thanks for contacting us!</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <h1>Thanks, <%= name %>!</h1>
-  <p>We received your message:</p>
-  <ul>
-    <li><strong>Email:</strong> <%= email %></li>
-    <li><strong>Message:</strong> <%= message %></li>
-  </ul>
-  <a href="/contact">Back to form</a>
+<body class="success-page">
+  <div class="success-container">
+    <h1 class="success-title">Thanks, <%= name %>!</h1>
+    <p class="success-message">We received your message:</p>
+    <ul class="success-details">
+      <li><strong>Email:</strong> <%= email %></li>
+      <li><strong>Message:</strong> <%= message %></li>
+    </ul>
+    <a href="/contact" class="back-link">Back to form</a>
+  </div>
 </body>
 </html>

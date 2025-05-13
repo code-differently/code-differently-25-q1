@@ -254,3 +254,44 @@ button {
   margin-right: 10px;
 }
 
+.success-container {
+  max-width: 600px;
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.success-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fe7a1b;
+}
+
+.success-message {
+  margin-bottom: 10px;
+}
+
+.success-details {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.success-details li {
+  margin-bottom: 8px;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fe7a1b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  background-color: #f55722e6;
+}
