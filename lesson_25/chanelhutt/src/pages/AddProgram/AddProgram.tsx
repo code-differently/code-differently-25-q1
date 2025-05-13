@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './AddProgram.scss';
 
 
 const AddProgramComponent: React.FC = () => {
