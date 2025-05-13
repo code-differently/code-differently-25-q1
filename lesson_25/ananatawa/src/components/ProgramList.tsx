@@ -1,4 +1,4 @@
-import Program from './Program';
+import Program from "./Program";
 
 function ProgramList() {
   const programs = [
