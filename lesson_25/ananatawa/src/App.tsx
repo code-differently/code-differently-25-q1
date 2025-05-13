@@ -1,11 +1,20 @@
-import { Outlet } from 'react-router-dom';
+import './App.scss';
+import {Outlet} from 'react-router-dom';
+
+import {Footer} from './components/footer';
+import {Header} from './components/header';
 
 function App() {
   return (
-    <main>
-      {/* Optional: add nav or layout elements here */}
-      <Outlet /> {/* This renders the page that matches the current route */}
-    </main>
+    <>
+      <Header />
+      <div className="main">
+        <div className="content">
+          <Outlet />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
 
