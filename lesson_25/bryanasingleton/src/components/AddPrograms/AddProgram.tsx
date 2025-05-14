@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 export const AddProgram: React.FC = () => {
-  const [title, setTitle] = useState('Add New Program');
+  const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
