@@ -1,3 +1,5 @@
+// This file defines a Button component in React with TypeScript.
+// This is simply the button that you're clicking on to get from page to page.
 import './Button.scss';
 
 type ButtonProps = {
