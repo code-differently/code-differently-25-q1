@@ -1,20 +1,17 @@
 import './newProgram.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import {ProgramData} from '../programs/programData';
+import { ProgramData } from '../programs/programData';
 
-interface NewProgramProps {
-  addProgram: (program: ProgramData) => void;
-}
-
-export const NewProgram: React.FC<NewProgramProps> = ({addProgram}) => {
+export const NewProgram: React.FC = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [submittedProgram, setSubmittedProgram] = useState<ProgramData | null>(null);
 
   const handleSubmission = (e: React.FormEvent) => {
     e.preventDefault();
-    const newProgram: ProgramData = {title, description};
-    addProgram(newProgram);
+    const newProgram: ProgramData = { title, description };
+    setSubmittedProgram(newProgram);
     setTitle('');
     setDescription('');
   };
@@ -52,8 +49,12 @@ export const NewProgram: React.FC<NewProgramProps> = ({addProgram}) => {
           <button type="submit">Submit your Program!</button>
         </form>
 
-        <p>{title}</p>
-        <p>{description}</p>
+        {submittedProgram && (
+          <>
+            <p>{submittedProgram.title}</p>
+            <p>{submittedProgram.description}</p>
+          </>
+        )}
       </div>
     </section>
   );
