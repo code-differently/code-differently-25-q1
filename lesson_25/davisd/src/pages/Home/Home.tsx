@@ -41,7 +41,10 @@ export const Home: React.FC = () => {
             <em className="highlight">diversity in tech.</em>
           </h2>
           <div className="hero-text">
-            <span>Code Differently</span> provides hands on training...
+            <span>Code Differently</span> provides hands on training and
+            education through coding classes that gives participants the
+            technical and cognitive skills they need to excel in
+            technology-driven workplaces.
           </div>
         </div>
       </section>
