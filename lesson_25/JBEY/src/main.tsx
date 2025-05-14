@@ -5,7 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 
-import AddProgramPage from './components/program/AddProgramPage.tsx';
 import './index.scss';
 
 const queryClient = new QueryClient();
@@ -18,10 +17,6 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-      },
-      {
-        path: '/add-program',
-        element: <AddProgramPage />,
       },
     ],
   },

@@ -1,13 +1,9 @@
-// Home.tsx
 import './Home.scss';
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router';
 
-import {ProgramList} from '../../components/program/ProgramList';
-
-<Link to="/add-program">
-  <button>Add New Program</button>
-</Link>;
+import Button from '../../components/button/button';
+import {ProgramList} from '../../components/programList/ProgramList';
 
 export const Home: React.FC = () => {
   return (
@@ -32,6 +28,9 @@ export const Home: React.FC = () => {
           Our <em className="highlight">Programs</em>
         </h2>
         <ProgramList />
+        <Link to="/add-program">
+          <Button label="New Program" />
+        </Link>
       </section>
     </article>
   );
