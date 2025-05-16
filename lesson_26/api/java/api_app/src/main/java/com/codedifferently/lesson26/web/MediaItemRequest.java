@@ -1,13 +1,15 @@
 package com.codedifferently.lesson26.web;
 
+import java.util.List;
+import java.util.UUID;
+
 import com.codedifferently.lesson26.library.Book;
 import com.codedifferently.lesson26.library.Dvd;
 import com.codedifferently.lesson26.library.Magazine;
 import com.codedifferently.lesson26.library.MediaItem;
 import com.codedifferently.lesson26.library.Newspaper;
+
 import jakarta.validation.constraints.NotBlank;
-import java.util.List;
-import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
