@@ -5,7 +5,7 @@
   "scripts": {
     "devStart": "nodemon index.js",
     "tsc": "tsc",
-    "start": "node lesson_24/davidadenaike/index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
