@@ -81,7 +81,7 @@
 <body>
 
   <div class="container">
-    <form action="/submit-contact" method="POST">
+    <form action="/contact-us" method="POST">
       <div>
         <label for="firstName">First Name*</label>
         <input type="text" id="firstName" name="firstName" required>
@@ -134,15 +134,18 @@
     </div>
   </div>
 
-  <% if (submittedData) { %>
+  <% if (typeof submittedData !== 'undefined' && submittedData) { %>
     <div class="submitted">
-      <h2>Submitted Data</h2>
-      <p><strong>First Name:</strong> <%= submittedData.firstName %></p>
-      <p><strong>Last Name:</strong> <%= submittedData.lastName %></p>
-      <p><strong>Phone:</strong> <%= submittedData.phone %></p>
-      <p><strong>Email:</strong> <%= submittedData.email %></p>
-      <p><strong>Program:</strong> <%= submittedData.program %></p>
-      <p><strong>Message:</strong> <%= submittedData.message %></p>
+      <h3>Thanks for contacting us!</h3>
+      <p>Here’s what you submitted:</p>
+      <ul>
+        <li><strong>First Name:</strong> <%= submittedData.firstName %></li>
+        <li><strong>Last Name:</strong> <%= submittedData.lastName %></li>
+        <li><strong>Phone:</strong> <%= submittedData.phone %></li>
+        <li><strong>Email:</strong> <%= submittedData.email %></li>
+        <li><strong>Program:</strong> <%= submittedData.program %></li>
+        <li><strong>Message:</strong> <%= submittedData.message || 'N/A' %></li>
+      </ul>
     </div>
   <% } %>
 
