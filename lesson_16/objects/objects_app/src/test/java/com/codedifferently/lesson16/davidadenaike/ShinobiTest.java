@@ -16,14 +16,6 @@ public class ShinobiTest {
     assertEquals('D', naruto.getMissionRank());
   }
 
-  // @Test
-  // public void testCreateRogueShinobi() {
-  //     Village village = new Village("Leaf");
-  //     assertThrows(RogueShinobiException.class, () -> {
-  //         new Shinobi("Sasuke", village, "rogue");
-  //     });
-  // }
-
   @Test
   public void testPromotionEligibility() throws RogueShinobiException {
     Shinobi sasuke = new Shinobi("Sasuke", Village.LEAF, "Genin");
