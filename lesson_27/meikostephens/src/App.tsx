@@ -1,11 +1,7 @@
 import './App.scss';
 import { Outlet } from 'react-router-dom';
-import { Home } from './pages/Home';
 import {Footer} from './components/footer';
 import { Header } from './components/header';
-
-
-
 
 function App() {
   return (
