@@ -6,6 +6,5 @@ import lombok.Data;
 @Data
 @Builder
 public class CreateMediaItemResponse {
-
   private MediaItemResponse item;
 }

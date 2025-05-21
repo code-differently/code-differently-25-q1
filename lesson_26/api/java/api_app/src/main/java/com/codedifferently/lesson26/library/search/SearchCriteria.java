@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SearchCriteria {
-
   /** The ID to search for (exact match). */
   public String id;
 
