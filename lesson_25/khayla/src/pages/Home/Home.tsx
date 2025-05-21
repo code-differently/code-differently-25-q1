@@ -1,10 +1,7 @@
+import { ProgramList } from '@/components/program/ProgramList';
 import './Home.scss';
 import React from 'react';
-import {ProgramList} from '../../components/context/ProgramList';
-
-
-
-
+import { Link } from 'react-router-dom';
 
 export const Home: React.FC = () => {
   return (
@@ -29,6 +26,9 @@ export const Home: React.FC = () => {
           Our <em className="highlight">Programs</em>
         </h2>
         <ProgramList />
+        <Link to="/second-page" className="add-program-button">
+        Add Program
+        </Link>
       </section>
     </article>
   );

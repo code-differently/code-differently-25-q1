@@ -75,6 +75,22 @@ article {
   max-width: 48%;
 }
 
+.add-program-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: #f47d26;
+  color: white;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  width: 10%;
+}
+
+
+
 @media screen and (max-width: 1080px) {
   .program {
     min-width: 100%;
