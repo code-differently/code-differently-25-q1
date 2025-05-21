@@ -19,10 +19,10 @@ public class nintendo {
   /**
    * Constructs a Nintendo Switch object with the specified attributes.
    *
-   * @param serialNumber   serial number of the device
-   * @param model          the model type of the Nintendo Switch
-   * @param isDocked       indicates if the device is currently docked
-   * @param batteryLife    current battery life in hours
+   * @param serialNumber serial number of the device
+   * @param model the model type of the Nintendo Switch
+   * @param isDocked indicates if the device is currently docked
+   * @param batteryLife current battery life in hours
    * @param installedGames list of games currently installed on the device
    */
   public nintendo(
@@ -44,10 +44,9 @@ public class nintendo {
     }
   }
 
-
   /**
-   * Checks the current battery status of the Nintendo Switch.
-   * If the battery life is negative, it throws an InvalidBatteryException.
+   * Checks the current battery status of the Nintendo Switch. If the battery life is negative, it
+   * throws an InvalidBatteryException.
    *
    * @throws InvalidBatteryException if battery life is less than 0
    */
@@ -68,9 +67,7 @@ public class nintendo {
     System.out.println(game + " has been added to your Nintendo Switch.");
   }
 
-  /**
-   * Displays all the games currently installed on the Nintendo Switch.
-   */
+  /** Displays all the games currently installed on the Nintendo Switch. */
   public void displayInstalledGames() {
     System.out.println("Installed games on the Nintendo Switch:");
     /** Using a normal for loop to iterate over installed games */
