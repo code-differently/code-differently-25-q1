@@ -51,12 +51,4 @@ public class MediaItemRequest {
       default -> throw new IllegalArgumentException("Unknown media item type: " + request.type);
     }
   }
-
-    Object getTitle() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    Object getType() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 }

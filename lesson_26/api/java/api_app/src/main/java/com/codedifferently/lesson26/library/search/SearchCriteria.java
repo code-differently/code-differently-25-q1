@@ -11,9 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SearchCriteria {
 
-    public static Object builder() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
   /** The ID to search for (exact match). */
   public String id;
 
