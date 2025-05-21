@@ -10,14 +10,21 @@ public class nintendo {
     OLED
   }
 
-  // This will be the attributes, or member variables, of the NintendoSwitch class.
   private String serialNumber;
   private Model model;
   private boolean isDocked;
   private double batteryLife; // This will be in hours.
   private ArrayList<String> installedGames;
 
-  // This will be the constructor for the NintendoSwitch class.
+  /**
+   * Constructs a Nintendo Switch object with the specified attributes.
+   *
+   * @param serialNumber   serial number of the device
+   * @param model          the model type of the Nintendo Switch
+   * @param isDocked       indicates if the device is currently docked
+   * @param batteryLife    current battery life in hours
+   * @param installedGames list of games currently installed on the device
+   */
   public nintendo(
       String serialNumber,
       Model model,
@@ -37,22 +44,33 @@ public class nintendo {
     }
   }
 
-  /** Function 1: This will check the battery status. This also has the exception handling. */
+
+  /**
+   * Checks the current battery status of the Nintendo Switch.
+   * If the battery life is negative, it throws an InvalidBatteryException.
+   *
+   * @throws InvalidBatteryException if battery life is less than 0
+   */
   public void checkBatteryStatus() throws InvalidBatteryException {
-    /** Conditional expression checking battery status */
     if (batteryLife < 0) {
       throw new InvalidBatteryException("Battery life cannot be negative.");
     }
     System.out.println("Battery life: " + batteryLife + " hours.");
   }
 
-  /** Function 2: Adds a game to the installed games collection */
+  /**
+   * Installs a game to the Nintendo Switch.
+   *
+   * @param game the name of the game to install
+   */
   public void installGame(String game) {
     installedGames.add(game);
     System.out.println(game + " has been added to your Nintendo Switch.");
   }
 
-  /** Function 3: Displays all installed games using a loop */
+  /**
+   * Displays all the games currently installed on the Nintendo Switch.
+   */
   public void displayInstalledGames() {
     System.out.println("Installed games on the Nintendo Switch:");
     /** Using a normal for loop to iterate over installed games */
@@ -61,7 +79,7 @@ public class nintendo {
     }
   }
 
-  /** Getter methods */
+  /* Getter methods */
   public String getSerialNumber() {
     return serialNumber;
   }
