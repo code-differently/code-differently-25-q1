@@ -9,7 +9,7 @@ export async function addProgramAction({request}: {request: Request}) {
     throw new Error('Invalid form input');
   }
 
-  await fetch('/api/programs', {
+  await fetch('http://localhost:4000/programs', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({title, description}),

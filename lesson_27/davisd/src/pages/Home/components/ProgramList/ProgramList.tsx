@@ -12,7 +12,7 @@ export const ProgramList: React.FC = () => {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const response = await fetch('/api/programs');
+        const response = await fetch('http://localhost:4000/programs');
         if (!response.ok) throw new Error('Failed to fetch programs');
         const data = await response.json();
         setPrograms(data);
