@@ -8,7 +8,6 @@ const UUID_PATTERN =
 
 export const createServer = (db: Db): Express => {
   const app: Express = express();
-  
 
   app.use(express.static('public'));
   app.use(express.json());
