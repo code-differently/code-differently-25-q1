@@ -1,12 +1,12 @@
-import App from './App.tsx';
-import {AddProgram} from './pages/Home/AddProgram';
-import {Home} from './pages/Home/Home.tsx';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactDOM from 'react-dom/client';
-import {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import App from './App.tsx';
+import { AddProgram } from './pages/Home/AddProgram.tsx';
+import { Home } from './pages/Home/Home.tsx';
 
-import './index.scss';
 import React from 'react';
+import './index.scss';
 
 const queryClient = new QueryClient();
 
