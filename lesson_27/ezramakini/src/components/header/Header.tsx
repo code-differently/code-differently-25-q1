@@ -16,13 +16,13 @@ export const Header: React.FC = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/new-program">Add Program</Link>
-        </li>
-        <li>
           <a href="#">About</a>
         </li>
         <li>
           <a href="#">Contact</a>
+        </li>
+        <li>
+          <Link to="/new-program">Add Program</Link>
         </li>
       </ul>
       <div className="header-cta">
