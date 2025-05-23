@@ -1,6 +1,6 @@
 import './ProgramList.scss';
 
-import { Program } from '../Program';
+import {Program} from '../Program';
 
 export const ProgramList: React.FC = () => {
   return (
