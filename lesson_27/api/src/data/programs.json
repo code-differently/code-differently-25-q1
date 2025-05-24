@@ -19,6 +19,16 @@
       "id": "a06f970a-03b7-4cbb-9efd-f4e99029a456",
       "title": "Platform Programs",
       "description": "Platform programs are designed for high school graduates, college students, career changers, or professionals looking to develop the technology job readiness skills for today’s workforce."
+    },
+    {
+      "title": "hello",
+      "description": "gello",
+      "id": "ef4c000d-b996-417f-9bc3-ae5354ccab4e"
+    },
+    {
+      "title": "we cooking",
+      "description": "we cooking with chatgbt",
+      "id": "10e4090e-7664-401f-b3d5-4169439110b8"
     }
   ]
 }
