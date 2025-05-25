@@ -1,0 +1,33 @@
+.programs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+  margin-bottom: 20px;
+}
+
+.program h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.program p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .program {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="contact-container">
+    <div class="form-section">
+      <form action="/contact" method="POST" class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="FULL NAME *" required />
+        </div>
+        <div class="form-row">
+          <input type="text" name="phone" placeholder="PHONE *" required />
+          <input type="email" name="email" placeholder="EMAIL *" required />
+        </div>
+        <select name="interest" required>
+          <option value="" disabled selected>PROGRAM OF INTEREST*</option>
+          <option value="1000kids">1000 Kids Coding</option>
+          <option value="returnready">Return Ready</option>
+          <option value="devshop">Pipeline DevShops</option>
+        </select>
+        <textarea name="message" placeholder="MESSAGE" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="info-section">
+      <div class="overlay">
+        <h2>Contact Us.</h2>
+        <p><strong>Code Differently</strong><br />
+        1200 N. French Street<br />
+        Wilmington, DE 19801<br />
+        302.669.9182<br />
+        info@codedifferently.com</p>
+        <div class="social-icons">
+          <span>Follow Us</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

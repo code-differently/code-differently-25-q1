@@ -1,0 +1,26 @@
+.programs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-between;
+}
+
+.add-program-button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background-color: #f47d26;
+  color: white;
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.add-program-button:hover {
+  background-color: #d8671f;
+}
