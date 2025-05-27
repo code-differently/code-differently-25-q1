@@ -3,46 +3,42 @@ import {useEffect, useState} from 'react';
 
 import {Program} from '../Program';
 
-// Define the shape of my program data
-interface ProgramData {
+type ProgramData = {
   title: string;
   description: string;
-}
+};
 
 export const ProgramList: React.FC = () => {
   const [programs, setPrograms] = useState<ProgramData[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Replacing this with a real API call
-    fetch('/api/programs')
+    fetch('http://localhost:4000/programs')
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch programs');
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject(new Error('Failed to load data'));
         }
-        return response.json();
       })
       .then(data => {
         setPrograms(data);
-        setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching program data:', error);
-        setLoading(false);
+        console.error("Couldn't load data", error);
       });
   }, []);
 
-  if (loading) {
-    return <p>Loading programs...</p>;
-  }
-
   return (
-    <ul className="programs">
-      {programs.map((program, index) => (
-        <Program key={index} title={program.title}>
-          <p>{program.description}</p>
-        </Program>
-      ))}
-    </ul>
+    <>
+      <ul className="programs">
+        {programs.map((program, index) => (
+          <li key={index} className="program">
+            <Program title={program.title}>
+              <p>{program.description}</p>
+            </Program>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };

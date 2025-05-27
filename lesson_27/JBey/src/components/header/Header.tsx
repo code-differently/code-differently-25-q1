@@ -1,6 +1,7 @@
 import './Header.scss';
 import logoImg from '@/assets/logo.png';
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 
 export const Header: React.FC = () => {
   return (
@@ -12,13 +13,16 @@ export const Header: React.FC = () => {
       </div>
       <ul className="header-top-menu">
         <li>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
           <a href="#">About</a>
         </li>
         <li>
           <a href="#">Contact</a>
+        </li>
+        <li>
+          <Link to="/new-program">New Programs</Link>
         </li>
       </ul>
       <div className="header-cta">
