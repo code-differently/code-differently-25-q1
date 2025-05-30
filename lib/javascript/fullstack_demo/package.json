@@ -1,6 +1,7 @@
 {
   "name": "fullstack_demo",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +13,8 @@
     "test:coverage": "vitest run --coverage",
     "postinstall": "prisma generate",
     "cy:open": "cypress open",
+    "cy:open:e2e": "cypress open --e2e",
+    "cy:run:e2e": "cypress run --e2e",
     "db:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
@@ -25,6 +28,7 @@
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@clerk/testing": "^1.7.5",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.1.0",
     "@types/node": "^22",
