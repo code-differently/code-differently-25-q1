@@ -1,9 +1,8 @@
-import App from './App.tsx';
-import {Home} from './pages/Home/Home.tsx';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactDOM from 'react-dom/client';
-import {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import App from './App.tsx';
+import { Home } from './pages/Home/Home.tsx';
 
 import './index.scss';
 
