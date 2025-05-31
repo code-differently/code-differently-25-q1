@@ -1,13 +1,12 @@
-import React from "react"
-import { useMutation, useQueryClient } from "@tanstack/react-query"
-
+import './ProgramForm.module.css';
+import {useMutation, useQueryClient} from '@tanstack/react-query';
+import React from 'react';
 
 export const ProgramForm: React.FC = () => {
+  const queryClient = useQueryClient();
 
-const queryClient = useQueryClient();
-
-const mutation = useMutation({
-    mutationFn: async (program: { title: string; description: string }) => {
+  const mutation = useMutation({
+    mutationFn: async (program: {title: string; description: string}) => {
       const response = await fetch('http://localhost:4000/programs', {
         method: 'POST',
         body: JSON.stringify(program),
@@ -15,14 +14,17 @@ const mutation = useMutation({
           'Content-Type': 'application/json',
         },
       });
+
       if (!response.ok) {
         throw new Error('Failed to create program');
       }
-      return response.json(); 
+
+      // Handle empty or non-JSON response safely
+      const text = await response.text();
+      return text ? JSON.parse(text) : null;
     },
     onSuccess: () => {
-      
-      queryClient.invalidateQueries({ queryKey: ['programs'] });
+      queryClient.invalidateQueries({queryKey: ['programs']});
     },
   });
 
@@ -39,30 +41,31 @@ const mutation = useMutation({
 
   return (
     <div className="form-page">
-  <div className="form-container">
-    <h2>Create New Program</h2>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Title:
-        <input type="text" name="title" required />
-      </label>
-      <label>
-        Description:
-        <textarea name="description" required />
-      </label>
-      <button type="submit" disabled={mutation.isPending}>
-        {mutation.isPending ? 'Creating...' : 'Create Program'}
-      </button>
-      {mutation.isError && (
-        <p className="error-message">Error: {mutation.error.message}</p>
-      )}
-      {mutation.isSuccess && (
-        <p className="success-message">Program successfully created!</p>
-      )}
-    </form>
-  </div>
-</div>
-
+      <div className="form-container">
+        <h2>Create New Program</h2>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Title:
+            <input type="text" name="title" required />
+          </label>
+          <label>
+            Description:
+            <textarea name="description" required />
+          </label>
+          <button type="submit" disabled={mutation.isPending}>
+            {mutation.isPending ? 'Creating...' : 'Create Program'}
+          </button>
+          {mutation.isError && (
+            <p className="error-message">
+              Error:{' '}
+              {(mutation.error as Error)?.message || 'Something went wrong'}
+            </p>
+          )}
+          {mutation.isSuccess && (
+            <p className="success-message">Program successfully created!</p>
+          )}
+        </form>
+      </div>
+    </div>
   );
 };
-
