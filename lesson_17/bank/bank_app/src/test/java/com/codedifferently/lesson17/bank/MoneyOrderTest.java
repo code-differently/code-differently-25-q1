@@ -1,17 +1,14 @@
 package com.codedifferently.lesson17.bank;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 import com.codedifferently.lesson17.bank.exceptions.MoneyOrderVoidedException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class MoneyOrderTest {
-    
+
   private CheckingAccount account1;
   private CheckingAccount account2;
   private MoneyOrder classUnderTest;
@@ -24,7 +21,7 @@ class MoneyOrderTest {
   }
 
   @Test
-  void testInitializesProperly(){
+  void testInitializesProperly() {
     // Arrange
     double balanceAfterMoneyOrder = account1.getBalance();
 

@@ -1,6 +1,5 @@
 package com.codedifferently.lesson17.bank;
 
-import com.codedifferently.lesson17.bank.exceptions.CheckVoidedException;
 import com.codedifferently.lesson17.bank.exceptions.MoneyOrderVoidedException;
 
 /** Represents a check. */
@@ -25,7 +24,7 @@ public class MoneyOrder {
     this.moneyOrderNumber = moneyOrderNumber;
     this.account = account;
     account.withdraw(amount);
-    this.amount = amount ;
+    this.amount = amount;
   }
 
   /**
