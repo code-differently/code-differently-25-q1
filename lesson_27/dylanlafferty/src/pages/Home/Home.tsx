@@ -1,4 +1,5 @@
 import './Home.scss';
+import {Link} from 'react-router-dom';
 
 import {ProgramList} from './components/ProgramList';
 
@@ -27,6 +28,9 @@ export const Home: React.FC = () => {
         <ul className="programs">
           <ProgramList />
         </ul>
+        <Link to="/programs" className="add-program-button">
+          Add Program
+        </Link>
       </section>
     </article>
   );

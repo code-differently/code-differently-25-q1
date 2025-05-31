@@ -67,4 +67,16 @@ article {
     padding: 0;
     justify-content: space-between;
   }
+
+  .add-program-button {
+    align-self: flex-start;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #f47d26;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
