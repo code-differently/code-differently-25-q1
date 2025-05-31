@@ -1,10 +1,15 @@
 package com.codedifferently.lesson26.web;
 
+import com.codedifferently.lesson26.library.Librarian;
+import com.codedifferently.lesson26.library.Library;
+import com.codedifferently.lesson26.library.MediaItem;
+import com.codedifferently.lesson26.library.exceptions.MediaItemCheckedOutException;
+import com.codedifferently.lesson26.library.search.SearchCriteria;
+import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,12 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.codedifferently.lesson26.library.Librarian;
-import com.codedifferently.lesson26.library.Library;
-import com.codedifferently.lesson26.library.MediaItem;
-import com.codedifferently.lesson26.library.exceptions.MediaItemCheckedOutException;
-import com.codedifferently.lesson26.library.search.SearchCriteria;
 
 @RestController
 @CrossOrigin
@@ -41,7 +40,7 @@ public class MediaItemsController {
   }
 
   @GetMapping("/items/{id}")
-  public ResponseEntity<MediaItemResponse> getItemsById(@PathVariable("id") UUID id) {
+  public ResponseEntity<MediaItemResponse> getItemsById(@Valid @PathVariable("id") UUID id) {
     Set<MediaItem> items = library.search(SearchCriteria.builder().id(id.toString()).build());
 
     if (items.isEmpty()) {
@@ -53,14 +52,15 @@ public class MediaItemsController {
   }
 
   @PostMapping("/items")
-  public ResponseEntity<CreateMediaItemResponse> postItem(@RequestBody CreateMediaItemRequest request) {
+  public ResponseEntity<CreateMediaItemResponse> postItem(
+      @Valid @RequestBody CreateMediaItemRequest request) {
     MediaItem newItem = MediaItemRequest.asMediaItem(request.getItem());
 
     library.addMediaItem(newItem, librarian);
 
     MediaItemResponse itemResponse = MediaItemResponse.from(newItem);
     CreateMediaItemResponse response = CreateMediaItemResponse.builder().item(itemResponse).build();
-    
+
     return ResponseEntity.ok(response);
   }
 
@@ -71,7 +71,7 @@ public class MediaItemsController {
     if (items.isEmpty()) {
       return ResponseEntity.notFound().build();
     }
-  
+
     MediaItem itemToDelete = items.iterator().next();
 
     try {
