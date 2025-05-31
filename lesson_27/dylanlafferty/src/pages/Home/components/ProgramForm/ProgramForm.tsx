@@ -19,7 +19,6 @@ export const ProgramForm: React.FC = () => {
         throw new Error('Failed to create program');
       }
 
-      // Handle empty or non-JSON response safely
       const text = await response.text();
       return text ? JSON.parse(text) : null;
     },
