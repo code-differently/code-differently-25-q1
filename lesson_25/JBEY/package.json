@@ -14,11 +14,12 @@
     "@tanstack/react-query": "^5.62.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.5.3"
+    "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^2.12.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.0",
+    "@types/node": "^22.15.17",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
