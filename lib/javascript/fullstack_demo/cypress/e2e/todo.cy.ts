@@ -1,5 +1,3 @@
-/// <reference types="../support/index.d.ts" />
-
 import { setupClerkTestingToken } from '@clerk/testing/cypress';
 
 describe('Todo App Functionality', () => {
