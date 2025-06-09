@@ -1,0 +1,21 @@
+{
+    "name": "postgres-docker-setup",
+    "version": "1.0.0",
+    "description": "PostgreSQL Docker setup for development",
+    "main": "index.js",
+    "scripts": {
+        "start": "./start-postgres.sh",
+        "stop": "./stop-postgres.sh",
+        "status": "./status-postgres.sh",
+        "reset": "docker-compose down && docker volume rm db_postgres_data || true && ./start-postgres.sh",
+        "logs": "docker-compose logs -f postgres"
+    },
+    "keywords": [
+        "postgresql",
+        "postgres",
+        "docker",
+        "database"
+    ],
+    "author": "",
+    "license": "ISC"
+}
