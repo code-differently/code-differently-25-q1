@@ -153,3 +153,6 @@ pip-log.txt
 
 # Custom
 !slides/dist/
+
+# Lecture notes
+lecture_notes
