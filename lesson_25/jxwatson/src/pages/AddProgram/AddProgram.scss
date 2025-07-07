@@ -1,0 +1,44 @@
+.add-program-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-family: Poppins, sans-serif;
+  }
+  
+  .add-program-form input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+  
+  .add-program-form input:focus {
+    outline: none;
+    border-color: #f47d26;
+  }
+  
+  .add-program-form button {
+    padding: 0.75rem 1rem;
+    background-color: #f47d26;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    transition: background-color 0.3s;
+  }
+  
+  .add-program-form button:hover {
+    background-color: #d8671f;
+  }
+  

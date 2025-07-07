@@ -107,6 +107,10 @@ For your presentation, you will be given up to 20 minutes to feature your projec
    - [ ]  Lastly, talk through technical challenges and features.
 3. You will be given 5 minutes for Q&A and take questions from the audience.
 
+### Feedback
+
+Please use [this link](https://forms.gle/f4UbB7fWir6Gx2iUA) to submit feedback on your teammates for grading.
+
 ### Academic Integrity
 
 Please refer to the [Academic Integrity][academic-integrity-link] section of the syllabus regarding the use of third-party code and resources that you have used for your project. Give credit to where credit is due!

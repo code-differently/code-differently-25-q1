@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    form {
+      flex: 1 1 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    form textarea, form select {
+      grid-column: 1 / 3;
+      resize: vertical;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      grid-column: 1 / 3;
+      background-color: #f47c20;
+      color: white;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-info {
+      flex: 1 1 35%;
+      background-color: #15294a;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .contact-info h2, .contact-info p {
+      margin: 0 0 10px;
+    }
+    .submitted {
+      margin: 40px auto;
+      max-width: 600px;
+      padding: 20px;
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <form action="/contact-us" method="POST">
+      <div>
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div>
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div>
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="program">Program of Interest*</label>
+        <select id="program" name="program" required>
+          <option value="">-- Select Program --</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="IT Support">IT Support</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+        </select>
+      </div>
+      <div style="grid-column: 1 / 3;">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-info">
+      <div>
+        <h2>Contact Us</h2>
+        <p><strong>Code Differently</strong></p>
+        <p>1200 N. French Street<br>Wilmington, DE 19801</p>
+        <p>302.669.9182<br><a href="mailto:info@codedifferently.com" style="color: #f47c20;">info@codedifferently.com</a></p>
+      </div>
+      <div>
+        <p>Follow Us:</p>
+        <p>
+          <a href="#" style="color: #f47c20;">Instagram</a> |
+          <a href="#" style="color: #f47c20;">Twitter</a> |
+          <a href="#" style="color: #f47c20;">Facebook</a> |
+          <a href="#" style="color: #f47c20;">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <% if (typeof submittedData !== 'undefined' && submittedData) { %>
+    <div class="submitted">
+      <h3>Thanks for contacting us!</h3>
+      <p>Here’s what you submitted:</p>
+      <ul>
+        <li><strong>First Name:</strong> <%= submittedData.firstName %></li>
+        <li><strong>Last Name:</strong> <%= submittedData.lastName %></li>
+        <li><strong>Phone:</strong> <%= submittedData.phone %></li>
+        <li><strong>Email:</strong> <%= submittedData.email %></li>
+        <li><strong>Program:</strong> <%= submittedData.program %></li>
+        <li><strong>Message:</strong> <%= submittedData.message || 'N/A' %></li>
+      </ul>
+    </div>
+  <% } %>
+
+</body>
+</html>

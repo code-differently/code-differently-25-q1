@@ -49,3 +49,4 @@ db.json
 # Cypress
 /cypress/snapshots/actual
 /cypress/snapshots/diff
+cypress.env.json

@@ -1,0 +1,421 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.header-logo img {
+  max-height: 50px;
+}
+
+.header-top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  font-size: 16px;
+}
+
+.header-top-menu li a {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins';
+  color: #3c3c3c;
+}
+
+.header-top-menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #eb5b21;
+  transition: width 0.3s ease;
+}
+
+.header-top-menu li a:hover::after {
+  width: 100%;
+}
+
+.sign-up-button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.sign-up-button:hover {
+  background-color: #f97218;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('hero.jpg');
+  min-height: 80vh;
+  display: flex;
+  text-align: center;
+  color: white;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 65%;
+  margin-top: 200px;
+  margin-bottom: 2px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: Montserrat;
+  z-index: 4;
+  max-width: 60%;
+  text-align: left;
+}
+
+.highlight {
+  position: relative;
+  color: inherit;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.3em;
+  width: 100%;
+  height: 8px;
+  background-color: #ff6600;
+  z-index: -1;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  color: #eee;
+  background-color: #201377;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  max-width: 180%;
+}
+
+span {
+  color: #ff6600;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: 60px 40px;
+  text-align: left;
+}
+
+.programs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.programs-section .highlight {
+  color: black;
+}
+
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.program {
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.program h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+/* Contact Header */
+.contact-header {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2.75rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #060606;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Layout */
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contact-info-block {
+  flex: 1 1 400px;
+  max-width: 600px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('codedifferently.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-info-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 14, 118, 0.85);
+  z-index: 1;
+}
+
+.contact-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 30px;
+  text-align: left;
+  width: 100%;
+  max-width: 90%;
+}
+
+.contact-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.contact-overlay p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-overlay a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-overlay h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #ff6600;
+}
+
+/* Styled Contact Form */
+.styled-form {
+  flex: 1 1 400px;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row input {
+  flex: 1;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+  padding: 14px 16px;
+  border: none;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.styled-form select:invalid {
+  color: #999;
+}
+
+.styled-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.styled-form button {
+  background-color: #ff6600;
+  color: white;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.styled-form button:hover {
+  background-color: #f97218;
+}
+
+/* Thank You Page */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.submission-details {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.submission-details li {
+  margin-bottom: 10px;
+}
+
+.submission-details blockquote {
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  border-left: 4px solid #ff6600;
+  color: #333;
+  font-style: italic;
+}
+
+.contact-card a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 440px) {
+  .input-row {
+    flex-direction: column;
+  }
+}

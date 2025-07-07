@@ -1,0 +1,39 @@
+h2 {
+    margin: 1rem;
+}
+
+.new-program-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20%;
+    margin: 1rem;
+}
+
+.new-program-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.new-program-form input,
+.new-program-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 0.25rem;
+    resize: vertical;
+}
+
+.new-program-form button {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: #f47d26;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
