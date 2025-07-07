@@ -19,4 +19,4 @@ LEFT JOIN
 checked_out_items c ON g.email = c.email
 GROUP BY
 g.email, g.name, g.type;
-/*End of code*/
+
