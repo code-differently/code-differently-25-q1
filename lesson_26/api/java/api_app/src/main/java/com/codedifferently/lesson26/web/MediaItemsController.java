@@ -1,51 +1,77 @@
-package com.codedifferently.lesson26.web;
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Param,
+  Post,
+  Res,
+} from '@nestjs/common';
+import { Response } from 'express';
+import { Librarian, LibraryService, MediaItem } from '../library';
+import { CreateMediaItemRequest } from './create_media_item_request';
+import { CreateMediaItemResponse } from './create_media_item_response';
+import { GetMediaItemsResponse } from './get_media_items_response';
+import { fromMediaItemRequest } from './media_item_request';
+import { MediaItemResponse, toMediaItemResponse } from './media_item_response';
 
-import com.codedifferently.lesson26.library.Librarian;
-import com.codedifferently.lesson26.library.Library;
-import com.codedifferently.lesson26.library.MediaItem;
-import com.codedifferently.lesson26.library.search.SearchCriteria;
-import java.io.IOException;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+@Controller()
+export class MediaItemsController {
+  private readonly librarian: Librarian;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@CrossOrigin
-public class MediaItemsController {
-
-  private final Library library;
-  private final Librarian librarian;
-
-  public MediaItemsController(Library library) throws IOException {
-    this.library = library;
-    this.librarian = library.getLibrarians().stream().findFirst().orElseThrow();
+  constructor(private readonly library: LibraryService) {
+    this.librarian = library.getLibrarians()[0];
   }
 
-  @GetMapping("/items")
-  public ResponseEntity<GetMediaItemsResponse> getItems() {
-    Set<MediaItem> items = library.search(SearchCriteria.builder().build());
-    if (items.isEmpty()) {
-      ResponseEntity.noContent();
+  @Get('items')
+  getItems(): GetMediaItemsResponse {
+    const items: ReadonlySet<MediaItem> = this.library.search({});
+    const responseItems: MediaItemResponse[] = [...items].map(
+      toMediaItemResponse,
+    );
+    const response = { items: responseItems };
+    return response;
+  }
+
+  @Get('items/:id')
+  getItem(
+    @Param('id') id: string,
+    @Res({ passthrough: true }) res: Response,
+  ): MediaItemResponse {
+    const items = this.library.search({ id });
+    if (items.size === 0) {
+      res.status(HttpStatus.NOT_FOUND);
     }
-    List<MediaItemResponse> responseItems = items.stream().map(MediaItemResponse::from).toList();
-    var response = GetMediaItemsResponse.builder().items(responseItems).build();
-    return ResponseEntity.ok(response);
+    const item = items.values().next().value;
+    return item ? toMediaItemResponse(item) : undefined;
   }
-  @GetMapping(value = "/{id}")
-  public ResponseEntity<MediaItemResponse> getItemById(@PathVariable("id") UUID id) {
 
-    System.out.println(id.toString());
+  @Post('items')
+  @HttpCode(HttpStatus.OK)
+  addItem(
+    @Body() body: CreateMediaItemRequest,
+    @Res({ passthrough: true }) res: Response,
+  ): CreateMediaItemResponse {
+    if (!body.item) {
+      res.status(HttpStatus.BAD_REQUEST);
+      return { errors: ['Missing item'] };
+    }
+    const item = fromMediaItemRequest(body.item);
+    this.library.addMediaItem(item, this.librarian);
+    return { item: toMediaItemResponse(item) };
+  }
 
-    Set<MediaItem> items = library.search(SearchCriteria.builder().id(id.toString()).build());
-    Optional<MediaItem> matchedItem =
-        items.stream().filter(item -> item.getId().equals(id)).findFirst();
-    System.out.println("items");
-      return null;
-}
+  @Delete('items/:id')
+  @HttpCode(HttpStatus.NO_CONTENT)
+  deleteItem(
+    @Param('id') id: string,
+    @Res({ passthrough: true }) res: Response,
+  ): void {
+    if (!this.library.hasMediaItemById(id)) {
+      res.status(HttpStatus.NOT_FOUND);
+    }
+    this.library.removeMediaItemById(id, this.librarian);
+  }
 }
