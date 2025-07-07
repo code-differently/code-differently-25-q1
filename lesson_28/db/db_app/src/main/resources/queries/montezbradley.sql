@@ -1,36 +1,22 @@
-SELECT * 
-
-FROM media_items
-
-SELECT type, COUNT(*) 
-AS item_count
+SELECT 
+COUNT(*) As count
 FROM media_items
 GROUP BY type;
 
-SELECT SUM(media_items.pages) 
-AS total_pages_checked_out
+SELECT 
+SUM(pages) as total_pages_checked_out
 FROM checked_out_items c 
-JOIN media_items m ON c.item_id = m.id;
+JOIN media_items m
+ON c.item_id = m.id;
 
-SELECT g.name, c.* 
-FROM guests g
-LEFT JOIN checked_out_items c ON g.email  = c.email
-
-DROP TABLE library_users;
-
-CREATE TABLE library_users (
-    id TEXT PRIMARY KEY,
-    email TEXT NOT NULL UNIQUE,
-    first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
-    password TEXT NOT NULL
-);
-
-INSERT INTO library_users (id, email, first_name, last_name, password)
-VALUES
-('1', 'jane@example.com', 'Jane', 'Doe', '$2a$10$8Sbo8w4UTo7PYYMRAfE8ieBaQYqDZV9AYw2x9AlFFeFZ3Y3q1TxMi'),
-('2', 'john@example.com', 'John', 'Smith', '$2a$10$L8lWx.L3QhxiKyzYJCTi7uYTeKKbqElxRYHO6mGjc5Cfb5pY3HHQO'),
-('3', 'olivia@example.com', 'Olivia', 'James', '$2a$10$kRrQ3YbeXYbXl9F6sUYOYOX5pK8flNOuNcByVRKz9ChfLYUM6ZKAe');
-
-SELECT * FROM library_users;
+SELECT 
+g.email,
+g.name, 
+GROUP_CONCAT(c.item_id) AS checked_out_items
+FROM
+guests g 
+LEFT JOIN
+checked_out_items c ON g.email = c.email
+GROUP BY
+g.email, g.name, g.type;
 /*End of code*/
