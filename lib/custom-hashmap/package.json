@@ -1,0 +1,25 @@
+{
+    "name": "custom-hashmap",
+    "version": "1.0.0",
+    "description": "Custom HashMap implementation in TypeScript",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "npm run build && node dist/demo.js",
+        "dev": "ts-node src/demo.ts",
+        "example": "npm run build && node dist/example.js",
+        "test": "npm run build && node dist/test.js"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0",
+        "@types/node": "^20.0.0"
+    },
+    "keywords": [
+        "hashmap",
+        "data-structure",
+        "typescript"
+    ],
+    "author": "",
+    "license": "MIT"
+}
