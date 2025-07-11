@@ -178,3 +178,22 @@ function demonstrateHashMap() {
 
 // Run the demo
 demonstrateHashMap();
+
+
+// input: "Application"
+// output: "p"
+
+
+
+function findFirstDuplicateCharacter(input: string) {
+  for (let i = 0; i < input.length; ++i) {
+    const char1 = input[i];
+    for (let j = i + 1; j < input.length; ++j) {
+        const char2 = input[j];
+        if (char1 === char2) {
+            return char2;
+        }
+    }
+  }
+  return null;
+}
