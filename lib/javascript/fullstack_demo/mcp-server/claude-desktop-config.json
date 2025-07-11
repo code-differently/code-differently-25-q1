@@ -3,11 +3,11 @@
         "todo-mcp-server": {
             "command": "node",
             "args": [
-                "/Users/anthonymays/source/forks/code-differently-25-q1/lib/javascript/fullstack_demo/mcp-server/dist/index.js"
+                "/your/path/here/code-differently-25-q1/lib/javascript/fullstack_demo/mcp-server/dist/index.js"
             ],
             "env": {
                 "TODO_API_BASE_URL": "http://localhost:3000/api/mcp",
-                "MCP_API_KEY": "your-secret-mcp-api-key-here"
+                "MCP_API_KEY": "your_api_key_here"
             }
         }
     }
