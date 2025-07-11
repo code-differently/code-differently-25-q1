@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+        "todo-mcp-server": {
+            "command": "node",
+            "args": [
+                "dist/index.js"
+            ],
+            "cwd": "/path/to/your/mcp-server",
+            "env": {
+                "TODO_API_BASE_URL": "http://localhost:3000/api"
+            }
+        }
+    }
+}
