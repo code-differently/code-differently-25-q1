@@ -27,7 +27,6 @@ export class TodoApiClient {
     }
 
     console.error(`[API] ${options.method || 'GET'} ${url}`);
-    console.error(`[API] Headers:`, headers);
     if (options.body) {
       console.error(`[API] Body:`, options.body);
     }

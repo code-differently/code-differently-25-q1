@@ -9,10 +9,6 @@ const todoRepository = createTodoRepository();
  */
 export async function GET(request: Request) {
   console.log('[MCP API] GET /api/mcp/todos called');
-  console.log(
-    '[MCP API] Headers:',
-    Object.fromEntries(request.headers.entries()),
-  );
 
   const userId = authenticateApiKey(request);
 
