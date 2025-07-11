@@ -4,12 +4,16 @@ import { v4 as uuidv4 } from 'uuid';
 
 const CORRELATION_ID_HEADER = 'x-correlation-id';
 const isProtectedRoute = createRouteMatcher(['/(.*)']);
+const isMcpApiRoute = createRouteMatcher(['/api/mcp/(.*)']);
 
 export default clerkMiddleware(async (auth, req) => {
   const correlationId = uuidv4();
   req.headers.set(CORRELATION_ID_HEADER, correlationId);
 
-  if (isProtectedRoute(req)) await auth.protect();
+  // Skip Clerk protection for MCP API routes (they have their own API key auth)
+  if (isProtectedRoute(req) && !isMcpApiRoute(req)) {
+    await auth.protect();
+  }
 
   const response = NextResponse.next();
   response.headers.set(CORRELATION_ID_HEADER, correlationId);
