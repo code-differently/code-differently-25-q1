@@ -43,7 +43,7 @@ class TodoMCPServer {
 
   private setupErrorHandling(): void {
     this.server.onerror = (error: Error) => {
-      console.error('[MCP Error]', error);
+      console.debug('[MCP Error]', error);
     };
 
     process.on('SIGINT', async () => {
@@ -208,9 +208,9 @@ class TodoMCPServer {
   }
 
   private async getTodos() {
-    console.error('[MCP] Getting todos...');
+    console.debug('[MCP] Getting todos...');
     const todos = await this.apiClient.getTodos();
-    console.error(`[MCP] Retrieved ${todos.length} todos`);
+    console.debug(`[MCP] Retrieved ${todos.length} todos`);
 
     return {
       content: [
@@ -223,9 +223,9 @@ class TodoMCPServer {
   }
 
   private async createTodo(args: CreateTodoRequest) {
-    console.error(`[MCP] Creating todo: "${args.text}"`);
+    console.debug(`[MCP] Creating todo: "${args.text}"`);
     const result = await this.apiClient.createTodo(args.text, args.completed);
-    console.error(`[MCP] Todo created with ID: ${result}`);
+    console.debug(`[MCP] Todo created with ID: ${result}`);
 
     return {
       content: [
@@ -302,11 +302,11 @@ class TodoMCPServer {
   async run(): Promise<void> {
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
-    console.error('Todo MCP server running on stdio');
-    console.error(
+    console.log('Todo MCP server running on stdio');
+    console.debug(
       `API Base URL: ${process.env.TODO_API_BASE_URL || 'http://localhost:3000/api/mcp'}`,
     );
-    console.error(
+    console.debug(
       `API Key configured: ${process.env.MCP_API_KEY ? 'Yes' : 'No'}`,
     );
   }
