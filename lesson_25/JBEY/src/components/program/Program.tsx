@@ -1,16 +1,16 @@
-// Program.tsx
-import React from 'react';
+// This is an inferface for ProgramList. ProgramList will import this interface
+// and use it to define the type of the props that it will pass to Program.
 
-interface ProgramProps {
-  title: string;
-  description: string;
+interface ProgramStuff {
+  top: string;
+  bottom: string;
 }
 
-export const Program: React.FC<ProgramProps> = ({title, description}) => {
+export const Program = ({top, bottom}: ProgramStuff) => {
   return (
-    <li className="program">
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
+    <>
+      <h3>{top}</h3>
+      <p>{bottom}</p>
+    </>
   );
 };

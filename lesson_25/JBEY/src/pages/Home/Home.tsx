@@ -1,13 +1,11 @@
-// Home.tsx
+// This is the home page of the application.
+// This is the very first thing you see when you open the browser.
 import './Home.scss';
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {ProgramList} from '../../components/program/ProgramList';
-
-<Link to="/add-program">
-  <button>Add New Program</button>
-</Link>;
+import Button from '../../components/button/button';
+import {ProgramList} from '../../components/programList/ProgramList';
 
 export const Home: React.FC = () => {
   return (
@@ -32,6 +30,9 @@ export const Home: React.FC = () => {
           Our <em className="highlight">Programs</em>
         </h2>
         <ProgramList />
+        <Link to="/new-program">
+          <Button label="New Program" />
+        </Link>
       </section>
     </article>
   );
