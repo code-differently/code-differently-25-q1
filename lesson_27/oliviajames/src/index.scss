@@ -1,0 +1,55 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #444;
+  font-weight: 900;
+  font-family: Montserrat, sans-serif;
+  font-size: 2em;
+}
+
+h3 {
+  color: #444;
+}
+
+em.highlight {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  padding: 0 3px;
+  z-index: 1;
+}
+
+em.highlight:before {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 28%;
+  top: auto;
+  bottom: 5px;
+  width: 100%;
+  background-color: #f47d26;
+  z-index: -1;
+  left: 0;
+  right: 0;
+}
