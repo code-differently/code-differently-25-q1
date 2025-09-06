@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  padding: 0 28px;
+  top: 0;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0 0 14px 0 #a0a0a0;
+
+  .header-logo img {
+    height: 75px;
+  }
+
+  .header-top-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0 50px;
+
+    li {
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid #f47d26;
+      }
+    }
+  }
+
+  .sign-up-button {
+    border-radius: 10px;
+    color: white;
+    background-color: #f47d26;
+    padding: 10px 20px;
+  }
+}
